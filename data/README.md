@@ -2,9 +2,10 @@
 
 The benchmark is **203 construction-site images**: 105 contain at least one
 hazard and 98 are hazard-free (included so that systems are penalised for
-over-predicting). The images come from three sources: approximately 103 from
-public Kaggle construction-safety datasets, approximately 80 from Google Images
-and approximately 20 generated with Google Gemini. They were selected to span
+over-predicting). The images come from three sources: 96 hazard-free images from
+public Kaggle construction-safety datasets, 78 hazard images from Google Images,
+and 29 images generated with Google Gemini (27 with hazards, 2 without). They
+were selected to span
 the seven OSHA-aligned hazard categories below. Annotations were made in
 Roboflow and exported in COCO format.
 
