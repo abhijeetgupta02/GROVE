@@ -1,0 +1,55 @@
+img,a1_cat,a2_cat,cat_match,iou,iog_a1_ref,iop_a1_ref,a1_raw,a2_raw
+1,Other,Other,True,0.5695,0.5776,0.976,Other,Other
+6,StruckBy_Hazard,Fall_Hazard,False,0.9197,0.9411,0.9758,Falling Object,Fall from Height
+6,Other,Other,True,0.8841,0.957,0.9207,Signage and Communication,Signage and Communication
+108,PPE_Violation,PPE_Violation,True,0.9429,0.9756,0.9657,PPE Violation,PPE Deficiency
+108,Housekeeping_Storage,Housekeeping_Storage,True,0.9082,0.991,0.9158,Slip and Trip,Slip and Trip Hazard
+108,Fall_Hazard,Fall_Hazard,True,0.6671,0.9578,0.6873,Falling Hazard,Fall from Height
+125,Housekeeping_Storage,Housekeeping_Storage,True,0.8502,0.9976,0.8519,Slip and Trip,Slip and Trip Hazard
+125,PPE_Violation,PPE_Violation,True,0.7586,0.7735,0.9753,PPE Violation,PPE Deficiency
+125,Housekeeping_Storage,Housekeeping_Storage,True,0.6506,0.6506,1.0,Housekeeping,Housekeeping
+125,Housekeeping_Storage,Housekeeping_Storage,True,0.4704,0.4908,0.9186,Housekeeping,Housekeeping
+126,Fall_Hazard,Fall_Hazard,True,0.8489,0.8801,0.96,Falling Hazard,Fall from Height
+138,Other,Other,True,0.8169,0.9594,0.8462,Other,Hazards
+141,Housekeeping_Storage,Housekeeping_Storage,True,0.8193,0.8699,0.9337,Slip and Trip,Slip and Trip Hazard
+141,Housekeeping_Storage,Housekeeping_Storage,True,0.7306,0.8932,0.8005,Housekeeping,Housekeeping
+141,Housekeeping_Storage,Housekeeping_Storage,True,0.7154,0.9403,0.7495,Slip and Trip,Housekeeping
+141,Housekeeping_Storage,Housekeeping_Storage,True,0.6705,0.8064,0.7992,Housekeeping,Slip and Trip Hazard
+145,Fall_Hazard,Fall_Hazard,True,0.8308,0.8809,0.9359,Falling Hazard,Fall from Height
+145,PPE_Violation,PPE_Violation,True,0.7563,0.8203,0.9065,PPE Violation,PPE Deficiency
+145,StruckBy_Hazard,StruckBy_Hazard,True,0.5462,0.5462,1.0,Falling Object,Falling Object Hazard
+161,Other,Other,True,0.9846,1.0,0.9846,Signage and Communication,Signage and Communication
+161,Fall_Hazard,Fall_Hazard,True,0.7049,0.9714,0.7199,Falling Hazard,Fall from Height
+171,Fall_Hazard,Fall_Hazard,True,0.7833,0.943,0.8223,Falling Hazard,Fall from Height
+171,Housekeeping_Storage,Housekeeping_Storage,True,0.6145,0.7992,0.7267,Slip and Trip,Slip and Trip Hazard
+173,Housekeeping_Storage,Housekeeping_Storage,True,0.8604,0.937,0.9132,Slip and Trip,Slip and Trip Hazard
+173,Fall_Hazard,Fall_Hazard,True,0.8545,0.955,0.8904,Falling Hazard,Fall from Height
+173,PPE_Violation,PPE_Violation,True,0.557,0.557,1.0,PPE Violation,PPE Deficiency
+177,Housekeeping_Storage,Housekeeping_Storage,True,0.9166,0.998,0.9183,Slip and Trip,Slip and Trip Hazard
+177,StruckBy_Hazard,Fall_Hazard,False,0.8766,0.9574,0.9122,Falling Object,Fall from Height
+177,Housekeeping_Storage,Housekeeping_Storage,True,0.6952,0.9706,0.7102,Housekeeping,Housekeeping
+180,Other,Other,True,0.6131,0.6423,0.9309,Signage and Communication,Signage and Communication
+180,StruckBy_Hazard,Fall_Hazard,False,0.4053,0.4053,1.0,Falling Object,Fall from Height
+186,Electrocution_Hazard,Electrocution_Hazard,True,0.5789,0.5789,1.0,Electrical Hazard,Electrical Hazard
+191,Housekeeping_Storage,Housekeeping_Storage,True,0.9785,1.0,0.9785,Slip and Trip,Slip and Trip Hazard
+191,Housekeeping_Storage,Housekeeping_Storage,True,0.8232,0.9957,0.8261,Housekeeping,Housekeeping
+191,StruckBy_Hazard,StruckBy_Hazard,True,0.5784,0.836,0.6524,Falling Object,Falling Object Hazard
+191,Fall_Hazard,Fall_Hazard,True,0.2779,0.2779,1.0,Falling Hazard,Fall from Height
+192,Fall_Hazard,Fall_Hazard,True,0.9489,0.9884,0.9596,Falling Hazard,Fall from Height
+192,PPE_Violation,PPE_Violation,True,0.8194,0.852,0.9555,PPE Violation,PPE Deficiency
+192,Other,CaughtInBetween_hazard,False,0.6521,0.6615,0.9787,Other,Equipment and Machine Safety
+195,Housekeeping_Storage,Housekeeping_Storage,True,0.9347,1.0,0.9347,Housekeeping,Housekeeping
+195,Fall_Hazard,Fall_Hazard,True,0.6682,0.6799,0.9748,Falling Hazard,Fall from Height
+195,Housekeeping_Storage,Housekeeping_Storage,True,0.1131,0.2303,0.1818,Slip and Trip,Slip and Trip Hazard
+196,Other,Other,True,0.7421,0.8567,0.8473,Other,Signage and Communication
+196,PPE_Violation,Fall_Hazard,False,0.6352,0.6559,0.9528,PPE Violation,Fall from Height
+196,Fall_Hazard,Fall_Hazard,True,0.3998,0.3998,1.0,Falling Hazard,Fall from Height
+197,PPE_Violation,PPE_Violation,True,0.9424,0.9879,0.9534,PPE Violation,PPE Deficiency
+197,Housekeeping_Storage,Housekeeping_Storage,True,0.7656,1.0,0.7656,Slip and Trip,Housekeeping
+197,Housekeeping_Storage,Housekeeping_Storage,True,0.6174,0.9996,0.6175,Housekeeping,Slip and Trip Hazard
+201,Housekeeping_Storage,Housekeeping_Storage,True,0.955,0.9571,0.9976,Housekeeping,Housekeeping
+201,StruckBy_Hazard,Fall_Hazard,False,0.9514,0.9641,0.9864,Falling Object,Fall from Height
+201,Housekeeping_Storage,Housekeeping_Storage,True,0.8248,0.9999,0.8249,Housekeeping,Housekeeping
+202,StruckBy_Hazard,Electrocution_Hazard,False,0.9814,1.0,0.9814,Falling Object,Electrical Hazard
+202,Housekeeping_Storage,Housekeeping_Storage,True,0.8798,0.966,0.9079,Slip and Trip,Slip and Trip Hazard
+202,Electrocution_Hazard,StruckBy_Hazard,False,0.8272,0.9346,0.878,Electrical Hazard,Falling Object Hazard

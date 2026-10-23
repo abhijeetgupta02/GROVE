@@ -10,6 +10,8 @@ Roboflow and exported in COCO format.
 
 ## Files
 
+- `iaa_matched_pairs.csv` — the 54 matched box pairs behind the inter-annotator
+  agreement statistics (each annotator's category, match flag, IoU, IoG and IoP).
 - `image_list.csv` — the file names of the 203 evaluation images. The images
   themselves are not redistributed here (see Provenance below).
 - `annotations.coco.json` — ground truth in COCO format. It contains **247
