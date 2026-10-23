@@ -1,5 +1,7 @@
 # GROVE: Grounded Violation Evaluator
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23585082.svg)](https://doi.org/10.5281/zenodo.23585082)
+
 Code, annotations, predictions and evaluation scripts for the paper
 
 > **GROVE: A Modular Vision–Language Framework for Grounded Construction Safety Inspection**
