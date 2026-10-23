@@ -1,6 +1,6 @@
 # GROVE: Grounded Violation Evaluator
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23585082.svg)](https://doi.org/10.5281/zenodo.23585082)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23585081.svg)](https://doi.org/10.5281/zenodo.23585081)
 
 Code, annotations, predictions and evaluation scripts for the paper
 
