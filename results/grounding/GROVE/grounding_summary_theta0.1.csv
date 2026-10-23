@@ -1,0 +1,16 @@
+metric,value
+experiment,GROVE
+theta,0.1
+total_gt_boxes,247
+gt_boxes_covered,221
+gt_coverage_recall,0.8947
+total_pred_boxes,282
+pred_boxes_covering,236
+pred_covering_rate,0.8369
+mean_tightness_iop,0.7990
+mean_iou_covering,0.6039
+no_box_hazard_rows,1
+total_hazard_rows,318
+no_box_rate,0.0031
+shared_images,101
+gt_only_images,4

@@ -1,0 +1,8 @@
+category,gt_count,covered,gt_coverage_recall
+CaughtInBetween_hazard,10,9,0.9000
+Electrocution_Hazard,24,21,0.8750
+Fall_Hazard,63,50,0.7937
+Housekeeping_Storage,77,55,0.7143
+Other,25,21,0.8400
+PPE_Violation,45,33,0.7333
+StruckBy_Hazard,3,3,1.0000

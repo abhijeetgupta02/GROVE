@@ -1,0 +1,6 @@
+failure_type,count,percent_of_all_f1_errors,example,fixable_by,definition
+Caption omission,2,1.8,145.jpg (FN StruckBy_Hazard: caption lacked a direct cue for the missed category),Caption module,GT category was absent from predictions and the caption lacked a category cue.
+Reasoning omission after caption cue,49,45.0,1.jpg (FN Other: caption cued the category but hazard response omitted it),Hazard reasoning module,GT category was absent from predictions even though the caption contained a category cue.
+Reasoning hallucination,44,40.4,110.jpg (FP Fall_Hazard: hazard reasoner emitted a category absent from GT),Hazard reasoning module,Prediction added a category absent from GT and was not attributed to fallback/no-box failure.
+Primary grounding failure,1,0.9,1.jpg (FP PPE_Violation: hazard category was emitted without a valid final grounded box),GroundingDINO primary grounding plus fallback trigger,Predicted category absent from GT and the hazard had no final grounding source/box.
+Poor fallback match,13,11.9,113.jpg (FP Fall_Hazard: fallback source on false-positive category),DETR/OpenCLIP fallback and post-grounding verifier,Prediction added a category absent from GT and at least one event hazard used DETR/OpenCLIP fallback.

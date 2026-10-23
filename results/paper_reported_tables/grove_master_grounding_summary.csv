@@ -1,0 +1,3 @@
+experiment,theta,gt_coverage_recall,pred_covering_rate,mean_tightness_iop,mean_iou_covering,no_box_rate,no_box_hazard_rows,total_hazard_rows,total_gt_boxes,gt_boxes_covered,total_pred_boxes,pred_boxes_covering,shared_images,gt_only_images,recall_CaughtInBetween_hazard,recall_Electrocution_Hazard,recall_Fall_Hazard,recall_Housekeeping_Storage,recall_Other,recall_PPE_Violation,recall_StruckBy_Hazard
+modular_qwen35_9b,0.1,0.8947,0.8369,0.7990,0.6039,0.0031,1,318,247,221,282,236,105,0,0.9000,0.8750,0.9524,0.8312,0.8400,0.9556,1.0000
+modular_qwen35_9b,0.3,0.8016,0.6879,0.7925,0.6952,0.0031,1,318,247,198,282,194,105,0,0.8000,0.8333,0.8889,0.7532,0.6000,0.8667,0.6667

@@ -1,0 +1,2 @@
+experiment,total_gt,total_pred,ag_pred_covered,ag_pred_rate,ca_pred_covered,ca_pred_rate,pred_gap,ag_mean_iop,ca_mean_iop,ag_mean_iou,ca_mean_iou,no_box_hazard_rows,total_hazard_rows
+modular_qwen35_9b,247,282,266,0.9433,159,0.5638,107,0.9203,0.9082,0.4813,0.5389,1,318

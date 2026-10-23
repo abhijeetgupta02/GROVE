@@ -1,0 +1,2 @@
+experiment,n_bootstrap,image_universe,f1_bootstrap_median,f1_ci95_low,f1_ci95_high
+modular_qwen35_9b,1000,203,0.7456,0.6845,0.7966

@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use this code or the annotations, please cite the paper."
+title: "GROVE: A Modular Vision-Language Framework for Grounded Construction Safety Inspection"
+type: software
+authors:
+  - family-names: Gupta
+    given-names: Abhijeet
+    affiliation: University of Dayton
+    orcid: "https://orcid.org/0009-0007-3912-5248"
+  - family-names: Singh
+    given-names: Shruti
+    affiliation: University of Dayton
+  - family-names: Asari
+    given-names: Vijayan
+    affiliation: University of Dayton
+  - family-names: Nguyen
+    given-names: Tam
+    affiliation: University of Dayton
+year: 2026
+license: MIT
+keywords:
+  - construction safety
+  - vision-language models
+  - visual grounding
+  - hazard detection

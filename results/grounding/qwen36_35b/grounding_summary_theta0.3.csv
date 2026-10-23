@@ -1,0 +1,16 @@
+metric,value
+experiment,qwen36_35b
+theta,0.3
+total_gt_boxes,247
+gt_boxes_covered,98
+gt_coverage_recall,0.3968
+total_pred_boxes,197
+pred_boxes_covering,74
+pred_covering_rate,0.3756
+mean_tightness_iop,0.6789
+mean_iou_covering,0.4994
+no_box_hazard_rows,208
+total_hazard_rows,550
+no_box_rate,0.3782
+shared_images,75
+gt_only_images,30

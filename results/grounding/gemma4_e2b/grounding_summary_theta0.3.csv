@@ -1,0 +1,16 @@
+metric,value
+experiment,gemma4_e2b
+theta,0.3
+total_gt_boxes,247
+gt_boxes_covered,61
+gt_coverage_recall,0.2470
+total_pred_boxes,88
+pred_boxes_covering,31
+pred_covering_rate,0.3523
+mean_tightness_iop,0.5308
+mean_iou_covering,0.5017
+no_box_hazard_rows,105
+total_hazard_rows,267
+no_box_rate,0.3933
+shared_images,59
+gt_only_images,46

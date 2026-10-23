@@ -1,0 +1,4 @@
+experiment,grounding_source,hazards,share,total_hazards
+modular_qwen35_9b,GroundingDINO (primary),258,0.8113,318
+modular_qwen35_9b,DETR + OpenCLIP (fallback),59,0.1855,318
+modular_qwen35_9b,Not grounded,1,0.0031,318

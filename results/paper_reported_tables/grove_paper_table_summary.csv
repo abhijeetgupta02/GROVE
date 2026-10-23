@@ -1,0 +1,2 @@
+experiment,id_precision,id_recall,id_f1,id_TP,id_FP,id_FN,gt_coverage_recall_iog03,pred_to_gt_coverage_iog03,mean_tightness_iop,mean_iou_covering,gt_to_pred_containment_iop03,category_aware_containment_iop03,mean_latency_sec
+modular_qwen35_9b,0.7327,0.7571,0.7447,159,58,51,0.8016,0.6879,0.7925,0.6952,0.9433,0.5638,19.9367

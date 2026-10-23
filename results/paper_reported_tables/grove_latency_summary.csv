@@ -1,0 +1,2 @@
+experiment,n_images,mean_total_inference_time_sec,min_total_inference_time_sec,max_total_inference_time_sec,total_inference_time_sec
+modular_qwen35_9b,203,19.9367,14.0900,25.5400,4047.1500

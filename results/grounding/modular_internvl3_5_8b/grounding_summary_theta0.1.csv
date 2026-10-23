@@ -1,0 +1,16 @@
+metric,value
+experiment,modular_internvl3_5_8b
+theta,0.1
+total_gt_boxes,247
+gt_boxes_covered,152
+gt_coverage_recall,0.6154
+total_pred_boxes,158
+pred_boxes_covering,127
+pred_covering_rate,0.8038
+mean_tightness_iop,0.8905
+mean_iou_covering,0.6313
+no_box_hazard_rows,0
+total_hazard_rows,266
+no_box_rate,0.0000
+shared_images,93
+gt_only_images,12

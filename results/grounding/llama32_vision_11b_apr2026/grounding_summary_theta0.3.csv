@@ -1,0 +1,16 @@
+metric,value
+experiment,llama32_vision_11b_apr2026
+theta,0.3
+total_gt_boxes,247
+gt_boxes_covered,192
+gt_coverage_recall,0.7773
+total_pred_boxes,180
+pred_boxes_covering,161
+pred_covering_rate,0.8944
+mean_tightness_iop,0.4108
+mean_iou_covering,0.5132
+no_box_hazard_rows,42
+total_hazard_rows,378
+no_box_rate,0.1111
+shared_images,90
+gt_only_images,15
