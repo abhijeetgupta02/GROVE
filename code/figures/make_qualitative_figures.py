@@ -96,8 +96,18 @@ def image_axis(ax, im):
         s.set_color(RULE)
 
 
+def fit_to_axis(fig, ax, t, min_size=5.0):
+    """Shrink a text artist until it fits inside the axis width."""
+    r = fig.canvas.get_renderer()
+    width = ax.get_window_extent(r).width
+    while t.get_window_extent(r).width > width and t.get_fontsize() > min_size:
+        t.set_fontsize(t.get_fontsize() - 0.2)
+
+
 def panel_title(ax, letter, text):
-    ax.set_title(f"({letter}) {text}", loc="left", pad=2.5, color=INK)
+    t = ax.set_title(f"({letter}) {text}", loc="left", pad=2.5, color=INK)
+    ax.figure.canvas.draw()
+    fit_to_axis(ax.figure, ax, t)
 
 
 def draw_box(ax, b, color, dashed=False, lw=1.1):
@@ -226,7 +236,7 @@ def figure3(img_dir, gt, grove, llama, out, img="194.png"):
     panels = [("a", "Reference annotation", g, REF, False, f"{len(ref)} annotated categories"),
               ("b", "GROVE", gv, GROVE, False,
                f"{len({lab for _, lab in gv} & ref)} of {len(ref)} categories found"),
-              ("c", "Single-pass Llama 3.2 Vision 11B", lv, BASE, True,
+              ("c", "Llama 3.2 Vision 11B", lv, BASE, True,
                f"{len({lab for _, lab in lv} & ref)} of {len(ref)} found; full-image boxes")]
     fig = plt.figure(figsize=(TEXT_WIDTH_IN, 2.18))
     gs = fig.add_gridspec(1, 3, wspace=0.04)
@@ -238,7 +248,10 @@ def figure3(img_dir, gt, grove, llama, out, img="194.png"):
             cb = [min(max(b[0], 4), W - 4), min(max(b[1], 4), H - 4), min(max(b[2], 4), W - 4), min(max(b[3], 4), H - 4)]
             draw_box(ax, cb, col, dashed=dashed, lw=1.1)
         place_tags(fig, ax, boxes, col, W, H)
-        ax.text(0.0, -0.035, note, transform=ax.transAxes, fontsize=6.4, color=MUTED, va="top", style="italic")
+        nt = ax.text(0.0, -0.035, note, transform=ax.transAxes, fontsize=6.4, color=MUTED, va="top",
+                     style="italic")
+        fig.canvas.draw()
+        fit_to_axis(fig, ax, nt)
     save(fig, out, "Fig3_reported")
 
 
