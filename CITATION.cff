@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "If you use this code or the annotations, please cite the paper."
-title: "GROVE: A Modular Vision-Language Framework for Grounded Construction Safety Inspection"
+title: "GROVE: A Grounded Violation Evaluator for Construction Safety Inspection Using Vision-Language Models"
 type: software
 authors:
   - family-names: Gupta

@@ -4,7 +4,7 @@
 
 Code, annotations, predictions and evaluation scripts for the paper
 
-> **GROVE: A Modular Vision–Language Framework for Grounded Construction Safety Inspection**
+> **GROVE: A Grounded Violation Evaluator for Construction Safety Inspection Using Vision–Language Models**
 > Abhijeet Gupta, Shruti Singh, Vijayan Asari, Tam Nguyen — University of Dayton.
 
 GROVE inspects construction-site photographs in three stages that share one scene caption:
