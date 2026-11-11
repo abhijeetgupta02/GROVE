@@ -13,7 +13,7 @@ const FAILS: GalleryImage[] = IMAGES.filter((x: GalleryImage) => x.role === "fai
 
 /** One plain sentence per failure, built from the image's saved data. */
 function sentence(img: GalleryImage): string {
-  const th = G.thresholds_refit;
+  const th = (G.thresholds ?? G.thresholds_refit);
   const e = img.error?.[0];
   const c: string = e?.category ?? "ppe";
   const sc = `${fixed(img.grove.scores[c], 2)} against a threshold of ${fixed(th[c], 2)}`;
@@ -64,11 +64,11 @@ export default function Failures({ base }: { base: string }) {
   };
   return (
     <div className="not-prose font-sans">
-      <ul className="m-0 grid list-none grid-cols-1 gap-3 p-0 sm:grid-cols-2 lg:grid-cols-3">
+      {FAILS.length > 0 && <ul className="m-0 grid list-none grid-cols-1 gap-3 p-0 sm:grid-cols-2 lg:grid-cols-3">
         {FAILS.map((img, k) => (
           <Card key={img.id} img={img} base={base} layers={layers} onOpen={() => setOpen(k)} sentence={`${img.failure_type[0].toUpperCase()}${img.failure_type.slice(1)}. ${sentence(img)}`} />
         ))}
-      </ul>
+      </ul>}
       <Lightbox list={FAILS} index={open} setIndex={setOpen} base={base} layers={layers} />
       <h3 className="mt-6 text-lg font-semibold">Error types on all final images<PostHoc /></h3>
       <ChartTable

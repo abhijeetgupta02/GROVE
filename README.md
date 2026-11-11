@@ -61,7 +61,7 @@ The code ran on Windows with Python 3.11, Ollama 0.40.14 and one RTX A6000 (48 G
 
 ## Data
 
-ConstructionSite10k (https://huggingface.co/datasets/LouisChen15/ConstructionSite) is available under CC BY-NC 4.0 after its access conditions are accepted. Its images come from MOCS, whose terms do not allow redistribution, so this repository gives the identifiers of the calibration and final images, not the images. The examples shown on the project page are credited to ConstructionSite10k and MOCS there.
+ConstructionSite10k (https://huggingface.co/datasets/LouisChen15/ConstructionSite) is available under CC BY-NC 4.0 after its access conditions are accepted. Its images come from MOCS, whose terms do not allow redistribution, so this repository gives the identifiers of the calibration and final images, not the images. The photographs on the project page are development images we generated with Google Gemini.
 
 ## Citation
 
@@ -75,4 +75,4 @@ ConstructionSite10k (https://huggingface.co/datasets/LouisChen15/ConstructionSit
 
 ## License
 
-Code (`code/`, `website/`, `paper_figures/`): MIT. Annotations, saved outputs, scores and reports: CC BY 4.0. Dataset images keep their own terms. See `LICENSE`.
+Code (`code/`, `website/`, `paper_figures/`): MIT. Annotations, saved outputs, scores and reports: CC BY 4.0. The generated images on the project page: CC BY 4.0. See `LICENSE`.

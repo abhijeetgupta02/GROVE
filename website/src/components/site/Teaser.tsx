@@ -39,7 +39,7 @@ function GemmaPanel({ img }: { img: GalleryImage }) {
   );
 }
 function GrovePanel({ img }: { img: GalleryImage }) {
-  const th = G.thresholds_refit;
+  const th = (G.thresholds ?? G.thresholds_refit);
   return (
     <div className="font-sans text-sm leading-snug">
       <p className="m-0 font-semibold">
@@ -96,7 +96,7 @@ export default function Teaser({ base }: { base: string }) {
         </div>
       </div>
       <figcaption className="mt-2 font-sans text-sm text-zinc-600 dark:text-zinc-300">
-        Selected example (image {img.id}, final set), chosen by the fixed rule described in the gallery. The labels mark{" "}
+        Development image {img.id}, generated with Google Gemini; chosen as described in the gallery. The labels mark{" "}
         {(["fall", "ppe"] as const).filter((c) => img.labels[c]).map((c) => CAT_NAME[c]).join(" and ") || "no violation"}.
       </figcaption>
     </figure>

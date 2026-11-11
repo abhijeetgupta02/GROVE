@@ -52,10 +52,10 @@ function ScoreBar({ label, score, th, flagged }: { label: string; score: number;
 }
 
 export function Detail({ img }: { img: GalleryImage }) {
-  const th = G.thresholds_refit;
+  const th = (G.thresholds ?? G.thresholds_refit);
   return (
     <div className="text-sm leading-snug">
-      <p className="m-0 mb-2 text-xs text-zinc-600 dark:text-zinc-300">Image {img.id}, final set. {img.illumination}, {img.camera_distance}. Why selected: {img.draw_reason}.</p>
+      <p className="m-0 mb-2 text-xs text-zinc-600 dark:text-zinc-300">Development image {img.id}, generated with Google Gemini. Why selected: {img.draw_reason}.</p>
       <h4 className="m-0 mb-1 font-semibold">Labels</h4>
       <ul className="m-0 mb-2 list-disc pl-5">
         {CATS.map((c) => (

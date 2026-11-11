@@ -1,0 +1,16 @@
+{
+  "title": "GROVE: Grounded Violation Evaluator for Visual Inspection",
+  "upload_type": "software",
+  "description": "<p>Code, frozen settings, image lists, every saved model response, scores, reports and the project website behind the paper \"GROVE: Grounded Violation Evaluator for Visual Inspection\". GROVE asks a decision model sixteen yes/no questions about a construction-site photograph, combines the answer probabilities into scores for fall hazards, electrical hazards and missing protective equipment, applies thresholds calibrated on labeled images from the target source, and grounds each report with an open-vocabulary detector.</p><p>Frozen evaluation on 1,000 unseen ConstructionSite10k images, scored once: GROVE micro-F1 0.702 [0.670, 0.733] against 0.642 [0.613, 0.670] for the single-pass baseline gemma4:31b (difference +0.060 [+0.030, +0.091]), with 22.8 against 71.6 false alarms per 100 violation-free images. ConstructionSite10k images are not included; the calibration and final image identifiers are. Project page: https://abhijeetgupta02.github.io/GROVE/</p>",
+  "creators": [
+    {"name": "Gupta, Abhijeet", "affiliation": "University of Dayton", "orcid": "0009-0007-3912-5248"},
+    {"name": "Singh, Shruti", "affiliation": "University of Dayton"},
+    {"name": "Asari, Vijayan", "affiliation": "University of Dayton"},
+    {"name": "Nguyen, Tam V.", "affiliation": "University of Dayton"}
+  ],
+  "license": "MIT",
+  "keywords": ["construction safety", "vision-language models", "calibration", "visual grounding", "hazard detection"],
+  "related_identifiers": [
+    {"identifier": "https://abhijeetgupta02.github.io/GROVE/", "relation": "isDocumentedBy", "resource_type": "other"}
+  ]
+}

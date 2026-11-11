@@ -29,7 +29,7 @@ export default function HowItWorks({ base }: { base: string }) {
   const [cat, setCat] = useState<"fall" | "ppe">("fall");
   const p = img.grove.probs as Record<string, number>;
   const w = G.weights;
-  const th = G.thresholds_refit[cat];
+  const th = (G.thresholds ?? G.thresholds_refit)[cat];
   const score = img.grove.scores[cat];
   const flagged = img.grove.decisions[cat];
   const nQ = Object.keys(G.questions).length;
@@ -105,7 +105,7 @@ export default function HowItWorks({ base }: { base: string }) {
           )}
           {step === 3 && (
             <>
-              <p className="m-0 mb-2">The score is compared with the category threshold, fit once on the calibration images:</p>
+              <p className="m-0 mb-2">The score is compared with the category threshold. For this development image that is the threshold fit on the 203 development images; on the final images GROVE uses thresholds refit once on 500 calibration images from that source:</p>
               <div className="relative mt-4 h-4 rounded-sm bg-zinc-200 dark:bg-zinc-700" role="img" aria-label={`Score ${fixed(score, 3)}, threshold ${fixed(th, 2)}`}>
                 <span className="absolute top-0 left-0 h-4 rounded-sm" style={{ width: `${score * 100}%`, background: COLORS.grove }} />
                 <span className="absolute -top-1 h-6 w-0.5 bg-zinc-900 dark:bg-zinc-100" style={{ left: `${th * 100}%` }} />
@@ -135,7 +135,7 @@ export default function HowItWorks({ base }: { base: string }) {
           )}
         </div>
       </div>
-      <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-300">Selected example (image {img.id}, final set), chosen by the fixed rule described in the gallery.</p>
+      <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-300">Development image {img.id}, generated with Google Gemini; chosen as described in the gallery.</p>
     </div>
   );
 }

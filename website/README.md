@@ -48,21 +48,21 @@ environment against the run folder (read only). Paths below are relative to the 
 | `src/data/final_scores.json` | Per-image labels, scores and decisions on the 1,000 final images: GROVE, main question, gemma4:31b, signed-confidence scores (post hoc), qwen3.5:27b fixed answers (post hoc), dataset attributes. Scores are rounded to 4 decimals without crossing a multiple of 0.01, so every decision at the page's thresholds is unchanged. | `runs/e50/d3_27b__h.jsonl`, `runs/e51/d3_27b__m.jsonl`, `runs/e52/gemma4_31b__sp.jsonl`, `runs_posthoc/p07_final/*__spc.jsonl`, `runs_posthoc/p06_final/qwen3.5_27b__sp.jsonl`, `tools/cs10k_meta.json`, `lists/final.json` |
 | `src/data/calibration_scores.json` | The same for the 500 calibration images (the set the thresholds were fit on; not an independent test). | `runs/e40/d3_27b__h.jsonl`, `runs/e41/d3_27b__m.jsonl`, `runs/e43/gemma4_31b__sp.jsonl`, `runs_posthoc/p07_cal/*__spc.jsonl`, `tools/cs10k_meta.json`, `lists/calibration.json` |
 | `src/data/thresholds.json` | Refit, first-freeze, Electrical and signed-confidence thresholds, and how each was fit. | `freeze/final_thresholds.json`, `freeze/freeze_1.json`, `freeze/freeze_2.json`, `results_posthoc/confidence_signed.json` |
-| `src/data/gallery.json` | The selection rule, its draw log and quotas, and the selected images with labels, boxes, GROVE scores, decisions and boxes, and gemma4:31b answers. | the score files above, `results/e53_grounding_predictions.json` (GROVE boxes and phrases), `tools/cs10k_meta.json` (labels, label boxes, captions, attributes) |
+| `src/data/gallery.json` | The examples on the page: seven development images we generated with Google Gemini, with labels, boxes, GROVE scores, decisions and boxes, and gemma4:31b answers. Written by `tools/build_dev_gallery.py` from the output of `tools/dev_gallery_scores.py`. | `runs/e12/d3_27b__h.jsonl`, `runs/e11/d3_27b__m.jsonl`, `runs/e09/gemma4_31b__sp.jsonl`, `results/gcache_gdino.jsonl`, `packet/data/grove203/annotations.coco.json` |
 | `src/data/errors.json` | Error types of GROVE and gemma4:31b on the final set (post hoc). | `reports/errors_final.md` |
-| `public/gallery/` | The selected images: decoded from the ConstructionSite10k parquet files as the run did (RGB), at most 1600 px on the long side and never enlarged, WebP quality 82 with a JPEG fallback, 480 px thumbnails, no metadata, no boxes drawn in. | ConstructionSite10k (images from MOCS), CC BY-NC 4.0 and the MOCS terms |
+| `public/gallery/` | The seven generated development images, at most 1600 px on the long side, WebP quality 82 with a JPEG fallback, 480 px thumbnails, no metadata, no boxes drawn in. No ConstructionSite10k image is shown. | the development images generated with Google Gemini |
 | `public/social-preview.png` | Social preview image (title and headline numbers; no dataset image). | drawn by `tools/social_preview.mjs` from `numbers.json` |
 
 To refresh the data after a change in the run folder, run `python tools/export_site_data.py` with the GROVE environment, then
 `python tools/check_numbers.py` and `npm run build`.
 
-### The selection rule
+### The examples
 
-Seed 20260422, final set only. Successes (15, of which 14 are shown: image 0006049 is also in the sample of the blinded expert review): GROVE's two decisions match the labels
-and every reported category has a top box at IoU 0.5 or more; at least 8 where gemma4:31b was wrong; spread over categories,
-day and night and camera distances; no two images from one near-copy group. Failures (5): one per type (false alarm on a
-vest in daylight, miss, right category with the wrong worker boxed, night-time miss, miss on height or depth). The exact rule
-text, the candidate counts and the draw log are in `src/data/gallery.json` and shown on the page.
+The page shows only images we own: the development images generated with Google Gemini. Among them, the images where
+GROVE is right on Fall, protective equipment and Electrical with the thresholds fit on the 203 development images, and
+where each reported category has a GroundingDINO box at IoU 0.5 or more with a labeled box, were picked by looking at
+them. These are in-sample examples; the measured results are on the 1,000 final images. Run
+`tools/build_dev_gallery.py` after `tools/export_site_data.py`, which still writes the earlier final-set gallery.
 
 ## Where things are on the page
 

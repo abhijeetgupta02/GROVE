@@ -35,7 +35,7 @@ function Tag({ b, text, color, dark = false }: { b: Box; text: string; color: st
 }
 
 export function altText(img: GalleryImage): string {
-  return `Selected example from the final set, image ${img.id}` + (img.caption ? `. Dataset caption: ${img.caption}` : "");
+  return `Development image ${img.id}, generated with Google Gemini` + (img.caption ? `. Dataset caption: ${img.caption}` : "");
 }
 
 export function ImageBoxes({

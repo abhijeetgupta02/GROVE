@@ -1,130 +1,13 @@
 {
- "set": "final",
- "n_images_in_set": 1000,
- "seed": 20260422,
- "selection_rule": "Selected examples, chosen by a fixed rule from the final 1,000 images, using only the saved scores, labels and attributes (no picture was looked at). Successes (15): images where both GROVE decisions (refit thresholds) match the labels and, for each category GROVE reports, its top box overlaps a labeled box with IoU 0.5 or more; the sorted image ids were shuffled with random.Random(20260422); quotas were then filled in that order (at least 4 with Fall reported, 4 with protective equipment reported, 2 at night, 1 each at long, short and mid camera distance; within a quota an image where gemma4:31b is wrong comes first), then images where gemma4:31b is wrong until there are at least 8, then the next images in order; no two images from one near-copy group. Failures (5): one per type, drawn with the same generator from the sorted ids of that type: false alarm on a vest in daylight (GROVE flags protective equipment with the phrase about a vest, the label has no protective-equipment violation, normal lighting); miss (labeled protective-equipment violation (hard hat or vest in the dataset reason) that GROVE does not flag, normal lighting); right category, wrong worker boxed (GROVE flags a labeled protective-equipment violation correctly, but its top box does not overlap any labeled box (IoU 0)); night-time miss (labeled violation that GROVE does not flag, illumination night); miss on height or depth (labeled Fall violation that GROVE does not flag, dataset reason about height or depth). One drawn success (image 0006049) is also in the sample of the blinded expert review and is not shown here, so 14 successes appear.",
- "candidates_successes": 615,
- "success_draw_log": [
-  {
-   "id": "0009971",
-   "reason": "quota: GROVE reports Fall"
-  },
-  {
-   "id": "0006710",
-   "reason": "quota: GROVE reports Fall"
-  },
-  {
-   "id": "0007719",
-   "reason": "quota: GROVE reports Fall"
-  },
-  {
-   "id": "0004862",
-   "reason": "quota: GROVE reports Fall"
-  },
-  {
-   "id": "0007211",
-   "reason": "quota: GROVE reports protective equipment"
-  },
-  {
-   "id": "0012079",
-   "reason": "quota: GROVE reports protective equipment"
-  },
-  {
-   "id": "0012170",
-   "reason": "quota: GROVE reports protective equipment"
-  },
-  {
-   "id": "0009992",
-   "reason": "quota: GROVE reports protective equipment"
-  },
-  {
-   "id": "0012494",
-   "reason": "quota: night"
-  },
-  {
-   "id": "0006629",
-   "reason": "quota: night"
-  },
-  {
-   "id": "0013117",
-   "reason": "quota: short distance"
-  },
-  {
-   "id": "0005546",
-   "reason": "fill in draw order"
-  },
-  {
-   "id": "0006049",
-   "reason": "fill in draw order"
-  },
-  {
-   "id": "0005746",
-   "reason": "fill in draw order"
-  },
-  {
-   "id": "0008122",
-   "reason": "fill in draw order"
-  }
- ],
- "quotas": {
-  "GROVE reports Fall": {
-   "wanted": 4,
-   "met": 4
-  },
-  "GROVE reports protective equipment": {
-   "wanted": 4,
-   "met": 4
-  },
-  "night": {
-   "wanted": 2,
-   "met": 2
-  },
-  "long distance": {
-   "wanted": 1,
-   "met": 1
-  },
-  "short distance": {
-   "wanted": 1,
-   "met": 1
-  },
-  "mid distance": {
-   "wanted": 1,
-   "met": 9
-  }
- },
- "failure_types": [
-  {
-   "type": "false alarm on a vest in daylight",
-   "rule": "GROVE flags protective equipment with the phrase about a vest, the label has no protective-equipment violation, normal lighting",
-   "candidates": 98,
-   "picked": "0007851"
-  },
-  {
-   "type": "miss",
-   "rule": "labeled protective-equipment violation (hard hat or vest in the dataset reason) that GROVE does not flag, normal lighting",
-   "candidates": 39,
-   "picked": "0006491"
-  },
-  {
-   "type": "right category, wrong worker boxed",
-   "rule": "GROVE flags a labeled protective-equipment violation correctly, but its top box does not overlap any labeled box (IoU 0)",
-   "candidates": 71,
-   "picked": "0008519"
-  },
-  {
-   "type": "night-time miss",
-   "rule": "labeled violation that GROVE does not flag, illumination night",
-   "candidates": 33,
-   "picked": "0009062"
-  },
-  {
-   "type": "miss on height or depth",
-   "rule": "labeled Fall violation that GROVE does not flag, dataset reason about height or depth",
-   "candidates": 38,
-   "picked": "0006675"
-  }
- ],
- "teaser": "0009971",
+ "set": "development",
+ "n_images_in_set": 203,
+ "seed": null,
+ "selection_rule": "Examples from the 29 development images we generated with Google Gemini (the other 174 development images and the ConstructionSite10k images are not ours to show). Shown are the images where GROVE is right on all three categories with the thresholds fit on the 203 development images (Fall 0.12, protective equipment 0.50, Electrical 0.32) and, for each category it reports, its GroundingDINO box overlaps a labeled box with IoU 0.5 or more; we picked them by looking at them. Because the thresholds were fit on these same images, these are in-sample examples, not a test. GROVE's measured performance is on the 1,000 final images (see Results and the threshold explorer).",
+ "candidates_successes": 7,
+ "success_draw_log": [],
+ "quotas": {},
+ "failure_types": [],
+ "teaser": "191",
  "thresholds_refit": {
   "fall": 0.86,
   "ppe": 0.8
@@ -163,41 +46,40 @@
   "ppe_mix": 0.5
  },
  "weights_source": "freeze/freeze_2.json (weights)",
- "caption_source": "ConstructionSite10k image_caption (used as alt text)",
+ "caption_source": null,
  "dataset_citation": "@misc{chen2025largepretrainedvisionlanguage,\n  title        = {Are Large Pre-trained Vision Language Models Effective Construction Safety Inspectors?}, \n  author       = {Xuezheng Chen and Zhengbo Zou},\n  year         = {2025},\n  eprint       = {2508.11011},\n  archivePrefix= {arXiv},\n  primaryClass = {cs.CV},\n  url          = {https://arxiv.org/abs/2508.11011},\n}",
- "dataset_citation_source": "packet/data/constructionsite10k/upstream_README.md",
- "box_note": "Boxes are stored as fractions of the image width and height. gemma4:31b boxes are drawn as written, read as pixel coordinates (the frozen rule); many of its boxes fit a 0-1000 grid reading instead (sensitivity analysis on the page).",
+ "box_note": "Boxes are stored as fractions of the image width and height. gemma4:31b boxes are drawn as written, read as pixel coordinates (the frozen rule).",
  "sources": {
-  "scores": "runs/e50 (GROVE), runs/e51 (main questions), runs/e52 (gemma4:31b)",
-  "boxes": "results/e53_grounding_predictions.json (GROVE), runs/e52 parsed bbox (gemma4:31b)",
-  "labels": "ConstructionSite10k annotations via tools/cs10k_meta.json",
-  "images": "ConstructionSite10k parquet files, decoded as the run did (RGB), resized to at most 1600 px"
+  "scores": "runs/e12/d3_27b__h.jsonl (GROVE), runs/e11/d3_27b__m.jsonl (main questions), runs/e09/gemma4_31b__sp.jsonl (gemma4:31b)",
+  "boxes": "results/gcache_gdino.jsonl (GROVE top GroundingDINO box for the fixed phrase; the overlaps equal results/e31_matches.jsonl)",
+  "labels": "packet/data/grove203/annotations.coco.json",
+  "images": "the generated development images (Google Gemini), at most 1600 px on the long side, WebP and JPEG, no metadata"
  },
  "images": [
   {
-   "id": "0009971",
+   "id": "191",
    "role": "success",
    "failure_type": null,
-   "draw_reason": "quota: GROVE reports Fall",
+   "draw_reason": "chosen by the authors from the generated development images where GROVE is right",
    "teaser": true,
    "files": {
-    "full_webp": "gallery/final_0009971.webp",
-    "full_jpg": "gallery/final_0009971.jpg",
-    "thumb_webp": "gallery/final_0009971_thumb.webp",
-    "thumb_jpg": "gallery/final_0009971_thumb.jpg"
+    "full_webp": "gallery/dev_191.webp",
+    "full_jpg": "gallery/dev_191.jpg",
+    "thumb_webp": "gallery/dev_191_thumb.webp",
+    "thumb_jpg": "gallery/dev_191_thumb.jpg"
    },
-   "width": 1200,
-   "height": 900,
+   "width": 1024,
+   "height": 1024,
    "thumb_width": 480,
-   "thumb_height": 360,
-   "original_width": 1200,
-   "original_height": 900,
-   "illumination": "normal lighting",
-   "camera_distance": "mid distance",
-   "size_band": "1% to 10%",
-   "caption": "The image shows a construction site with a single worker visible. The worker is wearing a red hard hat and is standing on scaffolding while working on the underside of a metal roof deck. The structure has multiple steel columns and beams, and the background reveals an unfinished building with visible scaffolding.",
+   "thumb_height": 480,
+   "original_width": 1024,
+   "original_height": 1024,
+   "illumination": "generated with Google Gemini",
+   "camera_distance": "development image",
+   "size_band": null,
+   "caption": null,
    "label_reason": {
-    "fall": "The worker on the scaffolding is not wearing a safety harness.",
+    "fall": null,
     "ppe": null
    },
    "labels": {
@@ -207,18 +89,18 @@
    "label_boxes": {
     "fall": [
      [
-      0.37,
-      0.34,
-      0.47,
-      0.62
+      0.4971,
+      0.1406,
+      0.585,
+      0.2662
      ]
     ],
     "ppe": []
    },
    "grove": {
     "scores": {
-     "fall": 0.9017,
-     "ppe": 0.7205
+     "fall": 0.6797,
+     "ppe": 0.0666
     },
     "decisions": {
      "fall": true,
@@ -226,15 +108,15 @@
     },
     "first_freeze_decisions": {
      "fall": true,
-     "ppe": true
+     "ppe": false
     },
     "boxes": {
      "fall": [
       [
-       0.3702,
-       0.3466,
-       0.4659,
-       0.6153
+       0.4991,
+       0.139,
+       0.5694,
+       0.2583
       ]
      ]
     },
@@ -245,31 +127,31 @@
      "fall": "GroundingDINO"
     },
     "top_iou": {
-     "fall": 0.9186
+     "fall": 0.7419
     },
     "probs": {
-     "Fall_Hazard": 0.951,
-     "f_fall_edge": 0.904,
-     "f_fall_opening": 0.1979,
-     "ok_fall_protected": 0.0793,
-     "Electrocution_Hazard": 0.0179,
-     "f_elec_wire": 0.0643,
-     "f_elec_lines": 0.011,
-     "ok_elec_testing": 0.0343,
-     "PPE_Violation": 0.4613,
-     "f_worker": 0.9986,
-     "f_ppe_nohat": 0.0189,
-     "f_ppe_novest": 0.981,
-     "f_ppe_noeye_glove": 0.2868,
-     "Housekeeping_Storage": 0.1962,
-     "f_house_trip": 0.2195,
-     "f_house_debris": 0.0777
+     "Fall_Hazard": 0.772,
+     "f_fall_edge": 0.6804,
+     "f_fall_opening": 0.422,
+     "ok_fall_protected": 0.1827,
+     "Electrocution_Hazard": 0.0133,
+     "f_elec_wire": 0.0186,
+     "f_elec_lines": 0.0135,
+     "ok_elec_testing": 0.0543,
+     "PPE_Violation": 0.0603,
+     "f_worker": 0.9992,
+     "f_ppe_nohat": 0.0376,
+     "f_ppe_novest": 0.0496,
+     "f_ppe_noeye_glove": 0.0729,
+     "Housekeeping_Storage": 0.9335,
+     "f_house_trip": 0.8684,
+     "f_house_debris": 0.9128
     }
    },
    "main_question": {
     "scores": {
-     "fall": 0.951,
-     "ppe": 0.463
+     "fall": 0.7658,
+     "ppe": 0.0584
     },
     "decisions": {
      "fall": true,
@@ -277,204 +159,15 @@
     }
    },
    "gemma": {
-    "decisions": {
-     "fall": true,
-     "ppe": true
-    },
-    "evidence": {
-     "fall": "worker on a scaffold platform without guardrails",
-     "ppe": "worker is not wearing a high-visibility vest"
-    },
-    "box_as_written": {
-     "fall": [
-      371,
-      548,
-      558,
-      643
-     ],
-     "ppe": [
-      325,
-      376,
-      625,
-      456
-     ]
-    },
-    "box_drawn": {
-     "fall": [
-      0.3092,
-      0.6089,
-      0.465,
-      0.7144
-     ],
-     "ppe": [
-      0.2708,
-      0.4178,
-      0.5208,
-      0.5067
-     ]
-    },
-    "fits_pixel_rule": {
-     "fall": true,
-     "ppe": true
-    },
-    "fits_grid_reading": {
-     "fall": true,
-     "ppe": true
-    }
-   },
-   "outcome": {
-    "grove_correct": true,
-    "gemma_wrong": true,
-    "disagree": true
-   }
-  },
-  {
-   "id": "0006710",
-   "role": "success",
-   "failure_type": null,
-   "draw_reason": "quota: GROVE reports Fall",
-   "teaser": false,
-   "files": {
-    "full_webp": "gallery/final_0006710.webp",
-    "full_jpg": "gallery/final_0006710.jpg",
-    "thumb_webp": "gallery/final_0006710_thumb.webp",
-    "thumb_jpg": "gallery/final_0006710_thumb.jpg"
-   },
-   "width": 1200,
-   "height": 900,
-   "thumb_width": 480,
-   "thumb_height": 360,
-   "original_width": 1200,
-   "original_height": 900,
-   "illumination": "underexposed",
-   "camera_distance": "mid distance",
-   "size_band": "10% or more",
-   "caption": "The image shows a large concrete slab in the trench with five workers. To the left, a retaining wall with metal sheet piles extends across the image, and an excavated area with mounds of earth is visible. To the right, another worker in an orange suit is handling rebar near a large stockpile of rebar bundles. There is a total of eight stacks of rebars on the embankment on the right. In the background, there are buildings and greenery above the retaining wall.",
-   "label_reason": {
-    "fall": "The right edge of the excavation is not protected nor warned.",
-    "ppe": null
-   },
-   "labels": {
-    "fall": true,
-    "ppe": false
-   },
-   "label_boxes": {
-    "fall": [
-     [
-      0.3,
-      0.29,
-      0.85,
-      0.98
-     ]
-    ],
-    "ppe": []
-   },
-   "grove": {
-    "scores": {
-     "fall": 0.8635,
-     "ppe": 0.6247
-    },
-    "decisions": {
-     "fall": true,
-     "ppe": false
-    },
-    "first_freeze_decisions": {
-     "fall": true,
-     "ppe": true
-    },
-    "boxes": {
-     "fall": [
-      [
-       0.2975,
-       0.4544,
-       0.7181,
-       0.9964
-      ]
-     ]
-    },
-    "phrase": {
-     "fall": "open trench or floor opening"
-    },
-    "box_source": {
-     "fall": "GroundingDINO"
-    },
-    "top_iou": {
-     "fall": 0.5668
-    },
-    "probs": {
-     "Fall_Hazard": 0.8313,
-     "f_fall_edge": 0.5913,
-     "f_fall_opening": 0.9242,
-     "ok_fall_protected": 0.0465,
-     "Electrocution_Hazard": 0.0456,
-     "f_elec_wire": 0.1299,
-     "f_elec_lines": 0.0333,
-     "ok_elec_testing": 0.0518,
-     "PPE_Violation": 0.4846,
-     "f_worker": 0.9985,
-     "f_ppe_nohat": 0.1988,
-     "f_ppe_novest": 0.7659,
-     "f_ppe_noeye_glove": 0.1487,
-     "Housekeeping_Storage": 0.8672,
-     "f_house_trip": 0.7063,
-     "f_house_debris": 0.8317
-    }
-   },
-   "main_question": {
-    "scores": {
-     "fall": 0.8313,
-     "ppe": 0.457
-    },
     "decisions": {
      "fall": false,
      "ppe": false
-    }
-   },
-   "gemma": {
-    "decisions": {
-     "fall": true,
-     "ppe": true
     },
-    "evidence": {
-     "fall": "workers are working in a deep excavation without perimeter guardrails",
-     "ppe": "worker in black shirt is missing a high-visibility vest"
-    },
-    "box_as_written": {
-     "fall": [
-      245,
-      330,
-      600,
-      590
-     ],
-     "ppe": [
-      486,
-      657,
-      523,
-      733
-     ]
-    },
-    "box_drawn": {
-     "fall": [
-      0.2042,
-      0.3667,
-      0.5,
-      0.6556
-     ],
-     "ppe": [
-      0.405,
-      0.73,
-      0.4358,
-      0.8144
-     ]
-    },
-    "fits_pixel_rule": {
-     "fall": true,
-     "ppe": true
-    },
-    "fits_grid_reading": {
-     "fall": true,
-     "ppe": true
-    }
+    "evidence": {},
+    "box_as_written": {},
+    "box_drawn": {},
+    "fits_pixel_rule": {},
+    "fits_grid_reading": {}
    },
    "outcome": {
     "grove_correct": true,
@@ -483,207 +176,201 @@
    }
   },
   {
-   "id": "0007719",
+   "id": "200",
    "role": "success",
    "failure_type": null,
-   "draw_reason": "quota: GROVE reports Fall",
+   "draw_reason": "chosen by the authors from the generated development images where GROVE is right",
    "teaser": false,
    "files": {
-    "full_webp": "gallery/final_0007719.webp",
-    "full_jpg": "gallery/final_0007719.jpg",
-    "thumb_webp": "gallery/final_0007719_thumb.webp",
-    "thumb_jpg": "gallery/final_0007719_thumb.jpg"
-   },
-   "width": 1200,
-   "height": 900,
-   "thumb_width": 480,
-   "thumb_height": 360,
-   "original_width": 1200,
-   "original_height": 900,
-   "illumination": "normal lighting",
-   "camera_distance": "long distance",
-   "size_band": "below 1%",
-   "caption": "The image shows a construction site with a large concrete circular structure, surrounded by scaffolding. Atop the structure, at least five workers are engaged in construction activities, wearing orange hard hats and safety vests. A crane with a red boom is visible to the right, with a worker at its base.",
-   "label_reason": {
-    "fall": "The group of workers on top of the scaffolding do not have safety harnesses.",
-    "ppe": null
-   },
-   "labels": {
-    "fall": true,
-    "ppe": false
-   },
-   "label_boxes": {
-    "fall": [
-     [
-      0.3,
-      0.27,
-      0.33,
-      0.32
-     ],
-     [
-      0.33,
-      0.28,
-      0.37,
-      0.32
-     ],
-     [
-      0.42,
-      0.26,
-      0.44,
-      0.32
-     ],
-     [
-      0.44,
-      0.3,
-      0.47,
-      0.35
-     ],
-     [
-      0.62,
-      0.3,
-      0.64,
-      0.36
-     ]
-    ],
-    "ppe": []
-   },
-   "grove": {
-    "scores": {
-     "fall": 0.9506,
-     "ppe": 0.7314
-    },
-    "decisions": {
-     "fall": true,
-     "ppe": false
-    },
-    "first_freeze_decisions": {
-     "fall": true,
-     "ppe": true
-    },
-    "boxes": {
-     "fall": [
-      [
-       0.2995,
-       0.2646,
-       0.3276,
-       0.3174
-      ]
-     ]
-    },
-    "phrase": {
-     "fall": "worker on elevated edge"
-    },
-    "box_source": {
-     "fall": "GroundingDINO"
-    },
-    "top_iou": {
-     "fall": 0.7795
-    },
-    "probs": {
-     "Fall_Hazard": 0.9703,
-     "f_fall_edge": 0.9446,
-     "f_fall_opening": 0.8453,
-     "ok_fall_protected": 0.0204,
-     "Electrocution_Hazard": 0.4327,
-     "f_elec_wire": 0.3294,
-     "f_elec_lines": 0.781,
-     "ok_elec_testing": 0.0443,
-     "PPE_Violation": 0.6412,
-     "f_worker": 0.9973,
-     "f_ppe_nohat": 0.5874,
-     "f_ppe_novest": 0.8238,
-     "f_ppe_noeye_glove": 0.0755,
-     "Housekeeping_Storage": 0.9932,
-     "f_house_trip": 0.9433,
-     "f_house_debris": 0.9952
-    }
-   },
-   "main_question": {
-    "scores": {
-     "fall": 0.9703,
-     "ppe": 0.6405
-    },
-    "decisions": {
-     "fall": true,
-     "ppe": false
-    }
-   },
-   "gemma": {
-    "decisions": {
-     "fall": true,
-     "ppe": true
-    },
-    "evidence": {
-     "fall": "workers on elevated formwork without guardrails",
-     "ppe": "workers missing hard hats and high-visibility vests"
-    },
-    "box_as_written": {
-     "fall": [
-      261,
-      261,
-      653,
-      685
-     ],
-     "ppe": [
-      256,
-      299,
-      313,
-      367
-     ]
-    },
-    "box_drawn": {
-     "fall": [
-      0.2175,
-      0.29,
-      0.5442,
-      0.7611
-     ],
-     "ppe": [
-      0.2133,
-      0.3322,
-      0.2608,
-      0.4078
-     ]
-    },
-    "fits_pixel_rule": {
-     "fall": true,
-     "ppe": true
-    },
-    "fits_grid_reading": {
-     "fall": true,
-     "ppe": true
-    }
-   },
-   "outcome": {
-    "grove_correct": true,
-    "gemma_wrong": true,
-    "disagree": true
-   }
-  },
-  {
-   "id": "0004862",
-   "role": "success",
-   "failure_type": null,
-   "draw_reason": "quota: GROVE reports Fall",
-   "teaser": false,
-   "files": {
-    "full_webp": "gallery/final_0004862.webp",
-    "full_jpg": "gallery/final_0004862.jpg",
-    "thumb_webp": "gallery/final_0004862_thumb.webp",
-    "thumb_jpg": "gallery/final_0004862_thumb.jpg"
+    "full_webp": "gallery/dev_200.webp",
+    "full_jpg": "gallery/dev_200.jpg",
+    "thumb_webp": "gallery/dev_200_thumb.webp",
+    "thumb_jpg": "gallery/dev_200_thumb.jpg"
    },
    "width": 1600,
-   "height": 1200,
+   "height": 1600,
    "thumb_width": 480,
-   "thumb_height": 360,
-   "original_width": 2560,
-   "original_height": 1920,
-   "illumination": "normal lighting",
-   "camera_distance": "mid distance",
-   "size_band": "1% to 10%",
-   "caption": "The image shows a construction site with a deep excavation area with a concrete retaining wall surrounded by extensive scaffolding. Starting from the left, there are four workers wearing hard hats squatting on the scaffolding. Several stacks of metal plates are visible on the scaffolding.",
+   "thumb_height": 480,
+   "original_width": 2048,
+   "original_height": 2048,
+   "illumination": "generated with Google Gemini",
+   "camera_distance": "development image",
+   "size_band": null,
+   "caption": null,
    "label_reason": {
-    "fall": "Workers on the scaffold on the left are not wearing safety harnesses.",
+    "fall": null,
+    "ppe": null
+   },
+   "labels": {
+    "fall": true,
+    "ppe": true
+   },
+   "label_boxes": {
+    "fall": [
+     [
+      0.353,
+      0.3921,
+      0.7192,
+      0.9406
+     ]
+    ],
+    "ppe": [
+     [
+      0.3599,
+      0.4019,
+      0.6545,
+      0.8836
+     ]
+    ]
+   },
+   "grove": {
+    "scores": {
+     "fall": 0.8872,
+     "ppe": 0.9755
+    },
+    "decisions": {
+     "fall": true,
+     "ppe": true
+    },
+    "first_freeze_decisions": {
+     "fall": true,
+     "ppe": true
+    },
+    "boxes": {
+     "fall": [
+      [
+       0.3754,
+       0.408,
+       0.653,
+       0.8847
+      ]
+     ],
+     "ppe": [
+      [
+       0.3768,
+       0.4098,
+       0.652,
+       0.8847
+      ]
+     ]
+    },
+    "phrase": {
+     "fall": "worker on elevated edge",
+     "ppe": "worker without hard hat"
+    },
+    "box_source": {
+     "fall": "GroundingDINO",
+     "ppe": "GroundingDINO"
+    },
+    "top_iou": {
+     "fall": 0.6588,
+     "ppe": 0.917
+    },
+    "probs": {
+     "Fall_Hazard": 0.9321,
+     "f_fall_edge": 0.9012,
+     "f_fall_opening": 0.5688,
+     "ok_fall_protected": 0.0918,
+     "Electrocution_Hazard": 0.0065,
+     "f_elec_wire": 0.0057,
+     "f_elec_lines": 0.0206,
+     "ok_elec_testing": 0.0604,
+     "PPE_Violation": 0.9656,
+     "f_worker": 0.9993,
+     "f_ppe_nohat": 0.986,
+     "f_ppe_novest": 0.0052,
+     "f_ppe_noeye_glove": 0.0603,
+     "Housekeeping_Storage": 0.1635,
+     "f_house_trip": 0.1713,
+     "f_house_debris": 0.0528
+    }
+   },
+   "main_question": {
+    "scores": {
+     "fall": 0.9345,
+     "ppe": 0.9663
+    },
+    "decisions": {
+     "fall": true,
+     "ppe": true
+    }
+   },
+   "gemma": {
+    "decisions": {
+     "fall": true,
+     "ppe": true
+    },
+    "evidence": {
+     "fall": "worker standing on an elevated edge without guardrails or a harness",
+     "ppe": "worker is not wearing a hard hat"
+    },
+    "box_as_written": {
+     "fall": [
+      388,
+      381,
+      856,
+      591
+     ],
+     "ppe": [
+      402,
+      423,
+      443,
+      491
+     ]
+    },
+    "box_drawn": {
+     "fall": [
+      0.1895,
+      0.186,
+      0.418,
+      0.2886
+     ],
+     "ppe": [
+      0.1963,
+      0.2065,
+      0.2163,
+      0.2397
+     ]
+    },
+    "fits_pixel_rule": {
+     "fall": true,
+     "ppe": true
+    },
+    "fits_grid_reading": {
+     "fall": true,
+     "ppe": true
+    }
+   },
+   "outcome": {
+    "grove_correct": true,
+    "gemma_wrong": false,
+    "disagree": false
+   }
+  },
+  {
+   "id": "196",
+   "role": "success",
+   "failure_type": null,
+   "draw_reason": "chosen by the authors from the generated development images where GROVE is right",
+   "teaser": false,
+   "files": {
+    "full_webp": "gallery/dev_196.webp",
+    "full_jpg": "gallery/dev_196.jpg",
+    "thumb_webp": "gallery/dev_196_thumb.webp",
+    "thumb_jpg": "gallery/dev_196_thumb.jpg"
+   },
+   "width": 1024,
+   "height": 1024,
+   "thumb_width": 480,
+   "thumb_height": 480,
+   "original_width": 1024,
+   "original_height": 1024,
+   "illumination": "generated with Google Gemini",
+   "camera_distance": "development image",
+   "size_band": null,
+   "caption": null,
+   "label_reason": {
+    "fall": null,
     "ppe": null
    },
    "labels": {
@@ -693,30 +380,24 @@
    "label_boxes": {
     "fall": [
      [
-      0.23,
-      0.04,
-      0.33,
-      0.16
+      0.5146,
+      0.3447,
+      0.6151,
+      0.5777
      ],
      [
-      0.19,
-      0.25,
-      0.34,
-      0.4
-     ],
-     [
-      0.34,
-      0.4,
-      0.47,
-      0.57
+      0.5049,
+      0.3447,
+      0.6416,
+      0.6084
      ]
     ],
     "ppe": []
    },
    "grove": {
     "scores": {
-     "fall": 0.9357,
-     "ppe": 0.7128
+     "fall": 0.4206,
+     "ppe": 0.0979
     },
     "decisions": {
      "fall": true,
@@ -724,15 +405,15 @@
     },
     "first_freeze_decisions": {
      "fall": true,
-     "ppe": true
+     "ppe": false
     },
     "boxes": {
      "fall": [
       [
-       0.1855,
-       0.2499,
-       0.3462,
-       0.4094
+       0.5108,
+       0.3385,
+       0.6074,
+       0.58
       ]
      ]
     },
@@ -743,31 +424,31 @@
      "fall": "GroundingDINO"
     },
     "top_iou": {
-     "fall": 0.8778
+     "fall": 0.8604
     },
     "probs": {
-     "Fall_Hazard": 0.9714,
-     "f_fall_edge": 0.9369,
-     "f_fall_opening": 0.2131,
-     "ok_fall_protected": 0.0554,
-     "Electrocution_Hazard": 0.0754,
-     "f_elec_wire": 0.4058,
-     "f_elec_lines": 0.0217,
-     "ok_elec_testing": 0.0523,
-     "PPE_Violation": 0.4667,
-     "f_worker": 0.9994,
-     "f_ppe_nohat": 0.0831,
-     "f_ppe_novest": 0.9595,
-     "f_ppe_noeye_glove": 0.3896,
-     "Housekeeping_Storage": 0.9447,
-     "f_house_trip": 0.7864,
-     "f_house_debris": 0.885
+     "Fall_Hazard": 0.5024,
+     "f_fall_edge": 0.4618,
+     "f_fall_opening": 0.2251,
+     "ok_fall_protected": 0.3642,
+     "Electrocution_Hazard": 0.0493,
+     "f_elec_wire": 0.1196,
+     "f_elec_lines": 0.0205,
+     "ok_elec_testing": 0.0656,
+     "PPE_Violation": 0.0869,
+     "f_worker": 0.999,
+     "f_ppe_nohat": 0.0912,
+     "f_ppe_novest": 0.1091,
+     "f_ppe_noeye_glove": 0.1065,
+     "Housekeeping_Storage": 0.2094,
+     "f_house_trip": 0.1725,
+     "f_house_debris": 0.0605
     }
    },
    "main_question": {
     "scores": {
-     "fall": 0.9714,
-     "ppe": 0.4667
+     "fall": 0.4923,
+     "ppe": 0.0838
     },
     "decisions": {
      "fall": true,
@@ -777,1164 +458,29 @@
    "gemma": {
     "decisions": {
      "fall": true,
-     "ppe": true
+     "ppe": false
     },
     "evidence": {
-     "fall": "workers on elevated scaffolding without guardrails or harnesses",
-     "ppe": "workers missing high-visibility vests"
+     "fall": "worker standing near an open gap in the guardrail on an elevated platform"
     },
     "box_as_written": {
      "fall": [
-      208,
-      231,
-      366,
-      336
-     ],
-     "ppe": [
-      231,
-      208,
-      366,
-      336
-     ]
-    },
-    "box_drawn": {
-     "fall": [
-      0.0813,
-      0.1203,
-      0.143,
-      0.175
-     ],
-     "ppe": [
-      0.0902,
-      0.1083,
-      0.143,
-      0.175
-     ]
-    },
-    "fits_pixel_rule": {
-     "fall": true,
-     "ppe": true
-    },
-    "fits_grid_reading": {
-     "fall": true,
-     "ppe": true
-    }
-   },
-   "outcome": {
-    "grove_correct": true,
-    "gemma_wrong": true,
-    "disagree": true
-   }
-  },
-  {
-   "id": "0007211",
-   "role": "success",
-   "failure_type": null,
-   "draw_reason": "quota: GROVE reports protective equipment",
-   "teaser": false,
-   "files": {
-    "full_webp": "gallery/final_0007211.webp",
-    "full_jpg": "gallery/final_0007211.jpg",
-    "thumb_webp": "gallery/final_0007211_thumb.webp",
-    "thumb_jpg": "gallery/final_0007211_thumb.jpg"
-   },
-   "width": 1280,
-   "height": 960,
-   "thumb_width": 480,
-   "thumb_height": 360,
-   "original_width": 1280,
-   "original_height": 960,
-   "illumination": "normal lighting",
-   "camera_distance": "mid distance",
-   "size_band": "below 1%",
-   "caption": "The image shows a white truck parked with two individuals working at its rear, possibly engaged in unloading or preparing materials. A large, unfinished concrete retaining wall spans the width of the image, with piles of rubble and construction debris scattered in front of it. Along the slope to the left, three individuals are standing at different elevations, each appearing to be observing the site or waiting.",
-   "label_reason": {
-    "fall": null,
-    "ppe": "None of the workers has a hard hat."
-   },
-   "labels": {
-    "fall": false,
-    "ppe": true
-   },
-   "label_boxes": {
-    "fall": [],
-    "ppe": [
-     [
-      0.0,
-      0.24,
-      0.02,
-      0.31
-     ],
-     [
-      0.05,
-      0.28,
-      0.07,
-      0.34
-     ],
-     [
-      0.1,
-      0.47,
-      0.13,
-      0.55
-     ],
-     [
-      0.6,
-      0.67,
-      0.66,
-      0.81
-     ]
-    ]
-   },
-   "grove": {
-    "scores": {
-     "fall": 0.3207,
-     "ppe": 0.978
-    },
-    "decisions": {
-     "fall": false,
-     "ppe": true
-    },
-    "first_freeze_decisions": {
-     "fall": true,
-     "ppe": true
-    },
-    "boxes": {
-     "ppe": [
-      [
-       0.0962,
-       0.4648,
-       0.129,
-       0.5524
-      ]
-     ]
-    },
-    "phrase": {
-     "ppe": "worker without safety vest"
-    },
-    "box_source": {
-     "ppe": "GroundingDINO"
-    },
-    "top_iou": {
-     "ppe": 0.7846
-    },
-    "probs": {
-     "Fall_Hazard": 0.2622,
-     "f_fall_edge": 0.4247,
-     "f_fall_opening": 0.3468,
-     "ok_fall_protected": 0.1896,
-     "Electrocution_Hazard": 0.3791,
-     "f_elec_wire": 0.8352,
-     "f_elec_lines": 0.0387,
-     "ok_elec_testing": 0.0718,
-     "PPE_Violation": 0.9719,
-     "f_worker": 0.9987,
-     "f_ppe_nohat": 0.979,
-     "f_ppe_novest": 0.9855,
-     "f_ppe_noeye_glove": 0.1046,
-     "Housekeeping_Storage": 0.8155,
-     "f_house_trip": 0.7076,
-     "f_house_debris": 0.8413
-    }
-   },
-   "main_question": {
-    "scores": {
-     "fall": 0.2622,
-     "ppe": 0.9722
-    },
-    "decisions": {
-     "fall": false,
-     "ppe": true
-    }
-   },
-   "gemma": {
-    "decisions": {
-     "fall": true,
-     "ppe": true
-    },
-    "evidence": {
-     "fall": "worker standing on an unguarded elevated edge of a retaining wall",
-     "ppe": "workers are not wearing hard hats or high-visibility vests"
-    },
-    "box_as_written": {
-     "fall": [
-      276,
-      60,
-      337,
-      75
-     ],
-     "ppe": [
-      667,
-      602,
-      808,
-      655
-     ]
-    },
-    "box_drawn": {
-     "fall": [
-      0.2156,
-      0.0625,
-      0.2633,
-      0.0781
-     ],
-     "ppe": [
-      0.5211,
-      0.6271,
-      0.6312,
-      0.6823
-     ]
-    },
-    "fits_pixel_rule": {
-     "fall": true,
-     "ppe": true
-    },
-    "fits_grid_reading": {
-     "fall": true,
-     "ppe": true
-    }
-   },
-   "outcome": {
-    "grove_correct": true,
-    "gemma_wrong": true,
-    "disagree": true
-   }
-  },
-  {
-   "id": "0012079",
-   "role": "success",
-   "failure_type": null,
-   "draw_reason": "quota: GROVE reports protective equipment",
-   "teaser": false,
-   "files": {
-    "full_webp": "gallery/final_0012079.webp",
-    "full_jpg": "gallery/final_0012079.jpg",
-    "thumb_webp": "gallery/final_0012079_thumb.webp",
-    "thumb_jpg": "gallery/final_0012079_thumb.jpg"
-   },
-   "width": 1280,
-   "height": 960,
-   "thumb_width": 480,
-   "thumb_height": 360,
-   "original_width": 1280,
-   "original_height": 960,
-   "illumination": "normal lighting",
-   "camera_distance": "mid distance",
-   "size_band": "1% to 10%",
-   "caption": "The image shows a construction site with a large pile of rocks contained within a wooden and metal formwork structure, likely for concrete pouring. Five individuals are present, with one inside the formwork arranging or inspecting the rocks, while the others are standing outside, engaged in a discussion or overseeing the work.",
-   "label_reason": {
-    "fall": null,
-    "ppe": "The workers in the middle are not wearing hard hats."
-   },
-   "labels": {
-    "fall": false,
-    "ppe": true
-   },
-   "label_boxes": {
-    "fall": [],
-    "ppe": [
-     [
-      0.47,
-      0.38,
-      0.52,
-      0.48
-     ],
-     [
-      0.62,
-      0.31,
-      0.68,
-      0.5
-     ],
-     [
-      0.69,
-      0.32,
-      0.74,
-      0.49
-     ],
-     [
-      0.62,
-      0.28,
-      0.68,
-      0.34
-     ]
-    ]
-   },
-   "grove": {
-    "scores": {
-     "fall": 0.8467,
-     "ppe": 0.989
-    },
-    "decisions": {
-     "fall": false,
-     "ppe": true
-    },
-    "first_freeze_decisions": {
-     "fall": true,
-     "ppe": true
-    },
-    "boxes": {
-     "ppe": [
-      [
-       0.4699,
-       0.3822,
-       0.5226,
-       0.477
-      ],
-      [
-       0.6849,
-       0.315,
-       0.7432,
-       0.4889
-      ]
-     ]
-    },
-    "phrase": {
-     "ppe": "worker without safety vest"
-    },
-    "box_source": {
-     "ppe": "GroundingDINO"
-    },
-    "top_iou": {
-     "ppe": 0.9013
-    },
-    "probs": {
-     "Fall_Hazard": 0.8376,
-     "f_fall_edge": 0.7157,
-     "f_fall_opening": 0.8846,
-     "ok_fall_protected": 0.0479,
-     "Electrocution_Hazard": 0.0417,
-     "f_elec_wire": 0.1368,
-     "f_elec_lines": 0.0096,
-     "ok_elec_testing": 0.0363,
-     "PPE_Violation": 0.9898,
-     "f_worker": 0.9989,
-     "f_ppe_nohat": 0.9873,
-     "f_ppe_novest": 0.9892,
-     "f_ppe_noeye_glove": 0.167,
-     "Housekeeping_Storage": 0.8116,
-     "f_house_trip": 0.5671,
-     "f_house_debris": 0.8199
-    }
-   },
-   "main_question": {
-    "scores": {
-     "fall": 0.8376,
-     "ppe": 0.9898
-    },
-    "decisions": {
-     "fall": false,
-     "ppe": true
-    }
-   },
-   "gemma": {
-    "decisions": {
-     "fall": true,
-     "ppe": true
-    },
-    "evidence": {
-     "fall": "workers standing on an elevated edge without guardrails",
-     "ppe": "workers not wearing hard hats or high-visibility vests"
-    },
-    "box_as_written": {
-     "fall": [
-      315,
-      622,
-      483,
-      676
-     ],
-     "ppe": [
-      315,
-      622,
-      483,
-      676
-     ]
-    },
-    "box_drawn": {
-     "fall": [
-      0.2461,
-      0.6479,
-      0.3773,
-      0.7042
-     ],
-     "ppe": [
-      0.2461,
-      0.6479,
-      0.3773,
-      0.7042
-     ]
-    },
-    "fits_pixel_rule": {
-     "fall": true,
-     "ppe": true
-    },
-    "fits_grid_reading": {
-     "fall": true,
-     "ppe": true
-    }
-   },
-   "outcome": {
-    "grove_correct": true,
-    "gemma_wrong": true,
-    "disagree": true
-   }
-  },
-  {
-   "id": "0012170",
-   "role": "success",
-   "failure_type": null,
-   "draw_reason": "quota: GROVE reports protective equipment",
-   "teaser": false,
-   "files": {
-    "full_webp": "gallery/final_0012170.webp",
-    "full_jpg": "gallery/final_0012170.jpg",
-    "thumb_webp": "gallery/final_0012170_thumb.webp",
-    "thumb_jpg": "gallery/final_0012170_thumb.jpg"
-   },
-   "width": 1280,
-   "height": 960,
-   "thumb_width": 480,
-   "thumb_height": 360,
-   "original_width": 1280,
-   "original_height": 960,
-   "illumination": "normal lighting",
-   "camera_distance": "mid distance",
-   "size_band": "below 1%",
-   "caption": "The image shows a construction site with several workers on and around a concrete structure with exposed rebar. A yellow dump truck is parked on a dirt ramp to the right, with a person standing beside it. A stationary yellow crane is positioned to the left of the concrete structure.",
-   "label_reason": {
-    "fall": null,
-    "ppe": "The worker in white on the right is not wearing a hard hat."
-   },
-   "labels": {
-    "fall": false,
-    "ppe": true
-   },
-   "label_boxes": {
-    "fall": [],
-    "ppe": [
-     [
-      0.86,
-      0.47,
-      0.88,
-      0.55
-     ]
-    ]
-   },
-   "grove": {
-    "scores": {
-     "fall": 0.6156,
-     "ppe": 0.8376
-    },
-    "decisions": {
-     "fall": false,
-     "ppe": true
-    },
-    "first_freeze_decisions": {
-     "fall": true,
-     "ppe": true
-    },
-    "boxes": {
-     "ppe": [
-      [
-       0.8556,
-       0.4682,
-       0.8825,
-       0.5463
-      ]
-     ]
-    },
-    "phrase": {
-     "ppe": "worker without safety vest"
-    },
-    "box_source": {
-     "ppe": "GroundingDINO"
-    },
-    "top_iou": {
-     "ppe": 0.703
-    },
-    "probs": {
-     "Fall_Hazard": 0.6013,
-     "f_fall_edge": 0.657,
-     "f_fall_opening": 0.732,
-     "ok_fall_protected": 0.2186,
-     "Electrocution_Hazard": 0.0438,
-     "f_elec_wire": 0.1136,
-     "f_elec_lines": 0.0756,
-     "ok_elec_testing": 0.0559,
-     "PPE_Violation": 0.7697,
-     "f_worker": 0.9939,
-     "f_ppe_nohat": 0.7961,
-     "f_ppe_novest": 0.911,
-     "f_ppe_noeye_glove": 0.0886,
-     "Housekeeping_Storage": 0.6439,
-     "f_house_trip": 0.3422,
-     "f_house_debris": 0.8452
-    }
-   },
-   "main_question": {
-    "scores": {
-     "fall": 0.6013,
-     "ppe": 0.7708
-    },
-    "decisions": {
-     "fall": false,
-     "ppe": true
-    }
-   },
-   "gemma": {
-    "decisions": {
-     "fall": true,
-     "ppe": true
-    },
-    "evidence": {
-     "fall": "worker standing on an elevated concrete edge without guardrails or harness",
-     "ppe": "worker standing on the road is not wearing a hard hat or high-visibility vest"
-    },
-    "box_as_written": {
-     "fall": [
-      473,
-      478,
-      542,
-      503
-     ],
-     "ppe": [
-      471,
-      854,
-      546,
-      876
-     ]
-    },
-    "box_drawn": {
-     "fall": [
-      0.3695,
-      0.4979,
-      0.4234,
-      0.524
-     ],
-     "ppe": [
-      0.368,
-      0.8896,
-      0.4266,
-      0.9125
-     ]
-    },
-    "fits_pixel_rule": {
-     "fall": true,
-     "ppe": true
-    },
-    "fits_grid_reading": {
-     "fall": true,
-     "ppe": true
-    }
-   },
-   "outcome": {
-    "grove_correct": true,
-    "gemma_wrong": true,
-    "disagree": true
-   }
-  },
-  {
-   "id": "0009992",
-   "role": "success",
-   "failure_type": null,
-   "draw_reason": "quota: GROVE reports protective equipment",
-   "teaser": false,
-   "files": {
-    "full_webp": "gallery/final_0009992.webp",
-    "full_jpg": "gallery/final_0009992.jpg",
-    "thumb_webp": "gallery/final_0009992_thumb.webp",
-    "thumb_jpg": "gallery/final_0009992_thumb.jpg"
-   },
-   "width": 1200,
-   "height": 900,
-   "thumb_width": 480,
-   "thumb_height": 360,
-   "original_width": 1200,
-   "original_height": 900,
-   "illumination": "normal lighting",
-   "camera_distance": "mid distance",
-   "size_band": "1% to 10%",
-   "caption": "The image shows a construction site where bricklaying work is in progress. There are four workers visible; one is standing and laying bricks, two are crouched and working on the brick structure, and another is observing the work. A pile of bricks is located near the worker who is standing.",
-   "label_reason": {
-    "fall": null,
-    "ppe": "Four workers in the middle are not wearing hard hats."
-   },
-   "labels": {
-    "fall": false,
-    "ppe": true
-   },
-   "label_boxes": {
-    "fall": [],
-    "ppe": [
-     [
-      0.3,
-      0.36,
-      0.38,
-      0.65
-     ],
-     [
-      0.58,
-      0.28,
-      0.62,
-      0.42
-     ],
-     [
-      0.87,
-      0.27,
-      0.94,
-      0.5
-     ]
-    ]
-   },
-   "grove": {
-    "scores": {
-     "fall": 0.8193,
-     "ppe": 0.9896
-    },
-    "decisions": {
-     "fall": false,
-     "ppe": true
-    },
-    "first_freeze_decisions": {
-     "fall": true,
-     "ppe": true
-    },
-    "boxes": {
-     "ppe": [
-      [
-       0.3029,
-       0.3675,
-       0.3798,
-       0.6503
-      ]
-     ]
-    },
-    "phrase": {
-     "ppe": "worker without hard hat"
-    },
-    "box_source": {
-     "ppe": "GroundingDINO"
-    },
-    "top_iou": {
-     "ppe": 0.9352
-    },
-    "probs": {
-     "Fall_Hazard": 0.7656,
-     "f_fall_edge": 0.138,
-     "f_fall_opening": 0.9231,
-     "ok_fall_protected": 0.0847,
-     "Electrocution_Hazard": 0.0321,
-     "f_elec_wire": 0.0487,
-     "f_elec_lines": 0.0569,
-     "ok_elec_testing": 0.0422,
-     "PPE_Violation": 0.9897,
-     "f_worker": 0.9991,
-     "f_ppe_nohat": 0.9903,
-     "f_ppe_novest": 0.9874,
-     "f_ppe_noeye_glove": 0.133,
-     "Housekeeping_Storage": 0.981,
-     "f_house_trip": 0.9482,
-     "f_house_debris": 0.9638
-    }
-   },
-   "main_question": {
-    "scores": {
-     "fall": 0.7656,
-     "ppe": 0.9899
-    },
-    "decisions": {
-     "fall": false,
-     "ppe": true
-    }
-   },
-   "gemma": {
-    "decisions": {
-     "fall": true,
-     "ppe": true
-    },
-    "evidence": {
-     "fall": "worker standing on the edge of an unguarded excavation",
-     "ppe": "workers are not wearing hard hats or high-visibility vests"
-    },
-    "box_as_written": {
-     "fall": [
-      338,
-      305,
-      587,
-      371
-     ],
-     "ppe": [
-      338,
-      305,
-      587,
-      371
-     ]
-    },
-    "box_drawn": {
-     "fall": [
-      0.2817,
-      0.3389,
-      0.4892,
-      0.4122
-     ],
-     "ppe": [
-      0.2817,
-      0.3389,
-      0.4892,
-      0.4122
-     ]
-    },
-    "fits_pixel_rule": {
-     "fall": true,
-     "ppe": true
-    },
-    "fits_grid_reading": {
-     "fall": true,
-     "ppe": true
-    }
-   },
-   "outcome": {
-    "grove_correct": true,
-    "gemma_wrong": true,
-    "disagree": true
-   }
-  },
-  {
-   "id": "0012494",
-   "role": "success",
-   "failure_type": null,
-   "draw_reason": "quota: night",
-   "teaser": false,
-   "files": {
-    "full_webp": "gallery/final_0012494.webp",
-    "full_jpg": "gallery/final_0012494.jpg",
-    "thumb_webp": "gallery/final_0012494_thumb.webp",
-    "thumb_jpg": "gallery/final_0012494_thumb.jpg"
-   },
-   "width": 1200,
-   "height": 900,
-   "thumb_width": 480,
-   "thumb_height": 360,
-   "original_width": 1200,
-   "original_height": 900,
-   "illumination": "night",
-   "camera_distance": "mid distance",
-   "size_band": "1% to 10%",
-   "caption": "Two workers wearing yellow hard hats and safety vests are leveling freshly poured concrete with long-handled tools. They are standing on a gravel surface that borders the concrete area, and behind them is an earthen wall. Metal beams are visible on the ground, forming a boundary for the concrete work area.",
-   "label_reason": {
-    "fall": null,
-    "ppe": "The workers are not wearing high-visibility vests when working at night."
-   },
-   "labels": {
-    "fall": false,
-    "ppe": true
-   },
-   "label_boxes": {
-    "fall": [],
-    "ppe": [
-     [
-      0.08,
-      0.29,
-      0.29,
-      0.58
-     ],
-     [
-      0.73,
-      0.25,
-      0.9,
-      0.54
-     ]
-    ]
-   },
-   "grove": {
-    "scores": {
-     "fall": 0.7289,
-     "ppe": 0.8775
-    },
-    "decisions": {
-     "fall": false,
-     "ppe": true
-    },
-    "first_freeze_decisions": {
-     "fall": true,
-     "ppe": true
-    },
-    "boxes": {
-     "ppe": [
-      [
-       0.0835,
-       0.2878,
-       0.2884,
-       0.5714
-      ]
-     ]
-    },
-    "phrase": {
-     "ppe": "worker without safety vest"
-    },
-    "box_source": {
-     "ppe": "GroundingDINO"
-    },
-    "top_iou": {
-     "ppe": 0.9396
-    },
-    "probs": {
-     "Fall_Hazard": 0.665,
-     "f_fall_edge": 0.2684,
-     "f_fall_opening": 0.8571,
-     "ok_fall_protected": 0.1206,
-     "Electrocution_Hazard": 0.0436,
-     "f_elec_wire": 0.1454,
-     "f_elec_lines": 0.0068,
-     "ok_elec_testing": 0.0144,
-     "PPE_Violation": 0.7665,
-     "f_worker": 0.9995,
-     "f_ppe_nohat": 0.0025,
-     "f_ppe_novest": 0.989,
-     "f_ppe_noeye_glove": 0.1842,
-     "Housekeeping_Storage": 0.7812,
-     "f_house_trip": 0.6108,
-     "f_house_debris": 0.2427
-    }
-   },
-   "main_question": {
-    "scores": {
-     "fall": 0.665,
-     "ppe": 0.7723
-    },
-    "decisions": {
-     "fall": false,
-     "ppe": true
-    }
-   },
-   "gemma": {
-    "decisions": {
-     "fall": true,
-     "ppe": true
-    },
-    "evidence": {
-     "fall": "workers are in a deep trench without shoring or slope protection",
-     "ppe": "workers are not wearing high-visibility vests"
-    },
-    "box_as_written": {
-     "fall": [
-      0,
-      0,
-      1000,
-      1000
-     ],
-     "ppe": [
-      275,
-      86,
-      521,
-      283
-     ]
-    },
-    "box_drawn": {
-     "fall": [
-      0.0,
-      0.0,
-      0.8333,
-      1.1111
-     ],
-     "ppe": [
-      0.2292,
-      0.0956,
-      0.4342,
-      0.3144
-     ]
-    },
-    "fits_pixel_rule": {
-     "fall": false,
-     "ppe": true
-    },
-    "fits_grid_reading": {
-     "fall": true,
-     "ppe": true
-    }
-   },
-   "outcome": {
-    "grove_correct": true,
-    "gemma_wrong": true,
-    "disagree": true
-   }
-  },
-  {
-   "id": "0006629",
-   "role": "success",
-   "failure_type": null,
-   "draw_reason": "quota: night",
-   "teaser": false,
-   "files": {
-    "full_webp": "gallery/final_0006629.webp",
-    "full_jpg": "gallery/final_0006629.jpg",
-    "thumb_webp": "gallery/final_0006629_thumb.webp",
-    "thumb_jpg": "gallery/final_0006629_thumb.jpg"
-   },
-   "width": 1280,
-   "height": 960,
-   "thumb_width": 480,
-   "thumb_height": 360,
-   "original_width": 1280,
-   "original_height": 960,
-   "illumination": "night",
-   "camera_distance": "mid distance",
-   "size_band": "1% to 10%",
-   "caption": "The image shows five individuals working within a construction area that appears to be a deep excavation or foundation pit. Two additional workers are standing on a high platform on the left. The area is filled with large rocks and debris, and there are wooden supports and beams visible.",
-   "label_reason": {
-    "fall": null,
-    "ppe": "The workers in the image do not have hard hats nor high-visibility retroreflective vests when working at night."
-   },
-   "labels": {
-    "fall": false,
-    "ppe": true
-   },
-   "label_boxes": {
-    "fall": [],
-    "ppe": [
-     [
-      0.38,
-      0.34,
-      0.46,
-      0.46
-     ],
-     [
-      0.55,
-      0.29,
-      0.63,
-      0.55
-     ],
-     [
-      0.65,
-      0.27,
-      0.71,
-      0.5
-     ],
-     [
-      0.72,
-      0.24,
-      0.8,
-      0.47
-     ]
-    ]
-   },
-   "grove": {
-    "scores": {
-     "fall": 0.7358,
-     "ppe": 0.9896
-    },
-    "decisions": {
-     "fall": false,
-     "ppe": true
-    },
-    "first_freeze_decisions": {
-     "fall": true,
-     "ppe": true
-    },
-    "boxes": {
-     "ppe": [
-      [
-       0.3817,
-       0.3347,
-       0.4589,
-       0.4632
-      ]
-     ]
-    },
-    "phrase": {
-     "ppe": "worker without hard hat"
-    },
-    "box_source": {
-     "ppe": "GroundingDINO"
-    },
-    "top_iou": {
-     "ppe": 0.9036
-    },
-    "probs": {
-     "Fall_Hazard": 0.7085,
-     "f_fall_edge": 0.7834,
-     "f_fall_opening": 0.523,
-     "ok_fall_protected": 0.0388,
-     "Electrocution_Hazard": 0.578,
-     "f_elec_wire": 0.7576,
-     "f_elec_lines": 0.0606,
-     "ok_elec_testing": 0.0148,
-     "PPE_Violation": 0.9909,
-     "f_worker": 0.9991,
-     "f_ppe_nohat": 0.9891,
-     "f_ppe_novest": 0.9841,
-     "f_ppe_noeye_glove": 0.2084,
-     "Housekeeping_Storage": 0.9795,
-     "f_house_trip": 0.9104,
-     "f_house_debris": 0.9768
-    }
-   },
-   "main_question": {
-    "scores": {
-     "fall": 0.7085,
-     "ppe": 0.9909
-    },
-    "decisions": {
-     "fall": false,
-     "ppe": true
-    }
-   },
-   "gemma": {
-    "decisions": {
-     "fall": true,
-     "ppe": true
-    },
-    "evidence": {
-     "fall": "worker on elevated platform without guardrails",
-     "ppe": "workers not wearing hard hats or high-visibility vests"
-    },
-    "box_as_written": {
-     "fall": [
-      0,
-      0,
-      120,
-      235
-     ],
-     "ppe": [
       391,
-      341,
-      463,
-      451
+      401,
+      578,
+      599
      ]
     },
     "box_drawn": {
      "fall": [
-      0.0,
-      0.0,
-      0.0938,
-      0.2448
-     ],
-     "ppe": [
-      0.3055,
-      0.3552,
-      0.3617,
-      0.4698
+      0.3818,
+      0.3916,
+      0.5645,
+      0.585
      ]
     },
     "fits_pixel_rule": {
-     "fall": true,
-     "ppe": true
-    },
-    "fits_grid_reading": {
-     "fall": true,
-     "ppe": true
-    }
-   },
-   "outcome": {
-    "grove_correct": true,
-    "gemma_wrong": true,
-    "disagree": true
-   }
-  },
-  {
-   "id": "0013117",
-   "role": "success",
-   "failure_type": null,
-   "draw_reason": "quota: short distance",
-   "teaser": false,
-   "files": {
-    "full_webp": "gallery/final_0013117.webp",
-    "full_jpg": "gallery/final_0013117.jpg",
-    "thumb_webp": "gallery/final_0013117_thumb.webp",
-    "thumb_jpg": "gallery/final_0013117_thumb.jpg"
-   },
-   "width": 1200,
-   "height": 900,
-   "thumb_width": 480,
-   "thumb_height": 360,
-   "original_width": 1200,
-   "original_height": 900,
-   "illumination": "normal lighting",
-   "camera_distance": "short distance",
-   "size_band": "no violation",
-   "caption": "The image shows a construction worker in an orange uniform and a yellow hard hat working on a concrete foundation with vertical steel reinforcement bars (rebars) in place. The worker appears to be using a tool to work on the rebars or the concrete.",
-   "label_reason": {
-    "fall": null,
-    "ppe": null
-   },
-   "labels": {
-    "fall": false,
-    "ppe": false
-   },
-   "label_boxes": {
-    "fall": [],
-    "ppe": []
-   },
-   "grove": {
-    "scores": {
-     "fall": 0.5594,
-     "ppe": 0.2512
-    },
-    "decisions": {
-     "fall": false,
-     "ppe": false
-    },
-    "first_freeze_decisions": {
-     "fall": true,
-     "ppe": false
-    },
-    "boxes": {},
-    "phrase": {},
-    "box_source": {},
-    "top_iou": {},
-    "probs": {
-     "Fall_Hazard": 0.5942,
-     "f_fall_edge": 0.5688,
-     "f_fall_opening": 0.4665,
-     "ok_fall_protected": 0.1089,
-     "Electrocution_Hazard": 0.0784,
-     "f_elec_wire": 0.2104,
-     "f_elec_lines": 0.0158,
-     "ok_elec_testing": 0.1015,
-     "PPE_Violation": 0.1172,
-     "f_worker": 0.9993,
-     "f_ppe_nohat": 0.004,
-     "f_ppe_novest": 0.3856,
-     "f_ppe_noeye_glove": 0.1099,
-     "Housekeeping_Storage": 0.731,
-     "f_house_trip": 0.6342,
-     "f_house_debris": 0.33
-    }
-   },
-   "main_question": {
-    "scores": {
-     "fall": 0.5942,
-     "ppe": 0.1146
-    },
-    "decisions": {
-     "fall": false,
-     "ppe": false
-    }
-   },
-   "gemma": {
-    "decisions": {
-     "fall": true,
-     "ppe": false
-    },
-    "evidence": {
-     "fall": "worker is standing in an open excavation without perimeter guardrails",
-     "ppe": "worker is wearing a hard hat and high-visibility clothing"
-    },
-    "box_as_written": {
-     "fall": [
-      258,
-      380,
-      994,
-      998
-     ]
-    },
-    "box_drawn": {
-     "fall": [
-      0.215,
-      0.4222,
-      0.8283,
-      1.1089
-     ]
-    },
-    "fits_pixel_rule": {
-     "fall": false
+     "fall": true
     },
     "fits_grid_reading": {
      "fall": true
@@ -1942,203 +488,142 @@
    },
    "outcome": {
     "grove_correct": true,
-    "gemma_wrong": true,
-    "disagree": true
-   }
-  },
-  {
-   "id": "0005546",
-   "role": "success",
-   "failure_type": null,
-   "draw_reason": "fill in draw order",
-   "teaser": false,
-   "files": {
-    "full_webp": "gallery/final_0005546.webp",
-    "full_jpg": "gallery/final_0005546.jpg",
-    "thumb_webp": "gallery/final_0005546_thumb.webp",
-    "thumb_jpg": "gallery/final_0005546_thumb.jpg"
-   },
-   "width": 1200,
-   "height": 900,
-   "thumb_width": 480,
-   "thumb_height": 360,
-   "original_width": 1200,
-   "original_height": 900,
-   "illumination": "normal lighting",
-   "camera_distance": "mid distance",
-   "size_band": "no violation",
-   "caption": "In the foreground, there is a large pile of earth with two yellow excavators at work. In the foreground, there are two stockpiles of rebars near the edge of an excavation. In the background, power lines and a brick building are visible.",
-   "label_reason": {
-    "fall": null,
-    "ppe": null
-   },
-   "labels": {
-    "fall": false,
-    "ppe": false
-   },
-   "label_boxes": {
-    "fall": [],
-    "ppe": []
-   },
-   "grove": {
-    "scores": {
-     "fall": 0.5364,
-     "ppe": 0.0128
-    },
-    "decisions": {
-     "fall": false,
-     "ppe": false
-    },
-    "first_freeze_decisions": {
-     "fall": true,
-     "ppe": false
-    },
-    "boxes": {},
-    "phrase": {},
-    "box_source": {},
-    "top_iou": {},
-    "probs": {
-     "Fall_Hazard": 0.1253,
-     "f_fall_edge": 0.1196,
-     "f_fall_opening": 0.9676,
-     "ok_fall_protected": 0.0526,
-     "Electrocution_Hazard": 0.3596,
-     "f_elec_wire": 0.0867,
-     "f_elec_lines": 0.2741,
-     "ok_elec_testing": 0.0103,
-     "PPE_Violation": 0.0235,
-     "f_worker": 0.0592,
-     "f_ppe_nohat": 0.0251,
-     "f_ppe_novest": 0.0358,
-     "f_ppe_noeye_glove": 0.0047,
-     "Housekeeping_Storage": 0.7147,
-     "f_house_trip": 0.5785,
-     "f_house_debris": 0.5175
-    }
-   },
-   "main_question": {
-    "scores": {
-     "fall": 0.1253,
-     "ppe": 0.0237
-    },
-    "decisions": {
-     "fall": false,
-     "ppe": false
-    }
-   },
-   "gemma": {
-    "decisions": {
-     "fall": false,
-     "ppe": false
-    },
-    "evidence": {
-     "fall": "no workers are visible near unguarded edges or openings",
-     "ppe": "no workers are visible in the image to assess PPE"
-    },
-    "box_as_written": {},
-    "box_drawn": {},
-    "fits_pixel_rule": {},
-    "fits_grid_reading": {}
-   },
-   "outcome": {
-    "grove_correct": true,
     "gemma_wrong": false,
     "disagree": false
    }
   },
   {
-   "id": "0005746",
+   "id": "183",
    "role": "success",
    "failure_type": null,
-   "draw_reason": "fill in draw order",
+   "draw_reason": "chosen by the authors from the generated development images where GROVE is right",
    "teaser": false,
    "files": {
-    "full_webp": "gallery/final_0005746.webp",
-    "full_jpg": "gallery/final_0005746.jpg",
-    "thumb_webp": "gallery/final_0005746_thumb.webp",
-    "thumb_jpg": "gallery/final_0005746_thumb.jpg"
+    "full_webp": "gallery/dev_183.webp",
+    "full_jpg": "gallery/dev_183.jpg",
+    "thumb_webp": "gallery/dev_183_thumb.webp",
+    "thumb_jpg": "gallery/dev_183_thumb.jpg"
    },
-   "width": 1000,
-   "height": 1000,
+   "width": 1024,
+   "height": 1024,
    "thumb_width": 480,
    "thumb_height": 480,
-   "original_width": 1000,
-   "original_height": 1000,
-   "illumination": "normal lighting",
-   "camera_distance": "long distance",
-   "size_band": "no violation",
-   "caption": "The image shows a construction site with several vertical scaffolding covered with green safety netting. Multiple stacks of construction materials, including wood planks and metal tubes, are organized throughout the site. There are at least five workers visible. The background features several stacks of white construction material piled on the other side of a road. There is a white SUV on parked on the road.",
+   "original_width": 1024,
+   "original_height": 1024,
+   "illumination": "generated with Google Gemini",
+   "camera_distance": "development image",
+   "size_band": null,
+   "caption": null,
    "label_reason": {
     "fall": null,
     "ppe": null
    },
    "labels": {
     "fall": false,
-    "ppe": false
+    "ppe": true
    },
    "label_boxes": {
     "fall": [],
-    "ppe": []
+    "ppe": [
+     [
+      0.2939,
+      0.2246,
+      0.6748,
+      0.8189
+     ]
+    ]
    },
    "grove": {
     "scores": {
-     "fall": 0.2629,
-     "ppe": 0.4558
+     "fall": 0.0024,
+     "ppe": 0.9281
     },
     "decisions": {
      "fall": false,
-     "ppe": false
+     "ppe": true
     },
     "first_freeze_decisions": {
-     "fall": true,
-     "ppe": false
+     "fall": false,
+     "ppe": true
     },
-    "boxes": {},
-    "phrase": {},
-    "box_source": {},
-    "top_iou": {},
+    "boxes": {
+     "ppe": [
+      [
+       0.2928,
+       0.2346,
+       0.6008,
+       0.8095
+      ]
+     ]
+    },
+    "phrase": {
+     "ppe": "worker without safety vest"
+    },
+    "box_source": {
+     "ppe": "GroundingDINO"
+    },
+    "top_iou": {
+     "ppe": 0.7772
+    },
     "probs": {
-     "Fall_Hazard": 0.2709,
-     "f_fall_edge": 0.3062,
-     "f_fall_opening": 0.3445,
-     "ok_fall_protected": 0.4156,
-     "Electrocution_Hazard": 0.0172,
-     "f_elec_wire": 0.0309,
-     "f_elec_lines": 0.0242,
-     "ok_elec_testing": 0.0563,
-     "PPE_Violation": 0.2466,
-     "f_worker": 0.9891,
-     "f_ppe_nohat": 0.1452,
-     "f_ppe_novest": 0.6723,
-     "f_ppe_noeye_glove": 0.0262,
-     "Housekeeping_Storage": 0.9766,
-     "f_house_trip": 0.9074,
-     "f_house_debris": 0.9668
+     "Fall_Hazard": 0.0024,
+     "f_fall_edge": 0.0016,
+     "f_fall_opening": 0.0048,
+     "ok_fall_protected": 0.9631,
+     "Electrocution_Hazard": 0.033,
+     "f_elec_wire": 0.1143,
+     "f_elec_lines": 0.0037,
+     "ok_elec_testing": 0.1803,
+     "PPE_Violation": 0.8683,
+     "f_worker": 0.9996,
+     "f_ppe_nohat": 0.0052,
+     "f_ppe_novest": 0.9881,
+     "f_ppe_noeye_glove": 0.7252,
+     "Housekeeping_Storage": 0.9829,
+     "f_house_trip": 0.9658,
+     "f_house_debris": 0.9251
     }
    },
    "main_question": {
     "scores": {
-     "fall": 0.2709,
-     "ppe": 0.2514
+     "fall": 0.0025,
+     "ppe": 0.8649
     },
     "decisions": {
      "fall": false,
-     "ppe": false
+     "ppe": true
     }
    },
    "gemma": {
     "decisions": {
      "fall": false,
-     "ppe": false
+     "ppe": true
     },
     "evidence": {
-     "fall": "no workers are exposed to unguarded edges or openings",
-     "ppe": "visible workers are wearing hard hats and high-visibility vests"
+     "ppe": "worker is missing eye protection and a high-visibility vest"
     },
-    "box_as_written": {},
-    "box_drawn": {},
-    "fits_pixel_rule": {},
-    "fits_grid_reading": {}
+    "box_as_written": {
+     "ppe": [
+      203,
+      203,
+      785,
+      594
+     ]
+    },
+    "box_drawn": {
+     "ppe": [
+      0.1982,
+      0.1982,
+      0.7666,
+      0.5801
+     ]
+    },
+    "fits_pixel_rule": {
+     "ppe": true
+    },
+    "fits_grid_reading": {
+     "ppe": true
+    }
    },
    "outcome": {
     "grove_correct": true,
@@ -2147,30 +632,30 @@
    }
   },
   {
-   "id": "0008122",
+   "id": "197",
    "role": "success",
    "failure_type": null,
-   "draw_reason": "fill in draw order",
+   "draw_reason": "chosen by the authors from the generated development images where GROVE is right",
    "teaser": false,
    "files": {
-    "full_webp": "gallery/final_0008122.webp",
-    "full_jpg": "gallery/final_0008122.jpg",
-    "thumb_webp": "gallery/final_0008122_thumb.webp",
-    "thumb_jpg": "gallery/final_0008122_thumb.jpg"
+    "full_webp": "gallery/dev_197.webp",
+    "full_jpg": "gallery/dev_197.jpg",
+    "thumb_webp": "gallery/dev_197_thumb.webp",
+    "thumb_jpg": "gallery/dev_197_thumb.jpg"
    },
-   "width": 1200,
-   "height": 900,
+   "width": 1024,
+   "height": 1024,
    "thumb_width": 480,
-   "thumb_height": 360,
-   "original_width": 1200,
-   "original_height": 900,
-   "illumination": "normal lighting",
-   "camera_distance": "mid distance",
-   "size_band": "1% to 10%",
-   "caption": "In the foreground, a pile of grey gravel is on the left, and a person is standing on the right, observing the scene. In the middle, an excavator is positioned on a mound of earth, loading soil into the bed of a dump truck. The background features a steep, excavated hillside with a single tree at the top.",
+   "thumb_height": 480,
+   "original_width": 1024,
+   "original_height": 1024,
+   "illumination": "generated with Google Gemini",
+   "camera_distance": "development image",
+   "size_band": null,
+   "caption": null,
    "label_reason": {
     "fall": null,
-    "ppe": "The worker on the right is not wearing a hard hat."
+    "ppe": null
    },
    "labels": {
     "fall": false,
@@ -2180,68 +665,68 @@
     "fall": [],
     "ppe": [
      [
-      0.92,
-      0.67,
-      0.98,
-      0.86
+      0.2705,
+      0.1113,
+      0.7588,
+      0.9997
      ]
     ]
    },
    "grove": {
     "scores": {
-     "fall": 0.4156,
-     "ppe": 0.9548
+     "fall": 0.0021,
+     "ppe": 0.9384
     },
     "decisions": {
      "fall": false,
      "ppe": true
     },
     "first_freeze_decisions": {
-     "fall": true,
+     "fall": false,
      "ppe": true
     },
     "boxes": {
      "ppe": [
       [
-       0.9194,
-       0.6688,
-       0.9743,
-       0.862
+       0.2652,
+       0.1292,
+       0.7296,
+       0.9987
       ]
      ]
     },
     "phrase": {
-     "ppe": "worker without safety vest"
+     "ppe": "worker using power tool"
     },
     "box_source": {
      "ppe": "GroundingDINO"
     },
     "top_iou": {
-     "ppe": 0.8826
+     "ppe": 0.9106
     },
     "probs": {
-     "Fall_Hazard": 0.1562,
-     "f_fall_edge": 0.1651,
-     "f_fall_opening": 0.7461,
-     "ok_fall_protected": 0.2251,
-     "Electrocution_Hazard": 0.0038,
-     "f_elec_wire": 0.0071,
-     "f_elec_lines": 0.0041,
-     "ok_elec_testing": 0.0063,
-     "PPE_Violation": 0.9401,
-     "f_worker": 0.9946,
-     "f_ppe_nohat": 0.9512,
-     "f_ppe_novest": 0.9747,
-     "f_ppe_noeye_glove": 0.036,
-     "Housekeeping_Storage": 0.6177,
-     "f_house_trip": 0.4717,
-     "f_house_debris": 0.3914
+     "Fall_Hazard": 0.0029,
+     "f_fall_edge": 0.0035,
+     "f_fall_opening": 0.0023,
+     "ok_fall_protected": 0.9512,
+     "Electrocution_Hazard": 0.0582,
+     "f_elec_wire": 0.4184,
+     "f_elec_lines": 0.0028,
+     "ok_elec_testing": 0.0798,
+     "PPE_Violation": 0.9145,
+     "f_worker": 0.9994,
+     "f_ppe_nohat": 0.0079,
+     "f_ppe_novest": 0.0086,
+     "f_ppe_noeye_glove": 0.9628,
+     "Housekeeping_Storage": 0.8364,
+     "f_house_trip": 0.8654,
+     "f_house_debris": 0.6496
     }
    },
    "main_question": {
     "scores": {
-     "fall": 0.1562,
-     "ppe": 0.9397
+     "fall": 0.0028,
+     "ppe": 0.915
     },
     "decisions": {
      "fall": false,
@@ -2254,27 +739,26 @@
      "ppe": true
     },
     "evidence": {
-     "fall": "no workers are exposed to unguarded edges or openings",
-     "ppe": "worker is not wearing a hard hat or high-visibility vest"
+     "ppe": "worker is not wearing eye protection while using a grinder"
     },
     "box_as_written": {
      "ppe": [
-      675,
-      917,
-      846,
-      973
+      188,
+      578,
+      256,
+      668
      ]
     },
     "box_drawn": {
      "ppe": [
-      0.5625,
-      1.0189,
-      0.705,
-      1.0811
+      0.1836,
+      0.5645,
+      0.25,
+      0.6523
      ]
     },
     "fits_pixel_rule": {
-     "ppe": false
+     "ppe": true
     },
     "fits_grid_reading": {
      "ppe": true
@@ -2287,27 +771,27 @@
    }
   },
   {
-   "id": "0007851",
-   "role": "failure",
-   "failure_type": "false alarm on a vest in daylight",
-   "draw_reason": "failure type: false alarm on a vest in daylight",
+   "id": "178",
+   "role": "success",
+   "failure_type": null,
+   "draw_reason": "chosen by the authors from the generated development images where GROVE is right",
    "teaser": false,
    "files": {
-    "full_webp": "gallery/final_0007851.webp",
-    "full_jpg": "gallery/final_0007851.jpg",
-    "thumb_webp": "gallery/final_0007851_thumb.webp",
-    "thumb_jpg": "gallery/final_0007851_thumb.jpg"
+    "full_webp": "gallery/dev_178.webp",
+    "full_jpg": "gallery/dev_178.jpg",
+    "thumb_webp": "gallery/dev_178_thumb.webp",
+    "thumb_jpg": "gallery/dev_178_thumb.jpg"
    },
-   "width": 1200,
-   "height": 900,
+   "width": 1024,
+   "height": 1024,
    "thumb_width": 480,
-   "thumb_height": 360,
-   "original_width": 1200,
-   "original_height": 900,
-   "illumination": "normal lighting",
-   "camera_distance": "mid distance",
-   "size_band": "no violation",
-   "caption": "The image shows a worker covered in dust holding a hose or cable, looking towards the camera. Three workers with yellow hard hats are engaged in construction activities among piles of bricks and building materials, with one standing on scaffolding, another walking carrying bricks, and the third bending over near a pile of bricks.",
+   "thumb_height": 480,
+   "original_width": 1024,
+   "original_height": 1024,
+   "illumination": "generated with Google Gemini",
+   "camera_distance": "development image",
+   "size_band": null,
+   "caption": null,
    "label_reason": {
     "fall": null,
     "ppe": null
@@ -2322,205 +806,44 @@
    },
    "grove": {
     "scores": {
-     "fall": 0.6832,
-     "ppe": 0.877
-    },
-    "decisions": {
-     "fall": false,
-     "ppe": true
-    },
-    "first_freeze_decisions": {
-     "fall": true,
-     "ppe": true
-    },
-    "boxes": {
-     "ppe": [
-      [
-       0.3925,
-       0.3643,
-       0.5764,
-       0.9977
-      ]
-     ]
-    },
-    "phrase": {
-     "ppe": "worker without safety vest"
-    },
-    "box_source": {
-     "ppe": "GroundingDINO"
-    },
-    "top_iou": {
-     "ppe": 0.0
-    },
-    "probs": {
-     "Fall_Hazard": 0.7315,
-     "f_fall_edge": 0.7487,
-     "f_fall_opening": 0.1153,
-     "ok_fall_protected": 0.2198,
-     "Electrocution_Hazard": 0.0533,
-     "f_elec_wire": 0.1686,
-     "f_elec_lines": 0.0155,
-     "ok_elec_testing": 0.064,
-     "PPE_Violation": 0.7691,
-     "f_worker": 0.9992,
-     "f_ppe_nohat": 0.1113,
-     "f_ppe_novest": 0.9857,
-     "f_ppe_noeye_glove": 0.3365,
-     "Housekeeping_Storage": 0.9895,
-     "f_house_trip": 0.9763,
-     "f_house_debris": 0.9876
-    }
-   },
-   "main_question": {
-    "scores": {
-     "fall": 0.7315,
-     "ppe": 0.7609
-    },
-    "decisions": {
-     "fall": false,
-     "ppe": true
-    }
-   },
-   "gemma": {
-    "decisions": {
-     "fall": true,
-     "ppe": true
-    },
-    "evidence": {
-     "fall": "worker on scaffold without guardrails",
-     "ppe": "workers missing high-visibility vests"
-    },
-    "box_as_written": {
-     "fall": [
-      258,
-      473,
-      354,
-      560
-     ],
-     "ppe": [
-      348,
-      240,
-      514,
-      287
-     ]
-    },
-    "box_drawn": {
-     "fall": [
-      0.215,
-      0.5256,
-      0.295,
-      0.6222
-     ],
-     "ppe": [
-      0.29,
-      0.2667,
-      0.4283,
-      0.3189
-     ]
-    },
-    "fits_pixel_rule": {
-     "fall": true,
-     "ppe": true
-    },
-    "fits_grid_reading": {
-     "fall": true,
-     "ppe": true
-    }
-   },
-   "outcome": {
-    "grove_correct": false,
-    "gemma_wrong": true,
-    "disagree": true
-   },
-   "error": [
-    {
-     "category": "ppe",
-     "kind": "false alarm",
-     "class": "helmet or vest"
-    }
-   ]
-  },
-  {
-   "id": "0006491",
-   "role": "failure",
-   "failure_type": "miss",
-   "draw_reason": "failure type: miss",
-   "teaser": false,
-   "files": {
-    "full_webp": "gallery/final_0006491.webp",
-    "full_jpg": "gallery/final_0006491.jpg",
-    "thumb_webp": "gallery/final_0006491_thumb.webp",
-    "thumb_jpg": "gallery/final_0006491_thumb.jpg"
-   },
-   "width": 1200,
-   "height": 900,
-   "thumb_width": 480,
-   "thumb_height": 360,
-   "original_width": 1200,
-   "original_height": 900,
-   "illumination": "normal lighting",
-   "camera_distance": "mid distance",
-   "size_band": "1% to 10%",
-   "caption": "A person is riding a motorcycle on a dirt road in the lower right corner. In the background, there is an excavator positioned on an elevated dirt area, surrounded by buildings. The foreground features a concrete utility pole on the left.",
-   "label_reason": {
-    "fall": null,
-    "ppe": "The person ridding a scooter is not wearing a hard hat."
-   },
-   "labels": {
-    "fall": false,
-    "ppe": true
-   },
-   "label_boxes": {
-    "fall": [],
-    "ppe": [
-     [
-      0.68,
-      0.68,
-      0.8,
-      0.81
-     ]
-    ]
-   },
-   "grove": {
-    "scores": {
-     "fall": 0.359,
-     "ppe": 0.5955
+     "fall": 0.0147,
+     "ppe": 0.059
     },
     "decisions": {
      "fall": false,
      "ppe": false
     },
     "first_freeze_decisions": {
-     "fall": true,
-     "ppe": true
+     "fall": false,
+     "ppe": false
     },
     "boxes": {},
     "phrase": {},
     "box_source": {},
     "top_iou": {},
     "probs": {
-     "Fall_Hazard": 0.0892,
-     "f_fall_edge": 0.017,
-     "f_fall_opening": 0.7092,
-     "ok_fall_protected": 0.2877,
-     "Electrocution_Hazard": 0.1763,
-     "f_elec_wire": 0.6846,
-     "f_elec_lines": 0.0769,
-     "ok_elec_testing": 0.0158,
-     "PPE_Violation": 0.4372,
-     "f_worker": 0.9787,
-     "f_ppe_nohat": 0.7702,
-     "f_ppe_novest": 0.7494,
-     "f_ppe_noeye_glove": 0.0299,
-     "Housekeeping_Storage": 0.8955,
-     "f_house_trip": 0.5652,
-     "f_house_debris": 0.9382
+     "Fall_Hazard": 0.0063,
+     "f_fall_edge": 0.0037,
+     "f_fall_opening": 0.0379,
+     "ok_fall_protected": 0.9619,
+     "Electrocution_Hazard": 0.0013,
+     "f_elec_wire": 0.0018,
+     "f_elec_lines": 0.0024,
+     "ok_elec_testing": 0.0372,
+     "PPE_Violation": 0.0484,
+     "f_worker": 0.9989,
+     "f_ppe_nohat": 0.0322,
+     "f_ppe_novest": 0.0697,
+     "f_ppe_noeye_glove": 0.0172,
+     "Housekeeping_Storage": 0.1436,
+     "f_house_trip": 0.1343,
+     "f_house_debris": 0.095
     }
    },
    "main_question": {
     "scores": {
-     "fall": 0.0892,
-     "ppe": 0.4262
+     "fall": 0.0062,
+     "ppe": 0.0495
     },
     "decisions": {
      "fall": false,
@@ -2530,402 +853,94 @@
    "gemma": {
     "decisions": {
      "fall": false,
-     "ppe": true
+     "ppe": false
     },
-    "evidence": {
-     "fall": "no workers exposed to unguarded edges or openings",
-     "ppe": "worker on scooter is not wearing a hard hat or high-visibility vest"
-    },
-    "box_as_written": {
-     "ppe": [
-      661,
-      661,
-      996,
-      793
-     ]
-    },
-    "box_drawn": {
-     "ppe": [
-      0.5508,
-      0.7344,
-      0.83,
-      0.8811
-     ]
-    },
-    "fits_pixel_rule": {
-     "ppe": true
-    },
-    "fits_grid_reading": {
-     "ppe": true
-    }
-   },
-   "outcome": {
-    "grove_correct": false,
-    "gemma_wrong": false,
-    "disagree": true
-   },
-   "error": [
-    {
-     "category": "ppe",
-     "kind": "miss",
-     "class": "helmet or vest"
-    }
-   ]
-  },
-  {
-   "id": "0008519",
-   "role": "failure",
-   "failure_type": "right category, wrong worker boxed",
-   "draw_reason": "failure type: right category, wrong worker boxed",
-   "teaser": false,
-   "files": {
-    "full_webp": "gallery/final_0008519.webp",
-    "full_jpg": "gallery/final_0008519.jpg",
-    "thumb_webp": "gallery/final_0008519_thumb.webp",
-    "thumb_jpg": "gallery/final_0008519_thumb.jpg"
-   },
-   "width": 1200,
-   "height": 800,
-   "thumb_width": 480,
-   "thumb_height": 320,
-   "original_width": 1200,
-   "original_height": 800,
-   "illumination": "normal lighting",
-   "camera_distance": "mid distance",
-   "size_band": "below 1%",
-   "caption": "The image shows a construction site with three workers. One worker is standing on the left side of the image, while two workers are on the right side, with one of them operating a tripod stand with a pulley system. There are several trees in the middle ground, and the site is characterized by exposed earth and some construction materials scattered around, such as wooden planks and concrete structures.",
-   "label_reason": {
-    "fall": null,
-    "ppe": "Two workers on the right in the background are not wearing hard hats."
-   },
-   "labels": {
-    "fall": false,
-    "ppe": true
-   },
-   "label_boxes": {
-    "fall": [],
-    "ppe": [
-     [
-      0.76,
-      0.38,
-      0.79,
-      0.47
-     ],
-     [
-      0.81,
-      0.4,
-      0.83,
-      0.45
-     ]
-    ]
-   },
-   "grove": {
-    "scores": {
-     "fall": 0.4822,
-     "ppe": 0.8921
-    },
-    "decisions": {
-     "fall": false,
-     "ppe": true
-    },
-    "first_freeze_decisions": {
-     "fall": true,
-     "ppe": true
-    },
-    "boxes": {
-     "ppe": [
-      [
-       0.3995,
-       0.4588,
-       0.4304,
-       0.5641
-      ]
-     ]
-    },
-    "phrase": {
-     "ppe": "worker without safety vest"
-    },
-    "box_source": {
-     "ppe": "GroundingDINO"
-    },
-    "top_iou": {
-     "ppe": 0.0
-    },
-    "probs": {
-     "Fall_Hazard": 0.3719,
-     "f_fall_edge": 0.0574,
-     "f_fall_opening": 0.6993,
-     "ok_fall_protected": 0.2846,
-     "Electrocution_Hazard": 0.0125,
-     "f_elec_wire": 0.0333,
-     "f_elec_lines": 0.0026,
-     "ok_elec_testing": 0.0553,
-     "PPE_Violation": 0.8366,
-     "f_worker": 0.9968,
-     "f_ppe_nohat": 0.4544,
-     "f_ppe_novest": 0.9507,
-     "f_ppe_noeye_glove": 0.036,
-     "Housekeeping_Storage": 0.9162,
-     "f_house_trip": 0.8112,
-     "f_house_debris": 0.873
-    }
-   },
-   "main_question": {
-    "scores": {
-     "fall": 0.3719,
-     "ppe": 0.8342
-    },
-    "decisions": {
-     "fall": false,
-     "ppe": true
-    }
-   },
-   "gemma": {
-    "decisions": {
-     "fall": false,
-     "ppe": true
-    },
-    "evidence": {
-     "fall": "no unguarded trenches or elevated edges with workers present",
-     "ppe": "worker is not wearing a hard hat or high-visibility vest"
-    },
-    "box_as_written": {
-     "ppe": [
-      405,
-      456,
-      431,
-      526
-     ]
-    },
-    "box_drawn": {
-     "ppe": [
-      0.3375,
-      0.57,
-      0.3592,
-      0.6575
-     ]
-    },
-    "fits_pixel_rule": {
-     "ppe": true
-    },
-    "fits_grid_reading": {
-     "ppe": true
-    }
+    "evidence": {},
+    "box_as_written": {},
+    "box_drawn": {},
+    "fits_pixel_rule": {},
+    "fits_grid_reading": {}
    },
    "outcome": {
     "grove_correct": true,
     "gemma_wrong": false,
     "disagree": false
-   },
-   "error": []
+   }
   },
   {
-   "id": "0009062",
-   "role": "failure",
-   "failure_type": "night-time miss",
-   "draw_reason": "failure type: night-time miss",
+   "id": "181",
+   "role": "success",
+   "failure_type": null,
+   "draw_reason": "chosen by the authors from the generated development images where GROVE is right",
    "teaser": false,
    "files": {
-    "full_webp": "gallery/final_0009062.webp",
-    "full_jpg": "gallery/final_0009062.jpg",
-    "thumb_webp": "gallery/final_0009062_thumb.webp",
-    "thumb_jpg": "gallery/final_0009062_thumb.jpg"
+    "full_webp": "gallery/dev_181.webp",
+    "full_jpg": "gallery/dev_181.jpg",
+    "thumb_webp": "gallery/dev_181_thumb.webp",
+    "thumb_jpg": "gallery/dev_181_thumb.jpg"
    },
-   "width": 1080,
-   "height": 1440,
-   "thumb_width": 360,
+   "width": 1024,
+   "height": 1024,
+   "thumb_width": 480,
    "thumb_height": 480,
-   "original_width": 1080,
-   "original_height": 1440,
-   "illumination": "night",
-   "camera_distance": "mid distance",
-   "size_band": "below 1%",
-   "caption": "The image shows a nighttime construction scene with a large concrete pump boom extended diagonally across the frame. In the foreground, there is a dense grid of rebar laid out on the ground, indicating preparation for a concrete pour. Three workers wearing hard hats are visible within this area.",
+   "original_width": 1024,
+   "original_height": 1024,
+   "illumination": "generated with Google Gemini",
+   "camera_distance": "development image",
+   "size_band": null,
+   "caption": null,
    "label_reason": {
     "fall": null,
-    "ppe": "The workers in the middle are not wearing high visibility vests when working at night."
-   },
-   "labels": {
-    "fall": false,
-    "ppe": true
-   },
-   "label_boxes": {
-    "fall": [],
-    "ppe": [
-     [
-      0.52,
-      0.64,
-      0.57,
-      0.72
-     ],
-     [
-      0.58,
-      0.64,
-      0.63,
-      0.72
-     ],
-     [
-      0.93,
-      0.61,
-      0.98,
-      0.68
-     ]
-    ]
-   },
-   "grove": {
-    "scores": {
-     "fall": 0.5343,
-     "ppe": 0.3129
-    },
-    "decisions": {
-     "fall": false,
-     "ppe": false
-    },
-    "first_freeze_decisions": {
-     "fall": true,
-     "ppe": false
-    },
-    "boxes": {},
-    "phrase": {},
-    "box_source": {},
-    "top_iou": {},
-    "probs": {
-     "Fall_Hazard": 0.6201,
-     "f_fall_edge": 0.5317,
-     "f_fall_opening": 0.497,
-     "ok_fall_protected": 0.2065,
-     "Electrocution_Hazard": 0.0456,
-     "f_elec_wire": 0.0704,
-     "f_elec_lines": 0.0706,
-     "ok_elec_testing": 0.0294,
-     "PPE_Violation": 0.2026,
-     "f_worker": 0.8752,
-     "f_ppe_nohat": 0.0924,
-     "f_ppe_novest": 0.4835,
-     "f_ppe_noeye_glove": 0.0437,
-     "Housekeeping_Storage": 0.2361,
-     "f_house_trip": 0.3102,
-     "f_house_debris": 0.1231
-    }
-   },
-   "main_question": {
-    "scores": {
-     "fall": 0.6197,
-     "ppe": 0.2097
-    },
-    "decisions": {
-     "fall": false,
-     "ppe": false
-    }
-   },
-   "gemma": {
-    "decisions": {
-     "fall": false,
-     "ppe": false
-    },
-    "evidence": {
-     "fall": "no workers are exposed to unguarded edges or openings",
-     "ppe": "visible workers are wearing hard hats"
-    },
-    "box_as_written": {},
-    "box_drawn": {},
-    "fits_pixel_rule": {},
-    "fits_grid_reading": {}
-   },
-   "outcome": {
-    "grove_correct": false,
-    "gemma_wrong": true,
-    "disagree": false
-   },
-   "error": [
-    {
-     "category": "ppe",
-     "kind": "miss",
-     "class": "inferred height or depth"
-    }
-   ]
-  },
-  {
-   "id": "0006675",
-   "role": "failure",
-   "failure_type": "miss on height or depth",
-   "draw_reason": "failure type: miss on height or depth",
-   "teaser": false,
-   "files": {
-    "full_webp": "gallery/final_0006675.webp",
-    "full_jpg": "gallery/final_0006675.jpg",
-    "thumb_webp": "gallery/final_0006675_thumb.webp",
-    "thumb_jpg": "gallery/final_0006675_thumb.jpg"
-   },
-   "width": 1200,
-   "height": 900,
-   "thumb_width": 480,
-   "thumb_height": 360,
-   "original_width": 1200,
-   "original_height": 900,
-   "illumination": "underexposed",
-   "camera_distance": "mid distance",
-   "size_band": "1% to 10%",
-   "caption": "The image shows a construction site with a large concrete slab, seven workers wearing yellow hard hats and safety vests, and a concrete pump truck with an extended boom.",
-   "label_reason": {
-    "fall": "The left edge of the excavation is not guarded.",
     "ppe": null
    },
    "labels": {
-    "fall": true,
+    "fall": false,
     "ppe": false
    },
    "label_boxes": {
-    "fall": [
-     [
-      0.01,
-      0.35,
-      0.22,
-      0.43
-     ]
-    ],
+    "fall": [],
     "ppe": []
    },
    "grove": {
     "scores": {
-     "fall": 0.3989,
-     "ppe": 0.6215
+     "fall": 0.0045,
+     "ppe": 0.0668
     },
     "decisions": {
      "fall": false,
      "ppe": false
     },
     "first_freeze_decisions": {
-     "fall": true,
-     "ppe": true
+     "fall": false,
+     "ppe": false
     },
     "boxes": {},
     "phrase": {},
     "box_source": {},
     "top_iou": {},
     "probs": {
-     "Fall_Hazard": 0.3019,
-     "f_fall_edge": 0.1553,
-     "f_fall_opening": 0.5748,
-     "ok_fall_protected": 0.2569,
-     "Electrocution_Hazard": 0.2242,
-     "f_elec_wire": 0.36,
-     "f_elec_lines": 0.2531,
-     "ok_elec_testing": 0.0328,
-     "PPE_Violation": 0.3566,
-     "f_worker": 0.9993,
-     "f_ppe_nohat": 0.1099,
-     "f_ppe_novest": 0.8871,
-     "f_ppe_noeye_glove": 0.0323,
-     "Housekeeping_Storage": 0.7459,
-     "f_house_trip": 0.8076,
-     "f_house_debris": 0.2941
+     "Fall_Hazard": 0.0059,
+     "f_fall_edge": 0.0056,
+     "f_fall_opening": 0.0075,
+     "ok_fall_protected": 0.9538,
+     "Electrocution_Hazard": 0.003,
+     "f_elec_wire": 0.0064,
+     "f_elec_lines": 0.011,
+     "ok_elec_testing": 0.0978,
+     "PPE_Violation": 0.0525,
+     "f_worker": 0.9979,
+     "f_ppe_nohat": 0.0813,
+     "f_ppe_novest": 0.0142,
+     "f_ppe_noeye_glove": 0.0161,
+     "Housekeeping_Storage": 0.0824,
+     "f_house_trip": 0.0252,
+     "f_house_debris": 0.0212
     }
    },
    "main_question": {
     "scores": {
-     "fall": 0.3019,
-     "ppe": 0.3481
+     "fall": 0.0057,
+     "ppe": 0.0506
     },
     "decisions": {
      "fall": false,
@@ -2937,27 +952,22 @@
      "fall": false,
      "ppe": false
     },
-    "evidence": {
-     "fall": "no workers are exposed to unguarded edges or openings",
-     "ppe": "all visible workers are wearing hard hats and high-visibility gear"
-    },
+    "evidence": {},
     "box_as_written": {},
     "box_drawn": {},
     "fits_pixel_rule": {},
     "fits_grid_reading": {}
    },
    "outcome": {
-    "grove_correct": false,
-    "gemma_wrong": true,
+    "grove_correct": true,
+    "gemma_wrong": false,
     "disagree": false
-   },
-   "error": [
-    {
-     "category": "fall",
-     "kind": "miss",
-     "class": "inferred height or depth"
-    }
-   ]
+   }
   }
- ]
+ ],
+ "set_label": "development set",
+ "thresholds": {
+  "fall": 0.12,
+  "ppe": 0.5
+ }
 }

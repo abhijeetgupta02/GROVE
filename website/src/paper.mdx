@@ -45,7 +45,7 @@ export const base = import.meta.env.BASE_URL.endsWith("/") ? import.meta.env.BAS
 <Section id="teaser" title="One photo, two inspectors" wide>
 <div class="mx-auto max-w-[50rem]">
 
-A single-pass vision-language model (<span class="font-mono">gemma4:31b</span>) reads the photo and answers in one go, with a sentence of evidence. GROVE scores each category against a fixed threshold and backs its alert with a box. This is a selected example; the rule that chose it is described in the gallery.
+A single-pass vision-language model (<span class="font-mono">gemma4:31b</span>) reads the photo and answers in one go, with a sentence of evidence. GROVE scores each category against a fixed threshold and backs its alert with a box. The photo is one of our development images, generated with Google Gemini; how it was chosen is described in the gallery.
 
 </div>
 <Teaser client:visible base={base} />
@@ -99,7 +99,7 @@ Under the frozen rule, a single-pass box counts only as pixel coordinates inside
 <Section id="gallery" title="Gallery" wide>
 <div class="mx-auto max-w-[50rem] font-semibold">
 
-Selected examples, chosen by a fixed rule. On all <Num k="final.n_images" as="int" /> final images GROVE&rsquo;s micro-F1 is <Num k="final.grove.micro_f1" />.
+Examples from our development images generated with Google Gemini, where GROVE is right. They are chosen, not representative: on all <Num k="final.n_images" as="int" /> final images GROVE&rsquo;s micro-F1 is <Num k="final.grove.micro_f1" />.
 
 </div>
 <Gallery client:visible base={base} />
@@ -108,7 +108,7 @@ Selected examples, chosen by a fixed rule. On all <Num k="final.n_images" as="in
 <Section id="failures" title="Where GROVE fails" wide>
 <div class="mx-auto max-w-[50rem]">
 
-Selected failures, one per type, drawn by the same fixed rule from the final images. On all final images GROVE made <Num k="errors.grove.false_alarm" as="int" /> false alarms and <Num k="errors.grove.miss" as="int" /> misses (image-category pairs), against <Num k="errors.gemma.false_alarm" as="int" /> and <Num k="errors.gemma.miss" as="int" /> for <span class="font-mono">gemma4:31b</span><PostHoc />.
+On all final images GROVE made <Num k="errors.grove.false_alarm" as="int" /> false alarms and <Num k="errors.grove.miss" as="int" /> misses (image-category pairs), against <Num k="errors.gemma.false_alarm" as="int" /> and <Num k="errors.gemma.miss" as="int" /> for <span class="font-mono">gemma4:31b</span><PostHoc />. The chart shows them by type.
 
 </div>
 <Failures client:visible base={base} />
