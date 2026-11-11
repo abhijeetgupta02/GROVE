@@ -25,7 +25,7 @@ export default function Gallery({ base }: { base: string }) {
   return (
     <div className="not-prose font-sans">
       <details className="mb-3 text-sm">
-        <summary className="cursor-pointer font-semibold">The selection rule ({nSucc} where GROVE is right, {nFail} where it fails)</summary>
+        <summary className="cursor-pointer font-semibold">How the examples were chosen ({nFail ? `${nSucc} where GROVE is right, ${nFail} where it fails` : `${nSucc} examples`})</summary>
         <p className="mt-1">{G.selection_rule}</p>
       </details>
       <div className="mb-2 flex flex-wrap items-end gap-3 text-sm">
