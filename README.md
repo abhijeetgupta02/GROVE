@@ -2,7 +2,7 @@
 
 Abhijeet Gupta, Shruti Singh, Vijayan Asari and Tam V. Nguyen, University of Dayton. Paper under review.
 
-**Project page: https://abhijeetgupta02.github.io/GROVE/**
+**Project page: https://abhijeetgupta02.github.io/GROVE/** · Archive of this release: https://doi.org/10.5281/zenodo.24145023
 
 GROVE asks a decision model sixteen yes/no questions about visible conditions in a construction-site photograph, combines the answer probabilities into scores for fall hazards, electrical hazards and missing protective equipment, applies thresholds calibrated on labeled images from the target source, and grounds each report with an open-vocabulary detector.
 

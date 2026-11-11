@@ -77,7 +77,7 @@ them. These are in-sample examples; the measured results are on the 1,000 final 
 
 Every push to `main` runs `.github/workflows/pages.yml`: it installs the packages, runs `tools/check_numbers.py` against the
 results in the repository (`GROVE_PC` set to the repository root), builds with the Pages `site` and `base`, and deploys.
-Still to add: the paper link in `src/components/site/Hero.astro` and the DOI in `Hero.astro` and `src/components/site/Repro.astro`.
+Still to add: the paper link in `src/components/site/Hero.astro`. The Zenodo archive is 10.5281/zenodo.24145023.
 
 ## Credits and license
 
