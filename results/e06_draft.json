@@ -1,0 +1,11 @@
+{
+ "images_hashed": 7212,
+ "hash": "difference hash, 16 x 16 = 256 bits, grayscale, Lanczos resize to 17 x 16",
+ "cutoff_bits": 60,
+ "files_63_79_distance": 0,
+ "pairs_at_or_below_cutoff": {
+  "cross_dataset": 0,
+  "within_cs10k": 1003,
+  "within_203": 7
+ }
+}

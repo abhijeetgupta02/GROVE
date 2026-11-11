@@ -1,0 +1,50 @@
+---
+// Page header. Links that are not public yet are shown as disabled placeholders (see README, publication checklist).
+const authors = ["Abhijeet Gupta", "Shruti Singh", "Vijayan Asari", "Tam V. Nguyen"];
+const bibtex = `@article{gupta_grove,
+  title  = {GROVE: Grounded Violation Evaluator for Visual Inspection},
+  author = {Gupta, Abhijeet and Singh, Shruti and Asari, Vijayan and Nguyen, Tam V.},
+  note   = {Under review}
+}`;
+---
+
+<header class="not-prose full-bleed mb-8 px-4 pt-4">
+  <div class="mx-auto flex max-w-[52rem] flex-col items-center gap-4 text-center">
+    <h1 class="m-0 text-3xl leading-tight font-semibold text-zinc-900 sm:text-5xl dark:text-zinc-50">
+      GROVE: Grounded Violation Evaluator for Visual Inspection
+    </h1>
+    <p class="m-0 text-lg sm:text-xl">
+      {authors.map((a, k) => (<><span class="whitespace-nowrap">{a}</span>{k < authors.length - 1 ? ", " : ""}</>))}
+    </p>
+    <p class="m-0 text-base sm:text-lg">University of Dayton</p>
+    <div class="flex flex-row flex-wrap justify-center gap-2 font-sans text-base">
+      <span class="link-disabled" aria-disabled="true" title="The paper is under review">Paper (under review)</span>
+      <a class="link-button" style="color:#fff;text-decoration:none" href="https://github.com/abhijeetgupta02/GROVE">Code and results</a>
+      <span class="link-disabled" aria-disabled="true" title="The DOI is added when the release is archived">DOI (to be added)</span>
+      <button type="button" class="link-button" data-copy-bibtex>Copy BibTeX</button>
+      <span id="bibtex-status" class="sr-only" aria-live="polite"></span>
+    </div>
+    <p class="m-0 max-w-[44rem] text-lg leading-relaxed">
+      GROVE flags safety violations in construction-site photos by asking a vision-language model a fixed set of yes/no
+      questions, combining the answers with a frozen formula into one score per category, and backing each alert with an
+      evidence box.
+    </p>
+  </div>
+  <template id="bibtex-text">{bibtex}</template>
+</header>
+
+<script>
+  document.querySelectorAll<HTMLButtonElement>("[data-copy-bibtex]").forEach((b) => {
+    b.addEventListener("click", async () => {
+      const t = (document.getElementById("bibtex-text") as HTMLTemplateElement | null)?.content.textContent ?? "";
+      const status = document.getElementById("bibtex-status");
+      try {
+        await navigator.clipboard.writeText(t.trim());
+        b.textContent = "BibTeX copied";
+        if (status) status.textContent = "BibTeX copied to the clipboard";
+      } catch {
+        location.hash = "#bibtex";
+      }
+    });
+  });
+</script>

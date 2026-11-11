@@ -1,0 +1,95 @@
+{
+ "post_hoc": true,
+ "source": "reports/errors_final.md",
+ "systems": {
+  "GROVE": [
+   {
+    "type": "false alarm",
+    "class": "helmet or vest",
+    "all": 121,
+    "sample": 39
+   },
+   {
+    "type": "false alarm",
+    "class": "inferred height or depth",
+    "all": 18,
+    "sample": 6
+   },
+   {
+    "type": "false alarm",
+    "class": "other or no text",
+    "all": 37,
+    "sample": 12
+   },
+   {
+    "type": "miss",
+    "class": "helmet or vest",
+    "all": 46,
+    "sample": 14
+   },
+   {
+    "type": "miss",
+    "class": "inferred height or depth",
+    "all": 69,
+    "sample": 22
+   },
+   {
+    "type": "miss",
+    "class": "other or no text",
+    "all": 23,
+    "sample": 7
+   }
+  ],
+  "gemma4:31b": [
+   {
+    "type": "false alarm",
+    "class": "helmet or vest",
+    "all": 28,
+    "sample": 4
+   },
+   {
+    "type": "false alarm",
+    "class": "inferred height or depth",
+    "all": 394,
+    "sample": 73
+   },
+   {
+    "type": "false alarm",
+    "class": "other or no text",
+    "all": 72,
+    "sample": 14
+   },
+   {
+    "type": "miss",
+    "class": "helmet or vest",
+    "all": 6,
+    "sample": 2
+   },
+   {
+    "type": "miss",
+    "class": "inferred height or depth",
+    "all": 27,
+    "sample": 7
+   },
+   {
+    "type": "miss",
+    "class": "other or no text",
+    "all": 1,
+    "sample": 0
+   }
+  ]
+ },
+ "totals": {
+  "GROVE": {
+   "all": 314,
+   "false_alarms": 176,
+   "misses": 138
+  },
+  "gemma4:31b": {
+   "all": 528,
+   "false_alarms": 494,
+   "misses": 34
+  }
+ },
+ "note": "Classes come from keywords in the system text and the dataset reason; \"other or no text\" means no keyword matched. Same method as experiment 60, repeated on the final 1,000 after final scoring."
+}

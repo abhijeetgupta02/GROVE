@@ -1,0 +1,67 @@
+{
+ "fit_on": "calibration 500 (refit once, Fall and PPE)",
+ "method": "grid 0.02-0.98 step 0.02, best single threshold then 2 rounds per category, micro-F1",
+ "thresholds": {
+  "GROVE": {
+   "refit": {
+    "Fall_Hazard": 0.86,
+    "PPE_Violation": 0.8
+   },
+   "first_freeze": {
+    "Fall_Hazard": 0.12,
+    "PPE_Violation": 0.5
+   }
+  },
+  "main_question": {
+   "refit": {
+    "Fall_Hazard": 0.86,
+    "PPE_Violation": 0.66
+   },
+   "first_freeze": {
+    "Fall_Hazard": 0.16,
+    "PPE_Violation": 0.58
+   }
+  },
+  "variant_no_fact_questions": {
+   "refit": {
+    "Fall_Hazard": 0.86,
+    "PPE_Violation": 0.66
+   },
+   "first_freeze": {
+    "Fall_Hazard": 0.16,
+    "PPE_Violation": 0.58
+   }
+  },
+  "variant_no_protection": {
+   "refit": {
+    "Fall_Hazard": 0.86,
+    "PPE_Violation": 0.8
+   },
+   "first_freeze": {
+    "Fall_Hazard": 0.14,
+    "PPE_Violation": 0.5
+   }
+  },
+  "variant_no_worker": {
+   "refit": {
+    "Fall_Hazard": 0.86,
+    "PPE_Violation": 0.8
+   },
+   "first_freeze": {
+    "Fall_Hazard": 0.12,
+    "PPE_Violation": 0.6
+   }
+  },
+  "second_GROVE_questions": {
+   "refit": {
+    "Fall_Hazard": 0.88,
+    "PPE_Violation": 0.62
+   },
+   "first_freeze": {
+    "Fall_Hazard": 0.08,
+    "PPE_Violation": 0.52
+   }
+  }
+ },
+ "at": "2026-11-06T20:47:00"
+}

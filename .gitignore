@@ -2,5 +2,6 @@ __pycache__/
 *.pyc
 .DS_Store
 .venv/
-data/images/
-code/inference/results/
+node_modules/
+website/dist/
+website/.astro/

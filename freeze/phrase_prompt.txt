@@ -1,0 +1,4 @@
+Look at this construction site image. The concern is a possible {C} violation. If an object showing this violation is clearly visible, write a 2-to-4 word phrase naming it, such as "worker on roof edge", "open trench edge", "exposed electrical wires" or "worker without hard hat". If nothing showing it is clearly visible, reply NONE. Reply with the phrase or NONE only.
+
+C = {"Fall_Hazard": "Fall Hazard", "Electrocution_Hazard": "Electrocution Hazard", "PPE_Violation": "PPE Violation"}
+(qwen3.5:9b: "\n/nothink" appended, think false)

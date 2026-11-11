@@ -1,0 +1,35 @@
+---
+import { NUMBERS, str, sourceOf } from "../../lib/data";
+import Num from "../Num.astro";
+const models = Object.keys(NUMBERS)
+  .filter((k) => k.startsWith("setup.digest."))
+  .map((k) => ({ name: k.slice("setup.digest.".length), key: k }));
+---
+
+<p>
+  Every model, prompt, question set, formula weight, threshold rule and image list was frozen and hashed before the
+  images it was used on were scored: once before the calibration images and once more, with the refit thresholds,
+  before the final images. The final images were scored once. All models ran locally under Ollama <Num k="setup.ollama_version" as="text" />
+  on one workstation (<Num k="setup.gpu" as="text" />); single-pass and phrase calls used temperature zero and a fixed seed.
+</p>
+<div class="not-prose overflow-x-auto font-sans">
+  <table class="w-full text-sm [&_td]:px-2 [&_td]:py-1 [&_th]:px-2 [&_th]:py-1">
+    <thead>
+      <tr><th class="text-left">Model</th><th class="text-left">Ollama digest (SHA-256)</th></tr>
+    </thead>
+    <tbody>
+      {
+        models.map((m) => (
+          <tr>
+            <td class="font-mono">{m.name}</td>
+            <td class="font-mono text-xs break-all" title={"Source: " + sourceOf(m.key)}>{str(m.key)}</td>
+          </tr>
+        ))
+      }
+    </tbody>
+  </table>
+</div>
+<ul>
+  <li>Frozen settings after calibration (<code>freeze_2.json</code>), SHA-256: <span class="font-mono text-sm break-all"><Num k="setup.freeze_2_sha256" as="text" /></span></li>
+  <li>Code, frozen settings, image lists, every saved model response, scores and reports: <a href="https://github.com/abhijeetgupta02/GROVE">github.com/abhijeetgupta02/GROVE</a>. A DOI will be added when the release is archived.</li>
+</ul>

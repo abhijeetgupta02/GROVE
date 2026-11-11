@@ -1,0 +1,25 @@
+{
+ "config_hash": "00245d526c5caa9889fcc530195f33d07d02cf746634b3ae94380f8f34d76b90",
+ "config": {
+  "kind": "phrase",
+  "model": "qwen3.5:9b",
+  "model_digest": "6488c96fa5faab64bb65cbd30d4289e20e6130ef535a93ef9a49f42eda893ea7",
+  "set": "phrase",
+  "image_encoding": "grove203:packet encoded_q95 bytes as stored",
+  "pause_seconds_before_each_call": 0.0,
+  "endpoint": "/api/chat",
+  "prompt": "Look at this construction site image. The concern is a possible {C} violation. If an object showing this violation is clearly visible, write a 2-to-4 word phrase naming it, such as \"worker on roof edge\", \"open trench edge\", \"exposed electrical wires\" or \"worker without hard hat\". If nothing showing it is clearly visible, reply NONE. Reply with the phrase or NONE only.",
+  "category_names": {
+   "Fall_Hazard": "Fall Hazard",
+   "Electrocution_Hazard": "Electrocution Hazard",
+   "PPE_Violation": "PPE Violation"
+  },
+  "nothink_suffix": true,
+  "options": {
+   "temperature": 0,
+   "num_predict": 32,
+   "seed": 20260422
+  },
+  "think": "false, removed if rejected"
+ }
+}

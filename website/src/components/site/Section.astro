@@ -1,0 +1,17 @@
+---
+interface Props {
+  id: string;
+  title: string;
+  wide?: boolean;
+}
+const { id, title, wide = false } = Astro.props;
+---
+
+<section id={id} aria-labelledby={`${id}-h`} class:list={["scroll-mt-6", wide && "full-bleed px-4"]}>
+  <div class:list={[wide && "mx-auto max-w-[72rem]"]}>
+    <h2 id={`${id}-h`} class="mb-3">
+      <a href={`#${id}`} class="no-underline! hover:underline!">{title}</a>
+    </h2>
+    <slot />
+  </div>
+</section>

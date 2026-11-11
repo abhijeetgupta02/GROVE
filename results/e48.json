@@ -1,0 +1,692 @@
+{
+ "results": {
+  "first_freeze": {
+   "GROVE": {
+    "TP": 244.0,
+    "FP": 519.0,
+    "FN": 10.0,
+    "precision": 0.3197903014416776,
+    "recall": 0.9606299212598425,
+    "micro_f1": 0.47984267453294,
+    "per_category": {
+     "Fall_Hazard": {
+      "TP": 52.0,
+      "FP": 367.0,
+      "FN": 0.0,
+      "precision": 0.12410501193317422,
+      "recall": 1.0,
+      "f1": 0.2208067940552017
+     },
+     "PPE_Violation": {
+      "TP": 192.0,
+      "FP": 152.0,
+      "FN": 10.0,
+      "precision": 0.5581395348837209,
+      "recall": 0.9504950495049505,
+      "f1": 0.7032967032967034
+     }
+    },
+    "macro_f1": 0.46205174867595256,
+    "n_images": 500,
+    "n_negative_images": 250,
+    "false_alarms_per_100_negative": 133.6,
+    "completion": 1.0,
+    "seconds": 17.44011,
+    "prevalence_standardized": {
+     "precision": 0.08613675164211926,
+     "recall": 0.9606299212598425,
+     "f1": 0.158097392837606,
+     "r": 0.122,
+     "p": 0.5
+    }
+   },
+   "main_question": {
+    "TP": 222.0,
+    "FP": 346.0,
+    "FN": 32.0,
+    "precision": 0.3908450704225352,
+    "recall": 0.8740157480314961,
+    "micro_f1": 0.5401459854014599,
+    "per_category": {
+     "Fall_Hazard": {
+      "TP": 50.0,
+      "FP": 269.0,
+      "FN": 2.0,
+      "precision": 0.15673981191222572,
+      "recall": 0.9615384615384616,
+      "f1": 0.2695417789757412
+     },
+     "PPE_Violation": {
+      "TP": 172.0,
+      "FP": 77.0,
+      "FN": 30.0,
+      "precision": 0.6907630522088354,
+      "recall": 0.8514851485148515,
+      "f1": 0.7627494456762749
+     }
+    },
+    "macro_f1": 0.5161456123260081,
+    "n_images": 500,
+    "n_negative_images": 250,
+    "false_alarms_per_100_negative": 82.8,
+    "completion": 1.0,
+    "seconds": 4.4197999999999995,
+    "prevalence_standardized": {
+     "precision": 0.11995323046397503,
+     "recall": 0.8740157480314961,
+     "f1": 0.21095429479390593,
+     "r": 0.122,
+     "p": 0.5
+    }
+   },
+   "variant_no_fact_questions": {
+    "TP": 222.0,
+    "FP": 346.0,
+    "FN": 32.0,
+    "precision": 0.3908450704225352,
+    "recall": 0.8740157480314961,
+    "micro_f1": 0.5401459854014599,
+    "per_category": {
+     "Fall_Hazard": {
+      "TP": 50.0,
+      "FP": 269.0,
+      "FN": 2.0,
+      "precision": 0.15673981191222572,
+      "recall": 0.9615384615384616,
+      "f1": 0.2695417789757412
+     },
+     "PPE_Violation": {
+      "TP": 172.0,
+      "FP": 77.0,
+      "FN": 30.0,
+      "precision": 0.6907630522088354,
+      "recall": 0.8514851485148515,
+      "f1": 0.7627494456762749
+     }
+    },
+    "macro_f1": 0.5161456123260081,
+    "n_images": 500,
+    "n_negative_images": 250,
+    "false_alarms_per_100_negative": 82.8,
+    "completion": 1.0,
+    "seconds": 4.4197999999999995,
+    "prevalence_standardized": {
+     "precision": 0.11995323046397503,
+     "recall": 0.8740157480314961,
+     "f1": 0.21095429479390593,
+     "r": 0.122,
+     "p": 0.5
+    }
+   },
+   "variant_no_protection": {
+    "TP": 244.0,
+    "FP": 531.0,
+    "FN": 10.0,
+    "precision": 0.31483870967741934,
+    "recall": 0.9606299212598425,
+    "micro_f1": 0.4742468415937804,
+    "per_category": {
+     "Fall_Hazard": {
+      "TP": 52.0,
+      "FP": 379.0,
+      "FN": 0.0,
+      "precision": 0.12064965197215777,
+      "recall": 1.0,
+      "f1": 0.2153209109730849
+     },
+     "PPE_Violation": {
+      "TP": 192.0,
+      "FP": 152.0,
+      "FN": 10.0,
+      "precision": 0.5581395348837209,
+      "recall": 0.9504950495049505,
+      "f1": 0.7032967032967034
+     }
+    },
+    "macro_f1": 0.45930880713489414,
+    "n_images": 500,
+    "n_negative_images": 250,
+    "false_alarms_per_100_negative": 134.8,
+    "completion": 1.0,
+    "seconds": 17.44011,
+    "prevalence_standardized": {
+     "precision": 0.08521650511562395,
+     "recall": 0.9606299212598425,
+     "f1": 0.15654597565144218,
+     "r": 0.122,
+     "p": 0.5
+    }
+   },
+   "variant_no_worker": {
+    "TP": 242.0,
+    "FP": 496.0,
+    "FN": 12.0,
+    "precision": 0.32791327913279134,
+    "recall": 0.952755905511811,
+    "micro_f1": 0.4879032258064516,
+    "per_category": {
+     "Fall_Hazard": {
+      "TP": 52.0,
+      "FP": 367.0,
+      "FN": 0.0,
+      "precision": 0.12410501193317422,
+      "recall": 1.0,
+      "f1": 0.2208067940552017
+     },
+     "PPE_Violation": {
+      "TP": 190.0,
+      "FP": 129.0,
+      "FN": 12.0,
+      "precision": 0.5956112852664577,
+      "recall": 0.9405940594059405,
+      "f1": 0.7293666026871402
+     }
+    },
+    "macro_f1": 0.4750866983711709,
+    "n_images": 500,
+    "n_negative_images": 250,
+    "false_alarms_per_100_negative": 126.4,
+    "completion": 1.0,
+    "seconds": 17.44011,
+    "prevalence_standardized": {
+     "precision": 0.08975715345420932,
+     "recall": 0.952755905511811,
+     "f1": 0.16405867970660137,
+     "r": 0.122,
+     "p": 0.5
+    }
+   },
+   "second_GROVE_questions": {
+    "TP": 241.0,
+    "FP": 505.0,
+    "FN": 13.0,
+    "precision": 0.3230563002680965,
+    "recall": 0.9488188976377953,
+    "micro_f1": 0.482,
+    "per_category": {
+     "Fall_Hazard": {
+      "TP": 52.0,
+      "FP": 399.0,
+      "FN": 0.0,
+      "precision": 0.11529933481152993,
+      "recall": 1.0,
+      "f1": 0.20675944333996024
+     },
+     "PPE_Violation": {
+      "TP": 189.0,
+      "FP": 106.0,
+      "FN": 13.0,
+      "precision": 0.6406779661016949,
+      "recall": 0.9356435643564357,
+      "f1": 0.7605633802816901
+     }
+    },
+    "macro_f1": 0.48366141181082517,
+    "n_images": 500,
+    "n_negative_images": 250,
+    "false_alarms_per_100_negative": 123.6,
+    "completion": 1.0,
+    "seconds": 3.002098,
+    "prevalence_standardized": {
+     "precision": 0.09057470981097658,
+     "recall": 0.9488188976377953,
+     "f1": 0.16536371919325976,
+     "r": 0.122,
+     "p": 0.5
+    }
+   },
+   "single-pass qwen3.5:27b": {
+    "TP": 237.0,
+    "FP": 294.0,
+    "FN": 17.0,
+    "precision": 0.4463276836158192,
+    "recall": 0.9330708661417323,
+    "micro_f1": 0.6038216560509554,
+    "per_category": {
+     "Fall_Hazard": {
+      "TP": 43.0,
+      "FP": 153.0,
+      "FN": 9.0,
+      "precision": 0.2193877551020408,
+      "recall": 0.8269230769230769,
+      "f1": 0.3467741935483871
+     },
+     "PPE_Violation": {
+      "TP": 194.0,
+      "FP": 141.0,
+      "FN": 8.0,
+      "precision": 0.5791044776119403,
+      "recall": 0.9603960396039604,
+      "f1": 0.7225325884543762
+     }
+    },
+    "macro_f1": 0.5346533910013817,
+    "n_images": 500,
+    "n_negative_images": 250,
+    "false_alarms_per_100_negative": 72.0,
+    "completion": 1.0,
+    "seconds": 6.21012,
+    "statuses": {
+     "valid": 500
+    },
+    "prevalence_standardized": {
+     "precision": 0.14394957732174318,
+     "recall": 0.9330708661417323,
+     "f1": 0.2494198835453956,
+     "r": 0.122,
+     "p": 0.5
+    }
+   },
+   "single-pass gemma4:31b": {
+    "TP": 232.0,
+    "FP": 267.0,
+    "FN": 22.0,
+    "precision": 0.4649298597194389,
+    "recall": 0.9133858267716536,
+    "micro_f1": 0.6162018592297477,
+    "per_category": {
+     "Fall_Hazard": {
+      "TP": 45.0,
+      "FP": 126.0,
+      "FN": 7.0,
+      "precision": 0.2631578947368421,
+      "recall": 0.8653846153846154,
+      "f1": 0.40358744394618834
+     },
+     "PPE_Violation": {
+      "TP": 187.0,
+      "FP": 141.0,
+      "FN": 15.0,
+      "precision": 0.5701219512195121,
+      "recall": 0.9257425742574258,
+      "f1": 0.7056603773584905
+     }
+    },
+    "macro_f1": 0.5546239106523394,
+    "n_images": 500,
+    "n_negative_images": 250,
+    "false_alarms_per_100_negative": 71.6,
+    "completion": 1.0,
+    "seconds": 4.76842,
+    "statuses": {
+     "valid": 500
+    },
+    "prevalence_standardized": {
+     "precision": 0.1442594876708698,
+     "recall": 0.9133858267716536,
+     "f1": 0.24916589638628459,
+     "r": 0.122,
+     "p": 0.5
+    }
+   },
+   "GROVE minus best single-pass": {
+    "f1": [
+     -0.1363591846968077,
+     -0.15920713831146746,
+     -0.11323507264790775
+    ],
+    "fa": [
+     62.0,
+     54.32072158365262,
+     69.74815329357548
+    ]
+   },
+   "GROVE minus main-question": [
+    -0.060303310868519866,
+    -0.08113089391918066,
+    -0.039295532115585174
+   ]
+  },
+  "refit": {
+   "GROVE": {
+    "TP": 189.0,
+    "FP": 92.0,
+    "FN": 65.0,
+    "precision": 0.6725978647686833,
+    "recall": 0.7440944881889764,
+    "micro_f1": 0.7065420560747664,
+    "per_category": {
+     "Fall_Hazard": {
+      "TP": 30.0,
+      "FP": 41.0,
+      "FN": 22.0,
+      "precision": 0.4225352112676056,
+      "recall": 0.5769230769230769,
+      "f1": 0.4878048780487805
+     },
+     "PPE_Violation": {
+      "TP": 159.0,
+      "FP": 51.0,
+      "FN": 43.0,
+      "precision": 0.7571428571428571,
+      "recall": 0.7871287128712872,
+      "f1": 0.7718446601941747
+     }
+    },
+    "macro_f1": 0.6298247691214776,
+    "n_images": 500,
+    "n_negative_images": 250,
+    "false_alarms_per_100_negative": 20.0,
+    "completion": 1.0,
+    "seconds": 17.44011,
+    "prevalence_standardized": {
+     "precision": 0.3198856857467882,
+     "recall": 0.7440944881889764,
+     "f1": 0.44742408072183937,
+     "r": 0.122,
+     "p": 0.5
+    }
+   },
+   "main_question": {
+    "TP": 196.0,
+    "FP": 105.0,
+    "FN": 58.0,
+    "precision": 0.6511627906976745,
+    "recall": 0.7716535433070866,
+    "micro_f1": 0.7063063063063063,
+    "per_category": {
+     "Fall_Hazard": {
+      "TP": 31.0,
+      "FP": 49.0,
+      "FN": 21.0,
+      "precision": 0.3875,
+      "recall": 0.5961538461538461,
+      "f1": 0.4696969696969697
+     },
+     "PPE_Violation": {
+      "TP": 165.0,
+      "FP": 56.0,
+      "FN": 37.0,
+      "precision": 0.746606334841629,
+      "recall": 0.8168316831683168,
+      "f1": 0.7801418439716312
+     }
+    },
+    "macro_f1": 0.6249194068343005,
+    "n_images": 500,
+    "n_negative_images": 250,
+    "false_alarms_per_100_negative": 23.2,
+    "completion": 1.0,
+    "seconds": 4.4197999999999995,
+    "prevalence_standardized": {
+     "precision": 0.2967854039965246,
+     "recall": 0.7716535433070867,
+     "f1": 0.4286918015740689,
+     "r": 0.122,
+     "p": 0.5
+    }
+   },
+   "variant_no_fact_questions": {
+    "TP": 196.0,
+    "FP": 105.0,
+    "FN": 58.0,
+    "precision": 0.6511627906976745,
+    "recall": 0.7716535433070866,
+    "micro_f1": 0.7063063063063063,
+    "per_category": {
+     "Fall_Hazard": {
+      "TP": 31.0,
+      "FP": 49.0,
+      "FN": 21.0,
+      "precision": 0.3875,
+      "recall": 0.5961538461538461,
+      "f1": 0.4696969696969697
+     },
+     "PPE_Violation": {
+      "TP": 165.0,
+      "FP": 56.0,
+      "FN": 37.0,
+      "precision": 0.746606334841629,
+      "recall": 0.8168316831683168,
+      "f1": 0.7801418439716312
+     }
+    },
+    "macro_f1": 0.6249194068343005,
+    "n_images": 500,
+    "n_negative_images": 250,
+    "false_alarms_per_100_negative": 23.2,
+    "completion": 1.0,
+    "seconds": 4.4197999999999995,
+    "prevalence_standardized": {
+     "precision": 0.2967854039965246,
+     "recall": 0.7716535433070867,
+     "f1": 0.4286918015740689,
+     "r": 0.122,
+     "p": 0.5
+    }
+   },
+   "variant_no_protection": {
+    "TP": 191.0,
+    "FP": 100.0,
+    "FN": 63.0,
+    "precision": 0.6563573883161512,
+    "recall": 0.7519685039370079,
+    "micro_f1": 0.7009174311926606,
+    "per_category": {
+     "Fall_Hazard": {
+      "TP": 32.0,
+      "FP": 49.0,
+      "FN": 20.0,
+      "precision": 0.3950617283950617,
+      "recall": 0.6153846153846154,
+      "f1": 0.48120300751879697
+     },
+     "PPE_Violation": {
+      "TP": 159.0,
+      "FP": 51.0,
+      "FN": 43.0,
+      "precision": 0.7571428571428571,
+      "recall": 0.7871287128712872,
+      "f1": 0.7718446601941747
+     }
+    },
+    "macro_f1": 0.6265238338564858,
+    "n_images": 500,
+    "n_negative_images": 250,
+    "false_alarms_per_100_negative": 20.8,
+    "completion": 1.0,
+    "seconds": 17.44011,
+    "prevalence_standardized": {
+     "precision": 0.31146576843906204,
+     "recall": 0.7519685039370079,
+     "f1": 0.44048316666981707,
+     "r": 0.122,
+     "p": 0.5
+    }
+   },
+   "variant_no_worker": {
+    "TP": 190.0,
+    "FP": 95.0,
+    "FN": 64.0,
+    "precision": 0.6666666666666666,
+    "recall": 0.7480314960629921,
+    "micro_f1": 0.7050092764378478,
+    "per_category": {
+     "Fall_Hazard": {
+      "TP": 30.0,
+      "FP": 41.0,
+      "FN": 22.0,
+      "precision": 0.4225352112676056,
+      "recall": 0.5769230769230769,
+      "f1": 0.4878048780487805
+     },
+     "PPE_Violation": {
+      "TP": 160.0,
+      "FP": 54.0,
+      "FN": 42.0,
+      "precision": 0.7476635514018691,
+      "recall": 0.7920792079207921,
+      "f1": 0.7692307692307693
+     }
+    },
+    "macro_f1": 0.6285178236397748,
+    "n_images": 500,
+    "n_negative_images": 250,
+    "false_alarms_per_100_negative": 21.2,
+    "completion": 1.0,
+    "seconds": 17.44011,
+    "prevalence_standardized": {
+     "precision": 0.3097356957695287,
+     "recall": 0.7480314960629921,
+     "f1": 0.4380775990777312,
+     "r": 0.122,
+     "p": 0.5
+    }
+   },
+   "second_GROVE_questions": {
+    "TP": 178.0,
+    "FP": 66.0,
+    "FN": 76.0,
+    "precision": 0.7295081967213115,
+    "recall": 0.7007874015748031,
+    "micro_f1": 0.714859437751004,
+    "per_category": {
+     "Fall_Hazard": {
+      "TP": 9.0,
+      "FP": 9.0,
+      "FN": 43.0,
+      "precision": 0.5,
+      "recall": 0.17307692307692307,
+      "f1": 0.2571428571428571
+     },
+     "PPE_Violation": {
+      "TP": 169.0,
+      "FP": 57.0,
+      "FN": 33.0,
+      "precision": 0.7477876106194691,
+      "recall": 0.8366336633663366,
+      "f1": 0.7897196261682243
+     }
+    },
+    "macro_f1": 0.5234312416555407,
+    "n_images": 500,
+    "n_negative_images": 250,
+    "false_alarms_per_100_negative": 19.2,
+    "completion": 1.0,
+    "seconds": 3.002098,
+    "prevalence_standardized": {
+     "precision": 0.32875136248031955,
+     "recall": 0.7007874015748031,
+     "f1": 0.447549565145707,
+     "r": 0.122,
+     "p": 0.5
+    }
+   },
+   "single-pass qwen3.5:27b": {
+    "TP": 237.0,
+    "FP": 294.0,
+    "FN": 17.0,
+    "precision": 0.4463276836158192,
+    "recall": 0.9330708661417323,
+    "micro_f1": 0.6038216560509554,
+    "per_category": {
+     "Fall_Hazard": {
+      "TP": 43.0,
+      "FP": 153.0,
+      "FN": 9.0,
+      "precision": 0.2193877551020408,
+      "recall": 0.8269230769230769,
+      "f1": 0.3467741935483871
+     },
+     "PPE_Violation": {
+      "TP": 194.0,
+      "FP": 141.0,
+      "FN": 8.0,
+      "precision": 0.5791044776119403,
+      "recall": 0.9603960396039604,
+      "f1": 0.7225325884543762
+     }
+    },
+    "macro_f1": 0.5346533910013817,
+    "n_images": 500,
+    "n_negative_images": 250,
+    "false_alarms_per_100_negative": 72.0,
+    "completion": 1.0,
+    "seconds": 6.21012,
+    "statuses": {
+     "valid": 500
+    },
+    "prevalence_standardized": {
+     "precision": 0.14394957732174318,
+     "recall": 0.9330708661417323,
+     "f1": 0.2494198835453956,
+     "r": 0.122,
+     "p": 0.5
+    }
+   },
+   "single-pass gemma4:31b": {
+    "TP": 232.0,
+    "FP": 267.0,
+    "FN": 22.0,
+    "precision": 0.4649298597194389,
+    "recall": 0.9133858267716536,
+    "micro_f1": 0.6162018592297477,
+    "per_category": {
+     "Fall_Hazard": {
+      "TP": 45.0,
+      "FP": 126.0,
+      "FN": 7.0,
+      "precision": 0.2631578947368421,
+      "recall": 0.8653846153846154,
+      "f1": 0.40358744394618834
+     },
+     "PPE_Violation": {
+      "TP": 187.0,
+      "FP": 141.0,
+      "FN": 15.0,
+      "precision": 0.5701219512195121,
+      "recall": 0.9257425742574258,
+      "f1": 0.7056603773584905
+     }
+    },
+    "macro_f1": 0.5546239106523394,
+    "n_images": 500,
+    "n_negative_images": 250,
+    "false_alarms_per_100_negative": 71.6,
+    "completion": 1.0,
+    "seconds": 4.76842,
+    "statuses": {
+     "valid": 500
+    },
+    "prevalence_standardized": {
+     "precision": 0.1442594876708698,
+     "recall": 0.9133858267716536,
+     "f1": 0.24916589638628459,
+     "r": 0.122,
+     "p": 0.5
+    }
+   },
+   "GROVE minus best single-pass": {
+    "f1": [
+     0.0903401968450187,
+     0.052050136091066235,
+     0.12851375925240113
+    ],
+    "fa": [
+     -51.599999999999994,
+     -59.915611814345986,
+     -43.41986366518706
+    ]
+   },
+   "GROVE minus main-question": [
+    0.00023574976846008067,
+    -0.025205668614734864,
+    0.02618572824776343
+   ]
+  }
+ },
+ "statuses": {
+  "GROVE h": {
+   "valid": 500
+  },
+  "main m": {
+   "valid": 500
+  },
+  "single-pass qwen3.5:27b": {
+   "valid": 500
+  },
+  "single-pass gemma4:31b": {
+   "valid": 500
+  }
+ }
+}

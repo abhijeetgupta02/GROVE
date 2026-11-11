@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-message: "If you use this code or the annotations, please cite the paper."
+message: "If you use this code or these results, please cite the paper."
 title: "GROVE: Grounded Violation Evaluator for Visual Inspection"
 type: software
 authors:
@@ -18,10 +18,11 @@ authors:
     affiliation: University of Dayton
 year: 2026
 license: MIT
-doi: 10.5281/zenodo.23585081
 repository-code: "https://github.com/abhijeetgupta02/GROVE"
+url: "https://abhijeetgupta02.github.io/GROVE/"
 keywords:
   - construction safety
   - vision-language models
+  - calibration
   - visual grounding
   - hazard detection

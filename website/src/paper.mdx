@@ -1,0 +1,133 @@
+---
+# Browser tab and link-preview card. Every number on the page comes from src/data (see README).
+title: "GROVE: Grounded Violation Evaluator for Visual Inspection"
+theme: device
+favicon: favicon.svg
+description: "GROVE flags safety violations in construction-site photos with a fixed set of yes/no questions, a frozen formula and an evidence box per alert."
+thumbnail: social-preview.png
+---
+
+import Hero from "./components/site/Hero.astro";
+import Section from "./components/site/Section.astro";
+import Glance from "./components/site/Glance.astro";
+import PostHoc from "./components/site/PostHocBadge.astro";
+import Num from "./components/Num.astro";
+import Repro from "./components/site/Repro.astro";
+import Credits from "./components/site/Credits.astro";
+import Teaser from "./components/site/Teaser.tsx";
+import HowItWorks from "./components/site/HowItWorks.tsx";
+import ThresholdExplorer from "./components/site/ThresholdExplorer.tsx";
+import Results from "./components/site/Results.tsx";
+import Removal from "./components/site/Removal.tsx";
+import Grounding from "./components/site/Grounding.tsx";
+import Gallery from "./components/site/Gallery.tsx";
+import Failures from "./components/site/Failures.tsx";
+
+export const base = import.meta.env.BASE_URL.endsWith("/") ? import.meta.env.BASE_URL : import.meta.env.BASE_URL + "/";
+
+<Hero />
+
+<nav aria-label="Sections" class="not-prose mb-10 font-sans text-sm">
+  <ul class="m-0 flex list-none flex-wrap justify-center gap-x-4 gap-y-1 p-0">
+    <li><a class="underline decoration-dashed underline-offset-4" href="#teaser">Example</a></li>
+    <li><a class="underline decoration-dashed underline-offset-4" href="#glance">At a glance</a></li>
+    <li><a class="underline decoration-dashed underline-offset-4" href="#how">How it works</a></li>
+    <li><a class="underline decoration-dashed underline-offset-4" href="#explorer">Threshold explorer</a></li>
+    <li><a class="underline decoration-dashed underline-offset-4" href="#results">Results</a></li>
+    <li><a class="underline decoration-dashed underline-offset-4" href="#gallery">Gallery</a></li>
+    <li><a class="underline decoration-dashed underline-offset-4" href="#failures">Where GROVE fails</a></li>
+    <li><a class="underline decoration-dashed underline-offset-4" href="#limitations">Limitations</a></li>
+    <li><a class="underline decoration-dashed underline-offset-4" href="#reproducibility">Reproducibility</a></li>
+    <li><a class="underline decoration-dashed underline-offset-4" href="#cite">Cite</a></li>
+  </ul>
+</nav>
+
+<Section id="teaser" title="One photo, two inspectors" wide>
+<div class="mx-auto max-w-[50rem]">
+
+A single-pass vision-language model (<span class="font-mono">gemma4:31b</span>) reads the photo and answers in one go, with a sentence of evidence. GROVE scores each category against a fixed threshold and backs its alert with a box. This is a selected example; the rule that chose it is described in the gallery.
+
+</div>
+<Teaser client:visible base={base} />
+</Section>
+
+<Section id="glance" title="At a glance">
+<Glance />
+</Section>
+
+<Section id="how" title="How it works">
+
+A vision-language decision model (<span class="font-mono">d3:27b</span>) answers <Num k="setup.question_count_h" as="int" /> fixed yes/no questions about the photo with a probability each: a main question per category, fact questions (for example, an unprotected edge or a worker without a hard hat) and protection questions. A formula with weights frozen before any test image was scored combines them into one score per category, and a threshold per category turns the score into an alert. For each alert a fixed phrase is sent to GroundingDINO (with DETR and OpenCLIP as a fallback) to find the evidence box. Click through the steps for one selected example.
+
+<HowItWorks client:visible base={base} />
+</Section>
+
+<Section id="explorer" title="Threshold explorer" wide>
+<div class="mx-auto max-w-[50rem]">
+
+GROVE&rsquo;s alerts depend on one threshold per category. The sliders start at the refit thresholds that were used on the final images; the numbers and curves are computed in your browser from the saved scores of every image.
+
+</div>
+<ThresholdExplorer client:visible />
+</Section>
+
+<Section id="results" title="Results" wide>
+<div class="mx-auto max-w-[50rem]">
+
+On the final images GROVE&rsquo;s micro-F1 is <Num k="final.grove.micro_f1" ci /> against <Num k="final.gemma.micro_f1" ci /> for <span class="font-mono">gemma4:31b</span>, the single-pass model chosen on the calibration images (difference <Num k="final.diff.grove_minus_gemma" as="signed" ci />). The main questions of the same decision model, without the fact questions and the formula, reached <Num k="final.main.micro_f1" ci /> (GROVE minus main questions <Num k="final.diff.grove_minus_main" as="signed" ci />), so on these images the fact questions and the formula did not add to the micro-F1 of the main questions. Against <span class="font-mono">qwen3.5:27b</span>, run on the final images after final scoring, the difference is <Num k="final.diff.grove_minus_qwen" as="signed" ci /><PostHoc />.
+
+</div>
+<Results client:visible />
+<div class="mx-auto mt-10 max-w-[50rem]">
+
+### Removing one part at a time
+
+On the development images, dropping the protection term (<Num k="dev.removal.17.diff" as="signed" ci d={4} />) or the worker-visible term (<Num k="dev.removal.18.diff" as="signed" ci d={4} />) lowered micro-F1 a little, and one shared threshold or a fixed threshold lowered it more. On the final images none of the three removals moved micro-F1 by an amount the intervals separate from zero.
+
+</div>
+<Removal client:visible />
+<div class="mx-auto mt-10 max-w-[50rem]">
+
+### Evidence boxes
+
+Under the frozen rule, a single-pass box counts only as pixel coordinates inside the image; read that way, the single-pass boxes almost never match a labeled box. Many of them fit a 0&ndash;1000 grid instead. Read on that grid, <span class="font-mono">qwen3.5:27b</span>&rsquo;s boxes reach about GROVE&rsquo;s top-box F1 on the final images (<Num k="final.box.qwen_grid.0.5.f1" /> against <Num k="final.box.grove.0.5.f1" />)<PostHoc />; this matches GROVE on this set and does not show better localization in general.
+
+</div>
+<Grounding client:visible />
+</Section>
+
+<Section id="gallery" title="Gallery" wide>
+<div class="mx-auto max-w-[50rem] font-semibold">
+
+Selected examples, chosen by a fixed rule. On all <Num k="final.n_images" as="int" /> final images GROVE&rsquo;s micro-F1 is <Num k="final.grove.micro_f1" />.
+
+</div>
+<Gallery client:visible base={base} />
+</Section>
+
+<Section id="failures" title="Where GROVE fails" wide>
+<div class="mx-auto max-w-[50rem]">
+
+Selected failures, one per type, drawn by the same fixed rule from the final images. On all final images GROVE made <Num k="errors.grove.false_alarm" as="int" /> false alarms and <Num k="errors.grove.miss" as="int" /> misses (image-category pairs), against <Num k="errors.gemma.false_alarm" as="int" /> and <Num k="errors.gemma.miss" as="int" /> for <span class="font-mono">gemma4:31b</span><PostHoc />.
+
+</div>
+<Failures client:visible base={base} />
+</Section>
+
+<Section id="limitations" title="Limitations">
+
+- **Balanced image sets.** Half of the calibration and final images contain a violation, far more than in practice. Standardized to the natural violation rate (<Num k="final.reference_rate" d={3} />), precision is <Num k="final.grove.std_precision" /> for GROVE against <Num k="final.gemma.std_precision" /> for <span class="font-mono">gemma4:31b</span>: at that rate most alerts of either system would be false.
+- **Narrower rules in ConstructionSite10k.** Its labels follow its own rules: high-visibility vests are required only at night, and falls count only from heights or depths of <Num k="dataset.height_rule_m" as="text" /> m or more. GROVE&rsquo;s questions are broader, so some of its alerts are &ldquo;wrong&rdquo; only under these rules.
+- **No Electrical labels** outside the development images, so Electrical is not tested on new images.
+- **Calibration needs labeled images from the target site.** Thresholds carried over from the development images gave micro-F1 <Num k="final.first_freeze_grove.micro_f1" /> on the final images<PostHoc />; the refit thresholds needed <Num k="cal.n_images" as="int" /> labeled calibration images.
+- **Speed.** The decision step takes about <Num k="speed.decision_seconds" d={1} /> s per image on one workstation, against <Num k="speed.single_pass_seconds" d={1} /> s for the single-pass model.
+
+</Section>
+
+<Section id="reproducibility" title="Reproducibility">
+<Repro />
+</Section>
+
+<Section id="cite" title="Citation, acknowledgments and image credit">
+<Credits />
+</Section>

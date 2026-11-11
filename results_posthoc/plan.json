@@ -1,0 +1,61 @@
+{
+ "posthoc": "Part B of 2026-11-10 (D24)",
+ "written": "2026-11-10T12:05:48",
+ "jobs": [
+  {
+   "exp": "p06_final",
+   "kind": "sp",
+   "model": "qwen3.5:27b",
+   "set": "sp",
+   "image_set": "final",
+   "total": 1000,
+   "file": "runs_posthoc\\p06_final\\qwen3.5_27b__sp.jsonl",
+   "est_seconds_per_image": 6.21,
+   "est_basis": "mean seconds per image of the same model in the run (runs\\e43)"
+  },
+  {
+   "exp": "p07_cal",
+   "kind": "spc",
+   "model": "qwen3.5:27b",
+   "set": "spc",
+   "image_set": "calibration",
+   "total": 500,
+   "file": "runs_posthoc\\p07_cal\\qwen3.5_27b__spc.jsonl",
+   "est_seconds_per_image": 6.21,
+   "est_basis": "mean seconds per image of the same model in the run (runs\\e43)"
+  },
+  {
+   "exp": "p07_final",
+   "kind": "spc",
+   "model": "qwen3.5:27b",
+   "set": "spc",
+   "image_set": "final",
+   "total": 1000,
+   "file": "runs_posthoc\\p07_final\\qwen3.5_27b__spc.jsonl",
+   "est_seconds_per_image": 6.21,
+   "est_basis": "mean seconds per image of the same model in the run (runs\\e43)"
+  },
+  {
+   "exp": "p07_cal",
+   "kind": "spc",
+   "model": "gemma4:31b",
+   "set": "spc",
+   "image_set": "calibration",
+   "total": 500,
+   "file": "runs_posthoc\\p07_cal\\gemma4_31b__spc.jsonl",
+   "est_seconds_per_image": 4.76,
+   "est_basis": "mean seconds per image of the same model in the run (runs\\e52)"
+  },
+  {
+   "exp": "p07_final",
+   "kind": "spc",
+   "model": "gemma4:31b",
+   "set": "spc",
+   "image_set": "final",
+   "total": 1000,
+   "file": "runs_posthoc\\p07_final\\gemma4_31b__spc.jsonl",
+   "est_seconds_per_image": 4.76,
+   "est_basis": "mean seconds per image of the same model in the run (runs\\e52)"
+  }
+ ]
+}

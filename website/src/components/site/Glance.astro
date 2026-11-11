@@ -1,0 +1,25 @@
+---
+import Num from "../Num.astro";
+import Tile from "./Tile.astro";
+---
+
+<div class="grid gap-3 sm:grid-cols-2">
+  <Tile title="Micro-F1 on the final images">
+    <Fragment slot="big"><Num k="final.grove.micro_f1" /> <span class="text-lg">against</span> <Num k="final.gemma.micro_f1" /></Fragment>
+    GROVE against the single-pass model <span class="font-mono">gemma4:31b</span>; difference
+    <Num k="final.diff.grove_minus_gemma" as="signed" ci /> (95% interval).
+  </Tile>
+  <Tile title="False alarms per 100 violation-free images">
+    <Fragment slot="big"><Num k="final.grove.false_alarms" d={1} /> <span class="text-lg">against</span> <Num k="final.gemma.false_alarms" d={1} /></Fragment>
+    GROVE against <span class="font-mono">gemma4:31b</span> on the final images.
+  </Tile>
+  <Tile title="Unseen images, scored once">
+    <Fragment slot="big"><Num k="final.n_images" as="int" /></Fragment>
+    Final images scored once, after the protocol, models and thresholds were frozen.
+  </Tile>
+  <Tile title="Top evidence box F1 at IoU 0.5">
+    <Fragment slot="big"><Num k="final.box.grove.0.5.f1" /></Fragment>
+    GROVE&rsquo;s top box per alert on the final images (<span class="font-mono">gemma4:31b</span> boxes as written:
+    <Num k="final.box.gemma.0.5.f1" />).
+  </Tile>
+</div>

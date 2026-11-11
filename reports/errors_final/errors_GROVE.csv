@@ -1,0 +1,101 @@
+image_id,category,type,score,system_text,dataset_reason,error_class,file
+0004910,PPE_Violation,false alarm,0.9149136224069794,worker without safety vest,,helmet or vest,GROVE_false_alarm_PPE_0004910.jpg
+0005538,PPE_Violation,false alarm,0.9223009059115792,worker without safety vest,,helmet or vest,GROVE_false_alarm_PPE_0005538.jpg
+0005549,PPE_Violation,false alarm,0.9287333128646706,worker without safety vest,,helmet or vest,GROVE_false_alarm_PPE_0005549.jpg
+0005606,PPE_Violation,false alarm,0.8312112754743142,worker without safety vest,,helmet or vest,GROVE_false_alarm_PPE_0005606.jpg
+0005783,PPE_Violation,false alarm,0.8568554862423516,worker without safety vest,,helmet or vest,GROVE_false_alarm_PPE_0005783.jpg
+0006326,PPE_Violation,false alarm,0.8782488912470969,worker without safety vest,,helmet or vest,GROVE_false_alarm_PPE_0006326.jpg
+0006383,PPE_Violation,false alarm,0.9301314753190388,worker without safety vest,,helmet or vest,GROVE_false_alarm_PPE_0006383.jpg
+0006404,PPE_Violation,false alarm,0.8658994022569504,worker without safety vest,,helmet or vest,GROVE_false_alarm_PPE_0006404.jpg
+0006505,PPE_Violation,false alarm,0.9158510955711904,worker without safety vest,,helmet or vest,GROVE_false_alarm_PPE_0006505.jpg
+0006716,PPE_Violation,false alarm,0.8258784182894812,worker without safety vest,,helmet or vest,GROVE_false_alarm_PPE_0006716.jpg
+0007369,PPE_Violation,false alarm,0.9151521699855785,worker without safety vest,,helmet or vest,GROVE_false_alarm_PPE_0007369.jpg
+0007432,PPE_Violation,false alarm,0.9106772832551848,worker without safety vest,,helmet or vest,GROVE_false_alarm_PPE_0007432.jpg
+0007757,PPE_Violation,false alarm,0.9388976710017837,worker without safety vest,,helmet or vest,GROVE_false_alarm_PPE_0007757.jpg
+0007761,PPE_Violation,false alarm,0.935369732745831,worker without safety vest,,helmet or vest,GROVE_false_alarm_PPE_0007761.jpg
+0007804,PPE_Violation,false alarm,0.8357152139154953,worker without safety vest,,helmet or vest,GROVE_false_alarm_PPE_0007804.jpg
+0007851,PPE_Violation,false alarm,0.8769536945083753,worker without safety vest,,helmet or vest,GROVE_false_alarm_PPE_0007851.jpg
+0007997,PPE_Violation,false alarm,0.8809542249308308,worker without safety vest,,helmet or vest,GROVE_false_alarm_PPE_0007997.jpg
+0008056,PPE_Violation,false alarm,0.9328937791051921,worker without safety vest,,helmet or vest,GROVE_false_alarm_PPE_0008056.jpg
+0008820,PPE_Violation,false alarm,0.9178904722211378,worker without safety vest,,helmet or vest,GROVE_false_alarm_PPE_0008820.jpg
+0009029,PPE_Violation,false alarm,0.8285360801519928,worker without safety vest,,helmet or vest,GROVE_false_alarm_PPE_0009029.jpg
+0009121,PPE_Violation,false alarm,0.8282548959816196,worker without safety vest,,helmet or vest,GROVE_false_alarm_PPE_0009121.jpg
+0009503,PPE_Violation,false alarm,0.8734776345545651,worker without safety vest,,helmet or vest,GROVE_false_alarm_PPE_0009503.jpg
+0009840,PPE_Violation,false alarm,0.8446899310758251,worker without safety vest,,helmet or vest,GROVE_false_alarm_PPE_0009840.jpg
+0009869,PPE_Violation,false alarm,0.8104288430687612,worker without safety vest,,helmet or vest,GROVE_false_alarm_PPE_0009869.jpg
+0009964,PPE_Violation,false alarm,0.9009302810827268,worker without safety vest,,helmet or vest,GROVE_false_alarm_PPE_0009964.jpg
+0010173,PPE_Violation,false alarm,0.8489920927681567,worker without safety vest,,helmet or vest,GROVE_false_alarm_PPE_0010173.jpg
+0010343,PPE_Violation,false alarm,0.9060805249493902,worker without safety vest,,helmet or vest,GROVE_false_alarm_PPE_0010343.jpg
+0010474,PPE_Violation,false alarm,0.8072068057232143,worker without safety vest,,helmet or vest,GROVE_false_alarm_PPE_0010474.jpg
+0010525,PPE_Violation,false alarm,0.8916323705843837,worker without safety vest,,helmet or vest,GROVE_false_alarm_PPE_0010525.jpg
+0010641,PPE_Violation,false alarm,0.9044108862520865,worker without safety vest,,helmet or vest,GROVE_false_alarm_PPE_0010641.jpg
+0011311,PPE_Violation,false alarm,0.8307452221685341,worker without safety vest,,helmet or vest,GROVE_false_alarm_PPE_0011311.jpg
+0011453,PPE_Violation,false alarm,0.8336509730200994,worker without safety vest,,helmet or vest,GROVE_false_alarm_PPE_0011453.jpg
+0011863,PPE_Violation,false alarm,0.8836941366569786,worker without safety vest,,helmet or vest,GROVE_false_alarm_PPE_0011863.jpg
+0012007,PPE_Violation,false alarm,0.803586000079908,worker without safety vest,,helmet or vest,GROVE_false_alarm_PPE_0012007.jpg
+0012535,PPE_Violation,false alarm,0.8425761632260178,worker without safety vest,,helmet or vest,GROVE_false_alarm_PPE_0012535.jpg
+0012789,PPE_Violation,false alarm,0.936232207324982,worker without safety vest,,helmet or vest,GROVE_false_alarm_PPE_0012789.jpg
+0012790,PPE_Violation,false alarm,0.8773325116547529,worker without safety vest,,helmet or vest,GROVE_false_alarm_PPE_0012790.jpg
+0012970,PPE_Violation,false alarm,0.8407627682983031,worker without safety vest,,helmet or vest,GROVE_false_alarm_PPE_0012970.jpg
+0013445,PPE_Violation,false alarm,0.8892446933788019,worker without safety vest,,helmet or vest,GROVE_false_alarm_PPE_0013445.jpg
+0006679,Fall_Hazard,false alarm,0.891381704203175,worker on elevated edge, ,inferred height or depth,GROVE_false_alarm_Fall_0006679.jpg
+0008186,Fall_Hazard,false alarm,0.9259891994899642,worker on elevated edge, ,inferred height or depth,GROVE_false_alarm_Fall_0008186.jpg
+0009611,Fall_Hazard,false alarm,0.8788011484470881,worker on elevated edge, ,inferred height or depth,GROVE_false_alarm_Fall_0009611.jpg
+0010483,Fall_Hazard,false alarm,0.905867981164861,worker on elevated edge, ,inferred height or depth,GROVE_false_alarm_Fall_0010483.jpg
+0010643,Fall_Hazard,false alarm,0.8786761940081971,worker on elevated edge, ,inferred height or depth,GROVE_false_alarm_Fall_0010643.jpg
+0011881,Fall_Hazard,false alarm,0.8775584752657781,worker on elevated edge, ,inferred height or depth,GROVE_false_alarm_Fall_0011881.jpg
+0005024,Fall_Hazard,false alarm,0.8631508827447829,open trench or floor opening, ,other or no text,GROVE_false_alarm_Fall_0005024.jpg
+0005519,Fall_Hazard,false alarm,0.876657646439298,open trench or floor opening, ,other or no text,GROVE_false_alarm_Fall_0005519.jpg
+0006295,Fall_Hazard,false alarm,0.9707685859769574,open trench or floor opening, ,other or no text,GROVE_false_alarm_Fall_0006295.jpg
+0008756,Fall_Hazard,false alarm,0.9769998248621111,open trench or floor opening, ,other or no text,GROVE_false_alarm_Fall_0008756.jpg
+0009341,Fall_Hazard,false alarm,0.9721809366706347,open trench or floor opening, ,other or no text,GROVE_false_alarm_Fall_0009341.jpg
+0010236,Fall_Hazard,false alarm,0.869739998636514,open trench or floor opening, ,other or no text,GROVE_false_alarm_Fall_0010236.jpg
+0010588,Fall_Hazard,false alarm,0.9571647239213595,open trench or floor opening, ,other or no text,GROVE_false_alarm_Fall_0010588.jpg
+0010726,Fall_Hazard,false alarm,0.9569615455689485,open trench or floor opening, ,other or no text,GROVE_false_alarm_Fall_0010726.jpg
+0011058,Fall_Hazard,false alarm,0.8646882021509088,open trench or floor opening, ,other or no text,GROVE_false_alarm_Fall_0011058.jpg
+0011175,Fall_Hazard,false alarm,0.9223776822505545,open trench or floor opening, ,other or no text,GROVE_false_alarm_Fall_0011175.jpg
+0012813,Fall_Hazard,false alarm,0.891226489215604,open trench or floor opening, ,other or no text,GROVE_false_alarm_Fall_0012813.jpg
+0013399,Fall_Hazard,false alarm,0.925157689370161,open trench or floor opening, ,other or no text,GROVE_false_alarm_Fall_0013399.jpg
+0005020,PPE_Violation,miss,0.796916918699934,,The person in the foreground on the left is not wearing a hard hat.,helmet or vest,GROVE_miss_PPE_0005020.jpg
+0006491,PPE_Violation,miss,0.5955060870010566,,The person ridding a scooter is not wearing a hard hat.,helmet or vest,GROVE_miss_PPE_0006491.jpg
+0007004,PPE_Violation,miss,0.7625712484089142,,The worker on the left is not wearing a hard hat.,helmet or vest,GROVE_miss_PPE_0007004.jpg
+0007314,PPE_Violation,miss,0.6947081046066403,,Some workers in the middle are not wearing hard hats,helmet or vest,GROVE_miss_PPE_0007314.jpg
+0007860,PPE_Violation,miss,0.6762800843656742,,The two workers in the lower right corner are not wearing hard hats.,helmet or vest,GROVE_miss_PPE_0007860.jpg
+0008053,PPE_Violation,miss,0.7768751184930678,,Three workers in the foreground and one worker in the background are not wearing hard hats.,helmet or vest,GROVE_miss_PPE_0008053.jpg
+0009701,PPE_Violation,miss,0.7291037902002651,,Some workers on the right are not wearing hard hats.,helmet or vest,GROVE_miss_PPE_0009701.jpg
+0011084,PPE_Violation,miss,0.6200365773533658,,A worker on the water truck is not wearing a hard hat.,helmet or vest,GROVE_miss_PPE_0011084.jpg
+0011319,PPE_Violation,miss,0.7952107370068646,,The workers in the upper right are not wearing hard hats.,helmet or vest,GROVE_miss_PPE_0011319.jpg
+0012252,PPE_Violation,miss,0.5836071046833735,,A worker under the shed is not wearing a hard hat.,helmet or vest,GROVE_miss_PPE_0012252.jpg
+0012390,PPE_Violation,miss,0.6205776395859639,,The workers in the upper left are not wearing hard hats.,helmet or vest,GROVE_miss_PPE_0012390.jpg
+0012564,PPE_Violation,miss,0.5482707367089589,,A worker squatting on the right is not wearing a hard hat.,helmet or vest,GROVE_miss_PPE_0012564.jpg
+0013781,PPE_Violation,miss,0.6512726375677105,,The worker in the upper right is not wearing a hard hat.,helmet or vest,GROVE_miss_PPE_0013781.jpg
+0013978,PPE_Violation,miss,0.48770549167895116,,The person in the lower left is not wearing a hard hat.,helmet or vest,GROVE_miss_PPE_0013978.jpg
+0004978,Fall_Hazard,miss,0.4818241820247964,, The edge of the excavation is not protected.,inferred height or depth,GROVE_miss_Fall_0004978.jpg
+0005031,Fall_Hazard,miss,0.6009972546657345,, The right edge of the excavation is not fenced nor warned.,inferred height or depth,GROVE_miss_Fall_0005031.jpg
+0005063,Fall_Hazard,miss,0.8170823465896857,, The edge of the excavation in the background is not guarded.,inferred height or depth,GROVE_miss_Fall_0005063.jpg
+0005447,PPE_Violation,miss,0.4913694256233656,,Workers in the image are not wearing high-visibility vests when working at night.,inferred height or depth,GROVE_miss_PPE_0005447.jpg
+0005691,Fall_Hazard,miss,0.787705981839841,, The right edge of the excavation is not guarded.,inferred height or depth,GROVE_miss_Fall_0005691.jpg
+0005992,Fall_Hazard,miss,0.49590485727429745,, The edge of the embankment on the left is not guarded.,inferred height or depth,GROVE_miss_Fall_0005992.jpg
+0007043,Fall_Hazard,miss,0.6629385791507173,, The edge of the concrete pits on the right are not guarded.,inferred height or depth,GROVE_miss_Fall_0007043.jpg
+0007369,Fall_Hazard,miss,0.8160176307490787,, The edge of the excavation is not guarded.,inferred height or depth,GROVE_miss_Fall_0007369.jpg
+0007485,Fall_Hazard,miss,0.29563209944599234,, The edge of a part of the concrete platform is not guarded.,inferred height or depth,GROVE_miss_Fall_0007485.jpg
+0007712,Fall_Hazard,miss,0.5553306602337997,, The edge of the excavation is not guarded.,inferred height or depth,GROVE_miss_Fall_0007712.jpg
+0007765,PPE_Violation,miss,0.3798532214771021,,The workers are not wearing high-visibility retroreflective vests when working at night.,inferred height or depth,GROVE_miss_PPE_0007765.jpg
+0008739,PPE_Violation,miss,0.6381128544764058,,Two workers are not wearing high-visibility retroreflective vests when working at night.,inferred height or depth,GROVE_miss_PPE_0008739.jpg
+0009403,PPE_Violation,miss,0.7137015053629711,,Four workers are not wearing high-visibility vests.,inferred height or depth,GROVE_miss_PPE_0009403.jpg
+0009435,Fall_Hazard,miss,0.7950369584410578,, The right edge of the excavation is not guarded.,inferred height or depth,GROVE_miss_Fall_0009435.jpg
+0009501,Fall_Hazard,miss,0.7952055099050659,, The edge of the underground excavation is not guarded.,inferred height or depth,GROVE_miss_Fall_0009501.jpg
+0009710,PPE_Violation,miss,0.4603752606198518,,Two workers are not wearing high-visibility retroreflective vests when working at night.,inferred height or depth,GROVE_miss_PPE_0009710.jpg
+0009759,Fall_Hazard,miss,0.7971845331981607,, The right edge of the excavation is not guarded.,inferred height or depth,GROVE_miss_Fall_0009759.jpg
+0011196,PPE_Violation,miss,0.4383265457774634,,The worker is not wearing a high-visibility retroreflective vest when working at night.,inferred height or depth,GROVE_miss_PPE_0011196.jpg
+0013033,Fall_Hazard,miss,0.8595491543666776,, The edge of the concrete platform in the middle is not guarded.,inferred height or depth,GROVE_miss_Fall_0013033.jpg
+0013540,PPE_Violation,miss,0.36865669341726265,,The workers in the middle are not wearing high-visibility retroreflective vests when working at night.,inferred height or depth,GROVE_miss_PPE_0013540.jpg
+0013625,Fall_Hazard,miss,0.6262197105680211,, The edges of the excavation are not guarded.,inferred height or depth,GROVE_miss_Fall_0013625.jpg
+0013729,PPE_Violation,miss,0.5342629974150302,,The workers are not wearing high-visibility vests when working at night.,inferred height or depth,GROVE_miss_PPE_0013729.jpg
+0005317,Fall_Hazard,miss,0.7616640011943117,,The worker on the scaffolding is not wearing a safety harness. ,other or no text,GROVE_miss_Fall_0005317.jpg
+0008056,Fall_Hazard,miss,0.7133925542854205,,The worker on the scaffolding is not wearing a safety harness. ,other or no text,GROVE_miss_Fall_0008056.jpg
+0008717,PPE_Violation,miss,0.7826343829829274,,The worker on the right is wearing shorts.,other or no text,GROVE_miss_PPE_0008717.jpg
+0010343,Fall_Hazard,miss,0.7015159744002981,,The worker on the scaffolding is not wearing a safety harness. ,other or no text,GROVE_miss_Fall_0010343.jpg
+0011372,PPE_Violation,miss,0.7303608323646866,,The pants of the worker in the middle cannot cover the ankles.,other or no text,GROVE_miss_PPE_0011372.jpg
+0012593,Fall_Hazard,miss,0.8578992869826494,,The worker on the scaffolding is not wearing a safety harness. ,other or no text,GROVE_miss_Fall_0012593.jpg
+0012939,PPE_Violation,miss,0.7437198393146015,,The pants of both workers cannot cover their ankles.,other or no text,GROVE_miss_PPE_0012939.jpg

@@ -1,0 +1,36 @@
+{
+ "all_pass": true,
+ "tests": [
+  {
+   "test": "1 labels",
+   "pass": true,
+   "detail": "positive pairs {'Fall_Hazard': 61, 'Electrocution_Hazard': 24, 'PPE_Violation': 40} total 125; kept boxes {'Fall_Hazard': 63, 'Electrocution_Hazard': 24, 'PPE_Violation': 45} total 132 of 247; other images 111"
+  },
+  {
+   "test": "2 fixed 0.5",
+   "pass": true,
+   "detail": "micro-F1 0.678261 (target 0.6783)"
+  },
+  {
+   "test": "3 file blocks",
+   "pass": true,
+   "detail": "micro-F1 0.7726 (target 0.7726 within 0.005)"
+  },
+  {
+   "test": "4 grouped folds",
+   "pass": true,
+   "detail": "micro-F1 0.7883 (target 0.78 to 0.80), repeats 0.781 to 0.794"
+  },
+  {
+   "test": "5 box matching",
+   "pass": true,
+   "detail": "matrix 1 -> [(0, 0)]; matrix 2 -> [(0, 1), (1, 0)]"
+  },
+  {
+   "test": "6 prevalence-standardized precision",
+   "pass": true,
+   "detail": "r = p: 0.3116883117 vs unweighted 0.3116883117"
+  }
+ ],
+ "at": "2026-11-05T22:15:08"
+}

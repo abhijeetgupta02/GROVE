@@ -1,0 +1,13 @@
+{
+ "images_hashed": 7212,
+ "hash": "difference hash, 16 x 16 = 256 bits, grayscale, Lanczos resize to 17 x 16",
+ "cutoff_bits": 66,
+ "files_63_79_distance": 0,
+ "pairs_at_or_below_cutoff": {
+  "cross_dataset": 0,
+  "within_cs10k": 1003,
+  "within_203": 7
+ },
+ "visual_check": "Viewed before any model ran (2026-11-05 11:15): the 20 within-ConstructionSite10k pairs closest to the cutoff on each side, the 20 closest cross-dataset pairs, and random samples of 12 pairs at 64-66 and 69-72 bits. Files 63 and 79 match (0 bits). No cross-dataset pair is at 67 bits or fewer (closest 68 bits, clearly unrelated), so no ConstructionSite10k image is removed as a near copy of a 203 image. At 59-60 bits about 8 of 20 pairs were unrelated low-detail images (haze, night), and at 61 bits about 6 of 10 pairs were still true near copies (consecutive frames from one camera); at 64-66 bits 4 of 12 sampled pairs were near copies and at 69-72 bits none of 12. Both kinds of error occur near 60, so the cutoff was changed once, from 60 to 66 bits, to catch copies between the calibration and final sets (the error that would leak information into the final test). The remaining error is that some unrelated low-detail images are treated as near copies: they are removed from later candidate pools (the final pool still had about 563 violation candidates for 500) or share a bootstrap group, which only widens intervals.",
+ "pairs_at_or_below_cutoff_total": 1146
+}

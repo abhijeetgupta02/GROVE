@@ -1,11 +1,11 @@
-GROVE — License
-===============
+GROVE: Grounded Violation Evaluator for Visual Inspection
+=========================================================
 
 Copyright (c) 2026 Abhijeet Gupta, Shruti Singh, Vijayan Asari, Tam V. Nguyen,
 University of Dayton.
 
-CODE (code/) — MIT License
---------------------------
+CODE (code/, website/, paper_figures/): MIT License
+---------------------------------------------------
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
 in the Software without restriction, including without limitation the rights
@@ -24,19 +24,22 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-ANNOTATIONS, PREDICTIONS AND RESULTS (data/, predictions/, results/)
---------------------------------------------------------------------
+ANNOTATIONS, SAVED OUTPUTS, SCORES AND REPORTS
+(packet/, freeze/, lists/, runs/, runs_posthoc/, results/, results_posthoc/, reports/)
+-----------------------------------------------------------------------------------
 Licensed under the Creative Commons Attribution 4.0 International License
 (CC BY 4.0): https://creativecommons.org/licenses/by/4.0/
 
 IMAGES
 ------
-The evaluation images are not distributed in this repository. They come from
-public Kaggle construction-safety datasets, Google Images and images generated
-with Google Gemini, and remain subject to the terms of their original sources.
+The images shown on the project page (website/public/gallery/) come from
+ConstructionSite10k, whose images come from MOCS. They are not covered by the
+licenses above: ConstructionSite10k is licensed under CC BY-NC 4.0, and the MOCS
+terms apply. The development images are not distributed in this repository and
+remain subject to the terms of their sources.
 
 THIRD-PARTY MODELS
 ------------------
-The inference code calls external models and tools (served via Ollama,
-GroundingDINO, DETR via Hugging Face Transformers, OpenCLIP). These are not
-included and remain subject to their own licenses.
+The code calls models and tools (served through Ollama, GroundingDINO, DETR via
+Hugging Face Transformers, OpenCLIP) that are not included and remain subject to
+their own licenses.

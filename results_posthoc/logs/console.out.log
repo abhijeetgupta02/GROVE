@@ -1,0 +1,6 @@
+2026-11-10T12:05:48  post hoc runner start (D24), pid 24756
+2026-11-10T12:05:50  job p06_final qwen3.5:27b sp: 1000 to do of 1000; no pause
+2026-11-10T13:49:38  post hoc job done p06_final qwen3.5:27b sp: {'valid': 1000, 'failed': 0, 'total': 1000, 'model_failed': False}
+2026-11-10T13:49:39  job p07_cal qwen3.5:27b spc: 500 to do of 500; no pause
+2026-11-10T14:47:28  post hoc job done p07_cal qwen3.5:27b spc: {'valid': 500, 'failed': 0, 'total': 500, 'model_failed': False}
+2026-11-10T14:47:29  job p07_final qwen3.5:27b spc: 1000 to do of 1000; no pause

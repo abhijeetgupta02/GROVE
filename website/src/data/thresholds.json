@@ -1,0 +1,63 @@
+{
+ "first_freeze": {
+  "GROVE": {
+   "fall": 0.12,
+   "electrical": 0.32,
+   "ppe": 0.5
+  },
+  "main_question": {
+   "fall": 0.16,
+   "electrical": 0.22,
+   "ppe": 0.58
+  },
+  "source": "freeze/freeze_1.json",
+  "key_path": [
+   "thresholds_fit_on_all_203"
+  ],
+  "fit_on": "all 203 development images"
+ },
+ "refit": {
+  "GROVE": {
+   "fall": 0.86,
+   "ppe": 0.8
+  },
+  "main_question": {
+   "fall": 0.86,
+   "ppe": 0.66
+  },
+  "source": "freeze/final_thresholds.json",
+  "key_path": [
+   "thresholds",
+   "<system>",
+   "refit"
+  ],
+  "fit_on": "calibration 500, refit once (Fall and protective equipment); used unchanged on the final 1,000"
+ },
+ "electrical": {
+  "GROVE": 0.32,
+  "source": "freeze/freeze_2.json",
+  "key_path": [
+   "thresholds_fit_on_all_203",
+   "GROVE",
+   "Electrocution_Hazard"
+  ],
+  "note": "Electrical is labeled only on the development images; its threshold was not refit."
+ },
+ "signed_confidence": {
+  "gemma": {
+   "fall": 0.96,
+   "ppe": 0.86
+  },
+  "qwen": {
+   "fall": 0.96,
+   "ppe": 0.16
+  },
+  "source": "results_posthoc/confidence_signed.json",
+  "key_path": [
+   "thresholds_signed"
+  ],
+  "post_hoc": true,
+  "fit_on": "calibration 500 (grid and method of experiment 44); score redefined after the first scoring"
+ },
+ "method": "grid 0.02-0.98 step 0.02, best single threshold then 2 rounds per category, micro-F1"
+}

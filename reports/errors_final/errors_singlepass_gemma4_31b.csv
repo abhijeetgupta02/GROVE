@@ -1,0 +1,101 @@
+image_id,category,type,score,system_text,dataset_reason,error_class,file
+0006958,PPE_Violation,false alarm,,worker in foreground is not wearing a hard hat,,helmet or vest,singlepass_gemma4_31b_false_alarm_PPE_0006958.jpg
+0009775,PPE_Violation,false alarm,,workers on the slope are not wearing hard hats,,helmet or vest,singlepass_gemma4_31b_false_alarm_PPE_0009775.jpg
+0010264,PPE_Violation,false alarm,,worker in the distance is not wearing a hard hat,,helmet or vest,singlepass_gemma4_31b_false_alarm_PPE_0010264.jpg
+0010947,PPE_Violation,false alarm,,worker in orange shirt is not wearing a hard hat,,helmet or vest,singlepass_gemma4_31b_false_alarm_PPE_0010947.jpg
+0004910,PPE_Violation,false alarm,,worker is not wearing a high-visibility vest,,inferred height or depth,singlepass_gemma4_31b_false_alarm_PPE_0004910.jpg
+0004974,PPE_Violation,false alarm,,worker is not wearing a high-visibility vest,,inferred height or depth,singlepass_gemma4_31b_false_alarm_PPE_0004974.jpg
+0005059,PPE_Violation,false alarm,,workers are missing high-visibility vests,,inferred height or depth,singlepass_gemma4_31b_false_alarm_PPE_0005059.jpg
+0005085,PPE_Violation,false alarm,,worker is missing a high-visibility vest,,inferred height or depth,singlepass_gemma4_31b_false_alarm_PPE_0005085.jpg
+0005112,Fall_Hazard,false alarm,,worker standing on the edge of an unguarded deep trench, ,inferred height or depth,singlepass_gemma4_31b_false_alarm_Fall_0005112.jpg
+0005317,PPE_Violation,false alarm,,worker on the ground missing a hard hat and high-visibility vest,,inferred height or depth,singlepass_gemma4_31b_false_alarm_PPE_0005317.jpg
+0005568,Fall_Hazard,false alarm,,workers are working inside a deep excavation without perimeter guardrails, ,inferred height or depth,singlepass_gemma4_31b_false_alarm_Fall_0005568.jpg
+0005783,PPE_Violation,false alarm,,workers are not wearing high-visibility vests,,inferred height or depth,singlepass_gemma4_31b_false_alarm_PPE_0005783.jpg
+0005795,PPE_Violation,false alarm,,workers are not wearing high-visibility vests,,inferred height or depth,singlepass_gemma4_31b_false_alarm_PPE_0005795.jpg
+0005855,PPE_Violation,false alarm,,workers are not wearing hard hats or high-visibility vests,,inferred height or depth,singlepass_gemma4_31b_false_alarm_PPE_0005855.jpg
+0006404,PPE_Violation,false alarm,,workers are not wearing hard hats or high-visibility vests,,inferred height or depth,singlepass_gemma4_31b_false_alarm_PPE_0006404.jpg
+0006688,Fall_Hazard,false alarm,,workers are on an elevated edge without guardrails, ,inferred height or depth,singlepass_gemma4_31b_false_alarm_Fall_0006688.jpg
+0006737,Fall_Hazard,false alarm,,"workers are standing in an unprotected deep excavation with steep, unguarded walls", ,inferred height or depth,singlepass_gemma4_31b_false_alarm_Fall_0006737.jpg
+0006785,PPE_Violation,false alarm,,worker missing high-visibility vest,,inferred height or depth,singlepass_gemma4_31b_false_alarm_PPE_0006785.jpg
+0006828,Fall_Hazard,false alarm,,workers are working in a deep trench without shoring or guardrails, ,inferred height or depth,singlepass_gemma4_31b_false_alarm_Fall_0006828.jpg
+0006957,Fall_Hazard,false alarm,,worker standing on the edge of a loader bucket without fall protection, ,inferred height or depth,singlepass_gemma4_31b_false_alarm_Fall_0006957.jpg
+0006990,Fall_Hazard,false alarm,,workers are standing on rebar and edges of a deep excavation without guardrails, ,inferred height or depth,singlepass_gemma4_31b_false_alarm_Fall_0006990.jpg
+0007072,PPE_Violation,false alarm,,worker missing hard hat and high-visibility vest,,inferred height or depth,singlepass_gemma4_31b_false_alarm_PPE_0007072.jpg
+0007091,PPE_Violation,false alarm,,workers missing high-visibility vests,,inferred height or depth,singlepass_gemma4_31b_false_alarm_PPE_0007091.jpg
+0007118,PPE_Violation,false alarm,,worker not wearing a hard hat or high-visibility vest,,inferred height or depth,singlepass_gemma4_31b_false_alarm_PPE_0007118.jpg
+0007126,PPE_Violation,false alarm,,worker in trench is not wearing a high-visibility vest,,inferred height or depth,singlepass_gemma4_31b_false_alarm_PPE_0007126.jpg
+0007250,PPE_Violation,false alarm,,worker in blue coat is not wearing a hard hat or high-visibility vest,,inferred height or depth,singlepass_gemma4_31b_false_alarm_PPE_0007250.jpg
+0007263,PPE_Violation,false alarm,,workers are not wearing high-visibility vests,,inferred height or depth,singlepass_gemma4_31b_false_alarm_PPE_0007263.jpg
+0007268,PPE_Violation,false alarm,,workers are missing high-visibility vests,,inferred height or depth,singlepass_gemma4_31b_false_alarm_PPE_0007268.jpg
+0007298,Fall_Hazard,false alarm,,workers are inside a deep excavation without perimeter guardrails or barriers, ,inferred height or depth,singlepass_gemma4_31b_false_alarm_Fall_0007298.jpg
+0007757,PPE_Violation,false alarm,,worker missing high-visibility vest,,inferred height or depth,singlepass_gemma4_31b_false_alarm_PPE_0007757.jpg
+0007771,Fall_Hazard,false alarm,,worker standing on an elevated concrete edge without guardrails, ,inferred height or depth,singlepass_gemma4_31b_false_alarm_Fall_0007771.jpg
+0007781,Fall_Hazard,false alarm,,worker on elevated scaffold edge without visible guardrails or harness, ,inferred height or depth,singlepass_gemma4_31b_false_alarm_Fall_0007781.jpg
+0007900,PPE_Violation,false alarm,,workers are not wearing high-visibility vests,,inferred height or depth,singlepass_gemma4_31b_false_alarm_PPE_0007900.jpg
+0008279,PPE_Violation,false alarm,,worker is missing a high-visibility vest,,inferred height or depth,singlepass_gemma4_31b_false_alarm_PPE_0008279.jpg
+0008314,Fall_Hazard,false alarm,,workers are standing on rebar grids over deep open trenches without guardrails or fall protection, ,inferred height or depth,singlepass_gemma4_31b_false_alarm_Fall_0008314.jpg
+0008477,PPE_Violation,false alarm,,workers are not wearing high-visibility vests,,inferred height or depth,singlepass_gemma4_31b_false_alarm_PPE_0008477.jpg
+0008647,PPE_Violation,false alarm,,worker on roof missing hard hat,,inferred height or depth,singlepass_gemma4_31b_false_alarm_PPE_0008647.jpg
+0008756,Fall_Hazard,false alarm,,worker in an unguarded deep excavation trench, ,inferred height or depth,singlepass_gemma4_31b_false_alarm_Fall_0008756.jpg
+0008978,PPE_Violation,false alarm,,workers are not wearing high-visibility vests,,inferred height or depth,singlepass_gemma4_31b_false_alarm_PPE_0008978.jpg
+0009343,PPE_Violation,false alarm,,worker missing hard hat and high-visibility vest,,inferred height or depth,singlepass_gemma4_31b_false_alarm_PPE_0009343.jpg
+0009377,Fall_Hazard,false alarm,,worker is in an unguarded deep trench with steep soil walls, ,inferred height or depth,singlepass_gemma4_31b_false_alarm_Fall_0009377.jpg
+0009492,PPE_Violation,false alarm,,workers are not wearing high-visibility vests,,inferred height or depth,singlepass_gemma4_31b_false_alarm_PPE_0009492.jpg
+0009562,Fall_Hazard,false alarm,,worker standing on an elevated edge without guardrails, ,inferred height or depth,singlepass_gemma4_31b_false_alarm_Fall_0009562.jpg
+0009611,Fall_Hazard,false alarm,,worker crouching on an unguarded elevated concrete ledge, ,inferred height or depth,singlepass_gemma4_31b_false_alarm_Fall_0009611.jpg
+0010064,PPE_Violation,false alarm,,workers missing high-visibility vests,,inferred height or depth,singlepass_gemma4_31b_false_alarm_PPE_0010064.jpg
+0010205,Fall_Hazard,false alarm,,worker is working near an unguarded elevated edge, ,inferred height or depth,singlepass_gemma4_31b_false_alarm_Fall_0010205.jpg
+0010311,Fall_Hazard,false alarm,,worker standing in a deep trench without shoring or slope protection, ,inferred height or depth,singlepass_gemma4_31b_false_alarm_Fall_0010311.jpg
+0010509,PPE_Violation,false alarm,,workers are not wearing high-visibility vests,,inferred height or depth,singlepass_gemma4_31b_false_alarm_PPE_0010509.jpg
+0010588,Fall_Hazard,false alarm,,worker standing in an unguarded deep trench, ,inferred height or depth,singlepass_gemma4_31b_false_alarm_Fall_0010588.jpg
+0010726,Fall_Hazard,false alarm,,worker standing in an unguarded deep trench, ,inferred height or depth,singlepass_gemma4_31b_false_alarm_Fall_0010726.jpg
+0010847,PPE_Violation,false alarm,,worker missing hard hat and high-visibility vest,,inferred height or depth,singlepass_gemma4_31b_false_alarm_PPE_0010847.jpg
+0010978,PPE_Violation,false alarm,,worker is not wearing a hard hat or high-visibility vest,,inferred height or depth,singlepass_gemma4_31b_false_alarm_PPE_0010978.jpg
+0010996,PPE_Violation,false alarm,,worker missing high-visibility vest,,inferred height or depth,singlepass_gemma4_31b_false_alarm_PPE_0010996.jpg
+0011127,PPE_Violation,false alarm,,worker is missing a high-visibility vest,,inferred height or depth,singlepass_gemma4_31b_false_alarm_PPE_0011127.jpg
+0011181,PPE_Violation,false alarm,,worker in the background is not wearing a high-visibility vest,,inferred height or depth,singlepass_gemma4_31b_false_alarm_PPE_0011181.jpg
+0011227,PPE_Violation,false alarm,,worker is missing a high-visibility vest,,inferred height or depth,singlepass_gemma4_31b_false_alarm_PPE_0011227.jpg
+0011301,PPE_Violation,false alarm,,worker is missing a high-visibility vest,,inferred height or depth,singlepass_gemma4_31b_false_alarm_PPE_0011301.jpg
+0011453,Fall_Hazard,false alarm,,worker crouching on an unguarded steep slope edge, ,inferred height or depth,singlepass_gemma4_31b_false_alarm_Fall_0011453.jpg
+0011495,PPE_Violation,false alarm,,worker is not wearing a hard hat or high-visibility vest,,inferred height or depth,singlepass_gemma4_31b_false_alarm_PPE_0011495.jpg
+0011706,Fall_Hazard,false alarm,,workers are near an unguarded elevated edge without barriers, ,inferred height or depth,singlepass_gemma4_31b_false_alarm_Fall_0011706.jpg
+0011863,PPE_Violation,false alarm,,worker is not wearing a high-visibility vest,,inferred height or depth,singlepass_gemma4_31b_false_alarm_PPE_0011863.jpg
+0012082,Fall_Hazard,false alarm,,workers are near an open edge without guardrails, ,inferred height or depth,singlepass_gemma4_31b_false_alarm_Fall_0012082.jpg
+0012590,PPE_Violation,false alarm,,workers are missing high-visibility vests,,inferred height or depth,singlepass_gemma4_31b_false_alarm_PPE_0012590.jpg
+0012596,PPE_Violation,false alarm,,workers in the distance are not wearing hard hats or high-visibility vests,,inferred height or depth,singlepass_gemma4_31b_false_alarm_PPE_0012596.jpg
+0012789,PPE_Violation,false alarm,,worker is not wearing a high-visibility vest,,inferred height or depth,singlepass_gemma4_31b_false_alarm_PPE_0012789.jpg
+0012813,Fall_Hazard,false alarm,,"workers are in a deep trench with steep, unguarded walls", ,inferred height or depth,singlepass_gemma4_31b_false_alarm_Fall_0012813.jpg
+0012833,PPE_Violation,false alarm,,worker is not wearing a high-visibility vest,,inferred height or depth,singlepass_gemma4_31b_false_alarm_PPE_0012833.jpg
+0012893,Fall_Hazard,false alarm,,worker standing on an unguarded edge of a deep excavation, ,inferred height or depth,singlepass_gemma4_31b_false_alarm_Fall_0012893.jpg
+0012893,PPE_Violation,false alarm,,worker is not wearing a high-visibility vest,,inferred height or depth,singlepass_gemma4_31b_false_alarm_PPE_0012893.jpg
+0012923,PPE_Violation,false alarm,,worker is not wearing a high-visibility vest,,inferred height or depth,singlepass_gemma4_31b_false_alarm_PPE_0012923.jpg
+0012990,PPE_Violation,false alarm,,worker not wearing a high-visibility vest,,inferred height or depth,singlepass_gemma4_31b_false_alarm_PPE_0012990.jpg
+0013069,Fall_Hazard,false alarm,,worker standing near an unguarded elevated edge, ,inferred height or depth,singlepass_gemma4_31b_false_alarm_Fall_0013069.jpg
+0013079,Fall_Hazard,false alarm,,workers are working in a deep trench without guardrails or barriers, ,inferred height or depth,singlepass_gemma4_31b_false_alarm_Fall_0013079.jpg
+0013143,PPE_Violation,false alarm,,worker in trench is not wearing a hard hat or high-visibility vest,,inferred height or depth,singlepass_gemma4_31b_false_alarm_PPE_0013143.jpg
+0013527,PPE_Violation,false alarm,,worker is not wearing a high-visibility vest,,inferred height or depth,singlepass_gemma4_31b_false_alarm_PPE_0013527.jpg
+0013560,PPE_Violation,false alarm,,worker is not wearing a high-visibility vest,,inferred height or depth,singlepass_gemma4_31b_false_alarm_PPE_0013560.jpg
+0013941,Fall_Hazard,false alarm,,workers are near an open perimeter edge without guardrails, ,inferred height or depth,singlepass_gemma4_31b_false_alarm_Fall_0013941.jpg
+0005386,Fall_Hazard,false alarm,,worker on scaffold without guardrails or harness, ,other or no text,singlepass_gemma4_31b_false_alarm_Fall_0005386.jpg
+0005896,Fall_Hazard,false alarm,,worker standing on unstable wooden planks over wet concrete without fall protection, ,other or no text,singlepass_gemma4_31b_false_alarm_Fall_0005896.jpg
+0007554,Fall_Hazard,false alarm,,workers are crouching next to an unguarded opening in the floor, ,other or no text,singlepass_gemma4_31b_false_alarm_Fall_0007554.jpg
+0007819,Fall_Hazard,false alarm,,workers are near unguarded concrete trenches, ,other or no text,singlepass_gemma4_31b_false_alarm_Fall_0007819.jpg
+0007847,Fall_Hazard,false alarm,,workers on elevated platform without guardrails, ,other or no text,singlepass_gemma4_31b_false_alarm_Fall_0007847.jpg
+0008186,Fall_Hazard,false alarm,,workers on elevated scaffolding platforms without guardrails, ,other or no text,singlepass_gemma4_31b_false_alarm_Fall_0008186.jpg
+0008742,Fall_Hazard,false alarm,,worker standing on elevated platform without guardrails, ,other or no text,singlepass_gemma4_31b_false_alarm_Fall_0008742.jpg
+0009085,Fall_Hazard,false alarm,,workers are standing on an elevated platform without guardrails, ,other or no text,singlepass_gemma4_31b_false_alarm_Fall_0009085.jpg
+0009621,Fall_Hazard,false alarm,,worker is standing next to an unguarded open trench, ,other or no text,singlepass_gemma4_31b_false_alarm_Fall_0009621.jpg
+0009923,Fall_Hazard,false alarm,,workers standing on narrow planks without guardrails or harnesses, ,other or no text,singlepass_gemma4_31b_false_alarm_Fall_0009923.jpg
+0010355,Fall_Hazard,false alarm,,workers are standing on an elevated rebar deck without guardrails or fall protection, ,other or no text,singlepass_gemma4_31b_false_alarm_Fall_0010355.jpg
+0010544,Fall_Hazard,false alarm,,"workers are near large, unguarded openings in the floor slab", ,other or no text,singlepass_gemma4_31b_false_alarm_Fall_0010544.jpg
+0010555,Fall_Hazard,false alarm,,workers are working in an unguarded trench, ,other or no text,singlepass_gemma4_31b_false_alarm_Fall_0010555.jpg
+0011362,Fall_Hazard,false alarm,,workers standing on elevated rebar platforms without guardrails, ,other or no text,singlepass_gemma4_31b_false_alarm_Fall_0011362.jpg
+0012905,PPE_Violation,miss,,no workers are clearly visible to assess PPE compliance,The worker in the middle is not wearing a hard hat.,helmet or vest,singlepass_gemma4_31b_miss_PPE_0012905.jpg
+0013474,PPE_Violation,miss,,all visible workers are wearing hard hats and high-visibility vests,The worker in the middle is not wearing a hard hat.,helmet or vest,singlepass_gemma4_31b_miss_PPE_0013474.jpg
+0005809,Fall_Hazard,miss,,no workers are visible near unguarded edges or openings, The edge of the excavation in the background is not protected nor warned.,inferred height or depth,singlepass_gemma4_31b_miss_Fall_0005809.jpg
+0007464,Fall_Hazard,miss,,no unguarded edges or open trenches visible, The left edge of the excavation is not guarded.,inferred height or depth,singlepass_gemma4_31b_miss_Fall_0007464.jpg
+0007973,Fall_Hazard,miss,,no workers are visible near unguarded edges, The right edge of the excavation is not guarded.,inferred height or depth,singlepass_gemma4_31b_miss_Fall_0007973.jpg
+0008087,PPE_Violation,miss,,workers are too distant and blurred to determine PPE compliance,The workers in the middle are not wearing high-visibility retroreflective vests when working at night.,inferred height or depth,singlepass_gemma4_31b_miss_PPE_0008087.jpg
+0008439,Fall_Hazard,miss,,no workers are exposed to unguarded elevated edges or open trenches, The right edge of the excavation is not guarded.,inferred height or depth,singlepass_gemma4_31b_miss_Fall_0008439.jpg
+0009062,PPE_Violation,miss,,visible workers are wearing hard hats,The workers in the middle are not wearing high visibility vests when working at night.,inferred height or depth,singlepass_gemma4_31b_miss_PPE_0009062.jpg
+0013729,PPE_Violation,miss,,workers are wearing hard hats and high-visibility clothing,The workers are not wearing high-visibility vests when working at night.,inferred height or depth,singlepass_gemma4_31b_miss_PPE_0013729.jpg

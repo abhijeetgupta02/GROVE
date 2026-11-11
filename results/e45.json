@@ -1,0 +1,7457 @@
+{
+ "evaluation": {
+  "GROVE top box": {
+   "iou_0.5": {
+    "pred_boxes": 281,
+    "true_boxes": 470,
+    "matched": 112,
+    "precision": 0.398576512455516,
+    "recall": 0.23829787234042554,
+    "f1": 0.2982689747003995,
+    "unmatched_pred": 169,
+    "unmatched_true": 358
+   },
+   "iou_0.3": {
+    "pred_boxes": 281,
+    "true_boxes": 470,
+    "matched": 119,
+    "precision": 0.4234875444839858,
+    "recall": 0.2531914893617021,
+    "f1": 0.31691078561917446,
+    "unmatched_pred": 162,
+    "unmatched_true": 351
+   },
+   "coverage_iog_0.5": 0.25957446808510637,
+   "coverage_iog_0.7": 0.24680851063829787
+  },
+  "GROVE up to 5 boxes": {
+   "iou_0.5": {
+    "pred_boxes": 463,
+    "true_boxes": 470,
+    "matched": 164,
+    "precision": 0.3542116630669546,
+    "recall": 0.34893617021276596,
+    "f1": 0.3515541264737406,
+    "unmatched_pred": 299,
+    "unmatched_true": 306
+   },
+   "iou_0.3": {
+    "pred_boxes": 463,
+    "true_boxes": 470,
+    "matched": 171,
+    "precision": 0.3693304535637149,
+    "recall": 0.3638297872340426,
+    "f1": 0.3665594855305466,
+    "unmatched_pred": 292,
+    "unmatched_true": 299
+   },
+   "coverage_iog_0.5": 0.3702127659574468,
+   "coverage_iog_0.7": 0.35319148936170214
+  },
+  "rates": {
+   "flagged": 281,
+   "no_box_rate": 0.0,
+   "no_visible_evidence_rate": 0.0,
+   "share_GroundingDINO": 0.9323843416370107,
+   "share_fallback": 0.06761565836298933,
+   "phrase_failures": 0
+  },
+  "single-pass qwen3.5:27b": {
+   "iou_0.5": {
+    "pred_boxes": 398,
+    "true_boxes": 470,
+    "matched": 6,
+    "precision": 0.01507537688442211,
+    "recall": 0.01276595744680851,
+    "f1": 0.013824884792626725,
+    "unmatched_pred": 392,
+    "unmatched_true": 464
+   },
+   "iou_0.3": {
+    "pred_boxes": 398,
+    "true_boxes": 470,
+    "matched": 19,
+    "precision": 0.04773869346733668,
+    "recall": 0.04042553191489362,
+    "f1": 0.04377880184331797,
+    "unmatched_pred": 379,
+    "unmatched_true": 451
+   },
+   "coverage_iog_0.5": 0.0574468085106383,
+   "coverage_iog_0.7": 0.02553191489361702
+  },
+  "single-pass gemma4:31b": {
+   "iou_0.5": {
+    "pred_boxes": 422,
+    "true_boxes": 470,
+    "matched": 2,
+    "precision": 0.004739336492890996,
+    "recall": 0.00425531914893617,
+    "f1": 0.004484304932735427,
+    "unmatched_pred": 420,
+    "unmatched_true": 468
+   },
+   "iou_0.3": {
+    "pred_boxes": 422,
+    "true_boxes": 470,
+    "matched": 7,
+    "precision": 0.016587677725118485,
+    "recall": 0.014893617021276596,
+    "f1": 0.01569506726457399,
+    "unmatched_pred": 415,
+    "unmatched_true": 463
+   },
+   "coverage_iog_0.5": 0.031914893617021274,
+   "coverage_iog_0.7": 0.02127659574468085
+  }
+ },
+ "items": [
+  {
+   "image": "0004851",
+   "category": "PPE_Violation",
+   "score": 0.8902074194426306,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     814.96,
+     378.63,
+     870.27,
+     476.22
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.80508
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.173
+  },
+  {
+   "image": "0004948",
+   "category": "PPE_Violation",
+   "score": 0.9032381766581299,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     74.33,
+     54.58,
+     109.35,
+     113.16
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.81495
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.181
+  },
+  {
+   "image": "0005006",
+   "category": "PPE_Violation",
+   "score": 0.9489676693117983,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     1131.53,
+     285.56,
+     1406.34,
+     1241.24
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.78797
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.227
+  },
+  {
+   "image": "0005023",
+   "category": "PPE_Violation",
+   "score": 0.9922220397720539,
+   "phrase": "worker without hard hat",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     613.15,
+     819.43,
+     1188.94,
+     1667.77
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.61645
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.165
+  },
+  {
+   "image": "0005110",
+   "category": "PPE_Violation",
+   "score": 0.9935620848896822,
+   "phrase": "worker without hard hat",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     5.29,
+     4.5,
+     1035.81,
+     2042.66
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.74321
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.193
+  },
+  {
+   "image": "0005125",
+   "category": "PPE_Violation",
+   "score": 0.9311044046545749,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     841.12,
+     426.43,
+     994.67,
+     896.44
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.46713
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.159
+  },
+  {
+   "image": "0005140",
+   "category": "Fall_Hazard",
+   "score": 0.9329601757712048,
+   "phrase": "open trench or floor opening",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     3.88,
+     562.16,
+     1195.86,
+     896.61
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.69486
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.146
+  },
+  {
+   "image": "0005159",
+   "category": "PPE_Violation",
+   "score": 0.9619876379064378,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     280.08,
+     510.36,
+     330.38,
+     582.04
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.80984
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.155
+  },
+  {
+   "image": "0005167",
+   "category": "Fall_Hazard",
+   "score": 0.8748817895817285,
+   "phrase": "open trench or floor opening",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     2.58,
+     454.47,
+     379.05,
+     661.68
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.5212
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.158
+  },
+  {
+   "image": "0005167",
+   "category": "PPE_Violation",
+   "score": 0.8677464269159243,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     845.92,
+     179.76,
+     896.12,
+     288.33
+    ],
+    [
+     218.88,
+     229.26,
+     261.5,
+     328.83
+    ],
+    [
+     335.59,
+     226.74,
+     378.08,
+     320.57
+    ],
+    [
+     444.07,
+     231.0,
+     484.53,
+     320.48
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.46978,
+    0.39376,
+    0.3819,
+    0.35144
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.157
+  },
+  {
+   "image": "0005220",
+   "category": "PPE_Violation",
+   "score": 0.9710539381856393,
+   "phrase": "worker without hard hat",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     911.36,
+     441.49,
+     960.16,
+     618.75
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.53295
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.143
+  },
+  {
+   "image": "0005250",
+   "category": "PPE_Violation",
+   "score": 0.9489427136291774,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     181.17,
+     390.22,
+     256.0,
+     571.44
+    ],
+    [
+     1.03,
+     356.04,
+     71.66,
+     562.86
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.70028,
+    0.41379
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.145
+  },
+  {
+   "image": "0005262",
+   "category": "PPE_Violation",
+   "score": 0.9237786827037306,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     109.18,
+     141.76,
+     384.59,
+     785.62
+    ],
+    [
+     656.61,
+     478.55,
+     1085.38,
+     897.71
+    ],
+    [
+     427.36,
+     115.53,
+     735.55,
+     897.58
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.58311,
+    0.45289,
+    0.4365
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.147
+  },
+  {
+   "image": "0005275",
+   "category": "PPE_Violation",
+   "score": 0.928508937306354,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     334.35,
+     288.75,
+     575.4,
+     666.07
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.82459
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.163
+  },
+  {
+   "image": "0005292",
+   "category": "PPE_Violation",
+   "score": 0.8474506579308727,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     552.18,
+     339.59,
+     614.31,
+     446.87
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.87933
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.156
+  },
+  {
+   "image": "0005310",
+   "category": "Fall_Hazard",
+   "score": 0.907241804718404,
+   "phrase": "open trench or floor opening",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     787.9,
+     295.7,
+     837.68,
+     421.8
+    ]
+   ],
+   "source": "DETR+OpenCLIP",
+   "fallback": {
+    "box": [
+     787.9,
+     295.7,
+     837.68,
+     421.8
+    ],
+    "score": 0.99901,
+    "label": "person",
+    "similarity": 0.77869
+   },
+   "crop_similarity": 0.1874781996011734,
+   "no_visible_evidence": false,
+   "seconds": 0.262
+  },
+  {
+   "image": "0005310",
+   "category": "PPE_Violation",
+   "score": 0.836414969222798,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     703.16,
+     255.81,
+     770.31,
+     430.56
+    ],
+    [
+     488.39,
+     488.05,
+     578.73,
+     616.86
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.53971,
+    0.47244
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.145
+  },
+  {
+   "image": "0005325",
+   "category": "PPE_Violation",
+   "score": 0.9071040239569215,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     1037.35,
+     460.72,
+     1244.54,
+     1077.06
+    ],
+    [
+     486.82,
+     754.8,
+     776.93,
+     1077.05
+    ],
+    [
+     863.79,
+     265.45,
+     1036.7,
+     767.01
+    ],
+    [
+     452.01,
+     523.79,
+     692.34,
+     891.69
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.69656,
+    0.51543,
+    0.44495,
+    0.42282
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.169
+  },
+  {
+   "image": "0005369",
+   "category": "PPE_Violation",
+   "score": 0.8108900885887051,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     279.63,
+     126.85,
+     612.74,
+     672.64
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.91007
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.173
+  },
+  {
+   "image": "0005402",
+   "category": "PPE_Violation",
+   "score": 0.9492355295679946,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     665.5,
+     408.14,
+     702.27,
+     486.8
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.42512
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.145
+  },
+  {
+   "image": "0005420",
+   "category": "Fall_Hazard",
+   "score": 0.9163599820695711,
+   "phrase": "worker on elevated edge",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     338.22,
+     124.69,
+     569.05,
+     611.47
+    ],
+    [
+     1.68,
+     574.92,
+     1197.57,
+     654.98
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.90813,
+    0.40707
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.149
+  },
+  {
+   "image": "0005436",
+   "category": "PPE_Violation",
+   "score": 0.885000311812955,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     762.19,
+     15.03,
+     790.33,
+     78.42
+    ],
+    [
+     924.66,
+     69.44,
+     957.57,
+     115.07
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.52567,
+    0.51552
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.156
+  },
+  {
+   "image": "0005509",
+   "category": "Fall_Hazard",
+   "score": 0.9060664711299465,
+   "phrase": "worker on elevated edge",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     93.96,
+     394.14,
+     148.55,
+     492.89
+    ]
+   ],
+   "source": "DETR+OpenCLIP",
+   "fallback": {
+    "box": [
+     93.96,
+     394.14,
+     148.55,
+     492.89
+    ],
+    "score": 0.95473,
+    "label": "person",
+    "similarity": 0.80543
+   },
+   "crop_similarity": 0.27052706480026245,
+   "no_visible_evidence": false,
+   "seconds": 0.255
+  },
+  {
+   "image": "0005509",
+   "category": "PPE_Violation",
+   "score": 0.9077779226229359,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     1080.51,
+     726.71,
+     1166.33,
+     897.48
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.45697
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.145
+  },
+  {
+   "image": "0005525",
+   "category": "Fall_Hazard",
+   "score": 0.9160690011306347,
+   "phrase": "open trench or floor opening",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     563.49,
+     105.05,
+     656.96,
+     169.01
+    ]
+   ],
+   "source": "DETR+OpenCLIP",
+   "fallback": {
+    "box": [
+     563.49,
+     105.05,
+     656.96,
+     169.01
+    ],
+    "score": 0.97105,
+    "label": "truck",
+    "similarity": 0.76376
+   },
+   "crop_similarity": 0.2492925077676773,
+   "no_visible_evidence": false,
+   "seconds": 0.247
+  },
+  {
+   "image": "0005542",
+   "category": "PPE_Violation",
+   "score": 0.808852494682083,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     709.88,
+     399.45,
+     889.03,
+     859.69
+    ],
+    [
+     769.9,
+     487.03,
+     884.78,
+     664.56
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.84661,
+    0.40229
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.159
+  },
+  {
+   "image": "0005572",
+   "category": "PPE_Violation",
+   "score": 0.9271609898594533,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     203.33,
+     654.91,
+     266.68,
+     816.01
+    ],
+    [
+     1053.17,
+     698.51,
+     1143.02,
+     865.71
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.65618,
+    0.37315
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.15
+  },
+  {
+   "image": "0005594",
+   "category": "PPE_Violation",
+   "score": 0.9620869780973088,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     299.47,
+     572.69,
+     415.58,
+     874.15
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.78906
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.165
+  },
+  {
+   "image": "0005603",
+   "category": "Fall_Hazard",
+   "score": 0.9385871642621638,
+   "phrase": "open trench or floor opening",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     5.72,
+     448.59,
+     382.14,
+     648.14
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.39429
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.229
+  },
+  {
+   "image": "0005603",
+   "category": "PPE_Violation",
+   "score": 0.9514951131652609,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     879.31,
+     197.34,
+     927.08,
+     307.86
+    ],
+    [
+     247.02,
+     233.59,
+     289.56,
+     332.63
+    ],
+    [
+     472.3,
+     240.63,
+     512.39,
+     329.92
+    ],
+    [
+     365.47,
+     234.01,
+     404.77,
+     328.88
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.50175,
+    0.38678,
+    0.3812,
+    0.36436
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.159
+  },
+  {
+   "image": "0005663",
+   "category": "PPE_Violation",
+   "score": 0.8385271305834756,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     315.64,
+     230.25,
+     619.09,
+     897.9
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.89321
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.151
+  },
+  {
+   "image": "0005675",
+   "category": "Fall_Hazard",
+   "score": 0.9641068422354575,
+   "phrase": "open trench or floor opening",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     464.33,
+     238.35,
+     809.28,
+     671.24
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.4298
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.159
+  },
+  {
+   "image": "0005675",
+   "category": "PPE_Violation",
+   "score": 0.8557021474472049,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     276.44,
+     326.45,
+     423.24,
+     564.31
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.75067
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.166
+  },
+  {
+   "image": "0005695",
+   "category": "Fall_Hazard",
+   "score": 0.9568095723988875,
+   "phrase": "worker on elevated edge",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     779.52,
+     335.04,
+     871.13,
+     533.85
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.45219
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.165
+  },
+  {
+   "image": "0005695",
+   "category": "PPE_Violation",
+   "score": 0.9923499970360852,
+   "phrase": "worker without hard hat",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     779.27,
+     336.27,
+     871.26,
+     535.66
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.58652
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.148
+  },
+  {
+   "image": "0005707",
+   "category": "PPE_Violation",
+   "score": 0.9458716821320002,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     357.26,
+     264.19,
+     515.68,
+     744.68
+    ],
+    [
+     599.09,
+     299.55,
+     729.14,
+     705.96
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.69785,
+    0.54601
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.161
+  },
+  {
+   "image": "0005725",
+   "category": "PPE_Violation",
+   "score": 0.9648709898134602,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     47.32,
+     461.84,
+     99.14,
+     565.31
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.79153
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.145
+  },
+  {
+   "image": "0005886",
+   "category": "Fall_Hazard",
+   "score": 0.8843897677763102,
+   "phrase": "worker on elevated edge",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     679.03,
+     566.89,
+     736.6,
+     699.37
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.3838
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.145
+  },
+  {
+   "image": "0005886",
+   "category": "PPE_Violation",
+   "score": 0.9435628673395038,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     678.81,
+     568.51,
+     735.78,
+     700.4
+    ],
+    [
+     847.36,
+     567.11,
+     897.34,
+     690.69
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.56674,
+    0.50997
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.148
+  },
+  {
+   "image": "0005927",
+   "category": "Fall_Hazard",
+   "score": 0.9571172585579686,
+   "phrase": "worker on elevated edge",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     223.4,
+     345.18,
+     324.47,
+     572.35
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.81694
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.142
+  },
+  {
+   "image": "0005927",
+   "category": "PPE_Violation",
+   "score": 0.8040814969365543,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     223.6,
+     345.82,
+     324.08,
+     572.29
+    ],
+    [
+     225.11,
+     376.24,
+     305.66,
+     470.08
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.86925,
+    0.40667
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.148
+  },
+  {
+   "image": "0005944",
+   "category": "Fall_Hazard",
+   "score": 0.9362975743165274,
+   "phrase": "worker on elevated edge",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     280.77,
+     126.42,
+     344.85,
+     227.12
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.80824
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.146
+  },
+  {
+   "image": "0005949",
+   "category": "PPE_Violation",
+   "score": 0.9878689422736142,
+   "phrase": "worker without hard hat",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     322.02,
+     335.96,
+     513.97,
+     783.81
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.7544
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.162
+  },
+  {
+   "image": "0005957",
+   "category": "PPE_Violation",
+   "score": 0.9878630736259105,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     806.58,
+     366.17,
+     871.06,
+     512.18
+    ],
+    [
+     1003.78,
+     338.39,
+     1093.29,
+     507.24
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.62898,
+    0.49583
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.146
+  },
+  {
+   "image": "0005974",
+   "category": "PPE_Violation",
+   "score": 0.9164183289410384,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     188.23,
+     150.86,
+     236.77,
+     257.31
+    ],
+    [
+     659.79,
+     185.94,
+     696.4,
+     273.13
+    ],
+    [
+     992.92,
+     202.69,
+     1035.84,
+     299.23
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.60464,
+    0.53021,
+    0.3923
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.166
+  },
+  {
+   "image": "0006042",
+   "category": "PPE_Violation",
+   "score": 0.9198438077692499,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     243.82,
+     496.5,
+     458.24,
+     732.73
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.5524
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.191
+  },
+  {
+   "image": "0006088",
+   "category": "PPE_Violation",
+   "score": 0.9172125051016103,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     333.38,
+     114.29,
+     371.67,
+     202.77
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.83646
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.117
+  },
+  {
+   "image": "0006111",
+   "category": "PPE_Violation",
+   "score": 0.8371353383014103,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     329.8,
+     549.82,
+     404.85,
+     663.91
+    ],
+    [
+     447.55,
+     569.87,
+     512.46,
+     712.08
+    ],
+    [
+     211.75,
+     531.39,
+     268.8,
+     651.56
+    ],
+    [
+     654.69,
+     580.96,
+     706.43,
+     708.67
+    ],
+    [
+     530.63,
+     558.66,
+     592.35,
+     719.66
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.55577,
+    0.49986,
+    0.45941,
+    0.4153,
+    0.37721
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.15
+  },
+  {
+   "image": "0006262",
+   "category": "Fall_Hazard",
+   "score": 0.9280952379143377,
+   "phrase": "open trench or floor opening",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     8.18,
+     148.74,
+     1035.72,
+     671.0
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.35394
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.178
+  },
+  {
+   "image": "0006262",
+   "category": "PPE_Violation",
+   "score": 0.8584776518298807,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     680.72,
+     203.04,
+     725.59,
+     309.55
+    ],
+    [
+     829.7,
+     167.08,
+     857.05,
+     227.9
+    ],
+    [
+     719.6,
+     244.56,
+     767.23,
+     311.68
+    ],
+    [
+     596.36,
+     83.34,
+     627.8,
+     150.43
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.608,
+    0.4428,
+    0.40705,
+    0.38269
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.16
+  },
+  {
+   "image": "0006337",
+   "category": "PPE_Violation",
+   "score": 0.8936706422456956,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     890.59,
+     202.29,
+     944.08,
+     332.94
+    ],
+    [
+     614.25,
+     162.81,
+     663.92,
+     300.29
+    ],
+    [
+     248.86,
+     198.66,
+     302.01,
+     340.42
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.54495,
+    0.46497,
+    0.38077
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.159
+  },
+  {
+   "image": "0006408",
+   "category": "PPE_Violation",
+   "score": 0.8313502486698685,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     629.83,
+     63.67,
+     803.86,
+     586.72
+    ],
+    [
+     841.33,
+     167.73,
+     962.7,
+     460.87
+    ],
+    [
+     265.49,
+     176.2,
+     374.37,
+     430.16
+    ],
+    [
+     435.21,
+     162.19,
+     567.24,
+     385.1
+    ],
+    [
+     344.15,
+     129.27,
+     424.77,
+     392.91
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.58635,
+    0.55213,
+    0.47811,
+    0.39256,
+    0.39125
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.145
+  },
+  {
+   "image": "0006437",
+   "category": "PPE_Violation",
+   "score": 0.9529741112605468,
+   "phrase": "worker without hard hat",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     391.68,
+     421.24,
+     475.59,
+     644.58
+    ],
+    [
+     775.9,
+     417.18,
+     840.14,
+     590.06
+    ],
+    [
+     620.66,
+     423.89,
+     692.38,
+     604.54
+    ],
+    [
+     462.97,
+     415.65,
+     544.12,
+     599.62
+    ],
+    [
+     989.87,
+     409.54,
+     1039.13,
+     567.71
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.68223,
+    0.46725,
+    0.42434,
+    0.37938,
+    0.36975
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.155
+  },
+  {
+   "image": "0006447",
+   "category": "PPE_Violation",
+   "score": 0.888069207971208,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     121.25,
+     170.91,
+     162.31,
+     242.69
+    ],
+    [
+     104.79,
+     145.35,
+     131.56,
+     190.13
+    ],
+    [
+     144.39,
+     143.87,
+     171.43,
+     202.18
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.61771,
+    0.37561,
+    0.35956
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.142
+  },
+  {
+   "image": "0006508",
+   "category": "PPE_Violation",
+   "score": 0.9081196008996268,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     505.66,
+     542.18,
+     590.11,
+     656.02
+    ],
+    [
+     356.75,
+     434.46,
+     418.44,
+     582.06
+    ],
+    [
+     612.84,
+     551.05,
+     682.45,
+     682.2
+    ],
+    [
+     253.24,
+     441.68,
+     332.47,
+     537.04
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.67542,
+    0.61599,
+    0.58902,
+    0.45709
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.148
+  },
+  {
+   "image": "0006558",
+   "category": "PPE_Violation",
+   "score": 0.8939319766125615,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     373.71,
+     200.04,
+     521.94,
+     660.58
+    ],
+    [
+     714.05,
+     188.99,
+     875.94,
+     657.57
+    ],
+    [
+     557.1,
+     190.71,
+     716.36,
+     551.63
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.67512,
+    0.65051,
+    0.50489
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.147
+  },
+  {
+   "image": "0006577",
+   "category": "Fall_Hazard",
+   "score": 0.906260723130885,
+   "phrase": "open trench or floor opening",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     389.58,
+     527.17,
+     665.23,
+     671.34
+    ]
+   ],
+   "source": "DETR+OpenCLIP",
+   "fallback": {
+    "box": [
+     389.58,
+     527.17,
+     665.23,
+     671.34
+    ],
+    "score": 0.74982,
+    "label": "train",
+    "similarity": 0.78397
+   },
+   "crop_similarity": 0.2294488549232483,
+   "no_visible_evidence": false,
+   "seconds": 0.273
+  },
+  {
+   "image": "0006577",
+   "category": "PPE_Violation",
+   "score": 0.9550515869021778,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     248.71,
+     401.23,
+     310.72,
+     564.2
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.87216
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.16
+  },
+  {
+   "image": "0006590",
+   "category": "Fall_Hazard",
+   "score": 0.9684177001271226,
+   "phrase": "open trench or floor opening",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     18.83,
+     350.47,
+     1185.17,
+     896.69
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.37973
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.162
+  },
+  {
+   "image": "0006590",
+   "category": "PPE_Violation",
+   "score": 0.9749370996462579,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     422.12,
+     313.78,
+     516.58,
+     558.77
+    ],
+    [
+     779.91,
+     350.66,
+     865.57,
+     493.03
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.70533,
+    0.4027
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.146
+  },
+  {
+   "image": "0006692",
+   "category": "Fall_Hazard",
+   "score": 0.8828320770137851,
+   "phrase": "open trench or floor opening",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     847.55,
+     332.24,
+     872.41,
+     353.25
+    ]
+   ],
+   "source": "DETR+OpenCLIP",
+   "fallback": {
+    "box": [
+     847.55,
+     332.24,
+     872.41,
+     353.25
+    ],
+    "score": 0.56032,
+    "label": "person",
+    "similarity": 0.77869
+   },
+   "crop_similarity": 0.2218647003173828,
+   "no_visible_evidence": false,
+   "seconds": 0.242
+  },
+  {
+   "image": "0006715",
+   "category": "Fall_Hazard",
+   "score": 0.9213233120034328,
+   "phrase": "worker on elevated edge",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     100.68,
+     438.7,
+     204.81,
+     590.42
+    ],
+    [
+     911.16,
+     186.58,
+     973.71,
+     317.01
+    ],
+    [
+     604.02,
+     417.34,
+     665.9,
+     575.82
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.42412,
+    0.39791,
+    0.38859
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.17
+  },
+  {
+   "image": "0006715",
+   "category": "PPE_Violation",
+   "score": 0.8807931260223579,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     98.93,
+     440.19,
+     204.06,
+     591.75
+    ],
+    [
+     603.56,
+     419.17,
+     665.43,
+     577.28
+    ],
+    [
+     911.02,
+     188.63,
+     973.03,
+     318.81
+    ],
+    [
+     994.19,
+     506.88,
+     1068.74,
+     595.21
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.63141,
+    0.59165,
+    0.47511,
+    0.41658
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.169
+  },
+  {
+   "image": "0006723",
+   "category": "PPE_Violation",
+   "score": 0.9883303153026026,
+   "phrase": "worker without hard hat",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     173.88,
+     1.26,
+     596.82,
+     565.01
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.87405
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.152
+  },
+  {
+   "image": "0006770",
+   "category": "PPE_Violation",
+   "score": 0.9484643813137459,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     135.83,
+     450.39,
+     193.42,
+     590.82
+    ],
+    [
+     665.2,
+     463.59,
+     695.42,
+     535.41
+    ],
+    [
+     76.41,
+     460.45,
+     125.19,
+     588.09
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.48626,
+    0.39557,
+    0.39146
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.16
+  },
+  {
+   "image": "0006779",
+   "category": "Fall_Hazard",
+   "score": 0.9286834154078036,
+   "phrase": "open trench or floor opening",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     8.13,
+     329.19,
+     967.65,
+     892.57
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.38303
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.163
+  },
+  {
+   "image": "0006787",
+   "category": "PPE_Violation",
+   "score": 0.9584112434880641,
+   "phrase": "worker without hard hat",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     633.46,
+     743.16,
+     873.18,
+     1012.1
+    ],
+    [
+     683.86,
+     742.87,
+     807.9,
+     837.5
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.92608,
+    0.54066
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.146
+  },
+  {
+   "image": "0006790",
+   "category": "PPE_Violation",
+   "score": 0.9891406519615701,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     183.17,
+     58.33,
+     374.22,
+     406.53
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.93153
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.171
+  },
+  {
+   "image": "0006799",
+   "category": "PPE_Violation",
+   "score": 0.9698743305821977,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     676.31,
+     462.68,
+     733.35,
+     581.81
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.80979
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.151
+  },
+  {
+   "image": "0006826",
+   "category": "PPE_Violation",
+   "score": 0.9373392446985056,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     478.72,
+     1085.85,
+     1386.28,
+     2692.21
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.41318
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.226
+  },
+  {
+   "image": "0006867",
+   "category": "PPE_Violation",
+   "score": 0.8865086501671504,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     677.51,
+     774.49,
+     758.73,
+     860.93
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.43063
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.158
+  },
+  {
+   "image": "0006903",
+   "category": "PPE_Violation",
+   "score": 0.9935210654972706,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     708.63,
+     306.05,
+     817.26,
+     512.19
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.88206
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.15
+  },
+  {
+   "image": "0006964",
+   "category": "Fall_Hazard",
+   "score": 0.9209290984042378,
+   "phrase": "open trench or floor opening",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     698.32,
+     290.11,
+     901.94,
+     630.02
+    ]
+   ],
+   "source": "DETR+OpenCLIP",
+   "fallback": {
+    "box": [
+     698.32,
+     290.11,
+     901.94,
+     630.02
+    ],
+    "score": 0.99943,
+    "label": "person",
+    "similarity": 0.77869
+   },
+   "crop_similarity": 0.2643618583679199,
+   "no_visible_evidence": false,
+   "seconds": 0.273
+  },
+  {
+   "image": "0006984",
+   "category": "PPE_Violation",
+   "score": 0.9338794711091201,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     582.15,
+     250.32,
+     770.52,
+     860.54
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.87886
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.148
+  },
+  {
+   "image": "0007001",
+   "category": "PPE_Violation",
+   "score": 0.8402210858343266,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     521.46,
+     482.51,
+     578.48,
+     622.56
+    ],
+    [
+     659.49,
+     472.13,
+     712.41,
+     611.8
+    ],
+    [
+     828.31,
+     548.31,
+     886.06,
+     617.22
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.56004,
+    0.51957,
+    0.37119
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.148
+  },
+  {
+   "image": "0007033",
+   "category": "Fall_Hazard",
+   "score": 0.9625563646449395,
+   "phrase": "open trench or floor opening",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     537.07,
+     606.3,
+     908.57,
+     897.66
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.41522
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.15
+  },
+  {
+   "image": "0007033",
+   "category": "PPE_Violation",
+   "score": 0.9629965221271333,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     492.94,
+     419.0,
+     567.67,
+     583.21
+    ],
+    [
+     520.21,
+     228.13,
+     580.93,
+     356.75
+    ],
+    [
+     577.73,
+     519.03,
+     681.09,
+     613.44
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.64978,
+    0.63675,
+    0.54672
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.155
+  },
+  {
+   "image": "0007155",
+   "category": "Fall_Hazard",
+   "score": 0.9643503535898694,
+   "phrase": "open trench or floor opening",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     4.44,
+     345.14,
+     1195.37,
+     896.29
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.4106
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.162
+  },
+  {
+   "image": "0007229",
+   "category": "PPE_Violation",
+   "score": 0.9930151172728516,
+   "phrase": "worker without hard hat",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     3.46,
+     3.74,
+     670.21,
+     782.46
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.86676
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.166
+  },
+  {
+   "image": "0007236",
+   "category": "PPE_Violation",
+   "score": 0.9577906890985242,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     436.13,
+     191.51,
+     604.42,
+     652.1
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.91005
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.159
+  },
+  {
+   "image": "0007256",
+   "category": "PPE_Violation",
+   "score": 0.9387238530582629,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     686.05,
+     663.46,
+     717.24,
+     750.0
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.65967
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.145
+  },
+  {
+   "image": "0007282",
+   "category": "PPE_Violation",
+   "score": 0.9409401579711836,
+   "phrase": "worker without hard hat",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     303.41,
+     400.91,
+     445.62,
+     679.97
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.43603
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.144
+  },
+  {
+   "image": "0007331",
+   "category": "PPE_Violation",
+   "score": 0.959449496339592,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     737.53,
+     243.11,
+     777.48,
+     338.65
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.86046
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.159
+  },
+  {
+   "image": "0007339",
+   "category": "PPE_Violation",
+   "score": 0.8556024469004464,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     335.19,
+     0.36,
+     413.76,
+     130.0
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.46847
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.136
+  },
+  {
+   "image": "0007365",
+   "category": "PPE_Violation",
+   "score": 0.9664202045951753,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     485.26,
+     480.6,
+     628.27,
+     683.12
+    ],
+    [
+     676.13,
+     447.21,
+     807.43,
+     617.26
+    ],
+    [
+     971.56,
+     302.32,
+     1077.9,
+     646.12
+    ],
+    [
+     894.51,
+     308.61,
+     974.71,
+     626.64
+    ],
+    [
+     1069.88,
+     305.25,
+     1182.24,
+     701.97
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.55172,
+    0.52119,
+    0.44773,
+    0.44669,
+    0.42874
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.146
+  },
+  {
+   "image": "0007497",
+   "category": "Fall_Hazard",
+   "score": 0.9161175409103064,
+   "phrase": "open trench or floor opening",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     553.02,
+     524.96,
+     1192.5,
+     896.43
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.35126
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.162
+  },
+  {
+   "image": "0007497",
+   "category": "PPE_Violation",
+   "score": 0.8626746963230328,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     678.02,
+     560.41,
+     757.13,
+     677.21
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.60051
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.146
+  },
+  {
+   "image": "0007519",
+   "category": "PPE_Violation",
+   "score": 0.8039011080396274,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     596.74,
+     250.8,
+     754.44,
+     674.07
+    ],
+    [
+     731.74,
+     255.82,
+     865.97,
+     617.63
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.7558,
+    0.48269
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.162
+  },
+  {
+   "image": "0007533",
+   "category": "PPE_Violation",
+   "score": 0.9237219950223965,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     235.74,
+     679.49,
+     419.79,
+     885.01
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.92279
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.166
+  },
+  {
+   "image": "0007611",
+   "category": "PPE_Violation",
+   "score": 0.9899165056908653,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     416.05,
+     474.81,
+     481.09,
+     644.27
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.62538
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.164
+  },
+  {
+   "image": "0007633",
+   "category": "PPE_Violation",
+   "score": 0.9841525625457193,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     715.9,
+     392.83,
+     788.82,
+     562.01
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.91227
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.162
+  },
+  {
+   "image": "0007700",
+   "category": "PPE_Violation",
+   "score": 0.9944832111922053,
+   "phrase": "worker without hard hat",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     1150.24,
+     530.92,
+     1461.78,
+     1517.88
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.65255
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.182
+  },
+  {
+   "image": "0007869",
+   "category": "PPE_Violation",
+   "score": 0.9343316676671574,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     430.05,
+     461.04,
+     468.5,
+     537.29
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.83466
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.147
+  },
+  {
+   "image": "0007871",
+   "category": "PPE_Violation",
+   "score": 0.9531720975195451,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     626.64,
+     641.69,
+     702.85,
+     832.85
+    ],
+    [
+     733.94,
+     623.59,
+     794.32,
+     853.44
+    ],
+    [
+     1003.8,
+     716.31,
+     1171.43,
+     897.93
+    ],
+    [
+     463.18,
+     602.16,
+     505.29,
+     688.28
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.62227,
+    0.56091,
+    0.5414,
+    0.37207
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.148
+  },
+  {
+   "image": "0007901",
+   "category": "PPE_Violation",
+   "score": 0.8684070061758947,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     592.58,
+     331.43,
+     667.58,
+     481.61
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.87095
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.149
+  },
+  {
+   "image": "0007983",
+   "category": "PPE_Violation",
+   "score": 0.9793730408622512,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     366.81,
+     433.72,
+     488.1,
+     593.53
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.91241
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.159
+  },
+  {
+   "image": "0008061",
+   "category": "PPE_Violation",
+   "score": 0.9396509401389078,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     91.69,
+     397.09,
+     144.86,
+     550.57
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.41454
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.151
+  },
+  {
+   "image": "0008083",
+   "category": "PPE_Violation",
+   "score": 0.974739817381449,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     441.91,
+     553.29,
+     485.03,
+     633.6
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.76709
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.163
+  },
+  {
+   "image": "0008115",
+   "category": "PPE_Violation",
+   "score": 0.8778105287562478,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     923.66,
+     711.94,
+     993.71,
+     852.98
+    ],
+    [
+     542.24,
+     750.22,
+     599.83,
+     828.78
+    ],
+    [
+     283.28,
+     699.96,
+     332.66,
+     811.82
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.44951,
+    0.44773,
+    0.36922
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.144
+  },
+  {
+   "image": "0008120",
+   "category": "PPE_Violation",
+   "score": 0.9455572380791907,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     509.99,
+     397.24,
+     610.85,
+     612.63
+    ],
+    [
+     784.01,
+     391.76,
+     848.42,
+     596.1
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.79085,
+    0.4912
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.146
+  },
+  {
+   "image": "0008174",
+   "category": "PPE_Violation",
+   "score": 0.9251488957334135,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     748.45,
+     476.37,
+     789.97,
+     532.41
+    ],
+    [
+     677.13,
+     470.27,
+     715.9,
+     527.33
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.39914,
+    0.38044
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.147
+  },
+  {
+   "image": "0008183",
+   "category": "Fall_Hazard",
+   "score": 0.9347871790697448,
+   "phrase": "worker on elevated edge",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     273.17,
+     215.57,
+     600.74,
+     586.71
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.85183
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.146
+  },
+  {
+   "image": "0008199",
+   "category": "PPE_Violation",
+   "score": 0.833845896680783,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     447.95,
+     258.6,
+     639.59,
+     676.88
+    ],
+    [
+     702.59,
+     255.16,
+     895.76,
+     689.52
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.68813,
+    0.66833
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.148
+  },
+  {
+   "image": "0008205",
+   "category": "PPE_Violation",
+   "score": 0.9862383059645796,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     774.7,
+     330.16,
+     883.54,
+     613.11
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.90634
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.18
+  },
+  {
+   "image": "0008243",
+   "category": "PPE_Violation",
+   "score": 0.8146499183659393,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     303.49,
+     825.64,
+     351.12,
+     933.98
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.86075
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.184
+  },
+  {
+   "image": "0008247",
+   "category": "Fall_Hazard",
+   "score": 0.9596884874176633,
+   "phrase": "open trench or floor opening",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     5.79,
+     206.39,
+     644.74,
+     672.28
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.37697
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.174
+  },
+  {
+   "image": "0008270",
+   "category": "PPE_Violation",
+   "score": 0.9774720932808694,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     224.83,
+     287.42,
+     308.7,
+     475.43
+    ],
+    [
+     333.9,
+     275.48,
+     408.33,
+     478.86
+    ],
+    [
+     555.04,
+     293.77,
+     623.01,
+     463.45
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.51799,
+    0.51542,
+    0.4252
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.159
+  },
+  {
+   "image": "0008282",
+   "category": "PPE_Violation",
+   "score": 0.836902142229976,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     185.58,
+     171.69,
+     240.56,
+     279.8
+    ],
+    [
+     361.96,
+     155.4,
+     400.66,
+     254.69
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.72496,
+    0.48909
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.159
+  },
+  {
+   "image": "0008319",
+   "category": "Fall_Hazard",
+   "score": 0.8906364259285006,
+   "phrase": "worker on elevated edge",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     358.09,
+     115.63,
+     494.9,
+     438.92
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.70691
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.161
+  },
+  {
+   "image": "0008319",
+   "category": "PPE_Violation",
+   "score": 0.9604110845514431,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     358.51,
+     117.9,
+     495.27,
+     440.43
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.83818
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.147
+  },
+  {
+   "image": "0008372",
+   "category": "PPE_Violation",
+   "score": 0.9803827816673103,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     375.15,
+     239.8,
+     506.03,
+     471.44
+    ],
+    [
+     245.76,
+     184.67,
+     333.63,
+     397.58
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.81423,
+    0.66747
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.144
+  },
+  {
+   "image": "0008489",
+   "category": "PPE_Violation",
+   "score": 0.8925602740212686,
+   "phrase": "worker without hard hat",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     233.48,
+     279.65,
+     414.33,
+     672.13
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.69406
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.156
+  },
+  {
+   "image": "0008493",
+   "category": "Fall_Hazard",
+   "score": 0.9754783083544061,
+   "phrase": "open trench or floor opening",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     462.67,
+     35.51,
+     515.09,
+     99.5
+    ]
+   ],
+   "source": "DETR+OpenCLIP",
+   "fallback": {
+    "box": [
+     462.67,
+     35.51,
+     515.09,
+     99.5
+    ],
+    "score": 0.87036,
+    "label": "person",
+    "similarity": 0.77869
+   },
+   "crop_similarity": 0.21740500628948212,
+   "no_visible_evidence": false,
+   "seconds": 0.242
+  },
+  {
+   "image": "0008493",
+   "category": "PPE_Violation",
+   "score": 0.9723289095032004,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     821.65,
+     26.96,
+     898.31,
+     261.0
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.44818
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.161
+  },
+  {
+   "image": "0008518",
+   "category": "Fall_Hazard",
+   "score": 0.9192839180784544,
+   "phrase": "worker on elevated edge",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     465.16,
+     497.52,
+     552.47,
+     638.09
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.49857
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.165
+  },
+  {
+   "image": "0008518",
+   "category": "PPE_Violation",
+   "score": 0.9900860733005452,
+   "phrase": "worker without hard hat",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     464.73,
+     499.45,
+     551.46,
+     640.75
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.58685
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.151
+  },
+  {
+   "image": "0008536",
+   "category": "PPE_Violation",
+   "score": 0.9835523808454154,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     553.91,
+     320.64,
+     669.22,
+     678.76
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.90557
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.154
+  },
+  {
+   "image": "0008612",
+   "category": "PPE_Violation",
+   "score": 0.9921312019348869,
+   "phrase": "worker without hard hat",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     342.56,
+     862.38,
+     447.69,
+     1110.43
+    ],
+    [
+     478.04,
+     894.54,
+     573.36,
+     1131.8
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.42746,
+    0.39517
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.161
+  },
+  {
+   "image": "0008682",
+   "category": "PPE_Violation",
+   "score": 0.9914142611615944,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     431.39,
+     643.35,
+     494.21,
+     772.73
+    ],
+    [
+     408.24,
+     376.28,
+     462.02,
+     474.87
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.62559,
+    0.5463
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.166
+  },
+  {
+   "image": "0008699",
+   "category": "PPE_Violation",
+   "score": 0.9415321374660982,
+   "phrase": "worker without hard hat",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     718.46,
+     371.43,
+     830.28,
+     562.49
+    ],
+    [
+     145.99,
+     413.88,
+     226.89,
+     506.08
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.57751,
+    0.43454
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.166
+  },
+  {
+   "image": "0008700",
+   "category": "Fall_Hazard",
+   "score": 0.9043206383448142,
+   "phrase": "open trench or floor opening",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     892.96,
+     3.21,
+     985.57,
+     257.58
+    ]
+   ],
+   "source": "DETR+OpenCLIP",
+   "fallback": {
+    "box": [
+     892.96,
+     3.21,
+     985.57,
+     257.58
+    ],
+    "score": 0.99841,
+    "label": "person",
+    "similarity": 0.77869
+   },
+   "crop_similarity": 0.20702826976776123,
+   "no_visible_evidence": false,
+   "seconds": 0.266
+  },
+  {
+   "image": "0008700",
+   "category": "PPE_Violation",
+   "score": 0.8728752360432239,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     897.35,
+     2.83,
+     986.09,
+     263.75
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.79959
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.168
+  },
+  {
+   "image": "0008736",
+   "category": "PPE_Violation",
+   "score": 0.9942764292286517,
+   "phrase": "worker without hard hat",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     296.87,
+     349.41,
+     565.99,
+     922.94
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.64058
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.163
+  },
+  {
+   "image": "0008784",
+   "category": "PPE_Violation",
+   "score": 0.9928524915181709,
+   "phrase": "worker without hard hat",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     464.92,
+     326.76,
+     540.61,
+     509.59
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.40742
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.163
+  },
+  {
+   "image": "0008817",
+   "category": "PPE_Violation",
+   "score": 0.9117197847105245,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     564.15,
+     314.33,
+     617.09,
+     447.02
+    ],
+    [
+     474.11,
+     294.03,
+     522.49,
+     365.0
+    ],
+    [
+     422.01,
+     427.53,
+     496.58,
+     529.55
+    ],
+    [
+     350.67,
+     271.28,
+     413.57,
+     393.62
+    ],
+    [
+     323.75,
+     364.67,
+     403.69,
+     505.49
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.70485,
+    0.52882,
+    0.50502,
+    0.4428,
+    0.43333
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.154
+  },
+  {
+   "image": "0008902",
+   "category": "Fall_Hazard",
+   "score": 0.9390844312066549,
+   "phrase": "open trench or floor opening",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     1821.36,
+     381.89,
+     2414.9,
+     1756.89
+    ]
+   ],
+   "source": "DETR+OpenCLIP",
+   "fallback": {
+    "box": [
+     1821.36,
+     381.89,
+     2414.9,
+     1756.89
+    ],
+    "score": 0.99894,
+    "label": "person",
+    "similarity": 0.77869
+   },
+   "crop_similarity": 0.267716646194458,
+   "no_visible_evidence": false,
+   "seconds": 0.401
+  },
+  {
+   "image": "0008902",
+   "category": "PPE_Violation",
+   "score": 0.9803499345952178,
+   "phrase": "worker without hard hat",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     1198.28,
+     477.2,
+     1841.52,
+     2181.6
+    ],
+    [
+     1822.25,
+     376.23,
+     2418.12,
+     1769.02
+    ],
+    [
+     1513.97,
+     477.08,
+     1812.29,
+     801.17
+    ],
+    [
+     3047.25,
+     972.07,
+     3813.75,
+     1840.45
+    ],
+    [
+     2125.0,
+     375.83,
+     2359.29,
+     590.89
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.76043,
+    0.61919,
+    0.4598,
+    0.40388,
+    0.38152
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.247
+  },
+  {
+   "image": "0008908",
+   "category": "Fall_Hazard",
+   "score": 0.8994240528250387,
+   "phrase": "open trench or floor opening",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     333.25,
+     304.14,
+     377.07,
+     397.54
+    ]
+   ],
+   "source": "DETR+OpenCLIP",
+   "fallback": {
+    "box": [
+     333.25,
+     304.14,
+     377.07,
+     397.54
+    ],
+    "score": 0.99908,
+    "label": "person",
+    "similarity": 0.77869
+   },
+   "crop_similarity": 0.19482846558094025,
+   "no_visible_evidence": false,
+   "seconds": 0.221
+  },
+  {
+   "image": "0009022",
+   "category": "PPE_Violation",
+   "score": 0.8001241543014156,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     141.46,
+     228.9,
+     231.6,
+     432.81
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.43145
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.165
+  },
+  {
+   "image": "0009091",
+   "category": "PPE_Violation",
+   "score": 0.9217840944492561,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     741.05,
+     777.24,
+     791.77,
+     882.94
+    ],
+    [
+     648.14,
+     801.79,
+     693.82,
+     897.99
+    ],
+    [
+     862.99,
+     787.97,
+     914.51,
+     897.97
+    ],
+    [
+     389.09,
+     806.21,
+     446.6,
+     898.15
+    ],
+    [
+     193.48,
+     801.62,
+     247.16,
+     897.6
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.48555,
+    0.41672,
+    0.39701,
+    0.375,
+    0.37428
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.152
+  },
+  {
+   "image": "0009118",
+   "category": "Fall_Hazard",
+   "score": 0.9131067593011258,
+   "phrase": "open trench or floor opening",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     12.43,
+     299.75,
+     916.44,
+     897.4
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.50861
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.163
+  },
+  {
+   "image": "0009118",
+   "category": "PPE_Violation",
+   "score": 0.9478318378844395,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     951.33,
+     1.28,
+     1119.66,
+     400.54
+    ],
+    [
+     682.99,
+     387.17,
+     827.64,
+     513.69
+    ],
+    [
+     728.91,
+     253.3,
+     781.12,
+     368.97
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.48233,
+    0.45749,
+    0.36411
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.159
+  },
+  {
+   "image": "0009210",
+   "category": "PPE_Violation",
+   "score": 0.9151151318895043,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     880.07,
+     433.35,
+     971.56,
+     688.43
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.58582
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.147
+  },
+  {
+   "image": "0009249",
+   "category": "PPE_Violation",
+   "score": 0.9000822515323106,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     690.91,
+     718.6,
+     722.49,
+     806.95
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.62654
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.161
+  },
+  {
+   "image": "0009271",
+   "category": "PPE_Violation",
+   "score": 0.9892462978032961,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     346.17,
+     387.02,
+     619.89,
+     849.61
+    ],
+    [
+     697.38,
+     296.65,
+     990.03,
+     768.33
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.71589,
+    0.69615
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.146
+  },
+  {
+   "image": "0009276",
+   "category": "Fall_Hazard",
+   "score": 0.8827400046651065,
+   "phrase": "worker on elevated edge",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     939.29,
+     378.76,
+     994.58,
+     480.8
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.50948
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.156
+  },
+  {
+   "image": "0009387",
+   "category": "Fall_Hazard",
+   "score": 0.9009675049796572,
+   "phrase": "worker on elevated edge",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     968.0,
+     157.68,
+     1055.26,
+     359.77
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.76443
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.148
+  },
+  {
+   "image": "0009387",
+   "category": "PPE_Violation",
+   "score": 0.8489220153630598,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     968.31,
+     159.34,
+     1054.33,
+     360.43
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.81763
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.161
+  },
+  {
+   "image": "0009393",
+   "category": "PPE_Violation",
+   "score": 0.8247620634558277,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     507.65,
+     668.91,
+     536.57,
+     737.15
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.51097
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.146
+  },
+  {
+   "image": "0009424",
+   "category": "Fall_Hazard",
+   "score": 0.9621549120128223,
+   "phrase": "worker on elevated edge",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     292.09,
+     15.02,
+     395.98,
+     158.33
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.47922
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.139
+  },
+  {
+   "image": "0009424",
+   "category": "PPE_Violation",
+   "score": 0.9708592063334784,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     292.01,
+     15.55,
+     396.37,
+     159.61
+    ],
+    [
+     4.54,
+     69.48,
+     138.68,
+     252.44
+    ],
+    [
+     183.2,
+     63.29,
+     256.8,
+     134.82
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.63586,
+    0.4356,
+    0.42182
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.139
+  },
+  {
+   "image": "0009454",
+   "category": "PPE_Violation",
+   "score": 0.815694536116619,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     495.06,
+     371.95,
+     669.73,
+     818.58
+    ],
+    [
+     641.09,
+     364.57,
+     816.31,
+     813.66
+    ],
+    [
+     759.65,
+     354.58,
+     896.97,
+     784.45
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.70313,
+    0.62235,
+    0.5212
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.17
+  },
+  {
+   "image": "0009513",
+   "category": "PPE_Violation",
+   "score": 0.8582443366472916,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     672.0,
+     790.78,
+     745.07,
+     897.74
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.48485
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.148
+  },
+  {
+   "image": "0009548",
+   "category": "Fall_Hazard",
+   "score": 0.9146178661274593,
+   "phrase": "open trench or floor opening",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     670.55,
+     450.16,
+     1195.58,
+     896.2
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.35065
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.142
+  },
+  {
+   "image": "0009578",
+   "category": "Fall_Hazard",
+   "score": 0.8630161467141638,
+   "phrase": "worker on elevated edge",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     574.44,
+     395.95,
+     602.58,
+     466.36
+    ]
+   ],
+   "source": "DETR+OpenCLIP",
+   "fallback": {
+    "box": [
+     574.44,
+     395.95,
+     602.58,
+     466.36
+    ],
+    "score": 0.71382,
+    "label": "person",
+    "similarity": 0.80543
+   },
+   "crop_similarity": 0.22097255289554596,
+   "no_visible_evidence": false,
+   "seconds": 0.254
+  },
+  {
+   "image": "0009578",
+   "category": "PPE_Violation",
+   "score": 0.9385450068441985,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     1198.56,
+     289.18,
+     1277.55,
+     675.47
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.6035
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.146
+  },
+  {
+   "image": "0009594",
+   "category": "Fall_Hazard",
+   "score": 0.9242714909950158,
+   "phrase": "worker on elevated edge",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     173.32,
+     44.82,
+     251.58,
+     196.45
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.73457
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.159
+  },
+  {
+   "image": "0009594",
+   "category": "PPE_Violation",
+   "score": 0.936606070987416,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     173.36,
+     45.63,
+     250.63,
+     196.67
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.83771
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.156
+  },
+  {
+   "image": "0009595",
+   "category": "PPE_Violation",
+   "score": 0.9415169360834243,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     175.61,
+     448.94,
+     264.33,
+     588.28
+    ],
+    [
+     376.26,
+     322.8,
+     441.88,
+     445.83
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.40585,
+    0.36713
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.145
+  },
+  {
+   "image": "0009617",
+   "category": "PPE_Violation",
+   "score": 0.9878773195024035,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     79.3,
+     1.23,
+     151.79,
+     118.59
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.86996
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.138
+  },
+  {
+   "image": "0009619",
+   "category": "PPE_Violation",
+   "score": 0.9643508855955323,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     304.84,
+     472.88,
+     360.31,
+     605.19
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.78254
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.144
+  },
+  {
+   "image": "0009660",
+   "category": "Fall_Hazard",
+   "score": 0.9111320744310374,
+   "phrase": "worker on elevated edge",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     539.46,
+     477.72,
+     602.68,
+     645.87
+    ],
+    [
+     180.24,
+     543.91,
+     281.49,
+     753.11
+    ],
+    [
+     283.03,
+     439.67,
+     342.03,
+     547.1
+    ],
+    [
+     72.4,
+     582.08,
+     163.22,
+     811.04
+    ],
+    [
+     192.25,
+     445.62,
+     240.35,
+     544.25
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.52418,
+    0.50713,
+    0.43377,
+    0.42513,
+    0.40896
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.156
+  },
+  {
+   "image": "0009747",
+   "category": "Fall_Hazard",
+   "score": 0.9076616814311627,
+   "phrase": "worker on elevated edge",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     424.17,
+     134.12,
+     481.2,
+     356.72
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.44773
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.159
+  },
+  {
+   "image": "0009747",
+   "category": "PPE_Violation",
+   "score": 0.9250161012869578,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     423.1,
+     134.51,
+     482.24,
+     358.75
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.67533
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.146
+  },
+  {
+   "image": "0009798",
+   "category": "PPE_Violation",
+   "score": 0.8952251791942674,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     1366.44,
+     475.75,
+     2551.06,
+     1912.18
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.86821
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.184
+  },
+  {
+   "image": "0009822",
+   "category": "PPE_Violation",
+   "score": 0.9628525171852303,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     520.8,
+     543.25,
+     585.27,
+     647.98
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.74559
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.144
+  },
+  {
+   "image": "0009831",
+   "category": "PPE_Violation",
+   "score": 0.9251891981900661,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     595.39,
+     315.53,
+     635.98,
+     401.93
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.66179
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.141
+  },
+  {
+   "image": "0009969",
+   "category": "Fall_Hazard",
+   "score": 0.8747021624490793,
+   "phrase": "open trench or floor opening",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     4.72,
+     441.2,
+     1195.3,
+     891.18
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.38288
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.144
+  },
+  {
+   "image": "0009969",
+   "category": "PPE_Violation",
+   "score": 0.8075258470827422,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     368.79,
+     370.41,
+     412.46,
+     461.68
+    ],
+    [
+     438.05,
+     373.31,
+     488.99,
+     483.23
+    ],
+    [
+     504.14,
+     360.35,
+     543.07,
+     469.82
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.48217,
+    0.46016,
+    0.40555
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.149
+  },
+  {
+   "image": "0010018",
+   "category": "PPE_Violation",
+   "score": 0.9812176797607038,
+   "phrase": "worker without hard hat",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     703.0,
+     468.54,
+     786.66,
+     640.88
+    ],
+    [
+     782.29,
+     463.44,
+     845.98,
+     612.54
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.62163,
+    0.55556
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.147
+  },
+  {
+   "image": "0010079",
+   "category": "PPE_Violation",
+   "score": 0.8552287768361657,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     460.84,
+     191.22,
+     653.46,
+     623.8
+    ],
+    [
+     627.45,
+     190.62,
+     759.4,
+     659.48
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.67981,
+    0.53648
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.18
+  },
+  {
+   "image": "0010146",
+   "category": "PPE_Violation",
+   "score": 0.8192906765578023,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     810.6,
+     2.89,
+     1188.51,
+     642.31
+    ],
+    [
+     332.51,
+     56.38,
+     471.36,
+     368.74
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.48304,
+    0.38886
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.153
+  },
+  {
+   "image": "0010168",
+   "category": "PPE_Violation",
+   "score": 0.9628014760107584,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     866.49,
+     457.03,
+     907.07,
+     542.96
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.76846
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.158
+  },
+  {
+   "image": "0010172",
+   "category": "Fall_Hazard",
+   "score": 0.9407721695172032,
+   "phrase": "open trench or floor opening",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     467.28,
+     291.96,
+     808.1,
+     606.62
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.35477
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.165
+  },
+  {
+   "image": "0010172",
+   "category": "PPE_Violation",
+   "score": 0.8288953214330892,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     489.25,
+     172.25,
+     674.93,
+     745.39
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.89238
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.148
+  },
+  {
+   "image": "0010191",
+   "category": "Fall_Hazard",
+   "score": 0.94602619627299,
+   "phrase": "worker on elevated edge",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     937.94,
+     241.15,
+     1035.16,
+     502.76
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.43374
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.206
+  },
+  {
+   "image": "0010191",
+   "category": "PPE_Violation",
+   "score": 0.8909142984381799,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     938.09,
+     243.48,
+     1032.01,
+     503.78
+    ],
+    [
+     250.7,
+     380.12,
+     296.04,
+     535.48
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.71488,
+    0.4769
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.143
+  },
+  {
+   "image": "0010238",
+   "category": "Fall_Hazard",
+   "score": 0.8868935693096944,
+   "phrase": "open trench or floor opening",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     323.9,
+     387.63,
+     384.01,
+     532.62
+    ]
+   ],
+   "source": "DETR+OpenCLIP",
+   "fallback": {
+    "box": [
+     323.9,
+     387.63,
+     384.01,
+     532.62
+    ],
+    "score": 0.99936,
+    "label": "person",
+    "similarity": 0.77869
+   },
+   "crop_similarity": 0.21703650057315826,
+   "no_visible_evidence": false,
+   "seconds": 0.271
+  },
+  {
+   "image": "0010238",
+   "category": "PPE_Violation",
+   "score": 0.9195001964099576,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     322.2,
+     388.08,
+     387.31,
+     541.26
+    ],
+    [
+     492.01,
+     338.68,
+     548.44,
+     491.17
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.72671,
+    0.71484
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.172
+  },
+  {
+   "image": "0010267",
+   "category": "PPE_Violation",
+   "score": 0.9041105873049088,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     64.96,
+     415.21,
+     124.76,
+     573.75
+    ],
+    [
+     16.19,
+     422.86,
+     73.3,
+     593.17
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.61382,
+    0.4064
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.162
+  },
+  {
+   "image": "0010270",
+   "category": "PPE_Violation",
+   "score": 0.9324803348731215,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     468.34,
+     69.13,
+     585.93,
+     473.3
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.91854
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.159
+  },
+  {
+   "image": "0010308",
+   "category": "PPE_Violation",
+   "score": 0.9475474574988648,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     299.37,
+     162.38,
+     517.03,
+     467.09
+    ],
+    [
+     507.66,
+     1.03,
+     689.53,
+     199.02
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.61396,
+    0.50618
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.136
+  },
+  {
+   "image": "0010317",
+   "category": "Fall_Hazard",
+   "score": 0.9551640702584351,
+   "phrase": "worker on elevated edge",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     129.67,
+     227.05,
+     211.21,
+     448.09
+    ]
+   ],
+   "source": "DETR+OpenCLIP",
+   "fallback": {
+    "box": [
+     129.67,
+     227.05,
+     211.21,
+     448.09
+    ],
+    "score": 0.99534,
+    "label": "person",
+    "similarity": 0.80543
+   },
+   "crop_similarity": 0.2279006987810135,
+   "no_visible_evidence": false,
+   "seconds": 0.241
+  },
+  {
+   "image": "0010353",
+   "category": "PPE_Violation",
+   "score": 0.9509990686845018,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     1100.62,
+     439.67,
+     1137.7,
+     532.31
+    ],
+    [
+     742.09,
+     452.29,
+     772.87,
+     524.13
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.49961,
+    0.35957
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.154
+  },
+  {
+   "image": "0010392",
+   "category": "PPE_Violation",
+   "score": 0.9804947394254544,
+   "phrase": "worker without hard hat",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     486.91,
+     370.41,
+     596.77,
+     625.85
+    ],
+    [
+     576.18,
+     380.19,
+     689.01,
+     629.74
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.44538,
+    0.40213
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.162
+  },
+  {
+   "image": "0010442",
+   "category": "PPE_Violation",
+   "score": 0.9692709147466485,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     209.43,
+     112.77,
+     302.93,
+     254.98
+    ],
+    [
+     372.24,
+     200.71,
+     505.91,
+     405.47
+    ],
+    [
+     309.24,
+     150.36,
+     359.69,
+     218.62
+    ],
+    [
+     375.0,
+     198.31,
+     454.45,
+     365.86
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.57322,
+    0.50399,
+    0.41605,
+    0.37138
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.145
+  },
+  {
+   "image": "0010454",
+   "category": "PPE_Violation",
+   "score": 0.9744101624323911,
+   "phrase": "worker without hard hat",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     578.14,
+     274.72,
+     776.93,
+     760.81
+    ],
+    [
+     800.1,
+     215.56,
+     976.02,
+     684.15
+    ],
+    [
+     369.74,
+     275.38,
+     459.53,
+     602.89
+    ],
+    [
+     546.49,
+     245.52,
+     649.72,
+     660.5
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.57461,
+    0.54441,
+    0.46838,
+    0.36612
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.149
+  },
+  {
+   "image": "0010480",
+   "category": "Fall_Hazard",
+   "score": 0.960126902640115,
+   "phrase": "worker on elevated edge",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     318.86,
+     62.28,
+     407.06,
+     233.68
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.59977
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.146
+  },
+  {
+   "image": "0010529",
+   "category": "Fall_Hazard",
+   "score": 0.9610070563302946,
+   "phrase": "worker on elevated edge",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     189.55,
+     559.06,
+     306.52,
+     737.71
+    ],
+    [
+     0.73,
+     601.68,
+     400.86,
+     762.08
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.81134,
+    0.46359
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.15
+  },
+  {
+   "image": "0010609",
+   "category": "Fall_Hazard",
+   "score": 0.8955211725398491,
+   "phrase": "worker on elevated edge",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     920.57,
+     2.78,
+     1185.22,
+     368.44
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.37597
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.18
+  },
+  {
+   "image": "0010609",
+   "category": "PPE_Violation",
+   "score": 0.987273908586165,
+   "phrase": "worker without hard hat",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     571.43,
+     365.04,
+     766.19,
+     563.08
+    ],
+    [
+     919.86,
+     2.51,
+     1184.38,
+     370.21
+    ],
+    [
+     268.55,
+     573.37,
+     366.28,
+     811.22
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.41639,
+    0.40027,
+    0.37608
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.165
+  },
+  {
+   "image": "0010635",
+   "category": "PPE_Violation",
+   "score": 0.9704881772053693,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     568.21,
+     461.43,
+     623.84,
+     574.39
+    ],
+    [
+     458.94,
+     415.61,
+     518.63,
+     556.4
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.51747,
+    0.49111
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.149
+  },
+  {
+   "image": "0010701",
+   "category": "Fall_Hazard",
+   "score": 0.8948920794617248,
+   "phrase": "worker on elevated edge",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     127.32,
+     420.54,
+     263.68,
+     543.25
+    ],
+    [
+     491.03,
+     232.75,
+     564.76,
+     364.01
+    ],
+    [
+     304.18,
+     273.2,
+     376.38,
+     410.91
+    ],
+    [
+     355.6,
+     117.73,
+     408.46,
+     222.38
+    ],
+    [
+     258.98,
+     381.82,
+     333.48,
+     479.45
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.64887,
+    0.51414,
+    0.43138,
+    0.38085,
+    0.3707
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.148
+  },
+  {
+   "image": "0010737",
+   "category": "PPE_Violation",
+   "score": 0.8678036159201938,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     165.94,
+     405.7,
+     237.07,
+     559.55
+    ],
+    [
+     2.11,
+     438.43,
+     79.79,
+     621.65
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.57824,
+    0.56815
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.182
+  },
+  {
+   "image": "0010760",
+   "category": "PPE_Violation",
+   "score": 0.9839656884122572,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     881.74,
+     422.06,
+     983.18,
+     641.8
+    ],
+    [
+     353.5,
+     352.13,
+     431.38,
+     481.42
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.47844,
+    0.36069
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.155
+  },
+  {
+   "image": "0010771",
+   "category": "Fall_Hazard",
+   "score": 0.9194625753795175,
+   "phrase": "open trench or floor opening",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     1083.19,
+     441.96,
+     1114.51,
+     477.76
+    ]
+   ],
+   "source": "DETR+OpenCLIP",
+   "fallback": {
+    "box": [
+     1083.19,
+     441.96,
+     1114.51,
+     477.76
+    ],
+    "score": 0.65918,
+    "label": "person",
+    "similarity": 0.77869
+   },
+   "crop_similarity": 0.19569730758666992,
+   "no_visible_evidence": false,
+   "seconds": 0.272
+  },
+  {
+   "image": "0010822",
+   "category": "PPE_Violation",
+   "score": 0.8613352646236745,
+   "phrase": "worker without hard hat",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     959.37,
+     726.47,
+     1010.48,
+     833.28
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.36224
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.154
+  },
+  {
+   "image": "0010835",
+   "category": "PPE_Violation",
+   "score": 0.9826326276823432,
+   "phrase": "worker without hard hat",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     643.37,
+     94.56,
+     846.7,
+     536.81
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.66902
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.158
+  },
+  {
+   "image": "0010846",
+   "category": "PPE_Violation",
+   "score": 0.9653053795451849,
+   "phrase": "worker without hard hat",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     229.91,
+     283.99,
+     285.2,
+     374.67
+    ],
+    [
+     268.04,
+     250.32,
+     311.35,
+     325.17
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.42591,
+    0.35741
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.149
+  },
+  {
+   "image": "0010860",
+   "category": "PPE_Violation",
+   "score": 0.9451808846374685,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     235.74,
+     539.96,
+     312.23,
+     696.63
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.66787
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.154
+  },
+  {
+   "image": "0010881",
+   "category": "PPE_Violation",
+   "score": 0.8870209406550611,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     422.78,
+     333.87,
+     449.42,
+     398.92
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.67991
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.139
+  },
+  {
+   "image": "0010884",
+   "category": "PPE_Violation",
+   "score": 0.944263252183289,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     179.14,
+     17.7,
+     324.19,
+     400.48
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.77092
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.159
+  },
+  {
+   "image": "0010945",
+   "category": "PPE_Violation",
+   "score": 0.8022249467575628,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     417.69,
+     315.29,
+     550.88,
+     515.36
+    ],
+    [
+     739.56,
+     230.79,
+     826.85,
+     364.8
+    ],
+    [
+     353.68,
+     324.82,
+     429.09,
+     497.7
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.64777,
+    0.60412,
+    0.39432
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.164
+  },
+  {
+   "image": "0010993",
+   "category": "PPE_Violation",
+   "score": 0.8919536127560768,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     129.03,
+     229.7,
+     200.49,
+     357.36
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.49531
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.172
+  },
+  {
+   "image": "0010997",
+   "category": "Fall_Hazard",
+   "score": 0.8668216695363952,
+   "phrase": "worker on elevated edge",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     438.14,
+     174.48,
+     746.55,
+     654.87
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.58431
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.164
+  },
+  {
+   "image": "0011090",
+   "category": "PPE_Violation",
+   "score": 0.9459973243948286,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     670.21,
+     291.9,
+     856.03,
+     718.4
+    ],
+    [
+     437.78,
+     301.19,
+     538.27,
+     624.34
+    ],
+    [
+     58.36,
+     289.7,
+     172.98,
+     718.04
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.6372,
+    0.57583,
+    0.47689
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.139
+  },
+  {
+   "image": "0011107",
+   "category": "PPE_Violation",
+   "score": 0.9898288903362719,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     535.15,
+     387.5,
+     660.55,
+     682.01
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.89522
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.146
+  },
+  {
+   "image": "0011206",
+   "category": "PPE_Violation",
+   "score": 0.8530605204005247,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     6.03,
+     688.42,
+     53.16,
+     804.11
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.53497
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.147
+  },
+  {
+   "image": "0011228",
+   "category": "Fall_Hazard",
+   "score": 0.9412250541600824,
+   "phrase": "open trench or floor opening",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     4.2,
+     342.05,
+     1191.76,
+     669.49
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.43015
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.171
+  },
+  {
+   "image": "0011228",
+   "category": "PPE_Violation",
+   "score": 0.9263843291719956,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     1.48,
+     503.6,
+     118.78,
+     669.7
+    ],
+    [
+     628.91,
+     378.64,
+     717.52,
+     496.41
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.59832,
+    0.55583
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.169
+  },
+  {
+   "image": "0011262",
+   "category": "PPE_Violation",
+   "score": 0.9900485982937856,
+   "phrase": "worker without hard hat",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     542.23,
+     382.29,
+     630.17,
+     649.8
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.78628
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.149
+  },
+  {
+   "image": "0011268",
+   "category": "PPE_Violation",
+   "score": 0.9121242854442472,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     94.03,
+     364.11,
+     210.63,
+     636.8
+    ],
+    [
+     219.37,
+     351.44,
+     335.98,
+     639.6
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.59551,
+    0.5627
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.181
+  },
+  {
+   "image": "0011281",
+   "category": "Fall_Hazard",
+   "score": 0.90473698496606,
+   "phrase": "worker on elevated edge",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     785.01,
+     432.18,
+     846.5,
+     601.77
+    ]
+   ],
+   "source": "DETR+OpenCLIP",
+   "fallback": {
+    "box": [
+     785.01,
+     432.18,
+     846.5,
+     601.77
+    ],
+    "score": 0.9944,
+    "label": "person",
+    "similarity": 0.80543
+   },
+   "crop_similarity": 0.2210383117198944,
+   "no_visible_evidence": false,
+   "seconds": 0.235
+  },
+  {
+   "image": "0011281",
+   "category": "PPE_Violation",
+   "score": 0.990177582710237,
+   "phrase": "worker without hard hat",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     1117.96,
+     482.0,
+     1276.8,
+     805.13
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.37524
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.164
+  },
+  {
+   "image": "0011326",
+   "category": "PPE_Violation",
+   "score": 0.9240181837106578,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     405.07,
+     90.89,
+     486.12,
+     267.18
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.91662
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.127
+  },
+  {
+   "image": "0011348",
+   "category": "PPE_Violation",
+   "score": 0.9319031421389272,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     74.21,
+     57.08,
+     132.78,
+     201.83
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.68963
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.162
+  },
+  {
+   "image": "0011376",
+   "category": "PPE_Violation",
+   "score": 0.9542813116740738,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     1200.43,
+     308.61,
+     1533.33,
+     1061.79
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.69108
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.188
+  },
+  {
+   "image": "0011468",
+   "category": "PPE_Violation",
+   "score": 0.8813690253546529,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     589.15,
+     555.55,
+     628.17,
+     610.45
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.54301
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.145
+  },
+  {
+   "image": "0011493",
+   "category": "PPE_Violation",
+   "score": 0.8539304660216522,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     595.88,
+     332.27,
+     690.87,
+     503.7
+    ],
+    [
+     370.46,
+     283.77,
+     447.61,
+     463.39
+    ],
+    [
+     669.96,
+     251.33,
+     733.26,
+     391.92
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.68937,
+    0.66094,
+    0.49685
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.161
+  },
+  {
+   "image": "0011507",
+   "category": "PPE_Violation",
+   "score": 0.9864089861171164,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     84.92,
+     582.85,
+     142.32,
+     736.81
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.76525
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.145
+  },
+  {
+   "image": "0011514",
+   "category": "Fall_Hazard",
+   "score": 0.935585082022535,
+   "phrase": "worker on elevated edge",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     608.13,
+     213.05,
+     681.17,
+     343.51
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.39484
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.181
+  },
+  {
+   "image": "0011531",
+   "category": "Fall_Hazard",
+   "score": 0.929515497026498,
+   "phrase": "open trench or floor opening",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     6.35,
+     139.03,
+     981.5,
+     879.51
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.5122
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.146
+  },
+  {
+   "image": "0011531",
+   "category": "PPE_Violation",
+   "score": 0.8503488390323202,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     607.06,
+     213.21,
+     747.02,
+     517.33
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.81773
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.147
+  },
+  {
+   "image": "0011535",
+   "category": "PPE_Violation",
+   "score": 0.9644303886138742,
+   "phrase": "worker without hard hat",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     907.87,
+     676.03,
+     1037.79,
+     897.63
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.79007
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.148
+  },
+  {
+   "image": "0011548",
+   "category": "PPE_Violation",
+   "score": 0.9467206517533713,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     188.82,
+     366.73,
+     237.39,
+     461.73
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.87816
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.149
+  },
+  {
+   "image": "0011683",
+   "category": "Fall_Hazard",
+   "score": 0.900829607800734,
+   "phrase": "worker on elevated edge",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     184.86,
+     427.21,
+     262.42,
+     512.85
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.42965
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.145
+  },
+  {
+   "image": "0011692",
+   "category": "PPE_Violation",
+   "score": 0.912617856428942,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     141.96,
+     454.93,
+     185.26,
+     530.06
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.72466
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.146
+  },
+  {
+   "image": "0011704",
+   "category": "PPE_Violation",
+   "score": 0.842674275034803,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     1366.64,
+     255.16,
+     1608.88,
+     500.81
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.72818
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.168
+  },
+  {
+   "image": "0011739",
+   "category": "PPE_Violation",
+   "score": 0.9857521257710014,
+   "phrase": "worker without hard hat",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     831.35,
+     215.49,
+     1063.45,
+     897.29
+    ],
+    [
+     373.12,
+     322.47,
+     668.58,
+     897.53
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.50493,
+    0.39181
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.148
+  },
+  {
+   "image": "0011741",
+   "category": "PPE_Violation",
+   "score": 0.9089075609258546,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     782.13,
+     128.88,
+     926.49,
+     461.93
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.68386
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.123
+  },
+  {
+   "image": "0011753",
+   "category": "PPE_Violation",
+   "score": 0.950896799844412,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     718.38,
+     684.33,
+     796.29,
+     863.71
+    ],
+    [
+     1031.94,
+     705.51,
+     1115.63,
+     897.83
+    ],
+    [
+     871.93,
+     669.09,
+     963.93,
+     858.66
+    ],
+    [
+     75.13,
+     687.48,
+     128.39,
+     820.84
+    ],
+    [
+     363.07,
+     678.26,
+     411.06,
+     796.47
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.5145,
+    0.43883,
+    0.40627,
+    0.39799,
+    0.38622
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.146
+  },
+  {
+   "image": "0011760",
+   "category": "PPE_Violation",
+   "score": 0.9235508019990354,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     923.62,
+     686.41,
+     976.3,
+     813.01
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.64648
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.144
+  },
+  {
+   "image": "0011776",
+   "category": "PPE_Violation",
+   "score": 0.8423276046986093,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     175.85,
+     440.84,
+     203.31,
+     499.91
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.49294
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.154
+  },
+  {
+   "image": "0011925",
+   "category": "Fall_Hazard",
+   "score": 0.9214372759777384,
+   "phrase": "open trench or floor opening",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     5.49,
+     161.45,
+     1193.91,
+     896.9
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.40278
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.166
+  },
+  {
+   "image": "0011925",
+   "category": "PPE_Violation",
+   "score": 0.9876945411138001,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     955.03,
+     516.75,
+     1026.96,
+     746.71
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.84222
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.153
+  },
+  {
+   "image": "0011928",
+   "category": "Fall_Hazard",
+   "score": 0.8775371950050068,
+   "phrase": "open trench or floor opening",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     544.68,
+     446.15,
+     651.26,
+     682.91
+    ]
+   ],
+   "source": "DETR+OpenCLIP",
+   "fallback": {
+    "box": [
+     544.68,
+     446.15,
+     651.26,
+     682.91
+    ],
+    "score": 0.99942,
+    "label": "person",
+    "similarity": 0.77869
+   },
+   "crop_similarity": 0.20397579669952393,
+   "no_visible_evidence": false,
+   "seconds": 0.255
+  },
+  {
+   "image": "0011928",
+   "category": "PPE_Violation",
+   "score": 0.8202901125571489,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     319.88,
+     375.33,
+     551.31,
+     716.81
+    ],
+    [
+     540.96,
+     442.76,
+     654.13,
+     690.36
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.83072,
+    0.43388
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.145
+  },
+  {
+   "image": "0011942",
+   "category": "PPE_Violation",
+   "score": 0.8887720018921703,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     808.37,
+     736.68,
+     854.83,
+     826.77
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.73782
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.156
+  },
+  {
+   "image": "0011967",
+   "category": "PPE_Violation",
+   "score": 0.8962861215485642,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     1487.89,
+     747.81,
+     2175.23,
+     1691.58
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.89128
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.195
+  },
+  {
+   "image": "0011972",
+   "category": "PPE_Violation",
+   "score": 0.9390508225567278,
+   "phrase": "worker without hard hat",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     716.7,
+     815.9,
+     759.85,
+     898.36
+    ],
+    [
+     460.29,
+     779.23,
+     495.26,
+     865.67
+    ],
+    [
+     530.44,
+     774.14,
+     579.46,
+     861.2
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.42628,
+    0.4136,
+    0.38479
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.146
+  },
+  {
+   "image": "0012183",
+   "category": "PPE_Violation",
+   "score": 0.8231544649236452,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     412.23,
+     325.78,
+     584.36,
+     672.37
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.75767
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.145
+  },
+  {
+   "image": "0012241",
+   "category": "Fall_Hazard",
+   "score": 0.9506365124535759,
+   "phrase": "worker on elevated edge",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     676.59,
+     514.43,
+     734.67,
+     680.27
+    ]
+   ],
+   "source": "DETR+OpenCLIP",
+   "fallback": {
+    "box": [
+     676.59,
+     514.43,
+     734.67,
+     680.27
+    ],
+    "score": 0.99847,
+    "label": "person",
+    "similarity": 0.80543
+   },
+   "crop_similarity": 0.2292279601097107,
+   "no_visible_evidence": false,
+   "seconds": 0.249
+  },
+  {
+   "image": "0012241",
+   "category": "PPE_Violation",
+   "score": 0.8132637449562832,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     421.32,
+     524.16,
+     528.22,
+     700.9
+    ],
+    [
+     560.44,
+     349.63,
+     621.89,
+     496.18
+    ],
+    [
+     674.14,
+     516.38,
+     736.5,
+     685.41
+    ],
+    [
+     599.5,
+     391.46,
+     666.23,
+     545.58
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.48322,
+    0.447,
+    0.41746,
+    0.38042
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.148
+  },
+  {
+   "image": "0012257",
+   "category": "PPE_Violation",
+   "score": 0.9758029358168394,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     430.64,
+     412.72,
+     499.61,
+     558.92
+    ],
+    [
+     534.18,
+     464.33,
+     581.44,
+     572.04
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.57413,
+    0.44781
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.148
+  },
+  {
+   "image": "0012288",
+   "category": "PPE_Violation",
+   "score": 0.8455459217137261,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     604.35,
+     383.54,
+     643.88,
+     469.62
+    ],
+    [
+     107.02,
+     371.9,
+     142.49,
+     459.94
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.53712,
+    0.52098
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.138
+  },
+  {
+   "image": "0012366",
+   "category": "PPE_Violation",
+   "score": 0.9357061109735123,
+   "phrase": "worker without hard hat",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     1114.19,
+     550.01,
+     1198.01,
+     804.13
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.39377
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.145
+  },
+  {
+   "image": "0012383",
+   "category": "Fall_Hazard",
+   "score": 0.9089256141585216,
+   "phrase": "open trench or floor opening",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     54.16,
+     216.45,
+     857.73,
+     835.41
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.40727
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.15
+  },
+  {
+   "image": "0012383",
+   "category": "PPE_Violation",
+   "score": 0.99078214204117,
+   "phrase": "worker without hard hat",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     733.53,
+     253.53,
+     851.59,
+     482.57
+    ],
+    [
+     793.63,
+     253.71,
+     833.54,
+     295.12
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.93307,
+    0.3961
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.153
+  },
+  {
+   "image": "0012506",
+   "category": "Fall_Hazard",
+   "score": 0.878628687714855,
+   "phrase": "worker on elevated edge",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     627.65,
+     450.0,
+     688.04,
+     540.45
+    ],
+    [
+     659.1,
+     509.81,
+     708.52,
+     618.48
+    ],
+    [
+     77.59,
+     631.17,
+     133.68,
+     746.26
+    ],
+    [
+     316.74,
+     593.13,
+     382.51,
+     657.23
+    ],
+    [
+     591.63,
+     642.47,
+     650.58,
+     721.0
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.66664,
+    0.44378,
+    0.38638,
+    0.36415,
+    0.35476
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.152
+  },
+  {
+   "image": "0012628",
+   "category": "PPE_Violation",
+   "score": 0.9513843303217708,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     402.91,
+     553.17,
+     464.15,
+     702.14
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.85528
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.156
+  },
+  {
+   "image": "0012711",
+   "category": "Fall_Hazard",
+   "score": 0.9311286509546823,
+   "phrase": "worker on elevated edge",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     377.91,
+     221.91,
+     652.96,
+     668.65
+    ],
+    [
+     799.62,
+     179.86,
+     932.77,
+     597.63
+    ],
+    [
+     608.44,
+     198.11,
+     718.23,
+     531.41
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.46599,
+    0.45837,
+    0.35709
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.149
+  },
+  {
+   "image": "0012712",
+   "category": "Fall_Hazard",
+   "score": 0.8982890631923576,
+   "phrase": "worker on elevated edge",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     412.62,
+     366.65,
+     589.34,
+     672.65
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.44526
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.147
+  },
+  {
+   "image": "0012712",
+   "category": "PPE_Violation",
+   "score": 0.9939267540898451,
+   "phrase": "worker without hard hat",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     412.82,
+     367.62,
+     590.02,
+     673.58
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.43482
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.167
+  },
+  {
+   "image": "0012717",
+   "category": "Fall_Hazard",
+   "score": 0.9199246479997686,
+   "phrase": "worker on elevated edge",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     695.89,
+     1.38,
+     837.26,
+     309.87
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.50812
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.155
+  },
+  {
+   "image": "0012717",
+   "category": "PPE_Violation",
+   "score": 0.971503656771481,
+   "phrase": "worker without hard hat",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     695.48,
+     1.03,
+     836.97,
+     311.83
+    ],
+    [
+     728.97,
+     0.18,
+     776.04,
+     29.92
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.69579,
+    0.36445
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.147
+  },
+  {
+   "image": "0012726",
+   "category": "PPE_Violation",
+   "score": 0.9656172766285955,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     462.01,
+     3.58,
+     1725.06,
+     1715.02
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.8967
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.18
+  },
+  {
+   "image": "0012735",
+   "category": "PPE_Violation",
+   "score": 0.9164588394055109,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     922.87,
+     759.12,
+     961.53,
+     849.88
+    ],
+    [
+     870.69,
+     756.54,
+     911.85,
+     850.64
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.48686,
+    0.45806
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.147
+  },
+  {
+   "image": "0012779",
+   "category": "PPE_Violation",
+   "score": 0.9254294487014352,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     473.91,
+     501.8,
+     826.44,
+     1499.0
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.76312
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.227
+  },
+  {
+   "image": "0012857",
+   "category": "PPE_Violation",
+   "score": 0.9607738828417198,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     550.51,
+     273.41,
+     593.27,
+     381.47
+    ],
+    [
+     780.96,
+     266.04,
+     814.79,
+     324.69
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.73641,
+    0.42018
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.176
+  },
+  {
+   "image": "0012863",
+   "category": "PPE_Violation",
+   "score": 0.9806636774855049,
+   "phrase": "worker without hard hat",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     159.07,
+     197.86,
+     236.06,
+     450.6
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.41106
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.148
+  },
+  {
+   "image": "0012897",
+   "category": "PPE_Violation",
+   "score": 0.965207358521624,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     177.36,
+     374.78,
+     216.02,
+     498.37
+    ],
+    [
+     269.79,
+     385.89,
+     311.1,
+     490.8
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.54762,
+    0.36375
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.16
+  },
+  {
+   "image": "0012912",
+   "category": "PPE_Violation",
+   "score": 0.979405675263793,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     753.5,
+     392.21,
+     817.22,
+     637.93
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.65856
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.146
+  },
+  {
+   "image": "0012945",
+   "category": "PPE_Violation",
+   "score": 0.8635617889358491,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     439.01,
+     179.46,
+     511.13,
+     330.97
+    ],
+    [
+     820.2,
+     467.71,
+     856.82,
+     570.5
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.7226,
+    0.40369
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.147
+  },
+  {
+   "image": "0013019",
+   "category": "PPE_Violation",
+   "score": 0.9696441198578625,
+   "phrase": "worker without hard hat",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     51.65,
+     333.93,
+     132.37,
+     507.41
+    ],
+    [
+     459.36,
+     251.91,
+     529.74,
+     344.31
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.37922,
+    0.37838
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.144
+  },
+  {
+   "image": "0013105",
+   "category": "PPE_Violation",
+   "score": 0.923279407269204,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     722.81,
+     443.95,
+     760.0,
+     516.64
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.61873
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.147
+  },
+  {
+   "image": "0013137",
+   "category": "PPE_Violation",
+   "score": 0.911469746282055,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     51.88,
+     446.56,
+     109.79,
+     585.41
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.70756
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.162
+  },
+  {
+   "image": "0013180",
+   "category": "PPE_Violation",
+   "score": 0.8185767235362977,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     368.94,
+     389.32,
+     459.7,
+     639.27
+    ],
+    [
+     744.87,
+     306.69,
+     836.56,
+     451.11
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.64926,
+    0.55457
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.147
+  },
+  {
+   "image": "0013229",
+   "category": "Fall_Hazard",
+   "score": 0.9595318894268237,
+   "phrase": "open trench or floor opening",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     4.71,
+     260.04,
+     1194.77,
+     895.22
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.44451
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.149
+  },
+  {
+   "image": "0013276",
+   "category": "PPE_Violation",
+   "score": 0.9698000263315962,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     383.96,
+     92.63,
+     451.21,
+     217.25
+    ],
+    [
+     859.43,
+     319.24,
+     918.91,
+     440.16
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.42636,
+    0.40443
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.16
+  },
+  {
+   "image": "0013295",
+   "category": "Fall_Hazard",
+   "score": 0.8950773538655584,
+   "phrase": "worker on elevated edge",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     395.81,
+     504.47,
+     795.71,
+     1569.46
+    ],
+    [
+     864.36,
+     411.33,
+     1373.42,
+     1579.98
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.41925,
+    0.38428
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.162
+  },
+  {
+   "image": "0013295",
+   "category": "PPE_Violation",
+   "score": 0.9950649572478681,
+   "phrase": "worker without hard hat",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     393.75,
+     507.15,
+     795.51,
+     1568.84
+    ],
+    [
+     864.92,
+     413.26,
+     1372.73,
+     1580.12
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.43122,
+    0.39497
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.178
+  },
+  {
+   "image": "0013302",
+   "category": "Fall_Hazard",
+   "score": 0.9301210755349283,
+   "phrase": "open trench or floor opening",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     201.99,
+     376.18,
+     847.19,
+     590.48
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.35386
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.158
+  },
+  {
+   "image": "0013302",
+   "category": "PPE_Violation",
+   "score": 0.8987374665377057,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     677.49,
+     184.98,
+     719.64,
+     300.54
+    ],
+    [
+     746.18,
+     334.69,
+     813.0,
+     481.05
+    ],
+    [
+     571.41,
+     181.26,
+     619.87,
+     301.1
+    ],
+    [
+     91.66,
+     163.86,
+     152.98,
+     315.07
+    ],
+    [
+     156.6,
+     373.94,
+     220.36,
+     542.93
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.52463,
+    0.50775,
+    0.50336,
+    0.46696,
+    0.36701
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.141
+  },
+  {
+   "image": "0013363",
+   "category": "PPE_Violation",
+   "score": 0.9330347620116742,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     418.19,
+     25.88,
+     454.11,
+     129.85
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.54337
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.134
+  },
+  {
+   "image": "0013409",
+   "category": "Fall_Hazard",
+   "score": 0.9110519917080597,
+   "phrase": "open trench or floor opening",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     4.11,
+     273.17,
+     746.15,
+     897.13
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.46373
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.154
+  },
+  {
+   "image": "0013409",
+   "category": "PPE_Violation",
+   "score": 0.8517233313841581,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     121.74,
+     152.57,
+     211.59,
+     359.06
+    ],
+    [
+     677.01,
+     43.0,
+     752.85,
+     236.83
+    ],
+    [
+     249.02,
+     142.58,
+     334.12,
+     331.49
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.66221,
+    0.54289,
+    0.50882
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.152
+  },
+  {
+   "image": "0013535",
+   "category": "PPE_Violation",
+   "score": 0.923224183194896,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     394.8,
+     141.98,
+     441.14,
+     250.01
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.37573
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.147
+  },
+  {
+   "image": "0013663",
+   "category": "Fall_Hazard",
+   "score": 0.8873363108947677,
+   "phrase": "open trench or floor opening",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     745.4,
+     443.26,
+     766.73,
+     505.02
+    ]
+   ],
+   "source": "DETR+OpenCLIP",
+   "fallback": {
+    "box": [
+     745.4,
+     443.26,
+     766.73,
+     505.02
+    ],
+    "score": 0.98539,
+    "label": "person",
+    "similarity": 0.77869
+   },
+   "crop_similarity": 0.20943628251552582,
+   "no_visible_evidence": false,
+   "seconds": 0.255
+  },
+  {
+   "image": "0013669",
+   "category": "PPE_Violation",
+   "score": 0.8235701537123056,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     108.54,
+     281.71,
+     142.84,
+     379.8
+    ],
+    [
+     186.13,
+     307.85,
+     219.29,
+     409.43
+    ],
+    [
+     221.54,
+     315.0,
+     249.15,
+     391.72
+    ],
+    [
+     8.0,
+     421.38,
+     43.9,
+     524.15
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.50347,
+    0.50051,
+    0.36687,
+    0.3562
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.155
+  },
+  {
+   "image": "0013677",
+   "category": "PPE_Violation",
+   "score": 0.8935297757502418,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     440.78,
+     424.83,
+     487.73,
+     574.6
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.74118
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.136
+  },
+  {
+   "image": "0013679",
+   "category": "PPE_Violation",
+   "score": 0.921087581375882,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     333.93,
+     288.7,
+     385.68,
+     472.99
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.46281
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.159
+  },
+  {
+   "image": "0013686",
+   "category": "PPE_Violation",
+   "score": 0.9934149223501474,
+   "phrase": "worker without hard hat",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     301.37,
+     260.0,
+     407.28,
+     486.27
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.92213
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.179
+  },
+  {
+   "image": "0013699",
+   "category": "Fall_Hazard",
+   "score": 0.9376875354190284,
+   "phrase": "worker on elevated edge",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     224.1,
+     709.82,
+     353.86,
+     899.06
+    ],
+    [
+     209.08,
+     205.98,
+     1164.75,
+     409.41
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.74498,
+    0.42192
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.145
+  },
+  {
+   "image": "0013699",
+   "category": "PPE_Violation",
+   "score": 0.9664258024142243,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     224.72,
+     710.36,
+     352.84,
+     899.19
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.87909
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.145
+  },
+  {
+   "image": "0013749",
+   "category": "PPE_Violation",
+   "score": 0.9896811164025908,
+   "phrase": "worker without hard hat",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     353.9,
+     186.2,
+     522.78,
+     689.11
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.88759
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.161
+  },
+  {
+   "image": "0013757",
+   "category": "Fall_Hazard",
+   "score": 0.8987877913748828,
+   "phrase": "worker on elevated edge",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     75.92,
+     372.3,
+     185.66,
+     476.79
+    ],
+    [
+     414.02,
+     276.84,
+     496.59,
+     466.67
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.65711,
+    0.424
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.164
+  },
+  {
+   "image": "0013795",
+   "category": "PPE_Violation",
+   "score": 0.8289558725449737,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     410.1,
+     15.21,
+     442.46,
+     77.97
+    ],
+    [
+     587.97,
+     52.49,
+     617.89,
+     92.56
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.6072,
+    0.49877
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.159
+  },
+  {
+   "image": "0013934",
+   "category": "PPE_Violation",
+   "score": 0.9539513956225042,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     579.67,
+     451.62,
+     677.23,
+     686.44
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.83989
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.162
+  },
+  {
+   "image": "0013942",
+   "category": "Fall_Hazard",
+   "score": 0.8600925629702862,
+   "phrase": "open trench or floor opening",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     654.62,
+     425.17,
+     676.58,
+     476.64
+    ]
+   ],
+   "source": "DETR+OpenCLIP",
+   "fallback": {
+    "box": [
+     654.62,
+     425.17,
+     676.58,
+     476.64
+    ],
+    "score": 0.9941,
+    "label": "person",
+    "similarity": 0.77869
+   },
+   "crop_similarity": 0.2234230637550354,
+   "no_visible_evidence": false,
+   "seconds": 0.223
+  },
+  {
+   "image": "0013947",
+   "category": "PPE_Violation",
+   "score": 0.8315099596452764,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     1006.5,
+     457.83,
+     1060.25,
+     582.41
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.40142
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.146
+  },
+  {
+   "image": "0014007",
+   "category": "PPE_Violation",
+   "score": 0.8967849781977273,
+   "phrase": "worker without safety vest",
+   "phrase_status": "valid",
+   "boxes": [
+    [
+     109.0,
+     199.53,
+     244.82,
+     536.26
+    ]
+   ],
+   "source": "GroundingDINO",
+   "logits": [
+    0.90801
+   ],
+   "no_visible_evidence": false,
+   "seconds": 0.138
+  }
+ ],
+ "phrase_method": "fixed"
+}

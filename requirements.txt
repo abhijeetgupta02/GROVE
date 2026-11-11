@@ -1,17 +1,13 @@
-# ── Evaluation (required to reproduce the paper tables, offline) ──────────────
-# The scoring scripts in code/evaluation/ use only the Python standard library
-# plus openpyxl to read the prediction workbooks.
-openpyxl>=3.1
-
-# ── Inference (optional — only needed to regenerate predictions from images) ──
-# The cached predictions in predictions/ already reproduce every reported
-# number, so these are NOT required for table reproduction. Re-running the
-# GROVE pipeline or the single-pass baselines additionally requires a local
-# Ollama server and a GroundingDINO checkout (see code/README.md).
-#
-# torch>=2.0
-# transformers>=4.40
-# open_clip_torch>=2.24
-# pillow>=10.0
-# requests>=2.31
-# numpy>=1.24
+# Versions used in the run (full list: freeze/pip_freeze.txt).
+# Scoring and analysis
+numpy==2.4.6
+scipy==1.17.1
+pandas==3.1.1
+pyarrow==26.0.1
+pillow==13.0.0
+requests==2.34.2
+# Grounding (GroundingDINO, DETR, OpenCLIP); the run used torch 2.6.0 with CUDA 12.4
+torch==2.6.0
+torchvision==0.21.0
+transformers==4.45.2
+open_clip_torch==3.3.0

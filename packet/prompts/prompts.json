@@ -1,0 +1,254 @@
+{
+ "g": {
+  "state": "Photograph of a construction or industrial site. Judge only visible physical conditions. Safety equipment (guardrails, harnesses, hard hats, vests, barriers) and normal tools in safe use are NOT violations. Instructional posters with text banners are NOT violations.",
+  "questions": {
+   "Fall_Hazard": "Is a worker exposed to falling into an unguarded trench/opening or from an elevated edge, roof, ladder, or scaffold that lacks guardrails or a tied-off harness?",
+   "f_fall_edge": "Is there an unprotected elevated edge, incomplete scaffold, or unsafe ladder with a worker at risk of falling?",
+   "f_fall_opening": "Is there an unbarricaded floor opening, roof opening, deep trench, or steep excavation edge that someone could fall into?",
+   "ok_fall_protected": "Are all elevated edges and openings protected by intact guardrails, barriers, or tied-off fall-arrest harnesses (or are there no elevated edges or trenches)?",
+   "Electrocution_Hazard": "Is there an unprotected electrical hazard, such as damaged or exposed live wiring, makeshift power hookups, or work dangerously close to overhead power lines?",
+   "f_elec_wire": "Are exposed, hanging, frayed, or makeshift electrical wires, cables, or open junction boxes left unprotected in the work area?",
+   "f_elec_lines": "Are workers, ladders, scaffolds, or cranes operating dangerously close to overhead energized power lines?",
+   "ok_elec_testing": "Is the only visible electrical equipment a panel being actively inspected or tested by a technician wearing protective gear (gloves, helmet, or face shield)?",
+   "PPE_Violation": "Is a visible construction worker missing a required hard hat, high-visibility vest, eye protection, or task-specific protective gear (excluding fall harnesses)?",
+   "f_worker": "Is at least one person or worker visible in the image?",
+   "f_ppe_nohat": "Is a visible worker in a construction zone not wearing a hard hat or helmet?",
+   "f_ppe_novest": "Is a visible worker in a construction zone not wearing a high-visibility vest or reflective jacket?",
+   "f_ppe_noeye_glove": "Is a visible worker operating a power tool, welding, cutting, or handling hazardous materials without eye/face protection or gloves?",
+   "Housekeeping_Storage": "Is there a slip, trip, or housekeeping violation, such as debris scattered on floors, cords/materials blocking walkways, wet/muddy walking surfaces, or unstable stacked materials?",
+   "f_house_trip": "Slip and Trip Hazard: are cords, hoses, pipes, tools, or loose materials obstructing a walking surface, stair, or passageway?",
+   "f_house_debris": "Housekeeping and Storage: is scrap, trash, rubble, or unstable/leaning stacked material scattered disorganized across the work area?",
+   "f_poster_banner": "Does this image contain an overlaid instructional text banner, safety rule caption bar, or stock watermark?"
+  }
+ },
+ "h": {
+  "state": "Photograph of a construction or industrial site. Judge only visible physical conditions. Safety equipment (guardrails, harnesses, hard hats, vests, barriers) and normal tools in safe use are NOT violations.",
+  "questions": {
+   "Fall_Hazard": "Is a worker exposed to falling into an unguarded trench/opening or from an elevated edge, roof, ladder, or scaffold that lacks guardrails or a tied-off harness?",
+   "f_fall_edge": "Is there an unprotected elevated edge, incomplete scaffold, or unsafe ladder with a worker at risk of falling?",
+   "f_fall_opening": "Is there an unbarricaded floor opening, roof opening, deep trench, or steep excavation edge that someone could fall into?",
+   "ok_fall_protected": "Are all elevated edges and openings protected by intact guardrails, barriers, or tied-off fall-arrest harnesses (or are there no elevated edges or trenches)?",
+   "Electrocution_Hazard": "Is there an unprotected electrical hazard, such as damaged or exposed live wiring, makeshift power hookups, or work dangerously close to overhead power lines?",
+   "f_elec_wire": "Are exposed, hanging, frayed, or makeshift electrical wires, cables, or open junction boxes left unprotected in the work area?",
+   "f_elec_lines": "Are workers, ladders, scaffolds, or cranes operating dangerously close to overhead energized power lines?",
+   "ok_elec_testing": "Is the only visible electrical equipment a panel being actively inspected or tested by a technician wearing protective gear (gloves, helmet, or face shield)?",
+   "PPE_Violation": "Is a visible construction worker missing a required hard hat, high-visibility vest, eye protection, or task-specific protective gear (excluding fall harnesses)?",
+   "f_worker": "Is at least one person or worker visible in the image?",
+   "f_ppe_nohat": "Is a visible worker in a construction zone not wearing a hard hat or helmet?",
+   "f_ppe_novest": "Is a visible worker in a construction zone not wearing a high-visibility vest or reflective jacket?",
+   "f_ppe_noeye_glove": "Is a visible worker operating a power tool, welding, cutting, or handling hazardous materials without eye/face protection or gloves?",
+   "Housekeeping_Storage": "Is there a slip, trip, or housekeeping violation, such as debris scattered on floors, cords/materials blocking walkways, wet/muddy walking surfaces, or unstable stacked materials?",
+   "f_house_trip": "Slip and Trip Hazard: are cords, hoses, pipes, tools, or loose materials obstructing a walking surface, stair, or passageway?",
+   "f_house_debris": "Housekeeping and Storage: is scrap, trash, rubble, or unstable/leaning stacked material scattered disorganized across the work area?"
+  }
+ },
+ "c": {
+  "state": "Assess only visible evidence in this image for the requested category.\nIdentify the relevant person, object, or location before judging it.\n\nAn object being present does not by itself establish an unsafe condition.\nProtection counts only when it applies to that same person or location.\nDistinguish visibly absent protection from protection that cannot be seen.\nDo not infer hidden equipment states, procedures, or events.\nDo not treat captions, signs, or text printed in the image as ground truth.\nDo not provide regulatory citations or mitigation advice.",
+  "questions": {
+   "Fall_Hazard": "Does the image show an accessible, unprotected fall edge or opening,\nor visibly unsafe use or condition of a ladder, scaffold, roof, or\nelevated work platform?\n\nA worker need not be visible for an accessible unprotected opening\nor edge to qualify. Identify the edge, opening, or access equipment\nand the visible condition that creates the fall exposure.\n\nCheck protection at that specific location. A guardrail elsewhere\ndoes not protect this edge. Height, a ladder, or a scaffold alone is\nnot enough. A harness with an attachment outside the frame is\nuncertain evidence, not proof of missing attachment.",
+   "Electrocution_Hazard": "Does the image show a visible electrical defect or exposure, such as\ndamaged insulation exposing a conductor, accessible unguarded\nelectrical terminals, an unsafe connection, or a person or equipment\nvisibly interacting dangerously with electrical infrastructure?\n\nIdentify the electrical component and the specific visible defect\nor exposure. Cables, an open cabinet, electrical work, or overhead\nlines alone are insufficient. Protective clothing alone does not\nprove safety. Do not invent energization, voltage, lockout status,\nor precise clearance distances that the image cannot establish.",
+   "PPE_Violation": "Does a particular visible person lack, or visibly misuse, protective\nequipment relevant to the task and setting shown?\n\nIdentify that person, the task or exposure, the protective item,\nand the visible evidence of absence or misuse. Inspect each person\nseparately; equipment worn by another person is irrelevant.\n\nDo not infer missing gloves, eye protection, footwear, or harness\ncomponents when the relevant body area is hidden or too small to\ninspect. Do not require every kind of PPE for every activity.\nEquivalent protective clothing is not a violation merely because\nit differs from a vest or another familiar appearance.",
+   "Housekeeping_Storage": "Does the image show either:\n(a) a visible slip or trip condition on a walking or working surface,\nor (b) obstructive clutter, scattered waste, or unstable material storage?\n\nIdentify the affected surface or storage location and the specific\ncondition: an obstruction, loose item, spill, uneven footing, or\nunstable arrangement. Consider working surfaces as well as marked\nwalkways. A worker need not be present.\n\nDistinguish these conditions from neatly staged materials, orderly\ncontainers, unfinished construction, and ordinary soil. Do not infer\na blocked route solely because materials are present."
+  }
+ },
+ "S0": {
+  "state": "Photograph of a construction site. Judge only what can be seen in the image. An object being present is not a violation by itself. Normal construction activity with proper safety measures is not a violation.",
+  "questions": {
+   "Fall_Hazard": "Is a worker exposed to a fall from height because of an unprotected edge or opening, or an unsafe ladder, scaffold, or work platform?",
+   "StruckBy_Hazard": "Is anyone at risk of being struck by falling objects or by suspended, overhead, or unstable loads or materials?",
+   "Electrocution_Hazard": "Is there an electrical hazard, such as exposed wiring, damaged cables, unsafe temporary power, or work close to energized equipment or power lines?",
+   "CaughtInBetween_hazard": "Is machinery or equipment being used unsafely, or is a worker exposed to unguarded machinery, pinch points, crushing, or being caught between objects?",
+   "PPE_Violation": "Is a visible worker missing required personal protective equipment, such as a hard hat, high-visibility vest, gloves, eye protection, or fall-arrest harness, or wearing it incorrectly?",
+   "Housekeeping_Storage": "Is there poor housekeeping, such as debris, clutter, blocked walkways, trip or slip hazards, or unsafely stored materials?",
+   "Other": "Is there another visible safety hazard outside falls, struck-by, electrical, machinery, PPE, and housekeeping, such as missing warning signs, missing barricades, or poor site communication?"
+  }
+ },
+ "E5": {
+  "state": "Photograph of a construction site. Judge only what can be seen in the image. An object being present is not a violation by itself. Normal construction activity with proper safety measures is not a violation.",
+  "questions": {
+   "Fall_Hazard": "Is a worker exposed to a fall from height because of an unprotected edge or opening, or an unsafe ladder, scaffold, or work platform?",
+   "StruckBy_Hazard": "Is anyone at risk of being struck by falling objects or by suspended, overhead, or unstable loads or materials?",
+   "Electrocution_Hazard": "Is there an electrical hazard, such as exposed wiring, damaged cables, unsafe temporary power, or work close to energized equipment or power lines?",
+   "CaughtInBetween_hazard": "Is machinery or equipment being used unsafely, or is a worker exposed to unguarded machinery, pinch points, crushing, or being caught between objects?",
+   "PPE_Violation": "Is a visible worker missing required personal protective equipment, such as a hard hat, high-visibility vest, gloves, eye protection, or fall-arrest harness, or wearing it incorrectly?",
+   "Housekeeping_Storage": "Is there poor housekeeping, such as debris, clutter, blocked walkways, trip or slip hazards, or unsafely stored materials?",
+   "Other": "Is there another visible safety hazard outside falls, struck-by, electrical, machinery, PPE, and housekeeping, such as missing warning signs, missing barricades, or poor site communication?",
+   "any_hazard": "Does this image show any safety hazard or OSHA violation?",
+   "safe_scene": "Does this image show a safe, orderly scene with no visible safety hazard?",
+   "lab_fall": "Fall from Height: can someone on this site fall from an elevated position?",
+   "lab_ppe": "PPE Deficiency: is required personal protective equipment missing or worn incorrectly?",
+   "lab_slip": "Slip and Trip Hazard: is there something on a walking surface that could make someone slip or trip?",
+   "lab_house": "Housekeeping: is the work area untidy, cluttered, or poorly organized?",
+   "lab_elec": "Electrical Hazard: is there an electrical danger on this site?",
+   "lab_sign": "Signage and Communication: are warning signs, barricades, tape, or hazard communication missing where they are needed?",
+   "lab_equip": "Equipment and Machine Safety: is equipment or machinery unsafe, poorly maintained, or being used unsafely?",
+   "lab_falling": "Falling Object Hazard: could an object or material fall onto someone below?",
+   "lab_other": "Is there a safety hazard here that is none of these: falls, falling objects, electrical, machinery, PPE, housekeeping, slips and trips?",
+   "ok_fall": "Is everyone at height protected by guardrails, harnesses, or safe access, or is no one at height?",
+   "ok_ppe": "Is every visible worker wearing the required protective equipment, or are no workers visible?",
+   "ok_elec": "Are all electrical wiring and equipment safely enclosed and protected, or is none visible?",
+   "ok_house": "Is the area tidy, with clear walkways and neatly stored materials?",
+   "ok_sign": "Are warning signs and barricades in place wherever needed, or is no hazardous zone visible?",
+   "ok_equip": "Is all machinery safely operated and guarded, or is no machinery visible?",
+   "f_worker": "Is at least one worker visible?",
+   "f_height": "Is a worker on a roof, scaffold, ladder, elevated platform, or near an open edge?",
+   "f_unprot": "Is a worker at height without guardrails or a tied-off harness?",
+   "f_guard": "Are guardrails or other edge protection visible at elevated edges?",
+   "f_harness": "Is a worker at height wearing a harness?",
+   "f_ladder": "Is a ladder set up or being used unsafely?",
+   "f_scaffold": "Is a scaffold incomplete, unstable, or missing planks or rails?",
+   "f_opening": "Is there an unprotected floor opening, roof opening, trench, or excavation edge?",
+   "f_nohat": "Is a visible worker not wearing a hard hat?",
+   "f_novest": "Is a visible worker not wearing a high-visibility vest?",
+   "f_noother": "Is a visible worker missing gloves, eye protection, or safety footwear needed for the task?",
+   "f_wire": "Are exposed, loose, or damaged wires or cables visible?",
+   "f_panel": "Is an electrical panel, junction box, or outlet open or unprotected?",
+   "f_power": "Is work happening close to overhead power lines or energized equipment?",
+   "f_debris": "Is debris, scrap, or waste scattered on the ground or floor?",
+   "f_walkway": "Is a walkway blocked, uneven, or obstructed by cords, hoses, or materials?",
+   "f_storage": "Are materials stacked or stored in an unstable or disorderly way?",
+   "f_wet": "Is a walking surface wet, muddy, or slippery?",
+   "f_signs": "Are safety signs, warning tape, or barricades visible?",
+   "f_nobarrier": "Is a dangerous work zone open to people without barricades or warning signs?",
+   "f_machine": "Is heavy machinery or powered equipment visible?",
+   "f_nearmach": "Is a worker within reach of operating machinery without separation?",
+   "f_unguard": "Does a machine or tool have exposed or unguarded moving parts?",
+   "f_misuse": "Is equipment or a vehicle being used in an unsafe way?",
+   "f_load": "Is there a suspended load or unsecured material overhead?",
+   "f_toolsup": "Could tools or materials at height fall on people below?"
+  }
+ },
+ "modular_baseline": {
+  "caption": "Describe this construction site image in detail. Include:\n- What workers are doing and their positions\n- All visible safety equipment (hard hats, vests, harnesses, guardrails, barriers, safety nets, signage)\n- Site conditions (cleanliness, material storage, weather)\n- Any equipment or machinery visible\nBe purely descriptive and factual. Do not make safety assessments or judgments.",
+  "analysis": "Analyze this construction site image for OSHA violations.\n\nScene description: '{caption}'\n\nRules:\n- Flag ONLY visible violations (missing PPE, unguarded edges, unsafe equipment use, poor housekeeping, electrical exposure)\n- Normal construction activity with proper safety measures = COMPLIANT\n- Workers with correct PPE for their task = COMPLIANT\n- Guardrails, barriers, and safety signage = protective, not hazardous\n\nIf COMPLIANT, respond EXACTLY:\nHazard: NO_HAZARD\nCategory: COMPLIANT\nRisk Level: NONE\nMitigation: Scene appears compliant.\n\nIf violations found, list up to 3:\nHazard: [specific violation]\nCategory: [OSHA category]\nRisk Level: [High/Medium/Low]\nMitigation: [action needed]\n\nOnly output hazard blocks or NO_HAZARD. Nothing else.",
+  "caption_placeholder": "{caption}"
+ },
+ "structured_generator": {
+  "prompt": "You are an OSHA construction safety inspector. Examine the image and evaluate ONLY these four hazard categories:\n\n1. Fall_Hazard:\n   - INCLUDE: Worker on a roof, scaffold, ladder, or elevated structure without guardrails or a tied-off harness; missing/incomplete scaffold planks or rails; unbarricaded floor opening, roof hole, or open trench/excavation edge.\n   - EXCLUDE: Workers properly tied off with a visible harness lanyard; workers behind intact yellow/metal guardrails; flat ground with no trench or drop.\n\n2. Electrocution_Hazard:\n   - INCLUDE: Exposed, frayed, or hanging live wires; open unattended breaker panels or junction boxes in rough construction; cranes, scaffolds, or ladders near overhead power lines; cords lying in standing water.\n   - EXCLUDE: Qualified electricians wearing hard hats/face shields/gloves actively testing a clean control cabinet with a multimeter; intact insulated conduits.\n\n3. PPE_Violation:\n   - INCLUDE: Visible worker missing a hard hat/helmet; visible worker missing a high-visibility vest/shirt; worker welding, grinding, or using power tools without eye/face protection or gloves.\n   - EXCLUDE: Missing fall-arrest harness (report missing harnesses ONLY under Fall_Hazard, never under PPE_Violation); scenes with no visible people.\n\n4. Housekeeping_Storage:\n   - INCLUDE: Slip and trip hazards (cables, hoses, lumber, or tools across walkways or work floors); scattered construction debris, scrap, or rubble; materials stacked crookedly or at risk of toppling; wet, muddy, or slick walking surfaces.\n   - EXCLUDE: Neatly stacked/banded building supplies in a designated storage yard; clean, unobstructed walkways.\n\nFor each category, output JSON with:\n- \"present\": true ONLY if the violation is clearly visible in the photo, otherwise false.\n- \"grounding_phrase\": if present is true, a concrete 2-to-4 word visible object phrase for an object detector (e.g., \"worker on roof edge\", \"open trench edge\", \"worker without hard hat\", \"debris on walkway\", \"exposed electrical wires\"); empty string if false.\n- \"hazard\": specific 1-sentence description of the violation if present, else \"COMPLIANT\".\n- \"risk_level\": \"High\", \"Medium\", \"Low\", or \"NONE\".\n- \"mitigation\": 1-sentence corrective action if present, else \"Scene appears compliant.\"\n",
+  "schema": {
+   "type": "object",
+   "required": [
+    "Fall_Hazard",
+    "Electrocution_Hazard",
+    "PPE_Violation",
+    "Housekeeping_Storage"
+   ],
+   "properties": {
+    "Fall_Hazard": {
+     "type": "object",
+     "required": [
+      "present",
+      "grounding_phrase",
+      "hazard",
+      "risk_level",
+      "mitigation"
+     ],
+     "properties": {
+      "present": {
+       "type": "boolean"
+      },
+      "grounding_phrase": {
+       "type": "string"
+      },
+      "hazard": {
+       "type": "string"
+      },
+      "risk_level": {
+       "type": "string"
+      },
+      "mitigation": {
+       "type": "string"
+      }
+     }
+    },
+    "Electrocution_Hazard": {
+     "type": "object",
+     "required": [
+      "present",
+      "grounding_phrase",
+      "hazard",
+      "risk_level",
+      "mitigation"
+     ],
+     "properties": {
+      "present": {
+       "type": "boolean"
+      },
+      "grounding_phrase": {
+       "type": "string"
+      },
+      "hazard": {
+       "type": "string"
+      },
+      "risk_level": {
+       "type": "string"
+      },
+      "mitigation": {
+       "type": "string"
+      }
+     }
+    },
+    "PPE_Violation": {
+     "type": "object",
+     "required": [
+      "present",
+      "grounding_phrase",
+      "hazard",
+      "risk_level",
+      "mitigation"
+     ],
+     "properties": {
+      "present": {
+       "type": "boolean"
+      },
+      "grounding_phrase": {
+       "type": "string"
+      },
+      "hazard": {
+       "type": "string"
+      },
+      "risk_level": {
+       "type": "string"
+      },
+      "mitigation": {
+       "type": "string"
+      }
+     }
+    },
+    "Housekeeping_Storage": {
+     "type": "object",
+     "required": [
+      "present",
+      "grounding_phrase",
+      "hazard",
+      "risk_level",
+      "mitigation"
+     ],
+     "properties": {
+      "present": {
+       "type": "boolean"
+      },
+      "grounding_phrase": {
+       "type": "string"
+      },
+      "hazard": {
+       "type": "string"
+      },
+      "risk_level": {
+       "type": "string"
+      },
+      "mitigation": {
+       "type": "string"
+      }
+     }
+    }
+   }
+  },
+  "options": {
+   "temperature": 0.0,
+   "num_ctx": 8192,
+   "num_predict": 900,
+   "seed": 20260422
+  }
+ }
+}

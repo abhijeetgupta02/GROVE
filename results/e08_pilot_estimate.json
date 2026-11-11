@@ -1,0 +1,238 @@
+{
+ "hours": 8.683919027777778,
+ "plan": [
+  [
+   "e09 single-pass qwen3.5:9b",
+   203,
+   1.978
+  ],
+  [
+   "e09 single-pass qwen3.5:27b",
+   203,
+   4.986
+  ],
+  [
+   "e09 single-pass gemma4:31b",
+   203,
+   3.847
+  ],
+  [
+   "e09 single-pass mistral-small3.2:24b",
+   203,
+   3.651
+  ],
+  [
+   "e09 single-pass ministral-3:14b",
+   203,
+   2.371
+  ],
+  [
+   "e09 single-pass qwen3-vl:32b",
+   203,
+   49.288
+  ],
+  [
+   "e10 repeat qwen3.5:9b",
+   20,
+   1.9885000000000002
+  ],
+  [
+   "e10 repeat qwen3.5:27b",
+   20,
+   4.996499999999999
+  ],
+  [
+   "e10 repeat gemma4:31b",
+   20,
+   3.85
+  ],
+  [
+   "e11 m clef:27b",
+   203,
+   0.764
+  ],
+  [
+   "e11 m clef-flash:9b",
+   203,
+   0.31
+  ],
+  [
+   "e11 m pplx-decider:27b",
+   203,
+   0.857
+  ],
+  [
+   "e11 m d3:9b",
+   203,
+   0.837
+  ],
+  [
+   "e11 m d3:27b",
+   203,
+   1.91
+  ],
+  [
+   "e12 h clef:27b",
+   203,
+   1.568
+  ],
+  [
+   "e12 h clef-flash:9b",
+   203,
+   0.552
+  ],
+  [
+   "e12 h pplx-decider:27b",
+   203,
+   1.845
+  ],
+  [
+   "e12 h d3:9b",
+   203,
+   3.296
+  ],
+  [
+   "e12 h d3:27b",
+   203,
+   7.526
+  ],
+  [
+   "e13 S0 clef:27b",
+   203,
+   0.931
+  ],
+  [
+   "e13 S0 clef-flash:9b",
+   203,
+   0.353
+  ],
+  [
+   "e13 S0 pplx-decider:27b",
+   203,
+   1.106
+  ],
+  [
+   "e13 S0 d3:9b",
+   203,
+   1.499
+  ],
+  [
+   "e13 S0 d3:27b",
+   203,
+   3.368
+  ],
+  [
+   "e23 reruns main h x2",
+   406,
+   0.552
+  ],
+  [
+   "e23 reruns electrical x2",
+   406,
+   0.931
+  ],
+  [
+   "e40 calibration main h",
+   500,
+   0.744
+  ],
+  [
+   "e41 calibration main m",
+   500,
+   0.504
+  ],
+  [
+   "e50 final main h",
+   1000,
+   0.746
+  ],
+  [
+   "e51 final main m",
+   1000,
+   0.502
+  ],
+  [
+   "e42 calibration second h",
+   500,
+   2.3855
+  ],
+  [
+   "e43 calibration single-pass qwen3.5:9b",
+   500,
+   2.359
+  ],
+  [
+   "e43 calibration single-pass qwen3.5:27b",
+   500,
+   5.8045
+  ],
+  [
+   "e52 final single-pass qwen3.5:9b",
+   1000,
+   2.3585
+  ],
+  [
+   "phrases + grounding, 203 (fixed and written)",
+   243,
+   0.6105
+  ],
+  [
+   "phrases + grounding, calibration",
+   420,
+   0.47050000000000003
+  ],
+  [
+   "phrases + grounding, final",
+   840,
+   0.47050000000000003
+  ]
+ ],
+ "speeds": {
+  "gemma4:31b|sp": 3.847,
+  "ministral-3:14b|sp": 2.371,
+  "mistral-small3.2:24b|sp": 3.651,
+  "qwen3-vl:32b|sp": 49.288,
+  "qwen3.5:27b|sp": 4.986,
+  "qwen3.5:9b|sp": 1.978,
+  "clef-flash:9b|m": 0.31,
+  "clef:27b|m": 0.764,
+  "d3:27b|m": 1.91,
+  "d3:9b|m": 0.837,
+  "pplx-decider:27b|m": 0.857,
+  "clef-flash:9b|h": 0.552,
+  "clef:27b|h": 1.568,
+  "d3:27b|h": 7.526,
+  "d3:9b|h": 3.296,
+  "pplx-decider:27b|h": 1.845,
+  "clef-flash:9b|S0": 0.353,
+  "clef:27b|S0": 0.931,
+  "d3:27b|S0": 3.368,
+  "d3:9b|S0": 1.499,
+  "pplx-decider:27b|S0": 1.106,
+  "clef-flash:9b|h|cs": 0.936,
+  "clef-flash:9b|m|cs": 0.698,
+  "pplx-decider:27b|h|cs": 2.926,
+  "qwen3.5:27b|sp|cs": 6.623,
+  "qwen3.5:9b|sp|cs": 2.74
+ },
+ "phrase_seconds": 0.3305,
+ "gdino_seconds": 0.14,
+ "flag_rate": 1.2,
+ "pilot_selection": {
+  "main_model": "clef-flash:9b",
+  "runner_up_main_model": "pplx-decider:27b",
+  "electrical_source": {
+   "option": "S0",
+   "model": "clef:27b"
+  }
+ },
+ "pilot_top2": [
+  "qwen3.5:9b",
+  "qwen3.5:27b"
+ ],
+ "pause_seconds": {
+  "decision": 0.0,
+  "phrase": 0.0,
+  "sp": 0.0
+ }
+}

@@ -1,0 +1,59 @@
+{
+ "calibration": {
+  "set": "calibration",
+  "n": 500,
+  "n_with": 250,
+  "n_without": 250,
+  "top_up_from_tuning_rest": {
+   "with": 189,
+   "without": 0
+  },
+  "seed": 20260422,
+  "visibility_cutoff_largest_box_share": 0.0029999999999999957,
+  "reference_rate_r": 0.122,
+  "reference_pool": "tuning_sample"
+ },
+ "final": {
+  "set": "final",
+  "n": 1000,
+  "n_with": 500,
+  "n_without": 500,
+  "top_up_from_tuning_rest": {
+   "with": 326,
+   "without": 0
+  },
+  "seed": 20260422,
+  "visibility_cutoff_largest_box_share": 0.0029999999999999957,
+  "reference_rate_r": 0.118,
+  "reference_pool": "validation"
+ },
+ "hashes": {
+  "calibration.json": "a5fbfeac8ef3bb6d68feb51d500a6d175a3ed9ea94af92d0ac6b976cfbc2c3d0",
+  "final.json": "4c9afdd7c1132c41dd4503335df3093f1c4a2786773a8f9dd69d41837e6c69b1"
+ },
+ "pilot_ids": [
+  "0006967",
+  "0007064",
+  "0007141",
+  "0008709",
+  "0009123",
+  "0011239",
+  "0011711",
+  "0012908",
+  "0013258",
+  "0013606"
+ ],
+ "pilot_203": [
+  "122.jpg",
+  "136.jpg",
+  "142.jpg",
+  "169.jpg",
+  "192.jpg",
+  "201.png",
+  "43.jpeg",
+  "53.jpg",
+  "62.jpg",
+  "70.jpg"
+ ],
+ "at": "2026-11-05T11:06:50"
+}

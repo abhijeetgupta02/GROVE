@@ -1,0 +1,33 @@
+{
+ "config_hash": "a852413399c441fa39d7c1ecffe10b7cd083b1daa85cc86a90947ad85d7b0d3e",
+ "config": {
+  "kind": "decision",
+  "model": "pplx-decider:27b",
+  "model_digest": "733585a9ebb6205d2d5b64a13748f0b1c9f1285885dd267780cfdb1c4c8ef141",
+  "set": "h",
+  "image_encoding": "cs10k:parquet image -> RGB -> JPEG quality 95, Pillow 13.0.0",
+  "pause_seconds_before_each_call": 0.0,
+  "endpoint": "/v1/systemone",
+  "state": "Photograph of a construction or industrial site. Judge only visible physical conditions. Safety equipment (guardrails, harnesses, hard hats, vests, barriers) and normal tools in safe use are NOT violations.",
+  "questions": {
+   "Fall_Hazard": "Is a worker exposed to falling into an unguarded trench/opening or from an elevated edge, roof, ladder, or scaffold that lacks guardrails or a tied-off harness?",
+   "f_fall_edge": "Is there an unprotected elevated edge, incomplete scaffold, or unsafe ladder with a worker at risk of falling?",
+   "f_fall_opening": "Is there an unbarricaded floor opening, roof opening, deep trench, or steep excavation edge that someone could fall into?",
+   "ok_fall_protected": "Are all elevated edges and openings protected by intact guardrails, barriers, or tied-off fall-arrest harnesses (or are there no elevated edges or trenches)?",
+   "Electrocution_Hazard": "Is there an unprotected electrical hazard, such as damaged or exposed live wiring, makeshift power hookups, or work dangerously close to overhead power lines?",
+   "f_elec_wire": "Are exposed, hanging, frayed, or makeshift electrical wires, cables, or open junction boxes left unprotected in the work area?",
+   "f_elec_lines": "Are workers, ladders, scaffolds, or cranes operating dangerously close to overhead energized power lines?",
+   "ok_elec_testing": "Is the only visible electrical equipment a panel being actively inspected or tested by a technician wearing protective gear (gloves, helmet, or face shield)?",
+   "PPE_Violation": "Is a visible construction worker missing a required hard hat, high-visibility vest, eye protection, or task-specific protective gear (excluding fall harnesses)?",
+   "f_worker": "Is at least one person or worker visible in the image?",
+   "f_ppe_nohat": "Is a visible worker in a construction zone not wearing a hard hat or helmet?",
+   "f_ppe_novest": "Is a visible worker in a construction zone not wearing a high-visibility vest or reflective jacket?",
+   "f_ppe_noeye_glove": "Is a visible worker operating a power tool, welding, cutting, or handling hazardous materials without eye/face protection or gloves?",
+   "Housekeeping_Storage": "Is there a slip, trip, or housekeeping violation, such as debris scattered on floors, cords/materials blocking walkways, wet/muddy walking surfaces, or unstable stacked materials?",
+   "f_house_trip": "Slip and Trip Hazard: are cords, hoses, pipes, tools, or loose materials obstructing a walking surface, stair, or passageway?",
+   "f_house_debris": "Housekeeping and Storage: is scrap, trash, rubble, or unstable/leaning stacked material scattered disorganized across the work area?"
+  },
+  "answer_type": "noul",
+  "context_size": 16384
+ }
+}

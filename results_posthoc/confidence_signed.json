@@ -1,0 +1,1595 @@
+{
+ "POST_HOC": "signed confidence score, defined after the first scoring of the confidence baselines (D29); no model call",
+ "written": "2026-11-11T08:12:50",
+ "signed_score": "confidence/100 if present = true; 1 - confidence/100 if present = false; invalid response = no prediction",
+ "method": "grove_score.fit (grid 0.02-0.98 step 0.02, best single threshold then 2 rounds per category, micro-F1), as experiment 44; fit on the calibration 500; applied unchanged to the final 1,000",
+ "thresholds_signed": {
+  "gemma4:31b": {
+   "Fall_Hazard": 0.96,
+   "PPE_Violation": 0.86
+  },
+  "qwen3.5:27b": {
+   "Fall_Hazard": 0.96,
+   "PPE_Violation": 0.16
+  }
+ },
+ "thresholds_original": {
+  "gemma4:31b": {
+   "Fall_Hazard": 0.96,
+   "PPE_Violation": 0.02
+  },
+  "qwen3.5:27b": {
+   "Fall_Hazard": 0.96,
+   "PPE_Violation": 0.02
+  }
+ },
+ "diagnostic": {
+  "gemma4:31b|calibration|Fall_Hazard": {
+   "answer_present": {
+    "n": 162,
+    "mean": 92.25308641975309,
+    "median": 90.0,
+    "q1": 90.0,
+    "q3": 95.0
+   },
+   "answer_absent": {
+    "n": 338,
+    "mean": 98.40236686390533,
+    "median": 100.0,
+    "q1": 95.0,
+    "q3": 100.0
+   },
+   "label_present": {
+    "n": 52,
+    "mean": 93.84615384615384,
+    "median": 95.0,
+    "q1": 90.0,
+    "q3": 95.0
+   },
+   "label_absent": {
+    "n": 448,
+    "mean": 96.70758928571429,
+    "median": 100.0,
+    "q1": 95.0,
+    "q3": 100.0
+   },
+   "answer_absent_confidence_50_or_more": 338,
+   "crossed_label_by_answer": {
+    "label_present|answer_present": {
+     "n": 44,
+     "mean": 93.06818181818181,
+     "median": 95.0,
+     "q1": 90.0,
+     "q3": 95.0
+    },
+    "label_present|answer_absent": {
+     "n": 8,
+     "mean": 98.125,
+     "median": 100.0,
+     "q1": 95.0,
+     "q3": 100.0
+    },
+    "label_absent|answer_present": {
+     "n": 118,
+     "mean": 91.94915254237289,
+     "median": 90.0,
+     "q1": 90.0,
+     "q3": 95.0
+    },
+    "label_absent|answer_absent": {
+     "n": 330,
+     "mean": 98.4090909090909,
+     "median": 100.0,
+     "q1": 95.0,
+     "q3": 100.0
+    }
+   },
+   "valid": 500
+  },
+  "gemma4:31b|calibration|PPE_Violation": {
+   "answer_present": {
+    "n": 322,
+    "mean": 94.36335403726709,
+    "median": 95.0,
+    "q1": 90.0,
+    "q3": 100.0
+   },
+   "answer_absent": {
+    "n": 178,
+    "mean": 97.70224719101124,
+    "median": 100.0,
+    "q1": 95.0,
+    "q3": 100.0
+   },
+   "label_present": {
+    "n": 202,
+    "mean": 95.56930693069307,
+    "median": 95.0,
+    "q1": 95.0,
+    "q3": 100.0
+   },
+   "label_absent": {
+    "n": 298,
+    "mean": 95.54026845637584,
+    "median": 95.0,
+    "q1": 90.0,
+    "q3": 100.0
+   },
+   "answer_absent_confidence_50_or_more": 178,
+   "crossed_label_by_answer": {
+    "label_present|answer_present": {
+     "n": 188,
+     "mean": 95.87765957446808,
+     "median": 95.0,
+     "q1": 95.0,
+     "q3": 100.0
+    },
+    "label_present|answer_absent": {
+     "n": 14,
+     "mean": 91.42857142857143,
+     "median": 95.0,
+     "q1": 90.0,
+     "q3": 95.0
+    },
+    "label_absent|answer_present": {
+     "n": 134,
+     "mean": 92.23880597014926,
+     "median": 90.0,
+     "q1": 90.0,
+     "q3": 95.0
+    },
+    "label_absent|answer_absent": {
+     "n": 164,
+     "mean": 98.23780487804878,
+     "median": 100.0,
+     "q1": 95.0,
+     "q3": 100.0
+    }
+   },
+   "valid": 500
+  },
+  "gemma4:31b|final|Fall_Hazard": {
+   "answer_present": {
+    "n": 276,
+    "mean": 92.01086956521739,
+    "median": 90.0,
+    "q1": 90.0,
+    "q3": 95.0
+   },
+   "answer_absent": {
+    "n": 724,
+    "mean": 98.61187845303867,
+    "median": 100.0,
+    "q1": 95.0,
+    "q3": 100.0
+   },
+   "label_present": {
+    "n": 95,
+    "mean": 94.05263157894737,
+    "median": 95.0,
+    "q1": 90.0,
+    "q3": 95.0
+   },
+   "label_absent": {
+    "n": 905,
+    "mean": 97.07734806629834,
+    "median": 100.0,
+    "q1": 95.0,
+    "q3": 100.0
+   },
+   "answer_absent_confidence_50_or_more": 724,
+   "crossed_label_by_answer": {
+    "label_present|answer_present": {
+     "n": 77,
+     "mean": 93.24675324675324,
+     "median": 95.0,
+     "q1": 90.0,
+     "q3": 95.0
+    },
+    "label_present|answer_absent": {
+     "n": 18,
+     "mean": 97.5,
+     "median": 97.5,
+     "q1": 95.0,
+     "q3": 100.0
+    },
+    "label_absent|answer_present": {
+     "n": 199,
+     "mean": 91.53266331658291,
+     "median": 90.0,
+     "q1": 90.0,
+     "q3": 95.0
+    },
+    "label_absent|answer_absent": {
+     "n": 706,
+     "mean": 98.64022662889518,
+     "median": 100.0,
+     "q1": 100.0,
+     "q3": 100.0
+    }
+   },
+   "valid": 1000
+  },
+  "gemma4:31b|final|PPE_Violation": {
+   "answer_present": {
+    "n": 669,
+    "mean": 94.66367713004485,
+    "median": 95.0,
+    "q1": 90.0,
+    "q3": 100.0
+   },
+   "answer_absent": {
+    "n": 331,
+    "mean": 98.1178247734139,
+    "median": 100.0,
+    "q1": 95.0,
+    "q3": 100.0
+   },
+   "label_present": {
+    "n": 413,
+    "mean": 96.08958837772397,
+    "median": 95.0,
+    "q1": 95.0,
+    "q3": 100.0
+   },
+   "label_absent": {
+    "n": 587,
+    "mean": 95.60817717206133,
+    "median": 95.0,
+    "q1": 90.0,
+    "q3": 100.0
+   },
+   "answer_absent_confidence_50_or_more": 331,
+   "crossed_label_by_answer": {
+    "label_present|answer_present": {
+     "n": 391,
+     "mean": 96.11253196930946,
+     "median": 95.0,
+     "q1": 95.0,
+     "q3": 100.0
+    },
+    "label_present|answer_absent": {
+     "n": 22,
+     "mean": 95.68181818181819,
+     "median": 95.0,
+     "q1": 95.0,
+     "q3": 100.0
+    },
+    "label_absent|answer_present": {
+     "n": 278,
+     "mean": 92.62589928057554,
+     "median": 90.0,
+     "q1": 90.0,
+     "q3": 95.0
+    },
+    "label_absent|answer_absent": {
+     "n": 309,
+     "mean": 98.29126213592232,
+     "median": 100.0,
+     "q1": 98.0,
+     "q3": 100.0
+    }
+   },
+   "valid": 1000
+  },
+  "qwen3.5:27b|calibration|Fall_Hazard": {
+   "answer_present": {
+    "n": 195,
+    "mean": 92.25641025641026,
+    "median": 95.0,
+    "q1": 90.0,
+    "q3": 95.0
+   },
+   "answer_absent": {
+    "n": 305,
+    "mean": 94.62295081967213,
+    "median": 95.0,
+    "q1": 95.0,
+    "q3": 95.0
+   },
+   "label_present": {
+    "n": 52,
+    "mean": 93.46153846153847,
+    "median": 95.0,
+    "q1": 90.0,
+    "q3": 95.0
+   },
+   "label_absent": {
+    "n": 448,
+    "mean": 93.72767857142857,
+    "median": 95.0,
+    "q1": 90.0,
+    "q3": 95.0
+   },
+   "answer_absent_confidence_50_or_more": 304,
+   "crossed_label_by_answer": {
+    "label_present|answer_present": {
+     "n": 42,
+     "mean": 93.21428571428571,
+     "median": 95.0,
+     "q1": 90.0,
+     "q3": 95.0
+    },
+    "label_present|answer_absent": {
+     "n": 10,
+     "mean": 94.5,
+     "median": 95.0,
+     "q1": 90.0,
+     "q3": 98.75
+    },
+    "label_absent|answer_present": {
+     "n": 153,
+     "mean": 91.99346405228758,
+     "median": 95.0,
+     "q1": 90.0,
+     "q3": 95.0
+    },
+    "label_absent|answer_absent": {
+     "n": 295,
+     "mean": 94.62711864406779,
+     "median": 95.0,
+     "q1": 95.0,
+     "q3": 95.0
+    }
+   },
+   "valid": 500
+  },
+  "qwen3.5:27b|calibration|PPE_Violation": {
+   "answer_present": {
+    "n": 325,
+    "mean": 90.04307692307692,
+    "median": 90.0,
+    "q1": 85.0,
+    "q3": 95.0
+   },
+   "answer_absent": {
+    "n": 175,
+    "mean": 93.45142857142856,
+    "median": 95.0,
+    "q1": 90.0,
+    "q3": 100.0
+   },
+   "label_present": {
+    "n": 202,
+    "mean": 91.33663366336634,
+    "median": 90.0,
+    "q1": 90.0,
+    "q3": 98.0
+   },
+   "label_absent": {
+    "n": 298,
+    "mean": 91.16778523489933,
+    "median": 90.0,
+    "q1": 85.0,
+    "q3": 95.0
+   },
+   "answer_absent_confidence_50_or_more": 175,
+   "crossed_label_by_answer": {
+    "label_present|answer_present": {
+     "n": 193,
+     "mean": 91.52849740932642,
+     "median": 90.0,
+     "q1": 90.0,
+     "q3": 98.0
+    },
+    "label_present|answer_absent": {
+     "n": 9,
+     "mean": 87.22222222222223,
+     "median": 85.0,
+     "q1": 85.0,
+     "q3": 90.0
+    },
+    "label_absent|answer_present": {
+     "n": 132,
+     "mean": 87.87121212121212,
+     "median": 90.0,
+     "q1": 85.0,
+     "q3": 90.0
+    },
+    "label_absent|answer_absent": {
+     "n": 166,
+     "mean": 93.78915662650603,
+     "median": 95.0,
+     "q1": 90.0,
+     "q3": 100.0
+    }
+   },
+   "valid": 500
+  },
+  "qwen3.5:27b|final|Fall_Hazard": {
+   "answer_present": {
+    "n": 361,
+    "mean": 91.96675900277009,
+    "median": 95.0,
+    "q1": 90.0,
+    "q3": 95.0
+   },
+   "answer_absent": {
+    "n": 639,
+    "mean": 94.80438184663537,
+    "median": 95.0,
+    "q1": 95.0,
+    "q3": 95.0
+   },
+   "label_present": {
+    "n": 95,
+    "mean": 92.94736842105263,
+    "median": 95.0,
+    "q1": 90.0,
+    "q3": 95.0
+   },
+   "label_absent": {
+    "n": 905,
+    "mean": 93.86740331491713,
+    "median": 95.0,
+    "q1": 90.0,
+    "q3": 95.0
+   },
+   "answer_absent_confidence_50_or_more": 638,
+   "crossed_label_by_answer": {
+    "label_present|answer_present": {
+     "n": 81,
+     "mean": 92.90123456790124,
+     "median": 95.0,
+     "q1": 90.0,
+     "q3": 95.0
+    },
+    "label_present|answer_absent": {
+     "n": 14,
+     "mean": 93.21428571428571,
+     "median": 95.0,
+     "q1": 86.25,
+     "q3": 100.0
+    },
+    "label_absent|answer_present": {
+     "n": 280,
+     "mean": 91.69642857142857,
+     "median": 95.0,
+     "q1": 90.0,
+     "q3": 95.0
+    },
+    "label_absent|answer_absent": {
+     "n": 625,
+     "mean": 94.84,
+     "median": 95.0,
+     "q1": 95.0,
+     "q3": 95.0
+    }
+   },
+   "valid": 1000
+  },
+  "qwen3.5:27b|final|PPE_Violation": {
+   "answer_present": {
+    "n": 670,
+    "mean": 90.05373134328359,
+    "median": 90.0,
+    "q1": 85.0,
+    "q3": 95.0
+   },
+   "answer_absent": {
+    "n": 330,
+    "mean": 94.54545454545455,
+    "median": 95.0,
+    "q1": 90.0,
+    "q3": 100.0
+   },
+   "label_present": {
+    "n": 413,
+    "mean": 92.63438256658596,
+    "median": 95.0,
+    "q1": 90.0,
+    "q3": 98.0
+   },
+   "label_absent": {
+    "n": 587,
+    "mean": 90.76320272572401,
+    "median": 90.0,
+    "q1": 85.0,
+    "q3": 100.0
+   },
+   "answer_absent_confidence_50_or_more": 330,
+   "crossed_label_by_answer": {
+    "label_present|answer_present": {
+     "n": 388,
+     "mean": 92.76546391752578,
+     "median": 95.0,
+     "q1": 90.0,
+     "q3": 98.0
+    },
+    "label_present|answer_absent": {
+     "n": 25,
+     "mean": 90.6,
+     "median": 90.0,
+     "q1": 85.0,
+     "q3": 95.0
+    },
+    "label_absent|answer_present": {
+     "n": 282,
+     "mean": 86.322695035461,
+     "median": 87.5,
+     "q1": 85.0,
+     "q3": 90.0
+    },
+    "label_absent|answer_absent": {
+     "n": 305,
+     "mean": 94.8688524590164,
+     "median": 95.0,
+     "q1": 90.0,
+     "q3": 100.0
+    }
+   },
+   "valid": 1000
+  }
+ },
+ "sets": {
+  "final": {
+   "GROVE": {
+    "TP": 370.0,
+    "FP": 176.0,
+    "FN": 138.0,
+    "precision": 0.6776556776556777,
+    "recall": 0.7283464566929134,
+    "micro_f1": 0.7020872865275142,
+    "per_category": {
+     "Fall_Hazard": {
+      "TP": 42.0,
+      "FP": 54.0,
+      "FN": 53.0,
+      "precision": 0.4375,
+      "recall": 0.4421052631578947,
+      "f1": 0.4397905759162304
+     },
+     "PPE_Violation": {
+      "TP": 328.0,
+      "FP": 122.0,
+      "FN": 85.0,
+      "precision": 0.7288888888888889,
+      "recall": 0.7941888619854721,
+      "f1": 0.7601390498261877
+     }
+    },
+    "macro_f1": 0.5999648128712091,
+    "n_images": 1000,
+    "n_negative_images": 500,
+    "false_alarms_per_100_negative": 22.8,
+    "completion": 1.0,
+    "prevalence_standardized": {
+     "precision": 0.288139172672316,
+     "recall": 0.7283464566929132,
+     "f1": 0.4129229954413907,
+     "r": 0.118,
+     "p": 0.5
+    }
+   },
+   "main_question": {
+    "TP": 388.0,
+    "FP": 189.0,
+    "FN": 120.0,
+    "precision": 0.6724436741767764,
+    "recall": 0.7637795275590551,
+    "micro_f1": 0.7152073732718894,
+    "per_category": {
+     "Fall_Hazard": {
+      "TP": 43.0,
+      "FP": 66.0,
+      "FN": 52.0,
+      "precision": 0.3944954128440367,
+      "recall": 0.45263157894736844,
+      "f1": 0.4215686274509804
+     },
+     "PPE_Violation": {
+      "TP": 345.0,
+      "FP": 123.0,
+      "FN": 68.0,
+      "precision": 0.7371794871794872,
+      "recall": 0.8353510895883777,
+      "f1": 0.7832009080590239
+     }
+    },
+    "macro_f1": 0.6023847677550022,
+    "n_images": 1000,
+    "n_negative_images": 500,
+    "false_alarms_per_100_negative": 25.0,
+    "completion": 1.0,
+    "prevalence_standardized": {
+     "precision": 0.2798772511095083,
+     "recall": 0.7637795275590551,
+     "f1": 0.4096452377756903,
+     "r": 0.118,
+     "p": 0.5
+    }
+   },
+   "single_pass_gemma4_frozen_prompt": {
+    "TP": 474.0,
+    "FP": 494.0,
+    "FN": 34.0,
+    "precision": 0.4896694214876033,
+    "recall": 0.9330708661417323,
+    "micro_f1": 0.6422764227642277,
+    "per_category": {
+     "Fall_Hazard": {
+      "TP": 79.0,
+      "FP": 213.0,
+      "FN": 16.0,
+      "precision": 0.2705479452054795,
+      "recall": 0.8315789473684211,
+      "f1": 0.4082687338501292
+     },
+     "PPE_Violation": {
+      "TP": 395.0,
+      "FP": 281.0,
+      "FN": 18.0,
+      "precision": 0.584319526627219,
+      "recall": 0.9564164648910412,
+      "f1": 0.7254361799816346
+     }
+    },
+    "macro_f1": 0.5668524569158819,
+    "n_images": 1000,
+    "n_negative_images": 500,
+    "false_alarms_per_100_negative": 71.6,
+    "completion": 1.0,
+    "prevalence_standardized": {
+     "precision": 0.14425279055852458,
+     "recall": 0.9330708661417325,
+     "f1": 0.249874910650465,
+     "r": 0.118,
+     "p": 0.5
+    }
+   },
+   "models": {
+    "gemma4:31b": {
+     "signed_fitted": {
+      "TP": 392.0,
+      "FP": 261.0,
+      "FN": 116.0,
+      "precision": 0.6003062787136294,
+      "recall": 0.7716535433070866,
+      "micro_f1": 0.6752799310938846,
+      "per_category": {
+       "Fall_Hazard": {
+        "TP": 4.0,
+        "FP": 0.0,
+        "FN": 91.0,
+        "precision": 1.0,
+        "recall": 0.042105263157894736,
+        "f1": 0.08080808080808081
+       },
+       "PPE_Violation": {
+        "TP": 388.0,
+        "FP": 261.0,
+        "FN": 25.0,
+        "precision": 0.5978428351309707,
+        "recall": 0.9394673123486683,
+        "f1": 0.7306967984934086
+       }
+      },
+      "macro_f1": 0.4057524396507447,
+      "n_images": 1000,
+      "n_negative_images": 500,
+      "false_alarms_per_100_negative": 40.4,
+      "completion": 1.0,
+      "prevalence_standardized": {
+       "precision": 0.19991183410982688,
+       "recall": 0.7716535433070866,
+       "f1": 0.3175549041280213,
+       "r": 0.118,
+       "p": 0.5
+      }
+     },
+     "signed_ci": [
+      0.6752799310938846,
+      0.6410957736280933,
+      0.7079822634830041
+     ],
+     "GROVE_minus_signed": [
+      0.026807355433629554,
+      -0.0028557653232166857,
+      0.057472784915492355
+     ],
+     "GROVE_minus_signed_per_category": {
+      "Fall_Hazard": [
+       0.35898249510814956,
+       0.2535685712849592,
+       0.46432195598291176
+      ],
+      "PPE_Violation": [
+       0.029442251332779112,
+       0.0015110152912325352,
+       0.057562005152170304
+      ]
+     },
+     "GROVE_minus_signed_false_alarms": [
+      -17.599999999999998,
+      -21.862824238510388,
+      -13.411974623314826
+     ],
+     "valid_only": [
+      0.026807355433629554,
+      -0.0028557653232166857,
+      0.057472784915492355
+     ],
+     "statuses": {
+      "valid": 1000
+     },
+     "original_fitted_unchanged": {
+      "TP": 426.0,
+      "FP": 1117.0,
+      "FN": 82.0,
+      "precision": 0.2760855476344783,
+      "recall": 0.8385826771653543,
+      "micro_f1": 0.41540711847879086,
+      "per_category": {
+       "Fall_Hazard": {
+        "TP": 13.0,
+        "FP": 530.0,
+        "FN": 82.0,
+        "precision": 0.02394106813996317,
+        "recall": 0.1368421052631579,
+        "f1": 0.04075235109717868
+       },
+       "PPE_Violation": {
+        "TP": 413.0,
+        "FP": 587.0,
+        "FN": 0.0,
+        "precision": 0.413,
+        "recall": 1.0,
+        "f1": 0.5845718329794763
+       }
+      },
+      "macro_f1": 0.3126620920383275,
+      "n_images": 1000,
+      "n_negative_images": 500,
+      "false_alarms_per_100_negative": 154.0,
+      "completion": 1.0,
+      "prevalence_standardized": {
+       "precision": 0.06525311739797532,
+       "recall": 0.8385826771653546,
+       "f1": 0.12108423722567051,
+       "r": 0.118,
+       "p": 0.5
+      }
+     },
+     "original_present_answers_unchanged": {
+      "TP": 468.0,
+      "FP": 477.0,
+      "FN": 40.0,
+      "precision": 0.49523809523809526,
+      "recall": 0.9212598425196851,
+      "micro_f1": 0.6441844459738472,
+      "per_category": {
+       "Fall_Hazard": {
+        "TP": 77.0,
+        "FP": 199.0,
+        "FN": 18.0,
+        "precision": 0.27898550724637683,
+        "recall": 0.8105263157894737,
+        "f1": 0.41509433962264153
+       },
+       "PPE_Violation": {
+        "TP": 391.0,
+        "FP": 278.0,
+        "FN": 22.0,
+        "precision": 0.5844544095665172,
+        "recall": 0.9467312348668281,
+        "f1": 0.722735674676525
+       }
+      },
+      "macro_f1": 0.5689150071495832,
+      "n_images": 1000,
+      "n_negative_images": 500,
+      "false_alarms_per_100_negative": 68.8,
+      "completion": 1.0,
+      "prevalence_standardized": {
+       "precision": 0.14752915907524483,
+       "recall": 0.9212598425196854,
+       "f1": 0.2543302553710829,
+       "r": 0.118,
+       "p": 0.5
+      }
+     }
+    },
+    "qwen3.5:27b": {
+     "signed_fitted": {
+      "TP": 389.0,
+      "FP": 285.0,
+      "FN": 119.0,
+      "precision": 0.5771513353115727,
+      "recall": 0.765748031496063,
+      "micro_f1": 0.6582064297800339,
+      "per_category": {
+       "Fall_Hazard": {
+        "TP": 0.0,
+        "FP": 0.0,
+        "FN": 95.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+       },
+       "PPE_Violation": {
+        "TP": 389.0,
+        "FP": 285.0,
+        "FN": 24.0,
+        "precision": 0.5771513353115727,
+        "recall": 0.9418886198547215,
+        "f1": 0.7157313707451702
+       }
+      },
+      "macro_f1": 0.3578656853725851,
+      "n_images": 1000,
+      "n_negative_images": 500,
+      "false_alarms_per_100_negative": 43.2,
+      "completion": 1.0,
+      "prevalence_standardized": {
+       "precision": 0.18769525180326782,
+       "recall": 0.765748031496063,
+       "f1": 0.30149096880131343,
+       "r": 0.118,
+       "p": 0.5
+      }
+     },
+     "signed_ci": [
+      0.6582064297800339,
+      0.6240126738812467,
+      0.6916546989069523
+     ],
+     "GROVE_minus_signed": [
+      0.043880856747480323,
+      0.013380203439555533,
+      0.07650176010485557
+     ],
+     "GROVE_minus_signed_per_category": {
+      "Fall_Hazard": [
+       0.4397905759162304,
+       0.3508714969241285,
+       0.526891495601173
+      ],
+      "PPE_Violation": [
+       0.044407679081017504,
+       0.015625334686532728,
+       0.07498199145497542
+      ]
+     },
+     "GROVE_minus_signed_false_alarms": [
+      -20.400000000000002,
+      -24.947621252459776,
+      -15.809497080400085
+     ],
+     "valid_only": [
+      0.043880856747480323,
+      0.013380203439555533,
+      0.07650176010485557
+     ],
+     "statuses": {
+      "valid": 1000
+     },
+     "original_fitted_unchanged": {
+      "TP": 418.0,
+      "FP": 724.0,
+      "FN": 90.0,
+      "precision": 0.3660245183887916,
+      "recall": 0.8228346456692913,
+      "micro_f1": 0.5066666666666667,
+      "per_category": {
+       "Fall_Hazard": {
+        "TP": 5.0,
+        "FP": 137.0,
+        "FN": 90.0,
+        "precision": 0.035211267605633804,
+        "recall": 0.05263157894736842,
+        "f1": 0.04219409282700422
+       },
+       "PPE_Violation": {
+        "TP": 413.0,
+        "FP": 587.0,
+        "FN": 0.0,
+        "precision": 0.413,
+        "recall": 1.0,
+        "f1": 0.5845718329794763
+       }
+      },
+      "macro_f1": 0.3133829629032403,
+      "n_images": 1000,
+      "n_negative_images": 500,
+      "false_alarms_per_100_negative": 126.8,
+      "completion": 1.0,
+      "prevalence_standardized": {
+       "precision": 0.07966637162995957,
+       "recall": 0.8228346456692915,
+       "f1": 0.14526798178701683,
+       "r": 0.118,
+       "p": 0.5
+      }
+     },
+     "original_present_answers_unchanged": {
+      "TP": 469.0,
+      "FP": 562.0,
+      "FN": 39.0,
+      "precision": 0.45489815712900095,
+      "recall": 0.9232283464566929,
+      "micro_f1": 0.6094866796621182,
+      "per_category": {
+       "Fall_Hazard": {
+        "TP": 81.0,
+        "FP": 280.0,
+        "FN": 14.0,
+        "precision": 0.22437673130193905,
+        "recall": 0.8526315789473684,
+        "f1": 0.35526315789473684
+       },
+       "PPE_Violation": {
+        "TP": 388.0,
+        "FP": 282.0,
+        "FN": 25.0,
+        "precision": 0.5791044776119403,
+        "recall": 0.9394673123486683,
+        "f1": 0.716528162511542
+       }
+      },
+      "macro_f1": 0.5358956602031395,
+      "n_images": 1000,
+      "n_negative_images": 500,
+      "false_alarms_per_100_negative": 69.2,
+      "completion": 1.0,
+      "prevalence_standardized": {
+       "precision": 0.14337231413308774,
+       "recall": 0.9232283464566933,
+       "f1": 0.24820045476358177,
+       "r": 0.118,
+       "p": 0.5
+      }
+     }
+    }
+   },
+   "average_precision": {
+    "Fall_Hazard": {
+     "GROVE": {
+      "AP": 0.39563110165097826,
+      "interval": [
+       0.3146626987745715,
+       0.5039332116214224
+      ]
+     },
+     "main questions": {
+      "AP": 0.42390662319486105,
+      "interval": [
+       0.33210138089629276,
+       0.528166140085488
+      ]
+     },
+     "gemma4:31b confidence/100": {
+      "AP": 0.07635167558320478,
+      "interval": [
+       0.06200420330742054,
+       0.09281800994344688
+      ]
+     },
+     "qwen3.5:27b confidence/100": {
+      "AP": 0.08707605322368571,
+      "interval": [
+       0.07005272027709511,
+       0.10726904973903711
+      ]
+     },
+     "gemma4:31b signed": {
+      "AP": 0.34436946826076326,
+      "interval": [
+       0.26884849642128855,
+       0.4245343692830983
+      ]
+     },
+     "qwen3.5:27b signed": {
+      "AP": 0.24080919136943957,
+      "interval": [
+       0.18971845419379765,
+       0.29740145458559314
+      ]
+     },
+     "GROVE_minus_signed": {
+      "gemma4:31b": [
+       0.051261633390215,
+       -0.009047338032651469,
+       0.13493090865206686
+      ],
+      "qwen3.5:27b": [
+       0.1548219102815387,
+       0.0955038493130569,
+       0.24133849108608027
+      ]
+     }
+    },
+    "PPE_Violation": {
+     "GROVE": {
+      "AP": 0.8644558504973955,
+      "interval": [
+       0.8352085634655936,
+       0.89123261153678
+      ]
+     },
+     "main questions": {
+      "AP": 0.8850070396140424,
+      "interval": [
+       0.8585417081087506,
+       0.9089492571331026
+      ]
+     },
+     "gemma4:31b confidence/100": {
+      "AP": 0.42348431188645214,
+      "interval": [
+       0.3875289614784755,
+       0.46000637367268815
+      ]
+     },
+     "qwen3.5:27b confidence/100": {
+      "AP": 0.4295389627769113,
+      "interval": [
+       0.39283467636906466,
+       0.4674849454404456
+      ]
+     },
+     "gemma4:31b signed": {
+      "AP": 0.7348678985660378,
+      "interval": [
+       0.6934274293533746,
+       0.7735947215931085
+      ]
+     },
+     "qwen3.5:27b signed": {
+      "AP": 0.7810898302059358,
+      "interval": [
+       0.7443462462605311,
+       0.8155251719128859
+      ]
+     },
+     "GROVE_minus_signed": {
+      "gemma4:31b": [
+       0.12958795193135764,
+       0.10014369168515604,
+       0.16165828951640054
+      ],
+      "qwen3.5:27b": [
+       0.08336602029145967,
+       0.05664953072616967,
+       0.1133186122084167
+      ]
+     }
+    }
+   }
+  },
+  "calibration": {
+   "GROVE": {
+    "TP": 189.0,
+    "FP": 92.0,
+    "FN": 65.0,
+    "precision": 0.6725978647686833,
+    "recall": 0.7440944881889764,
+    "micro_f1": 0.7065420560747664,
+    "per_category": {
+     "Fall_Hazard": {
+      "TP": 30.0,
+      "FP": 41.0,
+      "FN": 22.0,
+      "precision": 0.4225352112676056,
+      "recall": 0.5769230769230769,
+      "f1": 0.4878048780487805
+     },
+     "PPE_Violation": {
+      "TP": 159.0,
+      "FP": 51.0,
+      "FN": 43.0,
+      "precision": 0.7571428571428571,
+      "recall": 0.7871287128712872,
+      "f1": 0.7718446601941747
+     }
+    },
+    "macro_f1": 0.6298247691214776,
+    "n_images": 500,
+    "n_negative_images": 250,
+    "false_alarms_per_100_negative": 20.0,
+    "completion": 1.0,
+    "prevalence_standardized": {
+     "precision": 0.3198856857467882,
+     "recall": 0.7440944881889764,
+     "f1": 0.44742408072183937,
+     "r": 0.122,
+     "p": 0.5
+    }
+   },
+   "main_question": {
+    "TP": 196.0,
+    "FP": 105.0,
+    "FN": 58.0,
+    "precision": 0.6511627906976745,
+    "recall": 0.7716535433070866,
+    "micro_f1": 0.7063063063063063,
+    "per_category": {
+     "Fall_Hazard": {
+      "TP": 31.0,
+      "FP": 49.0,
+      "FN": 21.0,
+      "precision": 0.3875,
+      "recall": 0.5961538461538461,
+      "f1": 0.4696969696969697
+     },
+     "PPE_Violation": {
+      "TP": 165.0,
+      "FP": 56.0,
+      "FN": 37.0,
+      "precision": 0.746606334841629,
+      "recall": 0.8168316831683168,
+      "f1": 0.7801418439716312
+     }
+    },
+    "macro_f1": 0.6249194068343005,
+    "n_images": 500,
+    "n_negative_images": 250,
+    "false_alarms_per_100_negative": 23.2,
+    "completion": 1.0,
+    "prevalence_standardized": {
+     "precision": 0.2967854039965246,
+     "recall": 0.7716535433070867,
+     "f1": 0.4286918015740689,
+     "r": 0.122,
+     "p": 0.5
+    }
+   },
+   "single_pass_gemma4_frozen_prompt": {
+    "TP": 232.0,
+    "FP": 267.0,
+    "FN": 22.0,
+    "precision": 0.4649298597194389,
+    "recall": 0.9133858267716536,
+    "micro_f1": 0.6162018592297477,
+    "per_category": {
+     "Fall_Hazard": {
+      "TP": 45.0,
+      "FP": 126.0,
+      "FN": 7.0,
+      "precision": 0.2631578947368421,
+      "recall": 0.8653846153846154,
+      "f1": 0.40358744394618834
+     },
+     "PPE_Violation": {
+      "TP": 187.0,
+      "FP": 141.0,
+      "FN": 15.0,
+      "precision": 0.5701219512195121,
+      "recall": 0.9257425742574258,
+      "f1": 0.7056603773584905
+     }
+    },
+    "macro_f1": 0.5546239106523394,
+    "n_images": 500,
+    "n_negative_images": 250,
+    "false_alarms_per_100_negative": 71.6,
+    "completion": 1.0,
+    "prevalence_standardized": {
+     "precision": 0.1442594876708698,
+     "recall": 0.9133858267716536,
+     "f1": 0.24916589638628459,
+     "r": 0.122,
+     "p": 0.5
+    }
+   },
+   "models": {
+    "gemma4:31b": {
+     "signed_fitted": {
+      "TP": 186.0,
+      "FP": 120.0,
+      "FN": 68.0,
+      "precision": 0.6078431372549019,
+      "recall": 0.7322834645669292,
+      "micro_f1": 0.6642857142857143,
+      "per_category": {
+       "Fall_Hazard": {
+        "TP": 1.0,
+        "FP": 1.0,
+        "FN": 51.0,
+        "precision": 0.5,
+        "recall": 0.019230769230769232,
+        "f1": 0.037037037037037035
+       },
+       "PPE_Violation": {
+        "TP": 185.0,
+        "FP": 119.0,
+        "FN": 17.0,
+        "precision": 0.6085526315789473,
+        "recall": 0.9158415841584159,
+        "f1": 0.7312252964426877
+       }
+      },
+      "macro_f1": 0.38413116673986236,
+      "n_images": 500,
+      "n_negative_images": 250,
+      "false_alarms_per_100_negative": 37.2,
+      "completion": 1.0,
+      "prevalence_standardized": {
+       "precision": 0.210813823857302,
+       "recall": 0.732283464566929,
+       "f1": 0.3273797501226302,
+       "r": 0.122,
+       "p": 0.5
+      }
+     },
+     "signed_ci": [
+      0.6642857142857143,
+      0.6153776978417267,
+      0.7112564046596053
+     ],
+     "GROVE_minus_signed": [
+      0.04225634178905213,
+      -0.0029658318257727036,
+      0.08543717463845463
+     ],
+     "GROVE_minus_signed_per_category": {
+      "Fall_Hazard": [
+       0.45076784101174344,
+       0.31896955230518714,
+       0.5652248875562219
+      ],
+      "PPE_Violation": [
+       0.040619363751487,
+       -0.0002737019560955611,
+       0.07945554239755927
+      ]
+     },
+     "GROVE_minus_signed_false_alarms": [
+      -17.200000000000003,
+      -23.361316763617136,
+      -11.020408163265305
+     ],
+     "valid_only": [
+      0.04225634178905213,
+      -0.0029658318257727036,
+      0.08543717463845463
+     ],
+     "statuses": {
+      "valid": 500
+     },
+     "original_fitted_unchanged": {
+      "TP": 208.0,
+      "FP": 530.0,
+      "FN": 46.0,
+      "precision": 0.28184281842818426,
+      "recall": 0.8188976377952756,
+      "micro_f1": 0.41935483870967744,
+      "per_category": {
+       "Fall_Hazard": {
+        "TP": 6.0,
+        "FP": 232.0,
+        "FN": 46.0,
+        "precision": 0.025210084033613446,
+        "recall": 0.11538461538461539,
+        "f1": 0.041379310344827586
+       },
+       "PPE_Violation": {
+        "TP": 202.0,
+        "FP": 298.0,
+        "FN": 0.0,
+        "precision": 0.404,
+        "recall": 1.0,
+        "f1": 0.5754985754985755
+       }
+      },
+      "macro_f1": 0.30843894292170154,
+      "n_images": 500,
+      "n_negative_images": 250,
+      "false_alarms_per_100_negative": 152.0,
+      "completion": 1.0,
+      "prevalence_standardized": {
+       "precision": 0.06725397279733711,
+       "recall": 0.8188976377952756,
+       "f1": 0.12429954151808478,
+       "r": 0.122,
+       "p": 0.5
+      }
+     },
+     "original_present_answers_unchanged": {
+      "TP": 232.0,
+      "FP": 252.0,
+      "FN": 22.0,
+      "precision": 0.4793388429752066,
+      "recall": 0.9133858267716536,
+      "micro_f1": 0.6287262872628726,
+      "per_category": {
+       "Fall_Hazard": {
+        "TP": 44.0,
+        "FP": 118.0,
+        "FN": 8.0,
+        "precision": 0.2716049382716049,
+        "recall": 0.8461538461538461,
+        "f1": 0.411214953271028
+       },
+       "PPE_Violation": {
+        "TP": 188.0,
+        "FP": 134.0,
+        "FN": 14.0,
+        "precision": 0.5838509316770186,
+        "recall": 0.9306930693069307,
+        "f1": 0.7175572519083969
+       }
+      },
+      "macro_f1": 0.5643861025897124,
+      "n_images": 500,
+      "n_negative_images": 250,
+      "false_alarms_per_100_negative": 66.8,
+      "completion": 1.0,
+      "prevalence_standardized": {
+       "precision": 0.1527468969239072,
+       "recall": 0.9133858267716536,
+       "f1": 0.26172510726438825,
+       "r": 0.122,
+       "p": 0.5
+      }
+     }
+    },
+    "qwen3.5:27b": {
+     "signed_fitted": {
+      "TP": 195.0,
+      "FP": 137.0,
+      "FN": 59.0,
+      "precision": 0.5873493975903614,
+      "recall": 0.7677165354330708,
+      "micro_f1": 0.6655290102389079,
+      "per_category": {
+       "Fall_Hazard": {
+        "TP": 0.0,
+        "FP": 2.0,
+        "FN": 52.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+       },
+       "PPE_Violation": {
+        "TP": 195.0,
+        "FP": 135.0,
+        "FN": 7.0,
+        "precision": 0.5909090909090909,
+        "recall": 0.9653465346534653,
+        "f1": 0.7330827067669173
+       }
+      },
+      "macro_f1": 0.36654135338345867,
+      "n_images": 500,
+      "n_negative_images": 250,
+      "false_alarms_per_100_negative": 42.4,
+      "completion": 1.0,
+      "prevalence_standardized": {
+       "precision": 0.19719827586206884,
+       "recall": 0.767716535433071,
+       "f1": 0.31379428601577525,
+       "r": 0.122,
+       "p": 0.5
+      }
+     },
+     "signed_ci": [
+      0.6655290102389079,
+      0.6181802034555143,
+      0.7114141297258632
+     ],
+     "GROVE_minus_signed": [
+      0.04101304583585852,
+      -0.007606460407042967,
+      0.08900531314212104
+     ],
+     "GROVE_minus_signed_per_category": {
+      "Fall_Hazard": [
+       0.4878048780487805,
+       0.37312800404755886,
+       0.5864870509607352
+      ],
+      "PPE_Violation": [
+       0.03876195342725741,
+       -0.006481327502669057,
+       0.08343898343790068
+      ]
+     },
+     "GROVE_minus_signed_false_alarms": [
+      -22.4,
+      -28.8,
+      -15.648580089843872
+     ],
+     "valid_only": [
+      0.04101304583585852,
+      -0.007606460407042967,
+      0.08900531314212104
+     ],
+     "statuses": {
+      "valid": 500
+     },
+     "original_fitted_unchanged": {
+      "TP": 205.0,
+      "FP": 359.0,
+      "FN": 49.0,
+      "precision": 0.36347517730496454,
+      "recall": 0.8070866141732284,
+      "micro_f1": 0.5012224938875306,
+      "per_category": {
+       "Fall_Hazard": {
+        "TP": 3.0,
+        "FP": 61.0,
+        "FN": 49.0,
+        "precision": 0.046875,
+        "recall": 0.057692307692307696,
+        "f1": 0.05172413793103448
+       },
+       "PPE_Violation": {
+        "TP": 202.0,
+        "FP": 298.0,
+        "FN": 0.0,
+        "precision": 0.404,
+        "recall": 1.0,
+        "f1": 0.5754985754985755
+       }
+      },
+      "macro_f1": 0.313611356714805,
+      "n_images": 500,
+      "n_negative_images": 250,
+      "false_alarms_per_100_negative": 123.2,
+      "completion": 1.0,
+      "prevalence_standardized": {
+       "precision": 0.08290900893733286,
+       "recall": 0.8070866141732284,
+       "f1": 0.15037096716008747,
+       "r": 0.122,
+       "p": 0.5
+      }
+     },
+     "original_present_answers_unchanged": {
+      "TP": 235.0,
+      "FP": 285.0,
+      "FN": 19.0,
+      "precision": 0.4519230769230769,
+      "recall": 0.9251968503937008,
+      "micro_f1": 0.6072351421188631,
+      "per_category": {
+       "Fall_Hazard": {
+        "TP": 42.0,
+        "FP": 153.0,
+        "FN": 10.0,
+        "precision": 0.2153846153846154,
+        "recall": 0.8076923076923077,
+        "f1": 0.340080971659919
+       },
+       "PPE_Violation": {
+        "TP": 193.0,
+        "FP": 132.0,
+        "FN": 9.0,
+        "precision": 0.5938461538461538,
+        "recall": 0.9554455445544554,
+        "f1": 0.7324478178368121
+       }
+      },
+      "macro_f1": 0.5362643947483656,
+      "n_images": 500,
+      "n_negative_images": 250,
+      "false_alarms_per_100_negative": 69.2,
+      "completion": 1.0,
+      "prevalence_standardized": {
+       "precision": 0.14761002533105408,
+       "recall": 0.9251968503937008,
+       "f1": 0.2546000284171637,
+       "r": 0.122,
+       "p": 0.5
+      }
+     }
+    }
+   },
+   "average_precision": {
+    "Fall_Hazard": {
+     "GROVE": {
+      "AP": 0.3777953520791835,
+      "interval": [
+       0.28231532914381147,
+       0.5185501395092231
+      ]
+     },
+     "main questions": {
+      "AP": 0.36022886307746665,
+      "interval": [
+       0.2655074797076852,
+       0.4958950226400657
+      ]
+     },
+     "gemma4:31b confidence/100": {
+      "AP": 0.08407292010418711,
+      "interval": [
+       0.0630529596391495,
+       0.1090601577220775
+      ]
+     },
+     "qwen3.5:27b confidence/100": {
+      "AP": 0.09812241446980632,
+      "interval": [
+       0.07328214611049277,
+       0.12873621303200292
+      ]
+     },
+     "gemma4:31b signed": {
+      "AP": 0.2884058011880592,
+      "interval": [
+       0.21128045558409,
+       0.38639260232201783
+      ]
+     },
+     "qwen3.5:27b signed": {
+      "AP": 0.22302267477595866,
+      "interval": [
+       0.16033051578055937,
+       0.29770957547840105
+      ]
+     },
+     "GROVE_minus_signed": {
+      "gemma4:31b": [
+       0.08938955089112433,
+       0.017186309238820932,
+       0.198801810929806
+      ],
+      "qwen3.5:27b": [
+       0.15477267730322486,
+       0.082566184576195,
+       0.2711907211745581
+      ]
+     }
+    },
+    "PPE_Violation": {
+     "GROVE": {
+      "AP": 0.8531103124705832,
+      "interval": [
+       0.8053258961127554,
+       0.8937053253118867
+      ]
+     },
+     "main questions": {
+      "AP": 0.862260259080559,
+      "interval": [
+       0.8162384375831223,
+       0.9009613566597241
+      ]
+     },
+     "gemma4:31b confidence/100": {
+      "AP": 0.40258614555013994,
+      "interval": [
+       0.3535272608095748,
+       0.45507574470509154
+      ]
+     },
+     "qwen3.5:27b confidence/100": {
+      "AP": 0.40258853270059325,
+      "interval": [
+       0.352763068556775,
+       0.45843042475483825
+      ]
+     },
+     "gemma4:31b signed": {
+      "AP": 0.7227221419689198,
+      "interval": [
+       0.6616667190165639,
+       0.7816055926757514
+      ]
+     },
+     "qwen3.5:27b signed": {
+      "AP": 0.7314171849420864,
+      "interval": [
+       0.6715624369826516,
+       0.786271281926467
+      ]
+     },
+     "GROVE_minus_signed": {
+      "gemma4:31b": [
+       0.1303881705016634,
+       0.08424952733529058,
+       0.17673202832897758
+      ],
+      "qwen3.5:27b": [
+       0.12169312752849681,
+       0.07993248029077482,
+       0.16410484235274903
+      ]
+     }
+    }
+   }
+  }
+ },
+ "original_rows_reproduced": true
+}

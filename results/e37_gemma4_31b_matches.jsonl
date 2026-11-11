@@ -1,0 +1,4 @@
+{"image": "202.png", "category": "Electrocution_Hazard", "pred": 0, "true": 0, "iou": 0.6559552917283382, "cutoff": 0.5}
+{"image": "183.png", "category": "PPE_Violation", "pred": 0, "true": 0, "iou": 0.4395804477738111, "cutoff": 0.3}
+{"image": "187.png", "category": "Electrocution_Hazard", "pred": 0, "true": 0, "iou": 0.4183056060018, "cutoff": 0.3}
+{"image": "202.png", "category": "Electrocution_Hazard", "pred": 0, "true": 0, "iou": 0.6559552917283382, "cutoff": 0.3}

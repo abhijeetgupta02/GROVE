@@ -1,129 +1,78 @@
-# GROVE: Grounded Violation Evaluator
+# GROVE: Grounded Violation Evaluator for Visual Inspection
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23585081.svg)](https://doi.org/10.5281/zenodo.23585081)
+Abhijeet Gupta, Shruti Singh, Vijayan Asari and Tam V. Nguyen, University of Dayton. Paper under review.
 
-Code, annotations, predictions and evaluation scripts for the paper
+**Project page: https://abhijeetgupta02.github.io/GROVE/**
 
-> **GROVE: Grounded Violation Evaluator for Visual Inspection**
-> Abhijeet Gupta, Shruti Singh, Vijayan Asari, Tam V. Nguyen — University of Dayton.
+GROVE asks a decision model sixteen yes/no questions about visible conditions in a construction-site photograph, combines the answer probabilities into scores for fall hazards, electrical hazards and missing protective equipment, applies thresholds calibrated on labeled images from the target source, and grounds each report with an open-vocabulary detector.
 
-GROVE inspects construction-site photographs in three stages that share one scene caption:
+This repository holds the website, the run code and every saved output behind the paper's numbers.
 
-1. **Scene captioning** — Qwen 3.5 9B writes a factual description of workers, protective equipment, site conditions and machinery.
-2. **Hazard analysis** — Qwen 3.5 9B reads the image and the caption with an OSHA-aligned prompt and returns up to three hazards, each with a category, risk level and mitigation.
-3. **Hybrid grounding** — GroundingDINO localizes each hazard description; a DETR + OpenCLIP fallback supplies an evidence box when GroundingDINO returns none. A hazard without any box is marked ungrounded.
+## Main result
 
-Every stage saves its output, so each prediction can be traced back through its caption, hazard record and grounding source.
+Frozen evaluation on 1,000 unseen ConstructionSite10k images, scored once (Fall and protective equipment):
 
----
+| System | Micro-F1 [95% interval] | False alarms per 100 violation-free images |
+|---|---|---|
+| GROVE (d3:27b, thresholds refit on 500 calibration images) | 0.702 [0.670, 0.733] | 22.8 |
+| Same decision model, main questions only | 0.715 [0.685, 0.746] | 25.0 |
+| gemma4:31b, single pass (baseline chosen on the calibration images) | 0.642 [0.613, 0.670] | 71.6 |
 
-## Reproduce the paper's tables (offline, no GPU)
+GROVE minus the baseline: +0.060 [+0.030, +0.091]. The gain comes from calibrated probability scores, not from the added questions. Intervals: paired bootstrap by near-copy group, 4,000 draws.
 
-Requires Python 3.9+ and `openpyxl`.
+## Contents
 
-```bash
-pip install -r requirements.txt
-cd code/evaluation
-python run_evaluation.py
-```
-
-This scores every system in `predictions/` against `data/annotations.coco.json` and writes:
-
-| Output | Contents |
+| Folder | Contents |
 |---|---|
-| `results/identification/identification_results.csv` | Hazard identification (micro/macro P, R, F1 and per-category scores) for GROVE, the single-pass baselines and the backbone comparison |
-| `results/grounding/master_grounding_summary.csv` | Spatial grounding: coverage, no-box rates and threshold sensitivity |
-| `results/grounding/gt_covers_pred_comparison.csv` | Category-aware containment |
+| `website/` | Source of the project page (Astro). `website/tools/check_numbers.py` checks every number on the page against the files below |
+| `code/` | Run code: model calls, scoring, thresholds, bootstrap, grounding, post hoc analyses (`grove_score.py` holds the metrics) |
+| `freeze/` | Frozen settings: selected models and digests, thresholds, prompts, Python packages, SHA-256 of each freeze |
+| `lists/` | Identifiers of the 500 calibration and 1,000 final ConstructionSite10k images, drawn before any model ran |
+| `packet/` | Question sets and prompts (`prompts/prompts.json`), category mapping, development annotations and inter-annotator records (`data/grove203/`) |
+| `runs/`, `runs_posthoc/` | Every saved model response, one JSON line per image and attempt |
+| `results/`, `results_posthoc/` | Scores and intervals at full precision; `results_posthoc/` holds the analyses made after final scoring |
+| `reports/` | Readable report of each experiment; `PAPER_TABLES_v2.md` gathers the tables |
+| `paper_figures/` | Script and file of the paper's Figure 4 |
 
-The fallback ablation (GroundingDINO only, with the DETR + OpenCLIP fallback boxes removed) is reproduced from the same saved predictions:
+Where each table of the paper comes from:
 
-```bash
-python fallback_ablation.py
-```
-
-The qualitative figures (paper Figures 2 and 3) are drawn from the same saved predictions. The evaluation images supply the background, so pass the folder that holds them (from the repository root):
-
-```bash
-python code/figures/make_qualitative_figures.py --images /path/to/evaluation/images --out figures/
-```
-
-`results/paper_reported_tables/` holds the paper-reported tables, including those not regenerated by the offline scorer (grounding-source attribution, failure attribution, bootstrap confidence intervals and latency).
-
-### Verified
-
-Running the command above on a clean copy of this repository regenerates the bundled `results/identification/` and `results/grounding/` files exactly. Headline identification micro-F1:
-
-| System | F1 |
+| Paper | Source |
 |---|---|
-| **GROVE** (Qwen 3.5 9B) | **0.7447** |
-| Qwen 3.5 27B (strongest single-pass) | 0.5558 |
-| Gemma 4 31B | 0.5541 |
-| Qwen 3.5 9B (single pass, same backbone as GROVE) | 0.4736 |
-| InternVL 3.5 8B | 0.4241 |
-| Qwen 3.5 2B | 0.2543 |
-| Llama 3.2 Vision 11B | 0.1814 |
+| Table 3 (screening, 203 development images) | `results/e15_screening.json` |
+| Table 4 (main comparison) | `results/e15_screening.json`, `results/e48.json`, `results/e54_final.json`, `results_posthoc/second_baseline.json`, `results_posthoc/first_freeze_scores.json` |
+| Table 5 (per category) | `results/e54_final.json`, `results/e57_59.json` |
+| Table 6 (removing one part at a time) | `results/e16_21.json`, `results/e55_removal_final.json` |
+| Table 7 (confidence baselines, post hoc) | `results_posthoc/confidence_baseline.json`, `results_posthoc/confidence_signed.json` |
+| Table 8 (evidence grounding) | `results/e31_38.json`, `results/e45.json`, `results/e54_final.json` |
+| Table 9 (speed and memory) | `results/e56_speed.json`, `results/gpu_peaks.json` |
 
----
-
-## Repository contents
-
-```
-GROVE/
-├── README.md
-├── LICENSE
-├── CITATION.cff
-├── MODEL_IDENTIFIERS.md        paper label ↔ config key ↔ Ollama tag
-├── requirements.txt
-├── data/
-│   ├── annotations.coco.json   ground truth (COCO, 203 images, 247 boxes, 7 categories)
-│   ├── image_list.csv          the 203 evaluation image file names
-│   └── README.md               dataset description, sources and category mapping
-├── code/
-│   ├── inference/
-│   │   ├── grove_pipeline/run_experiment.py   GROVE pipeline (the code behind the reported run)
-│   │   ├── run_baseline.py                    single-pass baselines (--list for keys)
-│   │   ├── config.py                          paths, model registry, thresholds, decoding
-│   │   └── shared/                            e2e_runner, vlm_caller, data_schema, hazard_taxonomy, datasets
-│   ├── evaluation/                            scoring scripts (reproduce the tables)
-│   └── figures/make_qualitative_figures.py    redraws Figures 2 and 3 from the saved predictions
-├── predictions/
-│   ├── grove/              GROVE predictions (.jsonl with captions, hazard records and grounding sources; .xlsx)
-│   ├── single_pass/        11 single-pass baselines
-│   └── modular_ablation/   backbone comparison runs
-└── results/
-```
-
-The evaluation images are **not** included: most come from third-party sources with their own terms (see `data/README.md`). The scorer runs from the annotations and predictions alone.
-
----
-
-## Re-running inference (optional)
-
-Re-running needs a local [Ollama](https://ollama.com) server with `qwen3.5:9b` (and the baseline tags in `MODEL_IDENTIFIERS.md`), a GroundingDINO checkout with Swin-T/OGC weights, and the inference packages listed in `requirements.txt`. DETR (`facebook/detr-resnet-50`) and OpenCLIP ViT-B/32 weights download on first use.
+## Checking the numbers
 
 ```bash
-cd code/inference
-python grove_pipeline/run_experiment.py --run 1             # GROVE
-python run_baseline.py --model e2e_qwen35_27b                # a single-pass baseline
+cd website
+GROVE_PC=.. python3 tools/check_numbers.py
 ```
 
-Settings used for the reported run (set in `code/inference/config.py`):
+This recomputes the headline numbers from the per-image scores and re-reads every number on the project page from its source file in this repository (standard library only).
 
-| Component | Setting |
-|---|---|
-| VLM (captioning and analysis) | `qwen3.5:9b` via Ollama; context 8192, max output 512 tokens, temperature 0.1 |
-| Primary grounder | GroundingDINO Swin-T/OGC; box threshold 0.35, text threshold 0.25; highest-logit box kept |
-| Fallback | DETR-ResNet-50 (score threshold 0.5) + OpenCLIP ViT-B/32 (min cosine similarity 0.25) |
-| Confidence intervals | 1,000 image-level bootstrap resamples |
+## Running the code
 
-Model outputs vary slightly across hardware and Ollama versions, so a fresh run will be close to, but not identical with, the bundled predictions.
+The code ran on Windows with Python 3.11, Ollama 0.40.14 and one RTX A6000 (48 GB); package versions are in `freeze/pip_freeze.txt` and the model digests in `freeze/freeze_2.json`. It reads its folder from `G` in `code/grove_common.py` (set to `C:\GROVE_PC` in the run) and expects the ConstructionSite10k parquet files under `packet/data/constructionsite10k/`.
 
----
+## Data
+
+ConstructionSite10k (https://huggingface.co/datasets/LouisChen15/ConstructionSite) is available under CC BY-NC 4.0 after its access conditions are accepted. Its images come from MOCS, whose terms do not allow redistribution, so this repository gives the identifiers of the calibration and final images, not the images. The examples shown on the project page are credited to ConstructionSite10k and MOCS there.
 
 ## Citation
 
-See `CITATION.cff`. If you use the annotations or code, please cite the paper.
+```bibtex
+@article{gupta_grove,
+  title  = {GROVE: Grounded Violation Evaluator for Visual Inspection},
+  author = {Gupta, Abhijeet and Singh, Shruti and Asari, Vijayan and Nguyen, Tam V.},
+  note   = {Under review}
+}
+```
 
 ## License
 
-Code: MIT. Annotations and predictions: CC BY 4.0. See `LICENSE`.
+Code (`code/`, `website/`, `paper_figures/`): MIT. Annotations, saved outputs, scores and reports: CC BY 4.0. Dataset images keep their own terms. See `LICENSE`.

@@ -1,0 +1,9 @@
+{"image": "0006723", "category": "PPE_Violation", "pred": 0, "true": 0, "iou": 0.6442378232682496, "cutoff": 0.5}
+{"image": "0006787", "category": "PPE_Violation", "pred": 0, "true": 0, "iou": 0.5361416945907133, "cutoff": 0.5}
+{"image": "0004948", "category": "PPE_Violation", "pred": 0, "true": 0, "iou": 0.31756214915797915, "cutoff": 0.3}
+{"image": "0005110", "category": "PPE_Violation", "pred": 0, "true": 0, "iou": 0.3079429978506236, "cutoff": 0.3}
+{"image": "0005275", "category": "PPE_Violation", "pred": 0, "true": 1, "iou": 0.33973119834396254, "cutoff": 0.3}
+{"image": "0006723", "category": "PPE_Violation", "pred": 0, "true": 0, "iou": 0.6442378232682496, "cutoff": 0.3}
+{"image": "0006787", "category": "PPE_Violation", "pred": 0, "true": 0, "iou": 0.5361416945907133, "cutoff": 0.3}
+{"image": "0008784", "category": "PPE_Violation", "pred": 0, "true": 0, "iou": 0.40879062802783406, "cutoff": 0.3}
+{"image": "0010392", "category": "PPE_Violation", "pred": 0, "true": 0, "iou": 0.35273913790142536, "cutoff": 0.3}

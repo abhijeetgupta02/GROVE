@@ -1,0 +1,76 @@
+{
+ "config_hash": "354a1eefc917448b4701b504d078a77fb4792cf646cc17a04852684909d042ed",
+ "config": {
+  "kind": "spc",
+  "model": "gemma4:31b",
+  "model_digest": "6316f0629137b426c9d9b853ffc4c8209589f30ee39aebede6285096c0ff47e7",
+  "set": "spc",
+  "image_encoding": "cs10k:parquet image -> RGB -> JPEG quality 95, Pillow 13.0.0",
+  "endpoint": "/api/chat",
+  "prompt": "Inspect this construction site image for visible safety violations.\nJudge only visible physical conditions. Safety equipment (guardrails, harnesses, hard hats, vests, barriers) and normal tools in safe use are NOT violations.\nImage size: {W} x {H} pixels.\n\nAnswer for each category:\nFall_Hazard: Is a worker exposed to falling into an unguarded trench/opening or from an elevated edge, roof, ladder, or scaffold that lacks guardrails or a tied-off harness?\nElectrocution_Hazard: Is there an unprotected electrical hazard, such as damaged or exposed live wiring, makeshift power hookups, or work dangerously close to overhead power lines?\nPPE_Violation: Is a visible construction worker missing a required hard hat, high-visibility vest, eye protection, or task-specific protective gear (excluding fall harnesses)?\n\nFor each category give:\npresent: true only if the violation is clearly visible, otherwise false.\nevidence: one short clause describing what you see.\nbbox: [x1, y1, x2, y2] integer pixel coordinates of the violation, or [] if absent.\nconfidence: how sure you are that this violation is present, 0 to 100.\n\nReturn JSON only.",
+  "nothink_suffix": false,
+  "schema": {
+   "type": "object",
+   "required": [
+    "Fall_Hazard",
+    "Electrocution_Hazard",
+    "PPE_Violation"
+   ],
+   "properties": {
+    "Fall_Hazard": {
+     "$ref": "#/$defs/c"
+    },
+    "Electrocution_Hazard": {
+     "$ref": "#/$defs/c"
+    },
+    "PPE_Violation": {
+     "$ref": "#/$defs/c"
+    }
+   },
+   "$defs": {
+    "c": {
+     "type": "object",
+     "required": [
+      "present",
+      "evidence",
+      "bbox",
+      "confidence"
+     ],
+     "properties": {
+      "present": {
+       "type": "boolean"
+      },
+      "evidence": {
+       "type": "string"
+      },
+      "bbox": {
+       "type": "array",
+       "items": {
+        "type": "integer"
+       }
+      },
+      "confidence": {
+       "type": "integer"
+      }
+     }
+    }
+   }
+  },
+  "options": {
+   "temperature": 0,
+   "num_ctx": 32768,
+   "num_predict": 1024,
+   "seed": 20260422
+  },
+  "num_predict_ladder": [
+   1024,
+   2048,
+   4096
+  ],
+  "think": "false, removed if rejected",
+  "schema_policy": "$ref, inline if rejected",
+  "context_size": 32768,
+  "validity": "frozen single-pass rule plus integer confidence 0 to 100 for every category",
+  "posthoc": "D24: frozen single-pass prompt and schema plus one integer confidence per category; score = confidence / 100"
+ }
+}

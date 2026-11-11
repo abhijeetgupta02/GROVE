@@ -1,0 +1,161 @@
+POST HOC (D24). Single-pass prompt and schema with one change: an integer "confidence" from 0 to 100 for each category.
+Everything else is the frozen single-pass call: options {"temperature": 0, "num_ctx": 32768, "num_predict": 1024, "seed": 20260422}, num_predict ladder [1024, 2048, 4096], think false (removed if rejected), "\n/nothink" appended for qwen models,
+schema by $ref (inline if rejected). A response counts as valid only if it is valid under the frozen single-pass rule and every confidence is an integer from 0 to 100.
+Score used: confidence / 100.
+
+=== PROMPT ({W} and {H} are the image width and height in pixels) ===
+Inspect this construction site image for visible safety violations.
+Judge only visible physical conditions. Safety equipment (guardrails, harnesses, hard hats, vests, barriers) and normal tools in safe use are NOT violations.
+Image size: {W} x {H} pixels.
+
+Answer for each category:
+Fall_Hazard: Is a worker exposed to falling into an unguarded trench/opening or from an elevated edge, roof, ladder, or scaffold that lacks guardrails or a tied-off harness?
+Electrocution_Hazard: Is there an unprotected electrical hazard, such as damaged or exposed live wiring, makeshift power hookups, or work dangerously close to overhead power lines?
+PPE_Violation: Is a visible construction worker missing a required hard hat, high-visibility vest, eye protection, or task-specific protective gear (excluding fall harnesses)?
+
+For each category give:
+present: true only if the violation is clearly visible, otherwise false.
+evidence: one short clause describing what you see.
+bbox: [x1, y1, x2, y2] integer pixel coordinates of the violation, or [] if absent.
+confidence: how sure you are that this violation is present, 0 to 100.
+
+Return JSON only.
+
+=== SCHEMA ===
+{
+ "type": "object",
+ "required": [
+  "Fall_Hazard",
+  "Electrocution_Hazard",
+  "PPE_Violation"
+ ],
+ "properties": {
+  "Fall_Hazard": {
+   "$ref": "#/$defs/c"
+  },
+  "Electrocution_Hazard": {
+   "$ref": "#/$defs/c"
+  },
+  "PPE_Violation": {
+   "$ref": "#/$defs/c"
+  }
+ },
+ "$defs": {
+  "c": {
+   "type": "object",
+   "required": [
+    "present",
+    "evidence",
+    "bbox",
+    "confidence"
+   ],
+   "properties": {
+    "present": {
+     "type": "boolean"
+    },
+    "evidence": {
+     "type": "string"
+    },
+    "bbox": {
+     "type": "array",
+     "items": {
+      "type": "integer"
+     }
+    },
+    "confidence": {
+     "type": "integer"
+    }
+   }
+  }
+ }
+}
+
+=== SCHEMA (inline form, used only if a model rejects $ref) ===
+{
+ "type": "object",
+ "required": [
+  "Fall_Hazard",
+  "Electrocution_Hazard",
+  "PPE_Violation"
+ ],
+ "properties": {
+  "Fall_Hazard": {
+   "type": "object",
+   "required": [
+    "present",
+    "evidence",
+    "bbox",
+    "confidence"
+   ],
+   "properties": {
+    "present": {
+     "type": "boolean"
+    },
+    "evidence": {
+     "type": "string"
+    },
+    "bbox": {
+     "type": "array",
+     "items": {
+      "type": "integer"
+     }
+    },
+    "confidence": {
+     "type": "integer"
+    }
+   }
+  },
+  "Electrocution_Hazard": {
+   "type": "object",
+   "required": [
+    "present",
+    "evidence",
+    "bbox",
+    "confidence"
+   ],
+   "properties": {
+    "present": {
+     "type": "boolean"
+    },
+    "evidence": {
+     "type": "string"
+    },
+    "bbox": {
+     "type": "array",
+     "items": {
+      "type": "integer"
+     }
+    },
+    "confidence": {
+     "type": "integer"
+    }
+   }
+  },
+  "PPE_Violation": {
+   "type": "object",
+   "required": [
+    "present",
+    "evidence",
+    "bbox",
+    "confidence"
+   ],
+   "properties": {
+    "present": {
+     "type": "boolean"
+    },
+    "evidence": {
+     "type": "string"
+    },
+    "bbox": {
+     "type": "array",
+     "items": {
+      "type": "integer"
+     }
+    },
+    "confidence": {
+     "type": "integer"
+    }
+   }
+  }
+ }
+}

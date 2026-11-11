@@ -1,0 +1,62 @@
+{
+ "Calibration (500 images, not independent)|GROVE|Fall_Hazard": [
+  0.4878048780487805,
+  0.37312800404755886,
+  0.5864870509607352
+ ],
+ "Calibration (500 images, not independent)|GROVE|PPE_Violation": [
+  0.7718446601941747,
+  0.7259606481481481,
+  0.8144796380090498
+ ],
+ "Calibration (500 images, not independent)|main_question|Fall_Hazard": [
+  0.4696969696969697,
+  0.35642305755999326,
+  0.5714285714285714
+ ],
+ "Calibration (500 images, not independent)|main_question|PPE_Violation": [
+  0.7801418439716312,
+  0.7341772151898734,
+  0.8227272727272728
+ ],
+ "Calibration (500 images, not independent)|single-pass gemma4:31b|Fall_Hazard": [
+  0.40358744394618834,
+  0.32195121951219513,
+  0.4827586206896552
+ ],
+ "Calibration (500 images, not independent)|single-pass gemma4:31b|PPE_Violation": [
+  0.7056603773584905,
+  0.6610375098193244,
+  0.7486243509132837
+ ],
+ "Final test (1000 images)|GROVE|Fall_Hazard": [
+  0.4397905759162304,
+  0.3508714969241285,
+  0.526891495601173
+ ],
+ "Final test (1000 images)|GROVE|PPE_Violation": [
+  0.7601390498261877,
+  0.7272672375933246,
+  0.7914329932609037
+ ],
+ "Final test (1000 images)|main_question|Fall_Hazard": [
+  0.4215686274509804,
+  0.3333333333333333,
+  0.5024642919028641
+ ],
+ "Final test (1000 images)|main_question|PPE_Violation": [
+  0.7832009080590239,
+  0.7520559254400425,
+  0.8130939809926082
+ ],
+ "Final test (1000 images)|single-pass gemma4:31b|Fall_Hazard": [
+  0.4082687338501292,
+  0.34401649052478134,
+  0.47002453336869676
+ ],
+ "Final test (1000 images)|single-pass gemma4:31b|PPE_Violation": [
+  0.7254361799816346,
+  0.6949936684899675,
+  0.7552713674291377
+ ]
+}

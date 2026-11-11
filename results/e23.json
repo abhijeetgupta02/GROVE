@@ -1,0 +1,14 @@
+{
+ "e23_rep1": {
+  "max_prob_diff": 0.0,
+  "max_score_diff": 0.0,
+  "decisions_changed": 0,
+  "valid_both": 203
+ },
+ "e23_rep2": {
+  "max_prob_diff": 0.0,
+  "max_score_diff": 0.0,
+  "decisions_changed": 0,
+  "valid_both": 203
+ }
+}

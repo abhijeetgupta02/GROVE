@@ -1,0 +1,52 @@
+{
+ "POST_HOC": "experiment 60 repeated on the final 1,000 after final scoring",
+ "written": "2026-11-10T12:11:05",
+ "systems": {
+  "GROVE": {
+   "all": {
+    "miss|helmet or vest": 46,
+    "miss|other or no text": 23,
+    "false alarm|helmet or vest": 121,
+    "miss|inferred height or depth": 69,
+    "false alarm|other or no text": 37,
+    "false alarm|inferred height or depth": 18
+   },
+   "totals": {
+    "miss": 138,
+    "false alarm": 176
+   },
+   "sample": {
+    "false alarm|helmet or vest": 39,
+    "false alarm|inferred height or depth": 6,
+    "false alarm|other or no text": 12,
+    "miss|helmet or vest": 14,
+    "miss|inferred height or depth": 22,
+    "miss|other or no text": 7
+   },
+   "n_sample": 100
+  },
+  "gemma4:31b": {
+   "all": {
+    "false alarm|inferred height or depth": 394,
+    "false alarm|helmet or vest": 28,
+    "miss|inferred height or depth": 27,
+    "false alarm|other or no text": 72,
+    "miss|helmet or vest": 6,
+    "miss|other or no text": 1
+   },
+   "totals": {
+    "false alarm": 494,
+    "miss": 34
+   },
+   "sample": {
+    "false alarm|helmet or vest": 4,
+    "false alarm|inferred height or depth": 73,
+    "false alarm|other or no text": 14,
+    "miss|helmet or vest": 2,
+    "miss|inferred height or depth": 7
+   },
+   "n_sample": 100
+  }
+ },
+ "overlap": 201
+}

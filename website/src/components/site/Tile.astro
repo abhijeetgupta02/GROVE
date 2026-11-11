@@ -1,0 +1,12 @@
+---
+interface Props {
+  title: string;
+}
+const { title } = Astro.props;
+---
+
+<div class="not-prose flex flex-col gap-1 rounded-xl border border-zinc-200 p-4 dark:border-zinc-700">
+  <div class="font-sans text-sm text-zinc-600 dark:text-zinc-300">{title}</div>
+  <div class="text-3xl leading-tight"><slot name="big" /></div>
+  <div class="font-sans text-sm leading-snug"><slot /></div>
+</div>

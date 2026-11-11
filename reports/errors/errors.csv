@@ -1,0 +1,101 @@
+image_id,category,type,score,phrase,dataset_reason,error_class,file
+0004851,PPE_Violation,false alarm,0.8902074194426306,worker without safety vest,,helmet or vest,false_alarm_PPE_0004851.jpg
+0005292,PPE_Violation,false alarm,0.8474506579308727,worker without safety vest,,helmet or vest,false_alarm_PPE_0005292.jpg
+0005310,PPE_Violation,false alarm,0.836414969222798,worker without safety vest,,helmet or vest,false_alarm_PPE_0005310.jpg
+0005325,PPE_Violation,false alarm,0.9071040239569215,worker without safety vest,,helmet or vest,false_alarm_PPE_0005325.jpg
+0005369,PPE_Violation,false alarm,0.8108900885887051,worker without safety vest,,helmet or vest,false_alarm_PPE_0005369.jpg
+0006826,PPE_Violation,false alarm,0.9373392446985056,worker without safety vest,,helmet or vest,false_alarm_PPE_0006826.jpg
+0006984,PPE_Violation,false alarm,0.9338794711091201,worker without safety vest,,helmet or vest,false_alarm_PPE_0006984.jpg
+0007033,PPE_Violation,false alarm,0.9629965221271333,worker without safety vest,,helmet or vest,false_alarm_PPE_0007033.jpg
+0007533,PPE_Violation,false alarm,0.9237219950223965,worker without safety vest,,helmet or vest,false_alarm_PPE_0007533.jpg
+0008282,PPE_Violation,false alarm,0.836902142229976,worker without safety vest,,helmet or vest,false_alarm_PPE_0008282.jpg
+0008699,PPE_Violation,false alarm,0.9415321374660982,worker without hard hat,,helmet or vest,false_alarm_PPE_0008699.jpg
+0009454,PPE_Violation,false alarm,0.815694536116619,worker without safety vest,,helmet or vest,false_alarm_PPE_0009454.jpg
+0009578,PPE_Violation,false alarm,0.9385450068441985,worker without safety vest,,helmet or vest,false_alarm_PPE_0009578.jpg
+0010267,PPE_Violation,false alarm,0.9041105873049088,worker without safety vest,,helmet or vest,false_alarm_PPE_0010267.jpg
+0010308,PPE_Violation,false alarm,0.9475474574988648,worker without safety vest,,helmet or vest,false_alarm_PPE_0010308.jpg
+0010945,PPE_Violation,false alarm,0.8022249467575628,worker without safety vest,,helmet or vest,false_alarm_PPE_0010945.jpg
+0011206,PPE_Violation,false alarm,0.8530605204005247,worker without safety vest,,helmet or vest,false_alarm_PPE_0011206.jpg
+0011326,PPE_Violation,false alarm,0.9240181837106578,worker without safety vest,,helmet or vest,false_alarm_PPE_0011326.jpg
+0011704,PPE_Violation,false alarm,0.842674275034803,worker without safety vest,,helmet or vest,false_alarm_PPE_0011704.jpg
+0011741,PPE_Violation,false alarm,0.9089075609258546,worker without safety vest,,helmet or vest,false_alarm_PPE_0011741.jpg
+0012241,PPE_Violation,false alarm,0.8132637449562832,worker without safety vest,,helmet or vest,false_alarm_PPE_0012241.jpg
+0012717,PPE_Violation,false alarm,0.971503656771481,worker without hard hat,,helmet or vest,false_alarm_PPE_0012717.jpg
+0012863,PPE_Violation,false alarm,0.9806636774855049,worker without hard hat,,helmet or vest,false_alarm_PPE_0012863.jpg
+0013137,PPE_Violation,false alarm,0.911469746282055,worker without safety vest,,helmet or vest,false_alarm_PPE_0013137.jpg
+0013669,PPE_Violation,false alarm,0.8235701537123056,worker without safety vest,,helmet or vest,false_alarm_PPE_0013669.jpg
+0014007,PPE_Violation,false alarm,0.8967849781977273,worker without safety vest,,helmet or vest,false_alarm_PPE_0014007.jpg
+0005695,Fall_Hazard,false alarm,0.9568095723988875,worker on elevated edge, ,inferred height or depth,false_alarm_Fall_0005695.jpg
+0008183,Fall_Hazard,false alarm,0.9347871790697448,worker on elevated edge, ,inferred height or depth,false_alarm_Fall_0008183.jpg
+0008319,Fall_Hazard,false alarm,0.8906364259285006,worker on elevated edge, ,inferred height or depth,false_alarm_Fall_0008319.jpg
+0009424,Fall_Hazard,false alarm,0.9621549120128223,worker on elevated edge, ,inferred height or depth,false_alarm_Fall_0009424.jpg
+0010480,Fall_Hazard,false alarm,0.960126902640115,worker on elevated edge, ,inferred height or depth,false_alarm_Fall_0010480.jpg
+0010609,Fall_Hazard,false alarm,0.8955211725398491,worker on elevated edge, ,inferred height or depth,false_alarm_Fall_0010609.jpg
+0010701,Fall_Hazard,false alarm,0.8948920794617248,worker on elevated edge, ,inferred height or depth,false_alarm_Fall_0010701.jpg
+0011281,Fall_Hazard,false alarm,0.90473698496606,worker on elevated edge, ,inferred height or depth,false_alarm_Fall_0011281.jpg
+0012506,Fall_Hazard,false alarm,0.878628687714855,worker on elevated edge, ,inferred height or depth,false_alarm_Fall_0012506.jpg
+0012711,Fall_Hazard,false alarm,0.9311286509546823,worker on elevated edge, ,inferred height or depth,false_alarm_Fall_0012711.jpg
+0012712,Fall_Hazard,false alarm,0.8982890631923576,worker on elevated edge, ,inferred height or depth,false_alarm_Fall_0012712.jpg
+0013699,Fall_Hazard,false alarm,0.9376875354190284,worker on elevated edge, ,inferred height or depth,false_alarm_Fall_0013699.jpg
+0013757,Fall_Hazard,false alarm,0.8987877913748828,worker on elevated edge, ,inferred height or depth,false_alarm_Fall_0013757.jpg
+0005525,Fall_Hazard,false alarm,0.9160690011306347,open trench or floor opening, ,other or no text,false_alarm_Fall_0005525.jpg
+0006590,Fall_Hazard,false alarm,0.9684177001271226,open trench or floor opening, ,other or no text,false_alarm_Fall_0006590.jpg
+0006964,Fall_Hazard,false alarm,0.9209290984042378,open trench or floor opening, ,other or no text,false_alarm_Fall_0006964.jpg
+0008700,Fall_Hazard,false alarm,0.9043206383448142,open trench or floor opening, ,other or no text,false_alarm_Fall_0008700.jpg
+0008902,Fall_Hazard,false alarm,0.9390844312066549,open trench or floor opening, ,other or no text,false_alarm_Fall_0008902.jpg
+0008908,Fall_Hazard,false alarm,0.8994240528250387,open trench or floor opening, ,other or no text,false_alarm_Fall_0008908.jpg
+0009118,Fall_Hazard,false alarm,0.9131067593011258,open trench or floor opening, ,other or no text,false_alarm_Fall_0009118.jpg
+0010172,Fall_Hazard,false alarm,0.9407721695172032,open trench or floor opening, ,other or no text,false_alarm_Fall_0010172.jpg
+0010238,Fall_Hazard,false alarm,0.8868935693096944,open trench or floor opening, ,other or no text,false_alarm_Fall_0010238.jpg
+0011228,Fall_Hazard,false alarm,0.9412250541600824,open trench or floor opening, ,other or no text,false_alarm_Fall_0011228.jpg
+0011531,Fall_Hazard,false alarm,0.929515497026498,open trench or floor opening, ,other or no text,false_alarm_Fall_0011531.jpg
+0012383,Fall_Hazard,false alarm,0.9089256141585216,open trench or floor opening, ,other or no text,false_alarm_Fall_0012383.jpg
+0013229,Fall_Hazard,false alarm,0.9595318894268237,open trench or floor opening, ,other or no text,false_alarm_Fall_0013229.jpg
+0013302,Fall_Hazard,false alarm,0.9301210755349283,open trench or floor opening, ,other or no text,false_alarm_Fall_0013302.jpg
+0013409,Fall_Hazard,false alarm,0.9110519917080597,open trench or floor opening, ,other or no text,false_alarm_Fall_0013409.jpg
+0007041,PPE_Violation,miss,0.7824943716773297,,Three workers in the upper right corner are not wearing hard hats.,helmet or vest,miss_PPE_0007041.jpg
+0007845,PPE_Violation,miss,0.769585861662511,,The worker on the left does not have a hard hat.,helmet or vest,miss_PPE_0007845.jpg
+0007854,PPE_Violation,miss,0.6764365869188527,,The worker squatting on the right is not wearing a hard hat.,helmet or vest,miss_PPE_0007854.jpg
+0008180,PPE_Violation,miss,0.6920986508253061,,A worker in the middle is not wearing a hard hat.,helmet or vest,miss_PPE_0008180.jpg
+0008957,PPE_Violation,miss,0.6081534955912612,,The person squatting on the left is not wearing a hard hat.,helmet or vest,miss_PPE_0008957.jpg
+0009000,PPE_Violation,miss,0.6174168488254241,,Two workers in the upper right are not wearing hard hats.,helmet or vest,miss_PPE_0009000.jpg
+0009465,PPE_Violation,miss,0.607476882945217,,The workers on the formwork are not wearing hard hats.,helmet or vest,miss_PPE_0009465.jpg
+0009588,PPE_Violation,miss,0.47293678723062943,,A worker in the middle with a blue shirt is not wearing a hard hat but a straw hat.,helmet or vest,miss_PPE_0009588.jpg
+0010323,PPE_Violation,miss,0.7764337277356786,,The worker with a white hard hat is wearing shorts.,helmet or vest,miss_PPE_0010323.jpg
+0010742,PPE_Violation,miss,0.7983448097468492,,The worker on the left is not wearing a hard hat.,helmet or vest,miss_PPE_0010742.jpg
+0005065,PPE_Violation,miss,0.2408836896699398,,The workers on the left are not wearing high-visibility retroreflective vests when working at night.,inferred height or depth,miss_PPE_0005065.jpg
+0005163,PPE_Violation,miss,0.6594929344158204,,The workers are not wearing high-visibility vests when working at night.,inferred height or depth,miss_PPE_0005163.jpg
+0006844,PPE_Violation,miss,0.603673090698899,,Workers on the left are not wearing high-visibility vests.,inferred height or depth,miss_PPE_0006844.jpg
+0007529,Fall_Hazard,miss,0.5464966180257594,, The edge of the embankment in the background is not protected or warned.,inferred height or depth,miss_Fall_0007529.jpg
+0007797,Fall_Hazard,miss,0.7369021598089969,, The edge of the excavation in the upper left is not guarded.,inferred height or depth,miss_Fall_0007797.jpg
+0008211,Fall_Hazard,miss,0.7520947763724356,, The right edge of the excavation is not guarded.,inferred height or depth,miss_Fall_0008211.jpg
+0008447,PPE_Violation,miss,0.6861022857456416,,Workers are not wearing high-visibility retroreflective vests when working at night.,inferred height or depth,miss_PPE_0008447.jpg
+0008714,Fall_Hazard,miss,0.8217388569059376,,Three workers on top of the roof on the right are not wearing safety harnesses. ,inferred height or depth,miss_Fall_0008714.jpg
+0008816,PPE_Violation,miss,0.618733991958871,,The workers in the foreground are not wearing high-visibility vests when working at night.,inferred height or depth,miss_PPE_0008816.jpg
+0009131,PPE_Violation,miss,0.4637449632629046,,Two workers in the foreground are not wearing high-visibility retroreflective vests when working at night.,inferred height or depth,miss_PPE_0009131.jpg
+0010019,PPE_Violation,miss,0.680112039995908,,The workers in the image are not wearing high-visibility retroreflective vests when working at night.,inferred height or depth,miss_PPE_0010019.jpg
+0010086,Fall_Hazard,miss,0.7364074538635503,, The edge of the concrete pit is not guarded.,inferred height or depth,miss_Fall_0010086.jpg
+0010997,PPE_Violation,miss,0.3995167583611726,,The workers are not wearing high-visibility retroreflective vests when working at night.,inferred height or depth,miss_PPE_0010997.jpg
+0011074,PPE_Violation,miss,0.4393210462707747,,The workers are not wearing high-visibility vests when working at night.,inferred height or depth,miss_PPE_0011074.jpg
+0011083,Fall_Hazard,miss,0.6587682701987402,, The right edge of the excavation is not protected nor warned.,inferred height or depth,miss_Fall_0011083.jpg
+0011532,PPE_Violation,miss,0.6576645133571748,,The workers in the middle are not wearing high-visibility vests when working at night.,inferred height or depth,miss_PPE_0011532.jpg
+0011838,Fall_Hazard,miss,0.5566801525457078,, The right edge of the excavation is not protected nor warned.,inferred height or depth,miss_Fall_0011838.jpg
+0011839,PPE_Violation,miss,0.7412347623119528,,Workers are not wearing high-visibility retroreflective vests when working at night.,inferred height or depth,miss_PPE_0011839.jpg
+0013193,PPE_Violation,miss,0.17724811324968806,,The workers are not wearing high-visibility retroreflective vests when working at night.,inferred height or depth,miss_PPE_0013193.jpg
+0013717,PPE_Violation,miss,0.361827710984646,,Workers in the middle are not wearing high-visibility vests.,inferred height or depth,miss_PPE_0013717.jpg
+0013870,PPE_Violation,miss,0.7146798117703053,,The workers in the middle are not wearing high-visibility retroreflective vests when working at night.,inferred height or depth,miss_PPE_0013870.jpg
+0013889,PPE_Violation,miss,0.6890254978778304,,The workers are not wearing high-visibility vests when working at night.,inferred height or depth,miss_PPE_0013889.jpg
+0013984,PPE_Violation,miss,0.7237226792446898,,The workers are not wearing high-visibility vests when working at night.,inferred height or depth,miss_PPE_0013984.jpg
+0006079,PPE_Violation,miss,0.6829836893468453,,A worker in the middle is wearing a pair of shorts.,other or no text,miss_PPE_0006079.jpg
+0006656,Fall_Hazard,miss,0.8559106404380343,,The worker on the scaffolding in the upper right corner is not wearing a safety harness. ,other or no text,miss_Fall_0006656.jpg
+0008386,Fall_Hazard,miss,0.6831461896622726,,Two workers on the steel frame structure are not wearing safety harnesses. ,other or no text,miss_Fall_0008386.jpg
+0009975,Fall_Hazard,miss,0.7863935963860786,,The workers on top of the frame structure are not wearing safety harnesses. ,other or no text,miss_Fall_0009975.jpg
+0010208,Fall_Hazard,miss,0.768833541477464,,The four workers on top of the metal frame structure are not wearing safety harnesses. ,other or no text,miss_Fall_0010208.jpg
+0010701,PPE_Violation,miss,0.7434873489195508,,The two workers welding on the right are not using face shields.,other or no text,miss_PPE_0010701.jpg
+0010748,Fall_Hazard,miss,0.8488968245396208,,Two workers squatting on the right are not wearing safety harnesses. ,other or no text,miss_Fall_0010748.jpg
+0011817,PPE_Violation,miss,0.7948042148781462,,A worker in the middle is wearing a pair of shorts.,other or no text,miss_PPE_0011817.jpg
+0012013,PPE_Violation,miss,0.6806847498075062,,The worker in a camouflage jacket is not wearing the jacket properly.,other or no text,miss_PPE_0012013.jpg
+0012207,PPE_Violation,miss,0.7607644360454874,,A worker in the middle is wearing a pair of shorts.,other or no text,miss_PPE_0012207.jpg
+0012945,Fall_Hazard,miss,0.7734905312316142,,The worker on the scaffolding is not wearing a safety harness. ,other or no text,miss_Fall_0012945.jpg
+0013097,PPE_Violation,miss,0.6680106880090938,,,other or no text,miss_PPE_0013097.jpg
+0013960,PPE_Violation,miss,0.7767495409296488,,Some workers on the left are wearing shorts or slippers.,other or no text,miss_PPE_0013960.jpg

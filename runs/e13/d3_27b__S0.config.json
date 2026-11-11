@@ -1,0 +1,24 @@
+{
+ "config_hash": "525a684b9368898534596d13a5d6f155cc3eda1395815a3148143c78466ead60",
+ "config": {
+  "kind": "decision",
+  "model": "d3:27b",
+  "model_digest": "bdde0a6212d68af9a99e29bb908252aaa9c93e852713df98836bb2cef804fba0",
+  "set": "S0",
+  "image_encoding": "grove203:packet encoded_q95 bytes as stored",
+  "pause_seconds_before_each_call": 0.0,
+  "endpoint": "/v1/systemone",
+  "state": "Photograph of a construction site. Judge only what can be seen in the image. An object being present is not a violation by itself. Normal construction activity with proper safety measures is not a violation.",
+  "questions": {
+   "Fall_Hazard": "Is a worker exposed to a fall from height because of an unprotected edge or opening, or an unsafe ladder, scaffold, or work platform?",
+   "StruckBy_Hazard": "Is anyone at risk of being struck by falling objects or by suspended, overhead, or unstable loads or materials?",
+   "Electrocution_Hazard": "Is there an electrical hazard, such as exposed wiring, damaged cables, unsafe temporary power, or work close to energized equipment or power lines?",
+   "CaughtInBetween_hazard": "Is machinery or equipment being used unsafely, or is a worker exposed to unguarded machinery, pinch points, crushing, or being caught between objects?",
+   "PPE_Violation": "Is a visible worker missing required personal protective equipment, such as a hard hat, high-visibility vest, gloves, eye protection, or fall-arrest harness, or wearing it incorrectly?",
+   "Housekeeping_Storage": "Is there poor housekeeping, such as debris, clutter, blocked walkways, trip or slip hazards, or unsafely stored materials?",
+   "Other": "Is there another visible safety hazard outside falls, struck-by, electrical, machinery, PPE, and housekeeping, such as missing warning signs, missing barricades, or poor site communication?"
+  },
+  "answer_type": "noul",
+  "context_size": 4096
+ }
+}

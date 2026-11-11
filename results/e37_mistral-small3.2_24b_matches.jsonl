@@ -1,0 +1,13 @@
+{"image": "124.jpg", "category": "Fall_Hazard", "pred": 0, "true": 0, "iou": 0.6109333352760057, "cutoff": 0.5}
+{"image": "179.png", "category": "Fall_Hazard", "pred": 0, "true": 0, "iou": 0.7706246211101071, "cutoff": 0.5}
+{"image": "124.jpg", "category": "Fall_Hazard", "pred": 0, "true": 0, "iou": 0.6109333352760057, "cutoff": 0.3}
+{"image": "137.jpg", "category": "Fall_Hazard", "pred": 0, "true": 0, "iou": 0.42245716005863265, "cutoff": 0.3}
+{"image": "174.jpg", "category": "Fall_Hazard", "pred": 0, "true": 0, "iou": 0.4122833219233925, "cutoff": 0.3}
+{"image": "175.png", "category": "Fall_Hazard", "pred": 0, "true": 0, "iou": 0.3722545467544921, "cutoff": 0.3}
+{"image": "177.png", "category": "Fall_Hazard", "pred": 0, "true": 0, "iou": 0.46953821036587323, "cutoff": 0.3}
+{"image": "179.png", "category": "Fall_Hazard", "pred": 0, "true": 0, "iou": 0.7706246211101071, "cutoff": 0.3}
+{"image": "184.jpg", "category": "Fall_Hazard", "pred": 0, "true": 0, "iou": 0.39363494462476145, "cutoff": 0.3}
+{"image": "187.png", "category": "Fall_Hazard", "pred": 0, "true": 0, "iou": 0.33821884435731886, "cutoff": 0.3}
+{"image": "198.png", "category": "Electrocution_Hazard", "pred": 0, "true": 0, "iou": 0.33173669417773877, "cutoff": 0.3}
+{"image": "199.jpeg", "category": "Fall_Hazard", "pred": 0, "true": 0, "iou": 0.32438337457367716, "cutoff": 0.3}
+{"image": "201.png", "category": "Fall_Hazard", "pred": 0, "true": 0, "iou": 0.305947756767273, "cutoff": 0.3}

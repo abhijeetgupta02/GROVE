@@ -1,0 +1,129 @@
+{
+ "GROVE": {
+  "TP": 187.0,
+  "FP": 95.0,
+  "FN": 67.0,
+  "precision": 0.6631205673758865,
+  "recall": 0.7362204724409449,
+  "micro_f1": 0.6977611940298507,
+  "per_category": {
+   "Fall_Hazard": {
+    "TP": 30.0,
+    "FP": 41.0,
+    "FN": 22.0,
+    "precision": 0.4225352112676056,
+    "recall": 0.5769230769230769,
+    "f1": 0.4878048780487805
+   },
+   "PPE_Violation": {
+    "TP": 157.0,
+    "FP": 54.0,
+    "FN": 45.0,
+    "precision": 0.7440758293838863,
+    "recall": 0.7772277227722773,
+    "f1": 0.7602905569007264
+   }
+  },
+  "macro_f1": 0.6240477174747534,
+  "n_images": 500,
+  "n_negative_images": 250,
+  "false_alarms_per_100_negative": 21.2
+ },
+ "without f_ppe_novest": {
+  "TP": 203.0,
+  "FP": 108.0,
+  "FN": 51.0,
+  "precision": 0.6527331189710611,
+  "recall": 0.7992125984251969,
+  "micro_f1": 0.7185840707964601,
+  "per_category": {
+   "Fall_Hazard": {
+    "TP": 30.0,
+    "FP": 41.0,
+    "FN": 22.0,
+    "precision": 0.4225352112676056,
+    "recall": 0.5769230769230769,
+    "f1": 0.4878048780487805
+   },
+   "PPE_Violation": {
+    "TP": 173.0,
+    "FP": 67.0,
+    "FN": 29.0,
+    "precision": 0.7208333333333333,
+    "recall": 0.8564356435643564,
+    "f1": 0.7828054298642534
+   }
+  },
+  "macro_f1": 0.6353051539565169,
+  "n_images": 500,
+  "n_negative_images": 250,
+  "false_alarms_per_100_negative": 26.8
+ },
+ "without f_fall_opening": {
+  "TP": 175.0,
+  "FP": 99.0,
+  "FN": 79.0,
+  "precision": 0.6386861313868614,
+  "recall": 0.6889763779527559,
+  "micro_f1": 0.6628787878787878,
+  "per_category": {
+   "Fall_Hazard": {
+    "TP": 18.0,
+    "FP": 45.0,
+    "FN": 34.0,
+    "precision": 0.2857142857142857,
+    "recall": 0.34615384615384615,
+    "f1": 0.3130434782608696
+   },
+   "PPE_Violation": {
+    "TP": 157.0,
+    "FP": 54.0,
+    "FN": 45.0,
+    "precision": 0.7440758293838863,
+    "recall": 0.7772277227722773,
+    "f1": 0.7602905569007264
+   }
+  },
+  "macro_f1": 0.536667017580798,
+  "n_images": 500,
+  "n_negative_images": 250,
+  "false_alarms_per_100_negative": 22.8
+ },
+ "night images only (GROVE)": {
+  "TP": 35.0,
+  "FP": 2.0,
+  "FN": 0.0,
+  "precision": 0.9459459459459459,
+  "recall": 1.0,
+  "micro_f1": 0.9722222222222222,
+  "per_category": {
+   "Fall_Hazard": {
+    "TP": 0.0,
+    "FP": 1.0,
+    "FN": 0.0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0
+   },
+   "PPE_Violation": {
+    "TP": 35.0,
+    "FP": 1.0,
+    "FN": 0.0,
+    "precision": 0.9722222222222222,
+    "recall": 1.0,
+    "f1": 0.9859154929577465
+   }
+  },
+  "macro_f1": 0.49295774647887325,
+  "n_images": 37,
+  "n_negative_images": 2,
+  "false_alarms_per_100_negative": 50.0
+ },
+ "night_image_count": 37,
+ "illumination_values": {
+  "normal lighting": 388,
+  "underexposed": 57,
+  "night": 37,
+  "overexposed": 18
+ }
+}

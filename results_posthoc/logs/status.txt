@@ -1,0 +1,13 @@
+updated: 2026-11-10T19:31:29
+mode: posthoc
+experiment: p07_final
+model: gemma4:31b
+images done: 1000 / 1000
+seconds per image (last 30): 5.3
+estimated finish of this step: 2026-11-10T19:31
+estimated finish of the whole run: -
+GPU temperature C: 73.5
+GPU memory MiB: 477 / 49140
+GPU utilization %: 0
+failures so far (terminal, not valid): 0
+note: post hoc model runs finished

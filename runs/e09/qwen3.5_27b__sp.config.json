@@ -1,0 +1,70 @@
+{
+ "config_hash": "a53a67338a8de64680c59ce56467a236fa3de1d3a180d484071fc822ae3c8028",
+ "config": {
+  "kind": "sp",
+  "model": "qwen3.5:27b",
+  "model_digest": "7653528ba5cba4dd8e19da24aaddc7f4d0b5ecd93571c0825dfd4137958ec06e",
+  "set": "sp",
+  "image_encoding": "grove203:packet encoded_q95 bytes as stored",
+  "endpoint": "/api/chat",
+  "prompt": "Inspect this construction site image for visible safety violations.\nJudge only visible physical conditions. Safety equipment (guardrails, harnesses, hard hats, vests, barriers) and normal tools in safe use are NOT violations.\nImage size: {W} x {H} pixels.\n\nAnswer for each category:\nFall_Hazard: Is a worker exposed to falling into an unguarded trench/opening or from an elevated edge, roof, ladder, or scaffold that lacks guardrails or a tied-off harness?\nElectrocution_Hazard: Is there an unprotected electrical hazard, such as damaged or exposed live wiring, makeshift power hookups, or work dangerously close to overhead power lines?\nPPE_Violation: Is a visible construction worker missing a required hard hat, high-visibility vest, eye protection, or task-specific protective gear (excluding fall harnesses)?\n\nFor each category give:\npresent: true only if the violation is clearly visible, otherwise false.\nevidence: one short clause describing what you see.\nbbox: [x1, y1, x2, y2] integer pixel coordinates of the violation, or [] if absent.\n\nReturn JSON only.",
+  "nothink_suffix": true,
+  "schema": {
+   "type": "object",
+   "required": [
+    "Fall_Hazard",
+    "Electrocution_Hazard",
+    "PPE_Violation"
+   ],
+   "properties": {
+    "Fall_Hazard": {
+     "$ref": "#/$defs/c"
+    },
+    "Electrocution_Hazard": {
+     "$ref": "#/$defs/c"
+    },
+    "PPE_Violation": {
+     "$ref": "#/$defs/c"
+    }
+   },
+   "$defs": {
+    "c": {
+     "type": "object",
+     "required": [
+      "present",
+      "evidence",
+      "bbox"
+     ],
+     "properties": {
+      "present": {
+       "type": "boolean"
+      },
+      "evidence": {
+       "type": "string"
+      },
+      "bbox": {
+       "type": "array",
+       "items": {
+        "type": "integer"
+       }
+      }
+     }
+    }
+   }
+  },
+  "options": {
+   "temperature": 0,
+   "num_ctx": 32768,
+   "num_predict": 1024,
+   "seed": 20260422
+  },
+  "num_predict_ladder": [
+   1024,
+   2048,
+   4096
+  ],
+  "think": "false, removed if rejected",
+  "schema_policy": "$ref, inline if rejected",
+  "context_size": 32768
+ }
+}

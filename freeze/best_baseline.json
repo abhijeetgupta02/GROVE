@@ -1,0 +1,33 @@
+{
+ "best": {
+  "model": "gemma4:31b",
+  "f1": 0.6162018592297477,
+  "completion": 1.0,
+  "statuses": {
+   "valid": 500
+  },
+  "seconds": 4.76842
+ },
+ "candidates": [
+  {
+   "model": "qwen3.5:27b",
+   "f1": 0.6038216560509554,
+   "completion": 1.0,
+   "statuses": {
+    "valid": 500
+   },
+   "seconds": 6.21012
+  },
+  {
+   "model": "gemma4:31b",
+   "f1": 0.6162018592297477,
+   "completion": 1.0,
+   "statuses": {
+    "valid": 500
+   },
+   "seconds": 4.76842
+  }
+ ],
+ "rule": "higher micro-F1 (Fall, PPE) on the calibration 500",
+ "at": "2026-11-06T20:47:48"
+}

@@ -1,0 +1,18 @@
+---
+// A number from src/data/numbers.json. Hover (title) shows its source file and key path.
+import { fmt, fmtSigned, fmtCI, fmtInt, sourceOf, str } from "../lib/data";
+
+interface Props {
+  k: string;
+  d?: number;
+  as?: "value" | "signed" | "int" | "text";
+  ci?: boolean;
+  ciSigned?: boolean;
+}
+const { k, d = 3, as = "value", ci = false, ciSigned } = Astro.props;
+const main =
+  as === "signed" ? fmtSigned(k, d) : as === "int" ? fmtInt(k) : as === "text" ? str(k) : fmt(k, d);
+const interval = ci ? " " + fmtCI(k, d, ciSigned ?? as === "signed") : "";
+---
+
+<span class:list={["num", as === "text" ? "[overflow-wrap:anywhere]" : "whitespace-nowrap"]} title={"Source: " + sourceOf(k)} data-key={k}>{main}{interval}</span>

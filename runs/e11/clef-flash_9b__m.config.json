@@ -1,0 +1,21 @@
+{
+ "config_hash": "eb570c8b33bc98dcf31140782f9764a433afb030f69f7bd5e1be1b97f4b0e3df",
+ "config": {
+  "kind": "decision",
+  "model": "clef-flash:9b",
+  "model_digest": "73e026ff389b28464bb26f8978f3164851a76832f0d339032747e2c56f98ea29",
+  "set": "m",
+  "image_encoding": "grove203:packet encoded_q95 bytes as stored",
+  "pause_seconds_before_each_call": 0.0,
+  "endpoint": "/v1/systemone",
+  "state": "Photograph of a construction or industrial site. Judge only visible physical conditions. Safety equipment (guardrails, harnesses, hard hats, vests, barriers) and normal tools in safe use are NOT violations.",
+  "questions": {
+   "Fall_Hazard": "Is a worker exposed to falling into an unguarded trench/opening or from an elevated edge, roof, ladder, or scaffold that lacks guardrails or a tied-off harness?",
+   "Electrocution_Hazard": "Is there an unprotected electrical hazard, such as damaged or exposed live wiring, makeshift power hookups, or work dangerously close to overhead power lines?",
+   "PPE_Violation": "Is a visible construction worker missing a required hard hat, high-visibility vest, eye protection, or task-specific protective gear (excluding fall harnesses)?",
+   "Housekeeping_Storage": "Is there a slip, trip, or housekeeping violation, such as debris scattered on floors, cords/materials blocking walkways, wet/muddy walking surfaces, or unstable stacked materials?"
+  },
+  "answer_type": "noul",
+  "context_size": 16384
+ }
+}

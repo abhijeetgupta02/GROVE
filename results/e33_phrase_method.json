@@ -1,0 +1,6 @@
+{
+ "method": "fixed",
+ "top_box_f1_fixed": 0.43956043956043955,
+ "top_box_f1_written": 0.41592920353982304,
+ "rule": "higher top-box F1 at IoU 0.5; within 0.005 fixed phrases win"
+}

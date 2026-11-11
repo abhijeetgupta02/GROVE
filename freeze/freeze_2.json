@@ -1,0 +1,270 @@
+{
+ "freeze": 2,
+ "at": "2026-11-06T20:47:49",
+ "mode": "main",
+ "selection": {
+  "main_model": "d3:27b",
+  "electrical_source": {
+   "option": "formula",
+   "model": "d3:27b"
+  },
+  "held_out_micro_f1": 0.7862481315396114,
+  "runner_up_main_model": "pplx-decider:27b",
+  "rule": "Section 7.5: held-out micro-F1 (10 repeats of 5 grouped folds, seed 20260422); differences <= 0.005 are ties; ties to fewer models, then lower runtime"
+ },
+ "thresholds_fit_on_all_203": {
+  "GROVE": {
+   "Fall_Hazard": 0.12,
+   "Electrocution_Hazard": 0.32,
+   "PPE_Violation": 0.5
+  },
+  "main_question": {
+   "Fall_Hazard": 0.16,
+   "Electrocution_Hazard": 0.22,
+   "PPE_Violation": 0.58
+  },
+  "variant_no_protection": {
+   "Fall_Hazard": 0.14,
+   "Electrocution_Hazard": 0.32,
+   "PPE_Violation": 0.5
+  },
+  "variant_no_worker": {
+   "Fall_Hazard": 0.12,
+   "Electrocution_Hazard": 0.32,
+   "PPE_Violation": 0.6
+  },
+  "variant_no_fact_questions": {
+   "Fall_Hazard": 0.16,
+   "Electrocution_Hazard": 0.22,
+   "PPE_Violation": 0.58
+  },
+  "second_GROVE_questions": {
+   "Fall_Hazard": 0.08,
+   "Electrocution_Hazard": 0.28,
+   "PPE_Violation": 0.52
+  }
+ },
+ "formula": {
+  "Fall": "Fall = 0.5*(Fall_Hazard + max(f_fall_edge, f_fall_opening)) * (1 - 0.35*ok_fall_protected)",
+  "PPE": "PPE = 0.5*(PPE_Violation + f_worker*max(f_ppe_nohat, f_ppe_novest, f_ppe_noeye_glove))",
+  "Electrical formula": "Electrical = 0.5*(Electrocution_Hazard + max(f_elec_wire, f_elec_lines)) * (1 - 0.40*ok_elec_testing)",
+  "Housekeeping": "Housekeeping = (Housekeeping_Storage + f_house_trip + f_house_debris)/3"
+ },
+ "weights": {
+  "fall_protection": 0.35,
+  "electrical_testing": 0.4,
+  "fall_mix": 0.5,
+  "ppe_mix": 0.5
+ },
+ "phrase_method": {
+  "method": "fixed",
+  "top_box_f1_fixed": 0.43956043956043955,
+  "top_box_f1_written": 0.41592920353982304,
+  "rule": "higher top-box F1 at IoU 0.5; within 0.005 fixed phrases win"
+ },
+ "models": {
+  "clef:27b": {
+   "digest": "7885241a86db4803ff95b6a8fc60dc132a5f9612a76db786a304cfa8c760f84b",
+   "size": 20163365656
+  },
+  "clef-flash:9b": {
+   "digest": "73e026ff389b28464bb26f8978f3164851a76832f0d339032747e2c56f98ea29",
+   "size": 10578965269
+  },
+  "pplx-decider:27b": {
+   "digest": "733585a9ebb6205d2d5b64a13748f0b1c9f1285885dd267780cfdb1c4c8ef141",
+   "size": 17475009375
+  },
+  "d3:9b": {
+   "digest": "0f459473f0351636a127ca79c3206930f2d2cd79e4690b14f832fe450e3be563",
+   "size": 10449219831
+  },
+  "d3:27b": {
+   "digest": "bdde0a6212d68af9a99e29bb908252aaa9c93e852713df98836bb2cef804fba0",
+   "size": 29526923288
+  },
+  "qwen3.5:9b": {
+   "digest": "6488c96fa5faab64bb65cbd30d4289e20e6130ef535a93ef9a49f42eda893ea7",
+   "size": 6594474711
+  },
+  "qwen3.5:27b": {
+   "digest": "7653528ba5cba4dd8e19da24aaddc7f4d0b5ecd93571c0825dfd4137958ec06e",
+   "size": 17420432728
+  },
+  "gemma4:31b": {
+   "digest": "6316f0629137b426c9d9b853ffc4c8209589f30ee39aebede6285096c0ff47e7",
+   "size": 19868981791
+  },
+  "mistral-small3.2:24b": {
+   "digest": "5a408ab55df5c1b5cf46533c368813b30bf9e4d8fc39263bf2a3338cfa3b895b",
+   "size": 15177384862
+  },
+  "ministral-3:14b": {
+   "digest": "4760c35aeb9d9e9c6174c2492562c0b999e80a222804fd96b1915ab72bbcdcf7",
+   "size": 9082537546
+  },
+  "qwen3-vl:32b": {
+   "digest": "ff2e46876908853b8d0872595047c46d599d970056277e4864c8a1f0fd93fd3b",
+   "size": 20910297800
+  }
+ },
+ "ollama": {
+  "version": "0.40.14",
+  "exe": "C:\\GROVE_PC\\ollama\\0.40.14\\ollama.exe",
+  "exe_sha256": "14e0fff0449ce3c3a7fe9db8b8b32089274db5f835d4c99f5af7c32dcbf08981"
+ },
+ "prompt_hashes": {
+  "packet prompts.json": "2b4059e8a8f55ecb2d0f8e5c0331301ff9821f5b7ab4275c3f2466ced78727a7",
+  "set_m.json": "b078bcc829e661d20a8ea742cf20960a7f659812aaab1fff5c46731d2f90a478",
+  "single_pass_prompt.txt": "3273f6d72c884d9ad3de97e6220ab77791e8154d7d41fa8b81577774002dbd5c",
+  "phrase_prompt.txt": "9550f9ce32a605129f2d400d577b0c734e8f63da92236d9da36c3e7c1f657ec3"
+ },
+ "code_hashes": {
+  "acceptance_test.py": "89d76077a38cef2893b76fdd1df8f54e3ceaa1dc3d84087e61d71ee1242b9a86",
+  "box_rescale.py": "fce603d9ec96b7f573ce1dd0b1f73932b60e38a28a134d5f68eb614ec260e461",
+  "check_run.py": "a1318eff911ff2a93166e9a6583674f3baadbbca2823337387bd49a69fc3c4e9",
+  "e04_models.py": "8cba9becf215db35611e5a74f9c5d0693982ba96f20a7bdd6d159b4f7c458a4e",
+  "grove_calls.py": "7c46ea22f1e14721f17b4859b16998a27ff441243a762adbedcdb1634aebd083",
+  "grove_common.py": "ef6f6fe27a28153cf2e64eaa10706d40d60c120ad438cf0c4e1e05b46724077e",
+  "grove_data.py": "b841c696c8a8a2188d63b1ecb34f22a227b416c0719c397c9ed5ca969519dbe9",
+  "grove_eta.py": "920a672c9fe9288a821191241d7e7e99a09baf3929183112cf79cabd1af3fc6d",
+  "grove_ground.py": "fbe675c63b2e0e1ed1a43e5c47779c8dc9d839719c3c8a4a0eea8eca24f94a0c",
+  "grove_score.py": "f0e0020d067dee27adb35d447dac2042d260b2b31452cc0a709945807e0d8500",
+  "grove_stages.py": "27416cfd3ed491a98b26540be69b6cb9f000aabc22fcc82b8e8b3b648b6f3db0",
+  "hfget.py": "13d5d5cb86c256f76abf92f45bff85523792c589460fc08d7284484bdbb68a32",
+  "pdl.py": "07dd619941b18403a8ef31777030d13cb0435ec0f150540717c81991d4e5403f",
+  "pilot_report.py": "93e8fc99181218174d71a1216398959b3361e0a021caeff15fa3d73704d4c348",
+  "probe_system.ps1": "8ddd7a2905ab63419cefefe68f8d8cbb019296e724db40b24904f3b4574d7f8b",
+  "run_launch.ps1": "340de36f5c05060b0ce3df83574c345650a7e7b7f2e0cc27fef306c72182d34e",
+  "runner.py": "b0769aec950940d08d2e8225eedee75eddc783ca972d0ce5d5d490f57b25e963",
+  "score_final.py": "403c9c9f53e44ce74f0fc06c5318ef7190407eb63a55d05a63bd46d0fdd1fdef",
+  "stage_a.py": "1c4714c5ab3b139e2cce073df7b9f881a282f5eb8e57baf6efc590ef1445775f",
+  "task_launch.ps1": "9d32083088ece04168e98491ccc12ac68651c134ff4e890464be1bdf677780c4"
+ },
+ "list_hashes": {
+  "calibration.json": "a5fbfeac8ef3bb6d68feb51d500a6d175a3ed9ea94af92d0ac6b976cfbc2c3d0",
+  "final.json": "4c9afdd7c1132c41dd4503335df3093f1c4a2786773a8f9dd69d41837e6c69b1"
+ },
+ "single_pass_options": {
+  "temperature": 0,
+  "num_ctx": 32768,
+  "num_predict": 1024,
+  "seed": 20260422
+ },
+ "phrase_options": {
+  "temperature": 0,
+  "num_predict": 32,
+  "seed": 20260422
+ },
+ "freeze_1_sha256": "a7b70be6a9930408fdec8651b48e1d0461463903c173710717ffbdf9e65cd590",
+ "final_thresholds": {
+  "fit_on": "calibration 500 (refit once, Fall and PPE)",
+  "method": "grid 0.02-0.98 step 0.02, best single threshold then 2 rounds per category, micro-F1",
+  "thresholds": {
+   "GROVE": {
+    "refit": {
+     "Fall_Hazard": 0.86,
+     "PPE_Violation": 0.8
+    },
+    "first_freeze": {
+     "Fall_Hazard": 0.12,
+     "PPE_Violation": 0.5
+    }
+   },
+   "main_question": {
+    "refit": {
+     "Fall_Hazard": 0.86,
+     "PPE_Violation": 0.66
+    },
+    "first_freeze": {
+     "Fall_Hazard": 0.16,
+     "PPE_Violation": 0.58
+    }
+   },
+   "variant_no_fact_questions": {
+    "refit": {
+     "Fall_Hazard": 0.86,
+     "PPE_Violation": 0.66
+    },
+    "first_freeze": {
+     "Fall_Hazard": 0.16,
+     "PPE_Violation": 0.58
+    }
+   },
+   "variant_no_protection": {
+    "refit": {
+     "Fall_Hazard": 0.86,
+     "PPE_Violation": 0.8
+    },
+    "first_freeze": {
+     "Fall_Hazard": 0.14,
+     "PPE_Violation": 0.5
+    }
+   },
+   "variant_no_worker": {
+    "refit": {
+     "Fall_Hazard": 0.86,
+     "PPE_Violation": 0.8
+    },
+    "first_freeze": {
+     "Fall_Hazard": 0.12,
+     "PPE_Violation": 0.6
+    }
+   },
+   "second_GROVE_questions": {
+    "refit": {
+     "Fall_Hazard": 0.88,
+     "PPE_Violation": 0.62
+    },
+    "first_freeze": {
+     "Fall_Hazard": 0.08,
+     "PPE_Violation": 0.52
+    }
+   }
+  },
+  "at": "2026-11-06T20:47:00"
+ },
+ "best_baseline": {
+  "best": {
+   "model": "gemma4:31b",
+   "f1": 0.6162018592297477,
+   "completion": 1.0,
+   "statuses": {
+    "valid": 500
+   },
+   "seconds": 4.76842
+  },
+  "candidates": [
+   {
+    "model": "qwen3.5:27b",
+    "f1": 0.6038216560509554,
+    "completion": 1.0,
+    "statuses": {
+     "valid": 500
+    },
+    "seconds": 6.21012
+   },
+   {
+    "model": "gemma4:31b",
+    "f1": 0.6162018592297477,
+    "completion": 1.0,
+    "statuses": {
+     "valid": 500
+    },
+    "seconds": 4.76842
+   }
+  ],
+  "rule": "higher micro-F1 (Fall, PPE) on the calibration 500",
+  "at": "2026-11-06T20:47:48"
+ },
+ "calibration_micro_f1": {
+  "GROVE_refit": 0.7065420560747664,
+  "best_single_pass": 0.6162018592297477
+ },
+ "auto_score_final": true,
+ "auto_rule": "true only if GROVE F1 > best single-pass F1 on the calibration images, using refit thresholds (Section 7.7)",
+ "incomplete": {
+  "GROVE": false,
+  "baseline": false
+ }
+}

@@ -1,0 +1,4449 @@
+{
+ "_about": {
+  "generated_by": "tools/export_site_data.py",
+  "run_folder": "C:/GROVE_PC (read only)",
+  "rounding": "scores rounded to 4 decimals without crossing a multiple of 0.01",
+  "note": "every number on the page, with its source file (relative to the run folder) and key path; post_hoc marks analyses made after final scoring"
+ },
+ "numbers": {
+  "final.n_images": {
+   "unit": "images",
+   "source": "results/e54_final.json",
+   "key_path": [
+    "n_images"
+   ],
+   "post_hoc": false,
+   "value": 1000
+  },
+  "final.n_violation": {
+   "unit": "images with a violation",
+   "source": "results/e54_final.json",
+   "key_path": [
+    "n_violation"
+   ],
+   "post_hoc": false,
+   "value": 500
+  },
+  "final.n_negative": {
+   "unit": "violation-free images",
+   "source": "results/e54_final.json",
+   "key_path": [
+    "GROVE",
+    "n_negative_images"
+   ],
+   "post_hoc": false,
+   "value": 500
+  },
+  "final.reference_rate": {
+   "unit": "natural violation rate",
+   "source": "results/e54_final.json",
+   "key_path": [
+    "reference_rate_r"
+   ],
+   "post_hoc": false,
+   "value": 0.118
+  },
+  "final.grove.micro_f1": {
+   "unit": "micro-F1",
+   "source": "results/e54_final.json",
+   "key_path": [
+    "GROVE",
+    "micro_f1"
+   ],
+   "post_hoc": false,
+   "value": 0.7020872865275142,
+   "interval": [
+    0.6698642849382538,
+    0.7328836335800317
+   ],
+   "interval_key_path": [
+    "GROVE",
+    "f1_ci"
+   ]
+  },
+  "final.grove.precision": {
+   "unit": "precision",
+   "source": "results/e54_final.json",
+   "key_path": [
+    "GROVE",
+    "precision"
+   ],
+   "post_hoc": false,
+   "value": 0.6776556776556777
+  },
+  "final.grove.recall": {
+   "unit": "recall",
+   "source": "results/e54_final.json",
+   "key_path": [
+    "GROVE",
+    "recall"
+   ],
+   "post_hoc": false,
+   "value": 0.7283464566929134
+  },
+  "final.grove.false_alarms": {
+   "unit": "false alarms per 100 violation-free images",
+   "source": "results/e54_final.json",
+   "key_path": [
+    "GROVE",
+    "false_alarms_per_100_negative"
+   ],
+   "post_hoc": false,
+   "value": 22.8
+  },
+  "final.grove.completion": {
+   "unit": "share of images with a valid response",
+   "source": "results/e54_final.json",
+   "key_path": [
+    "GROVE",
+    "completion"
+   ],
+   "post_hoc": false,
+   "value": 1.0
+  },
+  "final.grove.fall.f1": {
+   "unit": "f1",
+   "source": "results/e54_final.json",
+   "key_path": [
+    "GROVE",
+    "per_category",
+    "Fall_Hazard",
+    "f1"
+   ],
+   "post_hoc": false,
+   "value": 0.4397905759162304
+  },
+  "final.grove.fall.precision": {
+   "unit": "precision",
+   "source": "results/e54_final.json",
+   "key_path": [
+    "GROVE",
+    "per_category",
+    "Fall_Hazard",
+    "precision"
+   ],
+   "post_hoc": false,
+   "value": 0.4375
+  },
+  "final.grove.fall.recall": {
+   "unit": "recall",
+   "source": "results/e54_final.json",
+   "key_path": [
+    "GROVE",
+    "per_category",
+    "Fall_Hazard",
+    "recall"
+   ],
+   "post_hoc": false,
+   "value": 0.4421052631578947
+  },
+  "final.grove.ppe.f1": {
+   "unit": "f1",
+   "source": "results/e54_final.json",
+   "key_path": [
+    "GROVE",
+    "per_category",
+    "PPE_Violation",
+    "f1"
+   ],
+   "post_hoc": false,
+   "value": 0.7601390498261877
+  },
+  "final.grove.ppe.precision": {
+   "unit": "precision",
+   "source": "results/e54_final.json",
+   "key_path": [
+    "GROVE",
+    "per_category",
+    "PPE_Violation",
+    "precision"
+   ],
+   "post_hoc": false,
+   "value": 0.7288888888888889
+  },
+  "final.grove.ppe.recall": {
+   "unit": "recall",
+   "source": "results/e54_final.json",
+   "key_path": [
+    "GROVE",
+    "per_category",
+    "PPE_Violation",
+    "recall"
+   ],
+   "post_hoc": false,
+   "value": 0.7941888619854721
+  },
+  "final.grove.std_precision": {
+   "unit": "prevalence-standardized precision",
+   "source": "results/e54_final.json",
+   "key_path": [
+    "GROVE",
+    "prevalence_standardized",
+    "precision"
+   ],
+   "post_hoc": false,
+   "value": 0.288139172672316
+  },
+  "final.grove.std_f1": {
+   "unit": "prevalence-standardized F1",
+   "source": "results/e54_final.json",
+   "key_path": [
+    "GROVE",
+    "prevalence_standardized",
+    "f1"
+   ],
+   "post_hoc": false,
+   "value": 0.4129229954413907
+  },
+  "final.main.micro_f1": {
+   "unit": "micro-F1",
+   "source": "results/e54_final.json",
+   "key_path": [
+    "main_question",
+    "micro_f1"
+   ],
+   "post_hoc": false,
+   "value": 0.7152073732718894,
+   "interval": [
+    0.6851131873679012,
+    0.7457051620492585
+   ],
+   "interval_key_path": [
+    "main_question",
+    "f1_ci"
+   ]
+  },
+  "final.main.precision": {
+   "unit": "precision",
+   "source": "results/e54_final.json",
+   "key_path": [
+    "main_question",
+    "precision"
+   ],
+   "post_hoc": false,
+   "value": 0.6724436741767764
+  },
+  "final.main.recall": {
+   "unit": "recall",
+   "source": "results/e54_final.json",
+   "key_path": [
+    "main_question",
+    "recall"
+   ],
+   "post_hoc": false,
+   "value": 0.7637795275590551
+  },
+  "final.main.false_alarms": {
+   "unit": "false alarms per 100 violation-free images",
+   "source": "results/e54_final.json",
+   "key_path": [
+    "main_question",
+    "false_alarms_per_100_negative"
+   ],
+   "post_hoc": false,
+   "value": 25.0
+  },
+  "final.main.completion": {
+   "unit": "share of images with a valid response",
+   "source": "results/e54_final.json",
+   "key_path": [
+    "main_question",
+    "completion"
+   ],
+   "post_hoc": false,
+   "value": 1.0
+  },
+  "final.main.fall.f1": {
+   "unit": "f1",
+   "source": "results/e54_final.json",
+   "key_path": [
+    "main_question",
+    "per_category",
+    "Fall_Hazard",
+    "f1"
+   ],
+   "post_hoc": false,
+   "value": 0.4215686274509804
+  },
+  "final.main.fall.precision": {
+   "unit": "precision",
+   "source": "results/e54_final.json",
+   "key_path": [
+    "main_question",
+    "per_category",
+    "Fall_Hazard",
+    "precision"
+   ],
+   "post_hoc": false,
+   "value": 0.3944954128440367
+  },
+  "final.main.fall.recall": {
+   "unit": "recall",
+   "source": "results/e54_final.json",
+   "key_path": [
+    "main_question",
+    "per_category",
+    "Fall_Hazard",
+    "recall"
+   ],
+   "post_hoc": false,
+   "value": 0.45263157894736844
+  },
+  "final.main.ppe.f1": {
+   "unit": "f1",
+   "source": "results/e54_final.json",
+   "key_path": [
+    "main_question",
+    "per_category",
+    "PPE_Violation",
+    "f1"
+   ],
+   "post_hoc": false,
+   "value": 0.7832009080590239
+  },
+  "final.main.ppe.precision": {
+   "unit": "precision",
+   "source": "results/e54_final.json",
+   "key_path": [
+    "main_question",
+    "per_category",
+    "PPE_Violation",
+    "precision"
+   ],
+   "post_hoc": false,
+   "value": 0.7371794871794872
+  },
+  "final.main.ppe.recall": {
+   "unit": "recall",
+   "source": "results/e54_final.json",
+   "key_path": [
+    "main_question",
+    "per_category",
+    "PPE_Violation",
+    "recall"
+   ],
+   "post_hoc": false,
+   "value": 0.8353510895883777
+  },
+  "final.main.std_precision": {
+   "unit": "prevalence-standardized precision",
+   "source": "results/e54_final.json",
+   "key_path": [
+    "main_question",
+    "prevalence_standardized",
+    "precision"
+   ],
+   "post_hoc": false,
+   "value": 0.2798772511095083
+  },
+  "final.main.std_f1": {
+   "unit": "prevalence-standardized F1",
+   "source": "results/e54_final.json",
+   "key_path": [
+    "main_question",
+    "prevalence_standardized",
+    "f1"
+   ],
+   "post_hoc": false,
+   "value": 0.4096452377756903
+  },
+  "final.gemma.micro_f1": {
+   "unit": "micro-F1",
+   "source": "results/e54_final.json",
+   "key_path": [
+    "best single-pass",
+    "micro_f1"
+   ],
+   "post_hoc": false,
+   "value": 0.6422764227642277,
+   "interval": [
+    0.6131487889273356,
+    0.6697867268691353
+   ],
+   "interval_key_path": [
+    "best single-pass",
+    "f1_ci"
+   ]
+  },
+  "final.gemma.precision": {
+   "unit": "precision",
+   "source": "results/e54_final.json",
+   "key_path": [
+    "best single-pass",
+    "precision"
+   ],
+   "post_hoc": false,
+   "value": 0.4896694214876033
+  },
+  "final.gemma.recall": {
+   "unit": "recall",
+   "source": "results/e54_final.json",
+   "key_path": [
+    "best single-pass",
+    "recall"
+   ],
+   "post_hoc": false,
+   "value": 0.9330708661417323
+  },
+  "final.gemma.false_alarms": {
+   "unit": "false alarms per 100 violation-free images",
+   "source": "results/e54_final.json",
+   "key_path": [
+    "best single-pass",
+    "false_alarms_per_100_negative"
+   ],
+   "post_hoc": false,
+   "value": 71.6
+  },
+  "final.gemma.completion": {
+   "unit": "share of images with a valid response",
+   "source": "results/e54_final.json",
+   "key_path": [
+    "best single-pass",
+    "completion"
+   ],
+   "post_hoc": false,
+   "value": 1.0
+  },
+  "final.gemma.fall.f1": {
+   "unit": "f1",
+   "source": "results/e54_final.json",
+   "key_path": [
+    "best single-pass",
+    "per_category",
+    "Fall_Hazard",
+    "f1"
+   ],
+   "post_hoc": false,
+   "value": 0.4082687338501292
+  },
+  "final.gemma.fall.precision": {
+   "unit": "precision",
+   "source": "results/e54_final.json",
+   "key_path": [
+    "best single-pass",
+    "per_category",
+    "Fall_Hazard",
+    "precision"
+   ],
+   "post_hoc": false,
+   "value": 0.2705479452054795
+  },
+  "final.gemma.fall.recall": {
+   "unit": "recall",
+   "source": "results/e54_final.json",
+   "key_path": [
+    "best single-pass",
+    "per_category",
+    "Fall_Hazard",
+    "recall"
+   ],
+   "post_hoc": false,
+   "value": 0.8315789473684211
+  },
+  "final.gemma.ppe.f1": {
+   "unit": "f1",
+   "source": "results/e54_final.json",
+   "key_path": [
+    "best single-pass",
+    "per_category",
+    "PPE_Violation",
+    "f1"
+   ],
+   "post_hoc": false,
+   "value": 0.7254361799816346
+  },
+  "final.gemma.ppe.precision": {
+   "unit": "precision",
+   "source": "results/e54_final.json",
+   "key_path": [
+    "best single-pass",
+    "per_category",
+    "PPE_Violation",
+    "precision"
+   ],
+   "post_hoc": false,
+   "value": 0.584319526627219
+  },
+  "final.gemma.ppe.recall": {
+   "unit": "recall",
+   "source": "results/e54_final.json",
+   "key_path": [
+    "best single-pass",
+    "per_category",
+    "PPE_Violation",
+    "recall"
+   ],
+   "post_hoc": false,
+   "value": 0.9564164648910412
+  },
+  "final.gemma.std_precision": {
+   "unit": "prevalence-standardized precision",
+   "source": "results/e54_final.json",
+   "key_path": [
+    "best single-pass",
+    "prevalence_standardized",
+    "precision"
+   ],
+   "post_hoc": false,
+   "value": 0.14425279055852458
+  },
+  "final.gemma.std_f1": {
+   "unit": "prevalence-standardized F1",
+   "source": "results/e54_final.json",
+   "key_path": [
+    "best single-pass",
+    "prevalence_standardized",
+    "f1"
+   ],
+   "post_hoc": false,
+   "value": 0.249874910650465
+  },
+  "final.qwen.micro_f1": {
+   "unit": "micro-F1",
+   "source": "results_posthoc/second_baseline.json",
+   "key_path": [
+    "qwen3.5:27b",
+    "micro_f1"
+   ],
+   "post_hoc": true,
+   "value": 0.6075786769428388,
+   "interval": [
+    0.581423075034977,
+    0.6333344283837056
+   ],
+   "interval_key_path": [
+    "qwen3.5:27b_f1_ci"
+   ]
+  },
+  "final.qwen.precision": {
+   "unit": "precision",
+   "source": "results_posthoc/second_baseline.json",
+   "key_path": [
+    "qwen3.5:27b",
+    "precision"
+   ],
+   "post_hoc": true,
+   "value": 0.45090562440419446
+  },
+  "final.qwen.recall": {
+   "unit": "recall",
+   "source": "results_posthoc/second_baseline.json",
+   "key_path": [
+    "qwen3.5:27b",
+    "recall"
+   ],
+   "post_hoc": true,
+   "value": 0.9311023622047244
+  },
+  "final.qwen.false_alarms": {
+   "unit": "false alarms per 100 violation-free images",
+   "source": "results_posthoc/second_baseline.json",
+   "key_path": [
+    "qwen3.5:27b",
+    "false_alarms_per_100_negative"
+   ],
+   "post_hoc": true,
+   "value": 71.8
+  },
+  "final.qwen.completion": {
+   "unit": "share of images with a valid response",
+   "source": "results_posthoc/second_baseline.json",
+   "key_path": [
+    "qwen3.5:27b",
+    "completion"
+   ],
+   "post_hoc": true,
+   "value": 1.0
+  },
+  "final.qwen.fall.f1": {
+   "unit": "f1",
+   "source": "results_posthoc/second_baseline.json",
+   "key_path": [
+    "qwen3.5:27b",
+    "per_category",
+    "Fall_Hazard",
+    "f1"
+   ],
+   "post_hoc": true,
+   "value": 0.3695652173913043
+  },
+  "final.qwen.fall.precision": {
+   "unit": "precision",
+   "source": "results_posthoc/second_baseline.json",
+   "key_path": [
+    "qwen3.5:27b",
+    "per_category",
+    "Fall_Hazard",
+    "precision"
+   ],
+   "post_hoc": true,
+   "value": 0.2328767123287671
+  },
+  "final.qwen.fall.recall": {
+   "unit": "recall",
+   "source": "results_posthoc/second_baseline.json",
+   "key_path": [
+    "qwen3.5:27b",
+    "per_category",
+    "Fall_Hazard",
+    "recall"
+   ],
+   "post_hoc": true,
+   "value": 0.8947368421052632
+  },
+  "final.qwen.ppe.f1": {
+   "unit": "f1",
+   "source": "results_posthoc/second_baseline.json",
+   "key_path": [
+    "qwen3.5:27b",
+    "per_category",
+    "PPE_Violation",
+    "f1"
+   ],
+   "post_hoc": true,
+   "value": 0.707383773928897
+  },
+  "final.qwen.ppe.precision": {
+   "unit": "precision",
+   "source": "results_posthoc/second_baseline.json",
+   "key_path": [
+    "qwen3.5:27b",
+    "per_category",
+    "PPE_Violation",
+    "precision"
+   ],
+   "post_hoc": true,
+   "value": 0.5672514619883041
+  },
+  "final.qwen.ppe.recall": {
+   "unit": "recall",
+   "source": "results_posthoc/second_baseline.json",
+   "key_path": [
+    "qwen3.5:27b",
+    "per_category",
+    "PPE_Violation",
+    "recall"
+   ],
+   "post_hoc": true,
+   "value": 0.9394673123486683
+  },
+  "final.qwen.std_precision": {
+   "unit": "prevalence-standardized precision",
+   "source": "results_posthoc/second_baseline.json",
+   "key_path": [
+    "qwen3.5:27b",
+    "prevalence_standardized",
+    "precision"
+   ],
+   "post_hoc": true,
+   "value": 0.14021574745388898
+  },
+  "final.qwen.std_f1": {
+   "unit": "prevalence-standardized F1",
+   "source": "results_posthoc/second_baseline.json",
+   "key_path": [
+    "qwen3.5:27b",
+    "prevalence_standardized",
+    "f1"
+   ],
+   "post_hoc": true,
+   "value": 0.24372819332666726
+  },
+  "final.diff.grove_minus_gemma": {
+   "unit": "micro-F1 difference",
+   "source": "results/e54_final.json",
+   "key_path": [
+    "criteria",
+    "primary",
+    "difference"
+   ],
+   "post_hoc": false,
+   "value": 0.05981086376328648,
+   "interval": [
+    0.03049184235617339,
+    0.09064272443529658
+   ]
+  },
+  "final.diff.grove_minus_gemma_false_alarms": {
+   "unit": "false alarms per 100 violation-free images, difference",
+   "source": "results/e54_final.json",
+   "key_path": [
+    "criteria",
+    "secondary_false_alarms",
+    "difference_GROVE_minus_baseline"
+   ],
+   "post_hoc": false,
+   "value": -48.8,
+   "interval": [
+    -54.838875956102434,
+    -42.99741500861663
+   ]
+  },
+  "final.diff.grove_minus_main": {
+   "unit": "micro-F1 difference",
+   "source": "results/e54_final.json",
+   "key_path": [
+    "criteria",
+    "secondary_main_question",
+    "difference"
+   ],
+   "post_hoc": false,
+   "value": -0.013120086744375259,
+   "interval": [
+    -0.031161186126011205,
+    0.004933092771165485
+   ]
+  },
+  "final.diff.grove_minus_gemma.fall": {
+   "unit": "F1 difference",
+   "source": "results/e54_final.json",
+   "key_path": [
+    "criteria",
+    "per_category",
+    "Fall_Hazard"
+   ],
+   "post_hoc": false,
+   "value": 0.0315218420661012,
+   "interval": [
+    -0.0511124992368346,
+    0.11178519214703428
+   ]
+  },
+  "final.diff.grove_minus_gemma.ppe": {
+   "unit": "F1 difference",
+   "source": "results/e54_final.json",
+   "key_path": [
+    "criteria",
+    "per_category",
+    "PPE_Violation"
+   ],
+   "post_hoc": false,
+   "value": 0.034702869844553175,
+   "interval": [
+    0.006374142415496365,
+    0.06441542588996865
+   ]
+  },
+  "final.diff.grove_minus_qwen": {
+   "unit": "micro-F1 difference",
+   "source": "results_posthoc/second_baseline.json",
+   "key_path": [
+    "GROVE_minus_qwen"
+   ],
+   "post_hoc": true,
+   "value": 0.09450860958467533,
+   "interval": [
+    0.06508923064324594,
+    0.1252342837861748
+   ]
+  },
+  "final.diff.grove_minus_qwen_false_alarms": {
+   "unit": "false alarms per 100 violation-free images, difference",
+   "source": "results_posthoc/second_baseline.json",
+   "key_path": [
+    "GROVE_minus_qwen_false_alarms"
+   ],
+   "post_hoc": true,
+   "value": -49.0,
+   "interval": [
+    -55.60004149377594,
+    -42.38598402323891
+   ]
+  },
+  "final.first_freeze_grove.micro_f1": {
+   "unit": "micro-F1",
+   "source": "results_posthoc/first_freeze_scores.json",
+   "key_path": [
+    "final",
+    "summary",
+    "GROVE",
+    "micro_f1"
+   ],
+   "post_hoc": true,
+   "value": 0.48255528255528257,
+   "interval": [
+    0.46046046046046046,
+    0.5039464369985842
+   ],
+   "interval_key_path": [
+    "final",
+    "summary",
+    "GROVE",
+    "f1_ci"
+   ]
+  },
+  "final.first_freeze_grove.false_alarms": {
+   "unit": "false alarms per 100 violation-free images",
+   "source": "results_posthoc/first_freeze_scores.json",
+   "key_path": [
+    "final",
+    "summary",
+    "GROVE",
+    "false_alarms_per_100_negative"
+   ],
+   "post_hoc": true,
+   "value": 128.0
+  },
+  "final.first_freeze_grove.precision": {
+   "unit": "precision",
+   "source": "results_posthoc/first_freeze_scores.json",
+   "key_path": [
+    "final",
+    "summary",
+    "GROVE",
+    "precision"
+   ],
+   "post_hoc": true,
+   "value": 0.32154551407989523
+  },
+  "final.first_freeze_grove.recall": {
+   "unit": "recall",
+   "source": "results_posthoc/first_freeze_scores.json",
+   "key_path": [
+    "final",
+    "summary",
+    "GROVE",
+    "recall"
+   ],
+   "post_hoc": true,
+   "value": 0.9665354330708661
+  },
+  "final.first_freeze_main.micro_f1": {
+   "unit": "micro-F1",
+   "source": "results_posthoc/first_freeze_scores.json",
+   "key_path": [
+    "final",
+    "summary",
+    "main_question",
+    "micro_f1"
+   ],
+   "post_hoc": true,
+   "value": 0.5666871542716656,
+   "interval": [
+    0.5410979073332463,
+    0.5914497504299615
+   ],
+   "interval_key_path": [
+    "final",
+    "summary",
+    "main_question",
+    "f1_ci"
+   ]
+  },
+  "final.first_freeze_main.false_alarms": {
+   "unit": "false alarms per 100 violation-free images",
+   "source": "results_posthoc/first_freeze_scores.json",
+   "key_path": [
+    "final",
+    "summary",
+    "main_question",
+    "false_alarms_per_100_negative"
+   ],
+   "post_hoc": true,
+   "value": 80.0
+  },
+  "final.first_freeze_main.precision": {
+   "unit": "precision",
+   "source": "results_posthoc/first_freeze_scores.json",
+   "key_path": [
+    "final",
+    "summary",
+    "main_question",
+    "precision"
+   ],
+   "post_hoc": true,
+   "value": 0.4119749776586238
+  },
+  "final.first_freeze_main.recall": {
+   "unit": "recall",
+   "source": "results_posthoc/first_freeze_scores.json",
+   "key_path": [
+    "final",
+    "summary",
+    "main_question",
+    "recall"
+   ],
+   "post_hoc": true,
+   "value": 0.90748031496063
+  },
+  "final.box.grove.0.5.f1": {
+   "unit": "top-box f1",
+   "source": "results/e54_final.json",
+   "key_path": [
+    "criteria",
+    "secondary_top_box",
+    "GROVE",
+    "iou_0.5",
+    "f1"
+   ],
+   "post_hoc": false,
+   "value": 0.3333333333333333
+  },
+  "final.box.grove.0.5.precision": {
+   "unit": "top-box precision",
+   "source": "results/e54_final.json",
+   "key_path": [
+    "criteria",
+    "secondary_top_box",
+    "GROVE",
+    "iou_0.5",
+    "precision"
+   ],
+   "post_hoc": false,
+   "value": 0.43956043956043955
+  },
+  "final.box.grove.0.5.recall": {
+   "unit": "top-box recall",
+   "source": "results/e54_final.json",
+   "key_path": [
+    "criteria",
+    "secondary_top_box",
+    "GROVE",
+    "iou_0.5",
+    "recall"
+   ],
+   "post_hoc": false,
+   "value": 0.2684563758389262
+  },
+  "final.box.gemma.0.5.f1": {
+   "unit": "top-box f1",
+   "source": "results/e54_final.json",
+   "key_path": [
+    "criteria",
+    "secondary_top_box",
+    "best single-pass",
+    "iou_0.5",
+    "f1"
+   ],
+   "post_hoc": false,
+   "value": 0.0035671819262782403
+  },
+  "final.box.gemma.0.5.precision": {
+   "unit": "top-box precision",
+   "source": "results/e54_final.json",
+   "key_path": [
+    "criteria",
+    "secondary_top_box",
+    "best single-pass",
+    "iou_0.5",
+    "precision"
+   ],
+   "post_hoc": false,
+   "value": 0.0038071065989847717
+  },
+  "final.box.gemma.0.5.recall": {
+   "unit": "top-box recall",
+   "source": "results/e54_final.json",
+   "key_path": [
+    "criteria",
+    "secondary_top_box",
+    "best single-pass",
+    "iou_0.5",
+    "recall"
+   ],
+   "post_hoc": false,
+   "value": 0.003355704697986577
+  },
+  "final.box.grove_up_to_5.0.5.f1": {
+   "unit": "box F1, up to 5 boxes per category",
+   "source": "results/e54_final.json",
+   "key_path": [
+    "criteria",
+    "GROVE_up_to_5_boxes",
+    "iou_0.5",
+    "f1"
+   ],
+   "post_hoc": false,
+   "value": 0.38866396761133604
+  },
+  "final.box.qwen_as_written.0.5.f1": {
+   "unit": "top-box F1",
+   "source": "results_posthoc/second_baseline.json",
+   "key_path": [
+    "boxes",
+    "0.5",
+    "as_written"
+   ],
+   "post_hoc": true,
+   "value": 0.01756440281030445
+  },
+  "final.box.qwen_grid.0.5.f1": {
+   "unit": "top-box F1, 0-1000 grid reading",
+   "source": "results_posthoc/second_baseline.json",
+   "key_path": [
+    "boxes",
+    "0.5",
+    "grid"
+   ],
+   "post_hoc": true,
+   "value": 0.32527020072053525
+  },
+  "final.box.grove_minus_qwen_grid.0.5": {
+   "unit": "top-box F1 difference",
+   "source": "results_posthoc/second_baseline.json",
+   "key_path": [
+    "boxes",
+    "0.5",
+    "GROVE_minus_upper_bound"
+   ],
+   "post_hoc": true,
+   "value": 0.008063132612798063,
+   "interval": [
+    -0.021247900199776345,
+    0.037050174860638545
+   ]
+  },
+  "final.box.grove.0.3.f1": {
+   "unit": "top-box f1",
+   "source": "results/e54_final.json",
+   "key_path": [
+    "criteria",
+    "secondary_top_box",
+    "GROVE",
+    "iou_0.3",
+    "f1"
+   ],
+   "post_hoc": false,
+   "value": 0.3513888888888889
+  },
+  "final.box.grove.0.3.precision": {
+   "unit": "top-box precision",
+   "source": "results/e54_final.json",
+   "key_path": [
+    "criteria",
+    "secondary_top_box",
+    "GROVE",
+    "iou_0.3",
+    "precision"
+   ],
+   "post_hoc": false,
+   "value": 0.4633699633699634
+  },
+  "final.box.grove.0.3.recall": {
+   "unit": "top-box recall",
+   "source": "results/e54_final.json",
+   "key_path": [
+    "criteria",
+    "secondary_top_box",
+    "GROVE",
+    "iou_0.3",
+    "recall"
+   ],
+   "post_hoc": false,
+   "value": 0.2829977628635347
+  },
+  "final.box.gemma.0.3.f1": {
+   "unit": "top-box f1",
+   "source": "results/e54_final.json",
+   "key_path": [
+    "criteria",
+    "secondary_top_box",
+    "best single-pass",
+    "iou_0.3",
+    "f1"
+   ],
+   "post_hoc": false,
+   "value": 0.0178359096313912
+  },
+  "final.box.gemma.0.3.precision": {
+   "unit": "top-box precision",
+   "source": "results/e54_final.json",
+   "key_path": [
+    "criteria",
+    "secondary_top_box",
+    "best single-pass",
+    "iou_0.3",
+    "precision"
+   ],
+   "post_hoc": false,
+   "value": 0.01903553299492386
+  },
+  "final.box.gemma.0.3.recall": {
+   "unit": "top-box recall",
+   "source": "results/e54_final.json",
+   "key_path": [
+    "criteria",
+    "secondary_top_box",
+    "best single-pass",
+    "iou_0.3",
+    "recall"
+   ],
+   "post_hoc": false,
+   "value": 0.016778523489932886
+  },
+  "final.box.grove_up_to_5.0.3.f1": {
+   "unit": "box F1, up to 5 boxes per category",
+   "source": "results/e54_final.json",
+   "key_path": [
+    "criteria",
+    "GROVE_up_to_5_boxes",
+    "iou_0.3",
+    "f1"
+   ],
+   "post_hoc": false,
+   "value": 0.406015037593985
+  },
+  "final.box.qwen_as_written.0.3.f1": {
+   "unit": "top-box F1",
+   "source": "results_posthoc/second_baseline.json",
+   "key_path": [
+    "boxes",
+    "0.3",
+    "as_written"
+   ],
+   "post_hoc": true,
+   "value": 0.04918032786885246
+  },
+  "final.box.qwen_grid.0.3.f1": {
+   "unit": "top-box F1, 0-1000 grid reading",
+   "source": "results_posthoc/second_baseline.json",
+   "key_path": [
+    "boxes",
+    "0.3",
+    "grid"
+   ],
+   "post_hoc": true,
+   "value": 0.36541430777148737
+  },
+  "final.box.grove_minus_qwen_grid.0.3": {
+   "unit": "top-box F1 difference",
+   "source": "results_posthoc/second_baseline.json",
+   "key_path": [
+    "boxes",
+    "0.3",
+    "GROVE_minus_upper_bound"
+   ],
+   "post_hoc": true,
+   "value": -0.014025418882598506,
+   "interval": [
+    -0.043144126953833635,
+    0.014936302591188395
+   ]
+  },
+  "final.box.gemma_grid.0.5": {
+   "value": 0.0108,
+   "unit": "top-box F1, 0-1000 grid reading (sensitivity; not trusted)",
+   "source": "reports/PAPER_TABLES_v2.md",
+   "key_path": [
+    "md_table",
+    "#### Final 1,000 (Fall, PPE)",
+    [
+     "single-pass gemma4:31b"
+    ],
+    "at 0.5, rescaled",
+    0
+   ],
+   "cell": "0.0108",
+   "post_hoc": false
+  },
+  "final.box.qwen_counts.boxes": {
+   "unit": "boxes",
+   "source": "results_posthoc/second_baseline.json",
+   "key_path": [
+    "box_counts",
+    "boxes"
+   ],
+   "post_hoc": true,
+   "value": 1049
+  },
+  "final.box.qwen_counts.grid_only": {
+   "unit": "boxes",
+   "source": "results_posthoc/second_baseline.json",
+   "key_path": [
+    "box_counts",
+    "grid_only"
+   ],
+   "post_hoc": true,
+   "value": 235
+  },
+  "final.removal.variant_no_fact_questions.micro_f1": {
+   "unit": "micro-F1",
+   "source": "results/e55_removal_final.json",
+   "key_path": [
+    "variant_no_fact_questions",
+    "summary",
+    "micro_f1"
+   ],
+   "post_hoc": false,
+   "value": 0.7152073732718894
+  },
+  "final.removal.variant_no_fact_questions.diff": {
+   "unit": "micro-F1 difference",
+   "source": "results/e55_removal_final.json",
+   "key_path": [
+    "variant_no_fact_questions",
+    "difference_from_GROVE"
+   ],
+   "post_hoc": false,
+   "value": 0.013120086744375259,
+   "interval": [
+    -0.004933092771165484,
+    0.03116118612601121
+   ]
+  },
+  "final.removal.variant_no_protection.micro_f1": {
+   "unit": "micro-F1",
+   "source": "results/e55_removal_final.json",
+   "key_path": [
+    "variant_no_protection",
+    "summary",
+    "micro_f1"
+   ],
+   "post_hoc": false,
+   "value": 0.7011070110701108
+  },
+  "final.removal.variant_no_protection.diff": {
+   "unit": "micro-F1 difference",
+   "source": "results/e55_removal_final.json",
+   "key_path": [
+    "variant_no_protection",
+    "difference_from_GROVE"
+   ],
+   "post_hoc": false,
+   "value": -0.0009802754574034234,
+   "interval": [
+    -0.010231423457201141,
+    0.009090276925668661
+   ]
+  },
+  "final.removal.variant_no_worker.micro_f1": {
+   "unit": "micro-F1",
+   "source": "results/e55_removal_final.json",
+   "key_path": [
+    "variant_no_worker",
+    "summary",
+    "micro_f1"
+   ],
+   "post_hoc": false,
+   "value": 0.7074317968015051
+  },
+  "final.removal.variant_no_worker.diff": {
+   "unit": "micro-F1 difference",
+   "source": "results/e55_removal_final.json",
+   "key_path": [
+    "variant_no_worker",
+    "difference_from_GROVE"
+   ],
+   "post_hoc": false,
+   "value": 0.0053445102739909656,
+   "interval": [
+    -0.0005001760230040258,
+    0.012116912037451459
+   ]
+  },
+  "final.signed.gemma.micro_f1": {
+   "unit": "micro-F1",
+   "source": "results_posthoc/confidence_signed.json",
+   "key_path": [
+    "sets",
+    "final",
+    "models",
+    "gemma4:31b",
+    "signed_fitted",
+    "micro_f1"
+   ],
+   "post_hoc": true,
+   "value": 0.6752799310938846,
+   "interval": [
+    0.6410957736280933,
+    0.7079822634830041
+   ],
+   "interval_key_path": [
+    "sets",
+    "final",
+    "models",
+    "gemma4:31b",
+    "signed_ci"
+   ]
+  },
+  "final.signed.gemma.precision": {
+   "unit": "precision",
+   "source": "results_posthoc/confidence_signed.json",
+   "key_path": [
+    "sets",
+    "final",
+    "models",
+    "gemma4:31b",
+    "signed_fitted",
+    "precision"
+   ],
+   "post_hoc": true,
+   "value": 0.6003062787136294
+  },
+  "final.signed.gemma.recall": {
+   "unit": "recall",
+   "source": "results_posthoc/confidence_signed.json",
+   "key_path": [
+    "sets",
+    "final",
+    "models",
+    "gemma4:31b",
+    "signed_fitted",
+    "recall"
+   ],
+   "post_hoc": true,
+   "value": 0.7716535433070866
+  },
+  "final.signed.gemma.false_alarms": {
+   "unit": "false alarms per 100 negative",
+   "source": "results_posthoc/confidence_signed.json",
+   "key_path": [
+    "sets",
+    "final",
+    "models",
+    "gemma4:31b",
+    "signed_fitted",
+    "false_alarms_per_100_negative"
+   ],
+   "post_hoc": true,
+   "value": 40.4
+  },
+  "final.signed.gemma.diff": {
+   "unit": "micro-F1 difference, GROVE minus",
+   "source": "results_posthoc/confidence_signed.json",
+   "key_path": [
+    "sets",
+    "final",
+    "models",
+    "gemma4:31b",
+    "GROVE_minus_signed"
+   ],
+   "post_hoc": true,
+   "value": 0.026807355433629554,
+   "interval": [
+    -0.0028557653232166857,
+    0.057472784915492355
+   ]
+  },
+  "final.confidence100.gemma.micro_f1": {
+   "unit": "micro-F1",
+   "source": "results_posthoc/confidence_baseline.json",
+   "key_path": [
+    "sets",
+    "final",
+    "confidence",
+    "gemma4:31b",
+    "fitted",
+    "micro_f1"
+   ],
+   "post_hoc": true,
+   "value": 0.41540711847879086
+  },
+  "final.ap.gemma_signed.fall": {
+   "unit": "average precision",
+   "source": "results_posthoc/confidence_signed.json",
+   "key_path": [
+    "sets",
+    "final",
+    "average_precision",
+    "Fall_Hazard",
+    "gemma4:31b signed",
+    "AP"
+   ],
+   "post_hoc": true,
+   "value": 0.34436946826076326
+  },
+  "final.ap.gemma_signed.ppe": {
+   "unit": "average precision",
+   "source": "results_posthoc/confidence_signed.json",
+   "key_path": [
+    "sets",
+    "final",
+    "average_precision",
+    "PPE_Violation",
+    "gemma4:31b signed",
+    "AP"
+   ],
+   "post_hoc": true,
+   "value": 0.7348678985660378
+  },
+  "final.signed.qwen.micro_f1": {
+   "unit": "micro-F1",
+   "source": "results_posthoc/confidence_signed.json",
+   "key_path": [
+    "sets",
+    "final",
+    "models",
+    "qwen3.5:27b",
+    "signed_fitted",
+    "micro_f1"
+   ],
+   "post_hoc": true,
+   "value": 0.6582064297800339,
+   "interval": [
+    0.6240126738812467,
+    0.6916546989069523
+   ],
+   "interval_key_path": [
+    "sets",
+    "final",
+    "models",
+    "qwen3.5:27b",
+    "signed_ci"
+   ]
+  },
+  "final.signed.qwen.precision": {
+   "unit": "precision",
+   "source": "results_posthoc/confidence_signed.json",
+   "key_path": [
+    "sets",
+    "final",
+    "models",
+    "qwen3.5:27b",
+    "signed_fitted",
+    "precision"
+   ],
+   "post_hoc": true,
+   "value": 0.5771513353115727
+  },
+  "final.signed.qwen.recall": {
+   "unit": "recall",
+   "source": "results_posthoc/confidence_signed.json",
+   "key_path": [
+    "sets",
+    "final",
+    "models",
+    "qwen3.5:27b",
+    "signed_fitted",
+    "recall"
+   ],
+   "post_hoc": true,
+   "value": 0.765748031496063
+  },
+  "final.signed.qwen.false_alarms": {
+   "unit": "false alarms per 100 negative",
+   "source": "results_posthoc/confidence_signed.json",
+   "key_path": [
+    "sets",
+    "final",
+    "models",
+    "qwen3.5:27b",
+    "signed_fitted",
+    "false_alarms_per_100_negative"
+   ],
+   "post_hoc": true,
+   "value": 43.2
+  },
+  "final.signed.qwen.diff": {
+   "unit": "micro-F1 difference, GROVE minus",
+   "source": "results_posthoc/confidence_signed.json",
+   "key_path": [
+    "sets",
+    "final",
+    "models",
+    "qwen3.5:27b",
+    "GROVE_minus_signed"
+   ],
+   "post_hoc": true,
+   "value": 0.043880856747480323,
+   "interval": [
+    0.013380203439555533,
+    0.07650176010485557
+   ]
+  },
+  "final.confidence100.qwen.micro_f1": {
+   "unit": "micro-F1",
+   "source": "results_posthoc/confidence_baseline.json",
+   "key_path": [
+    "sets",
+    "final",
+    "confidence",
+    "qwen3.5:27b",
+    "fitted",
+    "micro_f1"
+   ],
+   "post_hoc": true,
+   "value": 0.5066666666666667
+  },
+  "final.ap.qwen_signed.fall": {
+   "unit": "average precision",
+   "source": "results_posthoc/confidence_signed.json",
+   "key_path": [
+    "sets",
+    "final",
+    "average_precision",
+    "Fall_Hazard",
+    "qwen3.5:27b signed",
+    "AP"
+   ],
+   "post_hoc": true,
+   "value": 0.24080919136943957
+  },
+  "final.ap.qwen_signed.ppe": {
+   "unit": "average precision",
+   "source": "results_posthoc/confidence_signed.json",
+   "key_path": [
+    "sets",
+    "final",
+    "average_precision",
+    "PPE_Violation",
+    "qwen3.5:27b signed",
+    "AP"
+   ],
+   "post_hoc": true,
+   "value": 0.7810898302059358
+  },
+  "final.ap.grove.fall": {
+   "unit": "average precision",
+   "source": "results_posthoc/confidence_signed.json",
+   "key_path": [
+    "sets",
+    "final",
+    "average_precision",
+    "Fall_Hazard",
+    "GROVE",
+    "AP"
+   ],
+   "post_hoc": true,
+   "value": 0.39563110165097826
+  },
+  "final.ap.main.fall": {
+   "unit": "average precision",
+   "source": "results_posthoc/confidence_signed.json",
+   "key_path": [
+    "sets",
+    "final",
+    "average_precision",
+    "Fall_Hazard",
+    "main questions",
+    "AP"
+   ],
+   "post_hoc": true,
+   "value": 0.42390662319486105
+  },
+  "final.ap.grove.ppe": {
+   "unit": "average precision",
+   "source": "results_posthoc/confidence_signed.json",
+   "key_path": [
+    "sets",
+    "final",
+    "average_precision",
+    "PPE_Violation",
+    "GROVE",
+    "AP"
+   ],
+   "post_hoc": true,
+   "value": 0.8644558504973955
+  },
+  "final.ap.main.ppe": {
+   "unit": "average precision",
+   "source": "results_posthoc/confidence_signed.json",
+   "key_path": [
+    "sets",
+    "final",
+    "average_precision",
+    "PPE_Violation",
+    "main questions",
+    "AP"
+   ],
+   "post_hoc": true,
+   "value": 0.8850070396140424
+  },
+  "cal.signed.gemma.micro_f1": {
+   "unit": "micro-F1",
+   "source": "results_posthoc/confidence_signed.json",
+   "key_path": [
+    "sets",
+    "calibration",
+    "models",
+    "gemma4:31b",
+    "signed_fitted",
+    "micro_f1"
+   ],
+   "post_hoc": true,
+   "value": 0.6642857142857143,
+   "interval": [
+    0.6153776978417267,
+    0.7112564046596053
+   ],
+   "interval_key_path": [
+    "sets",
+    "calibration",
+    "models",
+    "gemma4:31b",
+    "signed_ci"
+   ]
+  },
+  "cal.signed.gemma.precision": {
+   "unit": "precision",
+   "source": "results_posthoc/confidence_signed.json",
+   "key_path": [
+    "sets",
+    "calibration",
+    "models",
+    "gemma4:31b",
+    "signed_fitted",
+    "precision"
+   ],
+   "post_hoc": true,
+   "value": 0.6078431372549019
+  },
+  "cal.signed.gemma.recall": {
+   "unit": "recall",
+   "source": "results_posthoc/confidence_signed.json",
+   "key_path": [
+    "sets",
+    "calibration",
+    "models",
+    "gemma4:31b",
+    "signed_fitted",
+    "recall"
+   ],
+   "post_hoc": true,
+   "value": 0.7322834645669292
+  },
+  "cal.signed.gemma.false_alarms": {
+   "unit": "false alarms per 100 negative",
+   "source": "results_posthoc/confidence_signed.json",
+   "key_path": [
+    "sets",
+    "calibration",
+    "models",
+    "gemma4:31b",
+    "signed_fitted",
+    "false_alarms_per_100_negative"
+   ],
+   "post_hoc": true,
+   "value": 37.2
+  },
+  "cal.signed.gemma.diff": {
+   "unit": "micro-F1 difference, GROVE minus",
+   "source": "results_posthoc/confidence_signed.json",
+   "key_path": [
+    "sets",
+    "calibration",
+    "models",
+    "gemma4:31b",
+    "GROVE_minus_signed"
+   ],
+   "post_hoc": true,
+   "value": 0.04225634178905213,
+   "interval": [
+    -0.0029658318257727036,
+    0.08543717463845463
+   ]
+  },
+  "cal.confidence100.gemma.micro_f1": {
+   "unit": "micro-F1",
+   "source": "results_posthoc/confidence_baseline.json",
+   "key_path": [
+    "sets",
+    "calibration",
+    "confidence",
+    "gemma4:31b",
+    "fitted",
+    "micro_f1"
+   ],
+   "post_hoc": true,
+   "value": 0.41935483870967744
+  },
+  "cal.ap.gemma_signed.fall": {
+   "unit": "average precision",
+   "source": "results_posthoc/confidence_signed.json",
+   "key_path": [
+    "sets",
+    "calibration",
+    "average_precision",
+    "Fall_Hazard",
+    "gemma4:31b signed",
+    "AP"
+   ],
+   "post_hoc": true,
+   "value": 0.2884058011880592
+  },
+  "cal.ap.gemma_signed.ppe": {
+   "unit": "average precision",
+   "source": "results_posthoc/confidence_signed.json",
+   "key_path": [
+    "sets",
+    "calibration",
+    "average_precision",
+    "PPE_Violation",
+    "gemma4:31b signed",
+    "AP"
+   ],
+   "post_hoc": true,
+   "value": 0.7227221419689198
+  },
+  "cal.signed.qwen.micro_f1": {
+   "unit": "micro-F1",
+   "source": "results_posthoc/confidence_signed.json",
+   "key_path": [
+    "sets",
+    "calibration",
+    "models",
+    "qwen3.5:27b",
+    "signed_fitted",
+    "micro_f1"
+   ],
+   "post_hoc": true,
+   "value": 0.6655290102389079,
+   "interval": [
+    0.6181802034555143,
+    0.7114141297258632
+   ],
+   "interval_key_path": [
+    "sets",
+    "calibration",
+    "models",
+    "qwen3.5:27b",
+    "signed_ci"
+   ]
+  },
+  "cal.signed.qwen.precision": {
+   "unit": "precision",
+   "source": "results_posthoc/confidence_signed.json",
+   "key_path": [
+    "sets",
+    "calibration",
+    "models",
+    "qwen3.5:27b",
+    "signed_fitted",
+    "precision"
+   ],
+   "post_hoc": true,
+   "value": 0.5873493975903614
+  },
+  "cal.signed.qwen.recall": {
+   "unit": "recall",
+   "source": "results_posthoc/confidence_signed.json",
+   "key_path": [
+    "sets",
+    "calibration",
+    "models",
+    "qwen3.5:27b",
+    "signed_fitted",
+    "recall"
+   ],
+   "post_hoc": true,
+   "value": 0.7677165354330708
+  },
+  "cal.signed.qwen.false_alarms": {
+   "unit": "false alarms per 100 negative",
+   "source": "results_posthoc/confidence_signed.json",
+   "key_path": [
+    "sets",
+    "calibration",
+    "models",
+    "qwen3.5:27b",
+    "signed_fitted",
+    "false_alarms_per_100_negative"
+   ],
+   "post_hoc": true,
+   "value": 42.4
+  },
+  "cal.signed.qwen.diff": {
+   "unit": "micro-F1 difference, GROVE minus",
+   "source": "results_posthoc/confidence_signed.json",
+   "key_path": [
+    "sets",
+    "calibration",
+    "models",
+    "qwen3.5:27b",
+    "GROVE_minus_signed"
+   ],
+   "post_hoc": true,
+   "value": 0.04101304583585852,
+   "interval": [
+    -0.007606460407042967,
+    0.08900531314212104
+   ]
+  },
+  "cal.confidence100.qwen.micro_f1": {
+   "unit": "micro-F1",
+   "source": "results_posthoc/confidence_baseline.json",
+   "key_path": [
+    "sets",
+    "calibration",
+    "confidence",
+    "qwen3.5:27b",
+    "fitted",
+    "micro_f1"
+   ],
+   "post_hoc": true,
+   "value": 0.5012224938875306
+  },
+  "cal.ap.qwen_signed.fall": {
+   "unit": "average precision",
+   "source": "results_posthoc/confidence_signed.json",
+   "key_path": [
+    "sets",
+    "calibration",
+    "average_precision",
+    "Fall_Hazard",
+    "qwen3.5:27b signed",
+    "AP"
+   ],
+   "post_hoc": true,
+   "value": 0.22302267477595866
+  },
+  "cal.ap.qwen_signed.ppe": {
+   "unit": "average precision",
+   "source": "results_posthoc/confidence_signed.json",
+   "key_path": [
+    "sets",
+    "calibration",
+    "average_precision",
+    "PPE_Violation",
+    "qwen3.5:27b signed",
+    "AP"
+   ],
+   "post_hoc": true,
+   "value": 0.7314171849420864
+  },
+  "cal.ap.grove.fall": {
+   "unit": "average precision",
+   "source": "results_posthoc/confidence_signed.json",
+   "key_path": [
+    "sets",
+    "calibration",
+    "average_precision",
+    "Fall_Hazard",
+    "GROVE",
+    "AP"
+   ],
+   "post_hoc": true,
+   "value": 0.3777953520791835
+  },
+  "cal.ap.main.fall": {
+   "unit": "average precision",
+   "source": "results_posthoc/confidence_signed.json",
+   "key_path": [
+    "sets",
+    "calibration",
+    "average_precision",
+    "Fall_Hazard",
+    "main questions",
+    "AP"
+   ],
+   "post_hoc": true,
+   "value": 0.36022886307746665
+  },
+  "cal.ap.grove.ppe": {
+   "unit": "average precision",
+   "source": "results_posthoc/confidence_signed.json",
+   "key_path": [
+    "sets",
+    "calibration",
+    "average_precision",
+    "PPE_Violation",
+    "GROVE",
+    "AP"
+   ],
+   "post_hoc": true,
+   "value": 0.8531103124705832
+  },
+  "cal.ap.main.ppe": {
+   "unit": "average precision",
+   "source": "results_posthoc/confidence_signed.json",
+   "key_path": [
+    "sets",
+    "calibration",
+    "average_precision",
+    "PPE_Violation",
+    "main questions",
+    "AP"
+   ],
+   "post_hoc": true,
+   "value": 0.862260259080559
+  },
+  "cal.n_images": {
+   "unit": "images",
+   "source": "results/e48.json",
+   "key_path": [
+    "results",
+    "refit",
+    "GROVE",
+    "n_images"
+   ],
+   "post_hoc": false,
+   "value": 500
+  },
+  "cal.n_negative": {
+   "unit": "violation-free images",
+   "source": "results/e48.json",
+   "key_path": [
+    "results",
+    "refit",
+    "GROVE",
+    "n_negative_images"
+   ],
+   "post_hoc": false,
+   "value": 250
+  },
+  "cal.grove.micro_f1": {
+   "unit": "micro-F1",
+   "source": "results/e48.json",
+   "key_path": [
+    "results",
+    "refit",
+    "GROVE",
+    "micro_f1"
+   ],
+   "post_hoc": false,
+   "value": 0.7065420560747664
+  },
+  "cal.grove.precision": {
+   "unit": "precision",
+   "source": "results/e48.json",
+   "key_path": [
+    "results",
+    "refit",
+    "GROVE",
+    "precision"
+   ],
+   "post_hoc": false,
+   "value": 0.6725978647686833
+  },
+  "cal.grove.recall": {
+   "unit": "recall",
+   "source": "results/e48.json",
+   "key_path": [
+    "results",
+    "refit",
+    "GROVE",
+    "recall"
+   ],
+   "post_hoc": false,
+   "value": 0.7440944881889764
+  },
+  "cal.grove.false_alarms": {
+   "unit": "false alarms per 100 violation-free images",
+   "source": "results/e48.json",
+   "key_path": [
+    "results",
+    "refit",
+    "GROVE",
+    "false_alarms_per_100_negative"
+   ],
+   "post_hoc": false,
+   "value": 20.0
+  },
+  "cal.grove.completion": {
+   "unit": "share of images with a valid response",
+   "source": "results/e48.json",
+   "key_path": [
+    "results",
+    "refit",
+    "GROVE",
+    "completion"
+   ],
+   "post_hoc": false,
+   "value": 1.0
+  },
+  "cal.grove.fall.f1": {
+   "unit": "f1",
+   "source": "results/e48.json",
+   "key_path": [
+    "results",
+    "refit",
+    "GROVE",
+    "per_category",
+    "Fall_Hazard",
+    "f1"
+   ],
+   "post_hoc": false,
+   "value": 0.4878048780487805
+  },
+  "cal.grove.fall.precision": {
+   "unit": "precision",
+   "source": "results/e48.json",
+   "key_path": [
+    "results",
+    "refit",
+    "GROVE",
+    "per_category",
+    "Fall_Hazard",
+    "precision"
+   ],
+   "post_hoc": false,
+   "value": 0.4225352112676056
+  },
+  "cal.grove.fall.recall": {
+   "unit": "recall",
+   "source": "results/e48.json",
+   "key_path": [
+    "results",
+    "refit",
+    "GROVE",
+    "per_category",
+    "Fall_Hazard",
+    "recall"
+   ],
+   "post_hoc": false,
+   "value": 0.5769230769230769
+  },
+  "cal.grove.ppe.f1": {
+   "unit": "f1",
+   "source": "results/e48.json",
+   "key_path": [
+    "results",
+    "refit",
+    "GROVE",
+    "per_category",
+    "PPE_Violation",
+    "f1"
+   ],
+   "post_hoc": false,
+   "value": 0.7718446601941747
+  },
+  "cal.grove.ppe.precision": {
+   "unit": "precision",
+   "source": "results/e48.json",
+   "key_path": [
+    "results",
+    "refit",
+    "GROVE",
+    "per_category",
+    "PPE_Violation",
+    "precision"
+   ],
+   "post_hoc": false,
+   "value": 0.7571428571428571
+  },
+  "cal.grove.ppe.recall": {
+   "unit": "recall",
+   "source": "results/e48.json",
+   "key_path": [
+    "results",
+    "refit",
+    "GROVE",
+    "per_category",
+    "PPE_Violation",
+    "recall"
+   ],
+   "post_hoc": false,
+   "value": 0.7871287128712872
+  },
+  "cal.grove.std_precision": {
+   "unit": "prevalence-standardized precision",
+   "source": "results/e48.json",
+   "key_path": [
+    "results",
+    "refit",
+    "GROVE",
+    "prevalence_standardized",
+    "precision"
+   ],
+   "post_hoc": false,
+   "value": 0.3198856857467882
+  },
+  "cal.grove.std_f1": {
+   "unit": "prevalence-standardized F1",
+   "source": "results/e48.json",
+   "key_path": [
+    "results",
+    "refit",
+    "GROVE",
+    "prevalence_standardized",
+    "f1"
+   ],
+   "post_hoc": false,
+   "value": 0.44742408072183937
+  },
+  "cal.main.micro_f1": {
+   "unit": "micro-F1",
+   "source": "results/e48.json",
+   "key_path": [
+    "results",
+    "refit",
+    "main_question",
+    "micro_f1"
+   ],
+   "post_hoc": false,
+   "value": 0.7063063063063063
+  },
+  "cal.main.precision": {
+   "unit": "precision",
+   "source": "results/e48.json",
+   "key_path": [
+    "results",
+    "refit",
+    "main_question",
+    "precision"
+   ],
+   "post_hoc": false,
+   "value": 0.6511627906976745
+  },
+  "cal.main.recall": {
+   "unit": "recall",
+   "source": "results/e48.json",
+   "key_path": [
+    "results",
+    "refit",
+    "main_question",
+    "recall"
+   ],
+   "post_hoc": false,
+   "value": 0.7716535433070866
+  },
+  "cal.main.false_alarms": {
+   "unit": "false alarms per 100 violation-free images",
+   "source": "results/e48.json",
+   "key_path": [
+    "results",
+    "refit",
+    "main_question",
+    "false_alarms_per_100_negative"
+   ],
+   "post_hoc": false,
+   "value": 23.2
+  },
+  "cal.main.completion": {
+   "unit": "share of images with a valid response",
+   "source": "results/e48.json",
+   "key_path": [
+    "results",
+    "refit",
+    "main_question",
+    "completion"
+   ],
+   "post_hoc": false,
+   "value": 1.0
+  },
+  "cal.main.fall.f1": {
+   "unit": "f1",
+   "source": "results/e48.json",
+   "key_path": [
+    "results",
+    "refit",
+    "main_question",
+    "per_category",
+    "Fall_Hazard",
+    "f1"
+   ],
+   "post_hoc": false,
+   "value": 0.4696969696969697
+  },
+  "cal.main.fall.precision": {
+   "unit": "precision",
+   "source": "results/e48.json",
+   "key_path": [
+    "results",
+    "refit",
+    "main_question",
+    "per_category",
+    "Fall_Hazard",
+    "precision"
+   ],
+   "post_hoc": false,
+   "value": 0.3875
+  },
+  "cal.main.fall.recall": {
+   "unit": "recall",
+   "source": "results/e48.json",
+   "key_path": [
+    "results",
+    "refit",
+    "main_question",
+    "per_category",
+    "Fall_Hazard",
+    "recall"
+   ],
+   "post_hoc": false,
+   "value": 0.5961538461538461
+  },
+  "cal.main.ppe.f1": {
+   "unit": "f1",
+   "source": "results/e48.json",
+   "key_path": [
+    "results",
+    "refit",
+    "main_question",
+    "per_category",
+    "PPE_Violation",
+    "f1"
+   ],
+   "post_hoc": false,
+   "value": 0.7801418439716312
+  },
+  "cal.main.ppe.precision": {
+   "unit": "precision",
+   "source": "results/e48.json",
+   "key_path": [
+    "results",
+    "refit",
+    "main_question",
+    "per_category",
+    "PPE_Violation",
+    "precision"
+   ],
+   "post_hoc": false,
+   "value": 0.746606334841629
+  },
+  "cal.main.ppe.recall": {
+   "unit": "recall",
+   "source": "results/e48.json",
+   "key_path": [
+    "results",
+    "refit",
+    "main_question",
+    "per_category",
+    "PPE_Violation",
+    "recall"
+   ],
+   "post_hoc": false,
+   "value": 0.8168316831683168
+  },
+  "cal.main.std_precision": {
+   "unit": "prevalence-standardized precision",
+   "source": "results/e48.json",
+   "key_path": [
+    "results",
+    "refit",
+    "main_question",
+    "prevalence_standardized",
+    "precision"
+   ],
+   "post_hoc": false,
+   "value": 0.2967854039965246
+  },
+  "cal.main.std_f1": {
+   "unit": "prevalence-standardized F1",
+   "source": "results/e48.json",
+   "key_path": [
+    "results",
+    "refit",
+    "main_question",
+    "prevalence_standardized",
+    "f1"
+   ],
+   "post_hoc": false,
+   "value": 0.4286918015740689
+  },
+  "cal.gemma.micro_f1": {
+   "unit": "micro-F1",
+   "source": "results/e48.json",
+   "key_path": [
+    "results",
+    "refit",
+    "single-pass gemma4:31b",
+    "micro_f1"
+   ],
+   "post_hoc": false,
+   "value": 0.6162018592297477
+  },
+  "cal.gemma.precision": {
+   "unit": "precision",
+   "source": "results/e48.json",
+   "key_path": [
+    "results",
+    "refit",
+    "single-pass gemma4:31b",
+    "precision"
+   ],
+   "post_hoc": false,
+   "value": 0.4649298597194389
+  },
+  "cal.gemma.recall": {
+   "unit": "recall",
+   "source": "results/e48.json",
+   "key_path": [
+    "results",
+    "refit",
+    "single-pass gemma4:31b",
+    "recall"
+   ],
+   "post_hoc": false,
+   "value": 0.9133858267716536
+  },
+  "cal.gemma.false_alarms": {
+   "unit": "false alarms per 100 violation-free images",
+   "source": "results/e48.json",
+   "key_path": [
+    "results",
+    "refit",
+    "single-pass gemma4:31b",
+    "false_alarms_per_100_negative"
+   ],
+   "post_hoc": false,
+   "value": 71.6
+  },
+  "cal.gemma.completion": {
+   "unit": "share of images with a valid response",
+   "source": "results/e48.json",
+   "key_path": [
+    "results",
+    "refit",
+    "single-pass gemma4:31b",
+    "completion"
+   ],
+   "post_hoc": false,
+   "value": 1.0
+  },
+  "cal.gemma.fall.f1": {
+   "unit": "f1",
+   "source": "results/e48.json",
+   "key_path": [
+    "results",
+    "refit",
+    "single-pass gemma4:31b",
+    "per_category",
+    "Fall_Hazard",
+    "f1"
+   ],
+   "post_hoc": false,
+   "value": 0.40358744394618834
+  },
+  "cal.gemma.fall.precision": {
+   "unit": "precision",
+   "source": "results/e48.json",
+   "key_path": [
+    "results",
+    "refit",
+    "single-pass gemma4:31b",
+    "per_category",
+    "Fall_Hazard",
+    "precision"
+   ],
+   "post_hoc": false,
+   "value": 0.2631578947368421
+  },
+  "cal.gemma.fall.recall": {
+   "unit": "recall",
+   "source": "results/e48.json",
+   "key_path": [
+    "results",
+    "refit",
+    "single-pass gemma4:31b",
+    "per_category",
+    "Fall_Hazard",
+    "recall"
+   ],
+   "post_hoc": false,
+   "value": 0.8653846153846154
+  },
+  "cal.gemma.ppe.f1": {
+   "unit": "f1",
+   "source": "results/e48.json",
+   "key_path": [
+    "results",
+    "refit",
+    "single-pass gemma4:31b",
+    "per_category",
+    "PPE_Violation",
+    "f1"
+   ],
+   "post_hoc": false,
+   "value": 0.7056603773584905
+  },
+  "cal.gemma.ppe.precision": {
+   "unit": "precision",
+   "source": "results/e48.json",
+   "key_path": [
+    "results",
+    "refit",
+    "single-pass gemma4:31b",
+    "per_category",
+    "PPE_Violation",
+    "precision"
+   ],
+   "post_hoc": false,
+   "value": 0.5701219512195121
+  },
+  "cal.gemma.ppe.recall": {
+   "unit": "recall",
+   "source": "results/e48.json",
+   "key_path": [
+    "results",
+    "refit",
+    "single-pass gemma4:31b",
+    "per_category",
+    "PPE_Violation",
+    "recall"
+   ],
+   "post_hoc": false,
+   "value": 0.9257425742574258
+  },
+  "cal.gemma.std_precision": {
+   "unit": "prevalence-standardized precision",
+   "source": "results/e48.json",
+   "key_path": [
+    "results",
+    "refit",
+    "single-pass gemma4:31b",
+    "prevalence_standardized",
+    "precision"
+   ],
+   "post_hoc": false,
+   "value": 0.1442594876708698
+  },
+  "cal.gemma.std_f1": {
+   "unit": "prevalence-standardized F1",
+   "source": "results/e48.json",
+   "key_path": [
+    "results",
+    "refit",
+    "single-pass gemma4:31b",
+    "prevalence_standardized",
+    "f1"
+   ],
+   "post_hoc": false,
+   "value": 0.24916589638628459
+  },
+  "cal.qwen.micro_f1": {
+   "unit": "micro-F1",
+   "source": "results/e48.json",
+   "key_path": [
+    "results",
+    "refit",
+    "single-pass qwen3.5:27b",
+    "micro_f1"
+   ],
+   "post_hoc": false,
+   "value": 0.6038216560509554
+  },
+  "cal.qwen.precision": {
+   "unit": "precision",
+   "source": "results/e48.json",
+   "key_path": [
+    "results",
+    "refit",
+    "single-pass qwen3.5:27b",
+    "precision"
+   ],
+   "post_hoc": false,
+   "value": 0.4463276836158192
+  },
+  "cal.qwen.recall": {
+   "unit": "recall",
+   "source": "results/e48.json",
+   "key_path": [
+    "results",
+    "refit",
+    "single-pass qwen3.5:27b",
+    "recall"
+   ],
+   "post_hoc": false,
+   "value": 0.9330708661417323
+  },
+  "cal.qwen.false_alarms": {
+   "unit": "false alarms per 100 violation-free images",
+   "source": "results/e48.json",
+   "key_path": [
+    "results",
+    "refit",
+    "single-pass qwen3.5:27b",
+    "false_alarms_per_100_negative"
+   ],
+   "post_hoc": false,
+   "value": 72.0
+  },
+  "cal.qwen.completion": {
+   "unit": "share of images with a valid response",
+   "source": "results/e48.json",
+   "key_path": [
+    "results",
+    "refit",
+    "single-pass qwen3.5:27b",
+    "completion"
+   ],
+   "post_hoc": false,
+   "value": 1.0
+  },
+  "cal.qwen.fall.f1": {
+   "unit": "f1",
+   "source": "results/e48.json",
+   "key_path": [
+    "results",
+    "refit",
+    "single-pass qwen3.5:27b",
+    "per_category",
+    "Fall_Hazard",
+    "f1"
+   ],
+   "post_hoc": false,
+   "value": 0.3467741935483871
+  },
+  "cal.qwen.fall.precision": {
+   "unit": "precision",
+   "source": "results/e48.json",
+   "key_path": [
+    "results",
+    "refit",
+    "single-pass qwen3.5:27b",
+    "per_category",
+    "Fall_Hazard",
+    "precision"
+   ],
+   "post_hoc": false,
+   "value": 0.2193877551020408
+  },
+  "cal.qwen.fall.recall": {
+   "unit": "recall",
+   "source": "results/e48.json",
+   "key_path": [
+    "results",
+    "refit",
+    "single-pass qwen3.5:27b",
+    "per_category",
+    "Fall_Hazard",
+    "recall"
+   ],
+   "post_hoc": false,
+   "value": 0.8269230769230769
+  },
+  "cal.qwen.ppe.f1": {
+   "unit": "f1",
+   "source": "results/e48.json",
+   "key_path": [
+    "results",
+    "refit",
+    "single-pass qwen3.5:27b",
+    "per_category",
+    "PPE_Violation",
+    "f1"
+   ],
+   "post_hoc": false,
+   "value": 0.7225325884543762
+  },
+  "cal.qwen.ppe.precision": {
+   "unit": "precision",
+   "source": "results/e48.json",
+   "key_path": [
+    "results",
+    "refit",
+    "single-pass qwen3.5:27b",
+    "per_category",
+    "PPE_Violation",
+    "precision"
+   ],
+   "post_hoc": false,
+   "value": 0.5791044776119403
+  },
+  "cal.qwen.ppe.recall": {
+   "unit": "recall",
+   "source": "results/e48.json",
+   "key_path": [
+    "results",
+    "refit",
+    "single-pass qwen3.5:27b",
+    "per_category",
+    "PPE_Violation",
+    "recall"
+   ],
+   "post_hoc": false,
+   "value": 0.9603960396039604
+  },
+  "cal.qwen.std_precision": {
+   "unit": "prevalence-standardized precision",
+   "source": "results/e48.json",
+   "key_path": [
+    "results",
+    "refit",
+    "single-pass qwen3.5:27b",
+    "prevalence_standardized",
+    "precision"
+   ],
+   "post_hoc": false,
+   "value": 0.14394957732174318
+  },
+  "cal.qwen.std_f1": {
+   "unit": "prevalence-standardized F1",
+   "source": "results/e48.json",
+   "key_path": [
+    "results",
+    "refit",
+    "single-pass qwen3.5:27b",
+    "prevalence_standardized",
+    "f1"
+   ],
+   "post_hoc": false,
+   "value": 0.2494198835453956
+  },
+  "cal.first_freeze_grove.micro_f1": {
+   "unit": "micro f1",
+   "source": "results/e48.json",
+   "key_path": [
+    "results",
+    "first_freeze",
+    "GROVE",
+    "micro_f1"
+   ],
+   "post_hoc": false,
+   "value": 0.47984267453294
+  },
+  "cal.first_freeze_grove.precision": {
+   "unit": "precision",
+   "source": "results/e48.json",
+   "key_path": [
+    "results",
+    "first_freeze",
+    "GROVE",
+    "precision"
+   ],
+   "post_hoc": false,
+   "value": 0.3197903014416776
+  },
+  "cal.first_freeze_grove.recall": {
+   "unit": "recall",
+   "source": "results/e48.json",
+   "key_path": [
+    "results",
+    "first_freeze",
+    "GROVE",
+    "recall"
+   ],
+   "post_hoc": false,
+   "value": 0.9606299212598425
+  },
+  "cal.first_freeze_grove.false_alarms": {
+   "unit": "false alarms per 100 negative",
+   "source": "results/e48.json",
+   "key_path": [
+    "results",
+    "first_freeze",
+    "GROVE",
+    "false_alarms_per_100_negative"
+   ],
+   "post_hoc": false,
+   "value": 133.6
+  },
+  "cal.first_freeze_main.micro_f1": {
+   "unit": "micro f1",
+   "source": "results/e48.json",
+   "key_path": [
+    "results",
+    "first_freeze",
+    "main_question",
+    "micro_f1"
+   ],
+   "post_hoc": false,
+   "value": 0.5401459854014599
+  },
+  "cal.first_freeze_main.precision": {
+   "unit": "precision",
+   "source": "results/e48.json",
+   "key_path": [
+    "results",
+    "first_freeze",
+    "main_question",
+    "precision"
+   ],
+   "post_hoc": false,
+   "value": 0.3908450704225352
+  },
+  "cal.first_freeze_main.recall": {
+   "unit": "recall",
+   "source": "results/e48.json",
+   "key_path": [
+    "results",
+    "first_freeze",
+    "main_question",
+    "recall"
+   ],
+   "post_hoc": false,
+   "value": 0.8740157480314961
+  },
+  "cal.first_freeze_main.false_alarms": {
+   "unit": "false alarms per 100 negative",
+   "source": "results/e48.json",
+   "key_path": [
+    "results",
+    "first_freeze",
+    "main_question",
+    "false_alarms_per_100_negative"
+   ],
+   "post_hoc": false,
+   "value": 82.8
+  },
+  "cal.diff.grove_minus_gemma": {
+   "unit": "micro-F1 difference (in-sample thresholds)",
+   "source": "results/e48.json",
+   "key_path": [
+    "results",
+    "refit",
+    "GROVE minus best single-pass",
+    "f1"
+   ],
+   "post_hoc": false,
+   "value": 0.0903401968450187,
+   "interval": [
+    0.052050136091066235,
+    0.12851375925240113
+   ]
+  },
+  "cal.diff.grove_minus_gemma_false_alarms": {
+   "unit": "false alarms per 100 violation-free images, difference",
+   "source": "results/e48.json",
+   "key_path": [
+    "results",
+    "refit",
+    "GROVE minus best single-pass",
+    "fa"
+   ],
+   "post_hoc": false,
+   "value": -51.599999999999994,
+   "interval": [
+    -59.915611814345986,
+    -43.41986366518706
+   ]
+  },
+  "cal.table4.grove.fall.f1": {
+   "unit": "F1",
+   "source": "results/e57_59.json",
+   "key_path": [
+    "Calibration (500 images, not independent)|GROVE|Fall_Hazard"
+   ],
+   "post_hoc": false,
+   "value": 0.4878048780487805,
+   "interval": [
+    0.37312800404755886,
+    0.5864870509607352
+   ]
+  },
+  "cal.table4.grove.fall.precision": {
+   "unit": "precision",
+   "source": "results/e48.json",
+   "key_path": [
+    "results",
+    "refit",
+    "GROVE",
+    "per_category",
+    "Fall_Hazard",
+    "precision"
+   ],
+   "post_hoc": false,
+   "value": 0.4225352112676056
+  },
+  "cal.table4.grove.fall.recall": {
+   "unit": "recall",
+   "source": "results/e48.json",
+   "key_path": [
+    "results",
+    "refit",
+    "GROVE",
+    "per_category",
+    "Fall_Hazard",
+    "recall"
+   ],
+   "post_hoc": false,
+   "value": 0.5769230769230769
+  },
+  "cal.table4.grove.ppe.f1": {
+   "unit": "F1",
+   "source": "results/e57_59.json",
+   "key_path": [
+    "Calibration (500 images, not independent)|GROVE|PPE_Violation"
+   ],
+   "post_hoc": false,
+   "value": 0.7718446601941747,
+   "interval": [
+    0.7259606481481481,
+    0.8144796380090498
+   ]
+  },
+  "cal.table4.grove.ppe.precision": {
+   "unit": "precision",
+   "source": "results/e48.json",
+   "key_path": [
+    "results",
+    "refit",
+    "GROVE",
+    "per_category",
+    "PPE_Violation",
+    "precision"
+   ],
+   "post_hoc": false,
+   "value": 0.7571428571428571
+  },
+  "cal.table4.grove.ppe.recall": {
+   "unit": "recall",
+   "source": "results/e48.json",
+   "key_path": [
+    "results",
+    "refit",
+    "GROVE",
+    "per_category",
+    "PPE_Violation",
+    "recall"
+   ],
+   "post_hoc": false,
+   "value": 0.7871287128712872
+  },
+  "cal.table4.main.fall.f1": {
+   "unit": "F1",
+   "source": "results/e57_59.json",
+   "key_path": [
+    "Calibration (500 images, not independent)|main_question|Fall_Hazard"
+   ],
+   "post_hoc": false,
+   "value": 0.4696969696969697,
+   "interval": [
+    0.35642305755999326,
+    0.5714285714285714
+   ]
+  },
+  "cal.table4.main.fall.precision": {
+   "unit": "precision",
+   "source": "results/e48.json",
+   "key_path": [
+    "results",
+    "refit",
+    "main_question",
+    "per_category",
+    "Fall_Hazard",
+    "precision"
+   ],
+   "post_hoc": false,
+   "value": 0.3875
+  },
+  "cal.table4.main.fall.recall": {
+   "unit": "recall",
+   "source": "results/e48.json",
+   "key_path": [
+    "results",
+    "refit",
+    "main_question",
+    "per_category",
+    "Fall_Hazard",
+    "recall"
+   ],
+   "post_hoc": false,
+   "value": 0.5961538461538461
+  },
+  "cal.table4.main.ppe.f1": {
+   "unit": "F1",
+   "source": "results/e57_59.json",
+   "key_path": [
+    "Calibration (500 images, not independent)|main_question|PPE_Violation"
+   ],
+   "post_hoc": false,
+   "value": 0.7801418439716312,
+   "interval": [
+    0.7341772151898734,
+    0.8227272727272728
+   ]
+  },
+  "cal.table4.main.ppe.precision": {
+   "unit": "precision",
+   "source": "results/e48.json",
+   "key_path": [
+    "results",
+    "refit",
+    "main_question",
+    "per_category",
+    "PPE_Violation",
+    "precision"
+   ],
+   "post_hoc": false,
+   "value": 0.746606334841629
+  },
+  "cal.table4.main.ppe.recall": {
+   "unit": "recall",
+   "source": "results/e48.json",
+   "key_path": [
+    "results",
+    "refit",
+    "main_question",
+    "per_category",
+    "PPE_Violation",
+    "recall"
+   ],
+   "post_hoc": false,
+   "value": 0.8168316831683168
+  },
+  "cal.table4.gemma.fall.f1": {
+   "unit": "F1",
+   "source": "results/e57_59.json",
+   "key_path": [
+    "Calibration (500 images, not independent)|single-pass gemma4:31b|Fall_Hazard"
+   ],
+   "post_hoc": false,
+   "value": 0.40358744394618834,
+   "interval": [
+    0.32195121951219513,
+    0.4827586206896552
+   ]
+  },
+  "cal.table4.gemma.fall.precision": {
+   "unit": "precision",
+   "source": "results/e48.json",
+   "key_path": [
+    "results",
+    "refit",
+    "single-pass gemma4:31b",
+    "per_category",
+    "Fall_Hazard",
+    "precision"
+   ],
+   "post_hoc": false,
+   "value": 0.2631578947368421
+  },
+  "cal.table4.gemma.fall.recall": {
+   "unit": "recall",
+   "source": "results/e48.json",
+   "key_path": [
+    "results",
+    "refit",
+    "single-pass gemma4:31b",
+    "per_category",
+    "Fall_Hazard",
+    "recall"
+   ],
+   "post_hoc": false,
+   "value": 0.8653846153846154
+  },
+  "cal.table4.gemma.ppe.f1": {
+   "unit": "F1",
+   "source": "results/e57_59.json",
+   "key_path": [
+    "Calibration (500 images, not independent)|single-pass gemma4:31b|PPE_Violation"
+   ],
+   "post_hoc": false,
+   "value": 0.7056603773584905,
+   "interval": [
+    0.6610375098193244,
+    0.7486243509132837
+   ]
+  },
+  "cal.table4.gemma.ppe.precision": {
+   "unit": "precision",
+   "source": "results/e48.json",
+   "key_path": [
+    "results",
+    "refit",
+    "single-pass gemma4:31b",
+    "per_category",
+    "PPE_Violation",
+    "precision"
+   ],
+   "post_hoc": false,
+   "value": 0.5701219512195121
+  },
+  "cal.table4.gemma.ppe.recall": {
+   "unit": "recall",
+   "source": "results/e48.json",
+   "key_path": [
+    "results",
+    "refit",
+    "single-pass gemma4:31b",
+    "per_category",
+    "PPE_Violation",
+    "recall"
+   ],
+   "post_hoc": false,
+   "value": 0.9257425742574258
+  },
+  "final.table4.grove.fall.f1": {
+   "unit": "F1",
+   "source": "results/e57_59.json",
+   "key_path": [
+    "Final test (1000 images)|GROVE|Fall_Hazard"
+   ],
+   "post_hoc": false,
+   "value": 0.4397905759162304,
+   "interval": [
+    0.3508714969241285,
+    0.526891495601173
+   ]
+  },
+  "final.table4.grove.fall.precision": {
+   "unit": "precision",
+   "source": "results/e54_final.json",
+   "key_path": [
+    "GROVE",
+    "per_category",
+    "Fall_Hazard",
+    "precision"
+   ],
+   "post_hoc": false,
+   "value": 0.4375
+  },
+  "final.table4.grove.fall.recall": {
+   "unit": "recall",
+   "source": "results/e54_final.json",
+   "key_path": [
+    "GROVE",
+    "per_category",
+    "Fall_Hazard",
+    "recall"
+   ],
+   "post_hoc": false,
+   "value": 0.4421052631578947
+  },
+  "final.table4.grove.ppe.f1": {
+   "unit": "F1",
+   "source": "results/e57_59.json",
+   "key_path": [
+    "Final test (1000 images)|GROVE|PPE_Violation"
+   ],
+   "post_hoc": false,
+   "value": 0.7601390498261877,
+   "interval": [
+    0.7272672375933246,
+    0.7914329932609037
+   ]
+  },
+  "final.table4.grove.ppe.precision": {
+   "unit": "precision",
+   "source": "results/e54_final.json",
+   "key_path": [
+    "GROVE",
+    "per_category",
+    "PPE_Violation",
+    "precision"
+   ],
+   "post_hoc": false,
+   "value": 0.7288888888888889
+  },
+  "final.table4.grove.ppe.recall": {
+   "unit": "recall",
+   "source": "results/e54_final.json",
+   "key_path": [
+    "GROVE",
+    "per_category",
+    "PPE_Violation",
+    "recall"
+   ],
+   "post_hoc": false,
+   "value": 0.7941888619854721
+  },
+  "final.table4.main.fall.f1": {
+   "unit": "F1",
+   "source": "results/e57_59.json",
+   "key_path": [
+    "Final test (1000 images)|main_question|Fall_Hazard"
+   ],
+   "post_hoc": false,
+   "value": 0.4215686274509804,
+   "interval": [
+    0.3333333333333333,
+    0.5024642919028641
+   ]
+  },
+  "final.table4.main.fall.precision": {
+   "unit": "precision",
+   "source": "results/e54_final.json",
+   "key_path": [
+    "main_question",
+    "per_category",
+    "Fall_Hazard",
+    "precision"
+   ],
+   "post_hoc": false,
+   "value": 0.3944954128440367
+  },
+  "final.table4.main.fall.recall": {
+   "unit": "recall",
+   "source": "results/e54_final.json",
+   "key_path": [
+    "main_question",
+    "per_category",
+    "Fall_Hazard",
+    "recall"
+   ],
+   "post_hoc": false,
+   "value": 0.45263157894736844
+  },
+  "final.table4.main.ppe.f1": {
+   "unit": "F1",
+   "source": "results/e57_59.json",
+   "key_path": [
+    "Final test (1000 images)|main_question|PPE_Violation"
+   ],
+   "post_hoc": false,
+   "value": 0.7832009080590239,
+   "interval": [
+    0.7520559254400425,
+    0.8130939809926082
+   ]
+  },
+  "final.table4.main.ppe.precision": {
+   "unit": "precision",
+   "source": "results/e54_final.json",
+   "key_path": [
+    "main_question",
+    "per_category",
+    "PPE_Violation",
+    "precision"
+   ],
+   "post_hoc": false,
+   "value": 0.7371794871794872
+  },
+  "final.table4.main.ppe.recall": {
+   "unit": "recall",
+   "source": "results/e54_final.json",
+   "key_path": [
+    "main_question",
+    "per_category",
+    "PPE_Violation",
+    "recall"
+   ],
+   "post_hoc": false,
+   "value": 0.8353510895883777
+  },
+  "final.table4.gemma.fall.f1": {
+   "unit": "F1",
+   "source": "results/e57_59.json",
+   "key_path": [
+    "Final test (1000 images)|single-pass gemma4:31b|Fall_Hazard"
+   ],
+   "post_hoc": false,
+   "value": 0.4082687338501292,
+   "interval": [
+    0.34401649052478134,
+    0.47002453336869676
+   ]
+  },
+  "final.table4.gemma.fall.precision": {
+   "unit": "precision",
+   "source": "results/e54_final.json",
+   "key_path": [
+    "best single-pass",
+    "per_category",
+    "Fall_Hazard",
+    "precision"
+   ],
+   "post_hoc": false,
+   "value": 0.2705479452054795
+  },
+  "final.table4.gemma.fall.recall": {
+   "unit": "recall",
+   "source": "results/e54_final.json",
+   "key_path": [
+    "best single-pass",
+    "per_category",
+    "Fall_Hazard",
+    "recall"
+   ],
+   "post_hoc": false,
+   "value": 0.8315789473684211
+  },
+  "final.table4.gemma.ppe.f1": {
+   "unit": "F1",
+   "source": "results/e57_59.json",
+   "key_path": [
+    "Final test (1000 images)|single-pass gemma4:31b|PPE_Violation"
+   ],
+   "post_hoc": false,
+   "value": 0.7254361799816346,
+   "interval": [
+    0.6949936684899675,
+    0.7552713674291377
+   ]
+  },
+  "final.table4.gemma.ppe.precision": {
+   "unit": "precision",
+   "source": "results/e54_final.json",
+   "key_path": [
+    "best single-pass",
+    "per_category",
+    "PPE_Violation",
+    "precision"
+   ],
+   "post_hoc": false,
+   "value": 0.584319526627219
+  },
+  "final.table4.gemma.ppe.recall": {
+   "unit": "recall",
+   "source": "results/e54_final.json",
+   "key_path": [
+    "best single-pass",
+    "per_category",
+    "PPE_Violation",
+    "recall"
+   ],
+   "post_hoc": false,
+   "value": 0.9564164648910412
+  },
+  "dev.n_images": {
+   "unit": "images",
+   "source": "results/e15_screening.json",
+   "key_path": [
+    "GROVE",
+    "n_images"
+   ],
+   "post_hoc": false,
+   "value": 203
+  },
+  "dev.n_negative": {
+   "unit": "violation-free images",
+   "source": "results/e15_screening.json",
+   "key_path": [
+    "GROVE",
+    "n_negative_images"
+   ],
+   "post_hoc": false,
+   "value": 111
+  },
+  "dev.grove.micro_f1": {
+   "unit": "micro-F1",
+   "source": "results/e15_screening.json",
+   "key_path": [
+    "GROVE",
+    "micro_f1"
+   ],
+   "post_hoc": false,
+   "value": 0.7862481315396114
+  },
+  "dev.grove.precision": {
+   "unit": "precision",
+   "source": "results/e15_screening.json",
+   "key_path": [
+    "GROVE",
+    "precision"
+   ],
+   "post_hoc": false,
+   "value": 0.7377279102384292
+  },
+  "dev.grove.recall": {
+   "unit": "recall",
+   "source": "results/e15_screening.json",
+   "key_path": [
+    "GROVE",
+    "recall"
+   ],
+   "post_hoc": false,
+   "value": 0.8416
+  },
+  "dev.grove.false_alarms": {
+   "unit": "false alarms per 100 violation-free images",
+   "source": "results/e15_screening.json",
+   "key_path": [
+    "GROVE",
+    "false_alarms_per_100_negative"
+   ],
+   "post_hoc": false,
+   "value": 17.74774774774775
+  },
+  "dev.grove.completion": {
+   "unit": "share of images with a valid response",
+   "source": "results/e15_screening.json",
+   "key_path": [
+    "GROVE",
+    "completion"
+   ],
+   "post_hoc": false,
+   "value": 1.0
+  },
+  "dev.grove.fall.f1": {
+   "unit": "f1",
+   "source": "results/e15_screening.json",
+   "key_path": [
+    "GROVE",
+    "per_category",
+    "Fall_Hazard",
+    "f1"
+   ],
+   "post_hoc": false,
+   "value": 0.833587786259542
+  },
+  "dev.grove.fall.precision": {
+   "unit": "precision",
+   "source": "results/e15_screening.json",
+   "key_path": [
+    "GROVE",
+    "per_category",
+    "Fall_Hazard",
+    "precision"
+   ],
+   "post_hoc": false,
+   "value": 0.78
+  },
+  "dev.grove.fall.recall": {
+   "unit": "recall",
+   "source": "results/e15_screening.json",
+   "key_path": [
+    "GROVE",
+    "per_category",
+    "Fall_Hazard",
+    "recall"
+   ],
+   "post_hoc": false,
+   "value": 0.8950819672131147
+  },
+  "dev.grove.electrical.f1": {
+   "unit": "f1",
+   "source": "results/e15_screening.json",
+   "key_path": [
+    "GROVE",
+    "per_category",
+    "Electrocution_Hazard",
+    "f1"
+   ],
+   "post_hoc": false,
+   "value": 0.6530612244897959
+  },
+  "dev.grove.electrical.precision": {
+   "unit": "precision",
+   "source": "results/e15_screening.json",
+   "key_path": [
+    "GROVE",
+    "per_category",
+    "Electrocution_Hazard",
+    "precision"
+   ],
+   "post_hoc": false,
+   "value": 0.7164179104477612
+  },
+  "dev.grove.electrical.recall": {
+   "unit": "recall",
+   "source": "results/e15_screening.json",
+   "key_path": [
+    "GROVE",
+    "per_category",
+    "Electrocution_Hazard",
+    "recall"
+   ],
+   "post_hoc": false,
+   "value": 0.6
+  },
+  "dev.grove.ppe.f1": {
+   "unit": "f1",
+   "source": "results/e15_screening.json",
+   "key_path": [
+    "GROVE",
+    "per_category",
+    "PPE_Violation",
+    "f1"
+   ],
+   "post_hoc": false,
+   "value": 0.7827027027027027
+  },
+  "dev.grove.ppe.precision": {
+   "unit": "precision",
+   "source": "results/e15_screening.json",
+   "key_path": [
+    "GROVE",
+    "per_category",
+    "PPE_Violation",
+    "precision"
+   ],
+   "post_hoc": false,
+   "value": 0.6895238095238095
+  },
+  "dev.grove.ppe.recall": {
+   "unit": "recall",
+   "source": "results/e15_screening.json",
+   "key_path": [
+    "GROVE",
+    "per_category",
+    "PPE_Violation",
+    "recall"
+   ],
+   "post_hoc": false,
+   "value": 0.905
+  },
+  "dev.main.micro_f1": {
+   "unit": "micro-F1",
+   "source": "results/e15_screening.json",
+   "key_path": [
+    "Main questions only (m) d3:27b",
+    "micro_f1"
+   ],
+   "post_hoc": false,
+   "value": 0.7521301316808675
+  },
+  "dev.main.precision": {
+   "unit": "precision",
+   "source": "results/e15_screening.json",
+   "key_path": [
+    "Main questions only (m) d3:27b",
+    "precision"
+   ],
+   "post_hoc": false,
+   "value": 0.728978978978979
+  },
+  "dev.main.recall": {
+   "unit": "recall",
+   "source": "results/e15_screening.json",
+   "key_path": [
+    "Main questions only (m) d3:27b",
+    "recall"
+   ],
+   "post_hoc": false,
+   "value": 0.7767999999999999
+  },
+  "dev.main.false_alarms": {
+   "unit": "false alarms per 100 violation-free images",
+   "source": "results/e15_screening.json",
+   "key_path": [
+    "Main questions only (m) d3:27b",
+    "false_alarms_per_100_negative"
+   ],
+   "post_hoc": false,
+   "value": 18.46846846846847
+  },
+  "dev.main.completion": {
+   "unit": "share of images with a valid response",
+   "source": "results/e15_screening.json",
+   "key_path": [
+    "Main questions only (m) d3:27b",
+    "completion"
+   ],
+   "post_hoc": false,
+   "value": 1.0
+  },
+  "dev.main.fall.f1": {
+   "unit": "f1",
+   "source": "results/e15_screening.json",
+   "key_path": [
+    "Main questions only (m) d3:27b",
+    "per_category",
+    "Fall_Hazard",
+    "f1"
+   ],
+   "post_hoc": false,
+   "value": 0.7845559845559846
+  },
+  "dev.main.fall.precision": {
+   "unit": "precision",
+   "source": "results/e15_screening.json",
+   "key_path": [
+    "Main questions only (m) d3:27b",
+    "per_category",
+    "Fall_Hazard",
+    "precision"
+   ],
+   "post_hoc": false,
+   "value": 0.7416058394160585
+  },
+  "dev.main.fall.recall": {
+   "unit": "recall",
+   "source": "results/e15_screening.json",
+   "key_path": [
+    "Main questions only (m) d3:27b",
+    "per_category",
+    "Fall_Hazard",
+    "recall"
+   ],
+   "post_hoc": false,
+   "value": 0.8327868852459016
+  },
+  "dev.main.electrical.f1": {
+   "unit": "f1",
+   "source": "results/e15_screening.json",
+   "key_path": [
+    "Main questions only (m) d3:27b",
+    "per_category",
+    "Electrocution_Hazard",
+    "f1"
+   ],
+   "post_hoc": false,
+   "value": 0.6225165562913908
+  },
+  "dev.main.electrical.precision": {
+   "unit": "precision",
+   "source": "results/e15_screening.json",
+   "key_path": [
+    "Main questions only (m) d3:27b",
+    "per_category",
+    "Electrocution_Hazard",
+    "precision"
+   ],
+   "post_hoc": false,
+   "value": 0.6619718309859155
+  },
+  "dev.main.electrical.recall": {
+   "unit": "recall",
+   "source": "results/e15_screening.json",
+   "key_path": [
+    "Main questions only (m) d3:27b",
+    "per_category",
+    "Electrocution_Hazard",
+    "recall"
+   ],
+   "post_hoc": false,
+   "value": 0.5875
+  },
+  "dev.main.ppe.f1": {
+   "unit": "f1",
+   "source": "results/e15_screening.json",
+   "key_path": [
+    "Main questions only (m) d3:27b",
+    "per_category",
+    "PPE_Violation",
+    "f1"
+   ],
+   "post_hoc": false,
+   "value": 0.7721822541966427
+  },
+  "dev.main.ppe.precision": {
+   "unit": "precision",
+   "source": "results/e15_screening.json",
+   "key_path": [
+    "Main questions only (m) d3:27b",
+    "per_category",
+    "PPE_Violation",
+    "precision"
+   ],
+   "post_hoc": false,
+   "value": 0.7419354838709677
+  },
+  "dev.main.ppe.recall": {
+   "unit": "recall",
+   "source": "results/e15_screening.json",
+   "key_path": [
+    "Main questions only (m) d3:27b",
+    "per_category",
+    "PPE_Violation",
+    "recall"
+   ],
+   "post_hoc": false,
+   "value": 0.805
+  },
+  "dev.gemma.micro_f1": {
+   "unit": "micro-F1",
+   "source": "results/e15_screening.json",
+   "key_path": [
+    "single-pass gemma4:31b",
+    "micro_f1"
+   ],
+   "post_hoc": false,
+   "value": 0.6808510638297872
+  },
+  "dev.gemma.precision": {
+   "unit": "precision",
+   "source": "results/e15_screening.json",
+   "key_path": [
+    "single-pass gemma4:31b",
+    "precision"
+   ],
+   "post_hoc": false,
+   "value": 0.7272727272727273
+  },
+  "dev.gemma.recall": {
+   "unit": "recall",
+   "source": "results/e15_screening.json",
+   "key_path": [
+    "single-pass gemma4:31b",
+    "recall"
+   ],
+   "post_hoc": false,
+   "value": 0.64
+  },
+  "dev.gemma.false_alarms": {
+   "unit": "false alarms per 100 violation-free images",
+   "source": "results/e15_screening.json",
+   "key_path": [
+    "single-pass gemma4:31b",
+    "false_alarms_per_100_negative"
+   ],
+   "post_hoc": false,
+   "value": 16.216216216216218
+  },
+  "dev.gemma.completion": {
+   "unit": "share of images with a valid response",
+   "source": "results/e15_screening.json",
+   "key_path": [
+    "single-pass gemma4:31b",
+    "completion"
+   ],
+   "post_hoc": false,
+   "value": 1.0
+  },
+  "dev.gemma.fall.f1": {
+   "unit": "f1",
+   "source": "results/e15_screening.json",
+   "key_path": [
+    "single-pass gemma4:31b",
+    "per_category",
+    "Fall_Hazard",
+    "f1"
+   ],
+   "post_hoc": false,
+   "value": 0.6666666666666666
+  },
+  "dev.gemma.fall.precision": {
+   "unit": "precision",
+   "source": "results/e15_screening.json",
+   "key_path": [
+    "single-pass gemma4:31b",
+    "per_category",
+    "Fall_Hazard",
+    "precision"
+   ],
+   "post_hoc": false,
+   "value": 0.868421052631579
+  },
+  "dev.gemma.fall.recall": {
+   "unit": "recall",
+   "source": "results/e15_screening.json",
+   "key_path": [
+    "single-pass gemma4:31b",
+    "per_category",
+    "Fall_Hazard",
+    "recall"
+   ],
+   "post_hoc": false,
+   "value": 0.5409836065573771
+  },
+  "dev.gemma.electrical.f1": {
+   "unit": "f1",
+   "source": "results/e15_screening.json",
+   "key_path": [
+    "single-pass gemma4:31b",
+    "per_category",
+    "Electrocution_Hazard",
+    "f1"
+   ],
+   "post_hoc": false,
+   "value": 0.5238095238095238
+  },
+  "dev.gemma.electrical.precision": {
+   "unit": "precision",
+   "source": "results/e15_screening.json",
+   "key_path": [
+    "single-pass gemma4:31b",
+    "per_category",
+    "Electrocution_Hazard",
+    "precision"
+   ],
+   "post_hoc": false,
+   "value": 0.6111111111111112
+  },
+  "dev.gemma.electrical.recall": {
+   "unit": "recall",
+   "source": "results/e15_screening.json",
+   "key_path": [
+    "single-pass gemma4:31b",
+    "per_category",
+    "Electrocution_Hazard",
+    "recall"
+   ],
+   "post_hoc": false,
+   "value": 0.4583333333333333
+  },
+  "dev.gemma.ppe.f1": {
+   "unit": "f1",
+   "source": "results/e15_screening.json",
+   "key_path": [
+    "single-pass gemma4:31b",
+    "per_category",
+    "PPE_Violation",
+    "f1"
+   ],
+   "post_hoc": false,
+   "value": 0.7659574468085106
+  },
+  "dev.gemma.ppe.precision": {
+   "unit": "precision",
+   "source": "results/e15_screening.json",
+   "key_path": [
+    "single-pass gemma4:31b",
+    "per_category",
+    "PPE_Violation",
+    "precision"
+   ],
+   "post_hoc": false,
+   "value": 0.6666666666666666
+  },
+  "dev.gemma.ppe.recall": {
+   "unit": "recall",
+   "source": "results/e15_screening.json",
+   "key_path": [
+    "single-pass gemma4:31b",
+    "per_category",
+    "PPE_Violation",
+    "recall"
+   ],
+   "post_hoc": false,
+   "value": 0.9
+  },
+  "dev.qwen.micro_f1": {
+   "unit": "micro-F1",
+   "source": "results/e15_screening.json",
+   "key_path": [
+    "single-pass qwen3.5:27b",
+    "micro_f1"
+   ],
+   "post_hoc": false,
+   "value": 0.6854460093896714
+  },
+  "dev.qwen.precision": {
+   "unit": "precision",
+   "source": "results/e15_screening.json",
+   "key_path": [
+    "single-pass qwen3.5:27b",
+    "precision"
+   ],
+   "post_hoc": false,
+   "value": 0.8295454545454546
+  },
+  "dev.qwen.recall": {
+   "unit": "recall",
+   "source": "results/e15_screening.json",
+   "key_path": [
+    "single-pass qwen3.5:27b",
+    "recall"
+   ],
+   "post_hoc": false,
+   "value": 0.584
+  },
+  "dev.qwen.false_alarms": {
+   "unit": "false alarms per 100 violation-free images",
+   "source": "results/e15_screening.json",
+   "key_path": [
+    "single-pass qwen3.5:27b",
+    "false_alarms_per_100_negative"
+   ],
+   "post_hoc": false,
+   "value": 3.6036036036036037
+  },
+  "dev.qwen.completion": {
+   "unit": "share of images with a valid response",
+   "source": "results/e15_screening.json",
+   "key_path": [
+    "single-pass qwen3.5:27b",
+    "completion"
+   ],
+   "post_hoc": false,
+   "value": 1.0
+  },
+  "dev.qwen.fall.f1": {
+   "unit": "f1",
+   "source": "results/e15_screening.json",
+   "key_path": [
+    "single-pass qwen3.5:27b",
+    "per_category",
+    "Fall_Hazard",
+    "f1"
+   ],
+   "post_hoc": false,
+   "value": 0.6736842105263158
+  },
+  "dev.qwen.fall.precision": {
+   "unit": "precision",
+   "source": "results/e15_screening.json",
+   "key_path": [
+    "single-pass qwen3.5:27b",
+    "per_category",
+    "Fall_Hazard",
+    "precision"
+   ],
+   "post_hoc": false,
+   "value": 0.9411764705882353
+  },
+  "dev.qwen.fall.recall": {
+   "unit": "recall",
+   "source": "results/e15_screening.json",
+   "key_path": [
+    "single-pass qwen3.5:27b",
+    "per_category",
+    "Fall_Hazard",
+    "recall"
+   ],
+   "post_hoc": false,
+   "value": 0.5245901639344263
+  },
+  "dev.qwen.electrical.f1": {
+   "unit": "f1",
+   "source": "results/e15_screening.json",
+   "key_path": [
+    "single-pass qwen3.5:27b",
+    "per_category",
+    "Electrocution_Hazard",
+    "f1"
+   ],
+   "post_hoc": false,
+   "value": 0.65
+  },
+  "dev.qwen.electrical.precision": {
+   "unit": "precision",
+   "source": "results/e15_screening.json",
+   "key_path": [
+    "single-pass qwen3.5:27b",
+    "per_category",
+    "Electrocution_Hazard",
+    "precision"
+   ],
+   "post_hoc": false,
+   "value": 0.8125
+  },
+  "dev.qwen.electrical.recall": {
+   "unit": "recall",
+   "source": "results/e15_screening.json",
+   "key_path": [
+    "single-pass qwen3.5:27b",
+    "per_category",
+    "Electrocution_Hazard",
+    "recall"
+   ],
+   "post_hoc": false,
+   "value": 0.5416666666666666
+  },
+  "dev.qwen.ppe.f1": {
+   "unit": "f1",
+   "source": "results/e15_screening.json",
+   "key_path": [
+    "single-pass qwen3.5:27b",
+    "per_category",
+    "PPE_Violation",
+    "f1"
+   ],
+   "post_hoc": false,
+   "value": 0.717948717948718
+  },
+  "dev.qwen.ppe.precision": {
+   "unit": "precision",
+   "source": "results/e15_screening.json",
+   "key_path": [
+    "single-pass qwen3.5:27b",
+    "per_category",
+    "PPE_Violation",
+    "precision"
+   ],
+   "post_hoc": false,
+   "value": 0.7368421052631579
+  },
+  "dev.qwen.ppe.recall": {
+   "unit": "recall",
+   "source": "results/e15_screening.json",
+   "key_path": [
+    "single-pass qwen3.5:27b",
+    "per_category",
+    "PPE_Violation",
+    "recall"
+   ],
+   "post_hoc": false,
+   "value": 0.7
+  },
+  "dev.diff.grove_minus_gemma": {
+   "unit": "micro-F1 difference",
+   "source": "results/e15_screening.json",
+   "key_path": [
+    "GROVE minus single-pass gemma4:31b"
+   ],
+   "post_hoc": false,
+   "value": 0.10539706770982415,
+   "interval": [
+    0.05134963352832492,
+    0.1624908480948966
+   ]
+  },
+  "dev.diff.grove_minus_qwen": {
+   "unit": "micro-F1 difference",
+   "source": "results/e15_screening.json",
+   "key_path": [
+    "GROVE minus single-pass qwen3.5:27b"
+   ],
+   "post_hoc": false,
+   "value": 0.10080212214994,
+   "interval": [
+    0.028298820574616843,
+    0.17511449764882578
+   ]
+  },
+  "dev.removal.16.micro_f1": {
+   "unit": "micro-F1",
+   "source": "results/e16_21.json",
+   "key_path": [
+    "16 Main questions only (m set of d3:27b)",
+    "micro_f1"
+   ],
+   "post_hoc": false,
+   "value": 0.7521301316808675
+  },
+  "dev.removal.16.diff": {
+   "unit": "micro-F1 difference",
+   "source": "results/e16_21.json",
+   "key_path": [
+    "differences",
+    "16 Main questions only (m set of d3:27b)"
+   ],
+   "post_hoc": false,
+   "value": -0.034117999858743864,
+   "interval": [
+    -0.07079317339399226,
+    0.0019643507185719226
+   ]
+  },
+  "dev.removal.17.micro_f1": {
+   "unit": "micro-F1",
+   "source": "results/e16_21.json",
+   "key_path": [
+    "17 No protection term",
+    "micro_f1"
+   ],
+   "post_hoc": false,
+   "value": 0.7744107744107743
+  },
+  "dev.removal.17.diff": {
+   "unit": "micro-F1 difference",
+   "source": "results/e16_21.json",
+   "key_path": [
+    "differences",
+    "17 No protection term"
+   ],
+   "post_hoc": false,
+   "value": -0.011837357128837045,
+   "interval": [
+    -0.02338611918144257,
+    -0.0031351206775879757
+   ]
+  },
+  "dev.removal.18.micro_f1": {
+   "unit": "micro-F1",
+   "source": "results/e16_21.json",
+   "key_path": [
+    "18 No worker-visible term",
+    "micro_f1"
+   ],
+   "post_hoc": false,
+   "value": 0.7760299625468166
+  },
+  "dev.removal.18.diff": {
+   "unit": "micro-F1 difference",
+   "source": "results/e16_21.json",
+   "key_path": [
+    "differences",
+    "18 No worker-visible term"
+   ],
+   "post_hoc": false,
+   "value": -0.010218168992794818,
+   "interval": [
+    -0.01999066402977146,
+    -0.0023336264458218223
+   ]
+  },
+  "dev.removal.20.micro_f1": {
+   "unit": "micro-F1",
+   "source": "results/e16_21.json",
+   "key_path": [
+    "20 One threshold for all categories",
+    "micro_f1"
+   ],
+   "post_hoc": false,
+   "value": 0.7230273752012882
+  },
+  "dev.removal.20.diff": {
+   "unit": "micro-F1 difference",
+   "source": "results/e16_21.json",
+   "key_path": [
+    "differences",
+    "20 One threshold for all categories"
+   ],
+   "post_hoc": false,
+   "value": -0.06322075633832314,
+   "interval": [
+    -0.1081663407344202,
+    -0.02189749440780564
+   ]
+  },
+  "dev.removal.21.micro_f1": {
+   "unit": "micro-F1",
+   "source": "results/e16_21.json",
+   "key_path": [
+    "21 Fixed 0.5",
+    "micro_f1"
+   ],
+   "post_hoc": false,
+   "value": 0.7350427350427351
+  },
+  "dev.removal.21.diff": {
+   "unit": "micro-F1 difference",
+   "source": "results/e16_21.json",
+   "key_path": [
+    "differences",
+    "21 Fixed 0.5"
+   ],
+   "post_hoc": false,
+   "value": -0.051205396496876276,
+   "interval": [
+    -0.0975592808097602,
+    -0.00459194616991209
+   ]
+  },
+  "dev.removal.grove.micro_f1": {
+   "unit": "micro-F1",
+   "source": "results/e16_21.json",
+   "key_path": [
+    "GROVE (as selected)",
+    "micro_f1"
+   ],
+   "post_hoc": false,
+   "value": 0.7862481315396114
+  },
+  "dev.box.grove.0.5": {
+   "value": 0.4396,
+   "unit": "top-box F1",
+   "source": "reports/PAPER_TABLES_v2.md",
+   "key_path": [
+    "md_table",
+    "### 203 images (copied from `reports\\grounding.md`, numbers in `results\\e31_38.json`)",
+    [
+     "36 both, as designed, top box"
+    ],
+    "Box F1 at 0.5",
+    0
+   ],
+   "cell": "0.4396",
+   "post_hoc": false
+  },
+  "dev.box.qwen.as_written.0.5": {
+   "value": 0.0494,
+   "unit": "top-box F1",
+   "source": "reports/PAPER_TABLES_v2.md",
+   "key_path": [
+    "md_table",
+    "#### 203 development images (Fall, Electrical, PPE)",
+    [
+     "single-pass qwen3.5:27b"
+    ],
+    "Top-box F1 at 0.5, as written",
+    0
+   ],
+   "cell": "0.0494",
+   "post_hoc": false
+  },
+  "cal.box.qwen.as_written.0.5": {
+   "value": 0.0138,
+   "unit": "top-box F1",
+   "source": "reports/PAPER_TABLES_v2.md",
+   "key_path": [
+    "md_table",
+    "#### Calibration 500 (Fall, PPE)",
+    [
+     "single-pass qwen3.5:27b"
+    ],
+    "Top-box F1 at 0.5, as written",
+    0
+   ],
+   "cell": "0.0138",
+   "post_hoc": false
+  },
+  "dev.box.qwen.grid.0.5": {
+   "value": 0.2909,
+   "unit": "top-box F1, 0-1000 grid reading (sensitivity)",
+   "source": "reports/PAPER_TABLES_v2.md",
+   "key_path": [
+    "md_table",
+    "#### 203 development images (Fall, Electrical, PPE)",
+    [
+     "single-pass qwen3.5:27b"
+    ],
+    "at 0.5, rescaled",
+    0
+   ],
+   "cell": "0.2909",
+   "post_hoc": false
+  },
+  "cal.box.qwen.grid.0.5": {
+   "value": 0.2977,
+   "unit": "top-box F1, 0-1000 grid reading (sensitivity; not trusted)",
+   "source": "reports/PAPER_TABLES_v2.md",
+   "key_path": [
+    "md_table",
+    "#### Calibration 500 (Fall, PPE)",
+    [
+     "single-pass qwen3.5:27b"
+    ],
+    "at 0.5, rescaled",
+    0
+   ],
+   "cell": "0.2977",
+   "post_hoc": false
+  },
+  "dev.box.gemma.as_written.0.5": {
+   "value": 0.0117,
+   "unit": "top-box F1",
+   "source": "reports/PAPER_TABLES_v2.md",
+   "key_path": [
+    "md_table",
+    "#### 203 development images (Fall, Electrical, PPE)",
+    [
+     "single-pass gemma4:31b"
+    ],
+    "Top-box F1 at 0.5, as written",
+    0
+   ],
+   "cell": "0.0117",
+   "post_hoc": false
+  },
+  "cal.box.gemma.as_written.0.5": {
+   "value": 0.0045,
+   "unit": "top-box F1",
+   "source": "reports/PAPER_TABLES_v2.md",
+   "key_path": [
+    "md_table",
+    "#### Calibration 500 (Fall, PPE)",
+    [
+     "single-pass gemma4:31b"
+    ],
+    "Top-box F1 at 0.5, as written",
+    0
+   ],
+   "cell": "0.0045",
+   "post_hoc": false
+  },
+  "dev.box.gemma.grid.0.5": {
+   "value": 0.0909,
+   "unit": "top-box F1, 0-1000 grid reading (sensitivity)",
+   "source": "reports/PAPER_TABLES_v2.md",
+   "key_path": [
+    "md_table",
+    "#### 203 development images (Fall, Electrical, PPE)",
+    [
+     "single-pass gemma4:31b"
+    ],
+    "at 0.5, rescaled",
+    0
+   ],
+   "cell": "0.0909",
+   "post_hoc": false
+  },
+  "cal.box.gemma.grid.0.5": {
+   "value": 0.0187,
+   "unit": "top-box F1, 0-1000 grid reading (sensitivity; not trusted)",
+   "source": "reports/PAPER_TABLES_v2.md",
+   "key_path": [
+    "md_table",
+    "#### Calibration 500 (Fall, PPE)",
+    [
+     "single-pass gemma4:31b"
+    ],
+    "at 0.5, rescaled",
+    0
+   ],
+   "cell": "0.0187",
+   "post_hoc": false
+  },
+  "cal.box.grove.0.5": {
+   "value": 0.2983,
+   "unit": "top-box F1",
+   "source": "reports/PAPER_TABLES_v2.md",
+   "key_path": [
+    "md_table",
+    "### Calibration 500 (copied from `reports\\calibration.md`, numbers in `results\\e45.json`)",
+    [
+     "GROVE top box"
+    ],
+    "Box F1 at 0.5",
+    0
+   ],
+   "cell": "0.2983",
+   "post_hoc": false
+  },
+  "speed.decision_seconds": {
+   "value": 17.61,
+   "unit": "seconds per image (decision step, d3:27b, final set)",
+   "source": "reports/PAPER_TABLES_v2.md",
+   "key_path": [
+    "md_table",
+    "## Batch runs (seconds per image, valid responses)",
+    [
+     "e50",
+     "d3_27b__h.jsonl"
+    ],
+    "Mean seconds per image",
+    0
+   ],
+   "cell": "17.61",
+   "post_hoc": false
+  },
+  "speed.single_pass_seconds": {
+   "value": 4.76,
+   "unit": "seconds per image (single-pass gemma4:31b, final set)",
+   "source": "reports/PAPER_TABLES_v2.md",
+   "key_path": [
+    "md_table",
+    "## Batch runs (seconds per image, valid responses)",
+    [
+     "e52",
+     "gemma4_31b__sp.jsonl"
+    ],
+    "Mean seconds per image",
+    0
+   ],
+   "cell": "4.76",
+   "post_hoc": false
+  },
+  "setup.ollama_version": {
+   "unit": "version",
+   "source": "freeze/freeze_2.json",
+   "key_path": [
+    "ollama",
+    "version"
+   ],
+   "post_hoc": false,
+   "value": "0.40.14"
+  },
+  "setup.question_count_h": {
+   "unit": "questions",
+   "source": "runs/e50/d3_27b__h.config.json",
+   "key_path": [
+    "config",
+    "questions"
+   ],
+   "post_hoc": false,
+   "value": 16,
+   "count_of": true
+  },
+  "setup.digest.clef:27b": {
+   "unit": "sha256 digest",
+   "source": "freeze/freeze_2.json",
+   "key_path": [
+    "models",
+    "clef:27b",
+    "digest"
+   ],
+   "post_hoc": false,
+   "value": "7885241a86db4803ff95b6a8fc60dc132a5f9612a76db786a304cfa8c760f84b"
+  },
+  "setup.digest.clef-flash:9b": {
+   "unit": "sha256 digest",
+   "source": "freeze/freeze_2.json",
+   "key_path": [
+    "models",
+    "clef-flash:9b",
+    "digest"
+   ],
+   "post_hoc": false,
+   "value": "73e026ff389b28464bb26f8978f3164851a76832f0d339032747e2c56f98ea29"
+  },
+  "setup.digest.pplx-decider:27b": {
+   "unit": "sha256 digest",
+   "source": "freeze/freeze_2.json",
+   "key_path": [
+    "models",
+    "pplx-decider:27b",
+    "digest"
+   ],
+   "post_hoc": false,
+   "value": "733585a9ebb6205d2d5b64a13748f0b1c9f1285885dd267780cfdb1c4c8ef141"
+  },
+  "setup.digest.d3:9b": {
+   "unit": "sha256 digest",
+   "source": "freeze/freeze_2.json",
+   "key_path": [
+    "models",
+    "d3:9b",
+    "digest"
+   ],
+   "post_hoc": false,
+   "value": "0f459473f0351636a127ca79c3206930f2d2cd79e4690b14f832fe450e3be563"
+  },
+  "setup.digest.d3:27b": {
+   "unit": "sha256 digest",
+   "source": "freeze/freeze_2.json",
+   "key_path": [
+    "models",
+    "d3:27b",
+    "digest"
+   ],
+   "post_hoc": false,
+   "value": "bdde0a6212d68af9a99e29bb908252aaa9c93e852713df98836bb2cef804fba0"
+  },
+  "setup.digest.qwen3.5:9b": {
+   "unit": "sha256 digest",
+   "source": "freeze/freeze_2.json",
+   "key_path": [
+    "models",
+    "qwen3.5:9b",
+    "digest"
+   ],
+   "post_hoc": false,
+   "value": "6488c96fa5faab64bb65cbd30d4289e20e6130ef535a93ef9a49f42eda893ea7"
+  },
+  "setup.digest.qwen3.5:27b": {
+   "unit": "sha256 digest",
+   "source": "freeze/freeze_2.json",
+   "key_path": [
+    "models",
+    "qwen3.5:27b",
+    "digest"
+   ],
+   "post_hoc": false,
+   "value": "7653528ba5cba4dd8e19da24aaddc7f4d0b5ecd93571c0825dfd4137958ec06e"
+  },
+  "setup.digest.gemma4:31b": {
+   "unit": "sha256 digest",
+   "source": "freeze/freeze_2.json",
+   "key_path": [
+    "models",
+    "gemma4:31b",
+    "digest"
+   ],
+   "post_hoc": false,
+   "value": "6316f0629137b426c9d9b853ffc4c8209589f30ee39aebede6285096c0ff47e7"
+  },
+  "setup.digest.mistral-small3.2:24b": {
+   "unit": "sha256 digest",
+   "source": "freeze/freeze_2.json",
+   "key_path": [
+    "models",
+    "mistral-small3.2:24b",
+    "digest"
+   ],
+   "post_hoc": false,
+   "value": "5a408ab55df5c1b5cf46533c368813b30bf9e4d8fc39263bf2a3338cfa3b895b"
+  },
+  "setup.digest.ministral-3:14b": {
+   "unit": "sha256 digest",
+   "source": "freeze/freeze_2.json",
+   "key_path": [
+    "models",
+    "ministral-3:14b",
+    "digest"
+   ],
+   "post_hoc": false,
+   "value": "4760c35aeb9d9e9c6174c2492562c0b999e80a222804fd96b1915ab72bbcdcf7"
+  },
+  "setup.digest.qwen3-vl:32b": {
+   "unit": "sha256 digest",
+   "source": "freeze/freeze_2.json",
+   "key_path": [
+    "models",
+    "qwen3-vl:32b",
+    "digest"
+   ],
+   "post_hoc": false,
+   "value": "ff2e46876908853b8d0872595047c46d599d970056277e4864c8a1f0fd93fd3b"
+  },
+  "setup.gpu": {
+   "value": "RTX A6000 48 GB",
+   "unit": "graphics card",
+   "source": "logs/pc_setup_report.md",
+   "key_path": [
+    "regex",
+    "\\((?:[^,()]*), (RTX A6000 \\d+ GB)\\)"
+   ],
+   "post_hoc": false
+  },
+  "setup.freeze_2_sha256": {
+   "value": "6f97c22fe4f3001c293ff273148eb75c0d11c3675963fdb2724ec102ed0e16f3",
+   "unit": "SHA-256 of freeze_2.json",
+   "source": "freeze/freeze_2.sha256",
+   "key_path": [
+    "regex",
+    "^([0-9a-f]{64})"
+   ],
+   "post_hoc": false
+  },
+  "dataset.height_rule_m": {
+   "value": "3",
+   "unit": "metres (ConstructionSite10k rules 2 and 3)",
+   "source": "packet/data/constructionsite10k/upstream_README.md",
+   "key_path": [
+    "regex",
+    "\\| 2 \\| Use of safety harness when working \\u2265(\\d+)m high"
+   ],
+   "post_hoc": false
+  },
+  "dataset.total_images": {
+   "value": "10,013",
+   "unit": "images in ConstructionSite10k",
+   "source": "packet/data/constructionsite10k/upstream_README.md",
+   "key_path": [
+    "regex",
+    "\\*\\*Total images:\\*\\* ([\\d,]+)"
+   ],
+   "post_hoc": false
+  },
+  "lists.final.visibility_cutoff": {
+   "unit": "largest-box share",
+   "source": "lists/final.json",
+   "key_path": [
+    "visibility_cutoff_largest_box_share"
+   ],
+   "post_hoc": false,
+   "value": 0.0029999999999999957
+  },
+  "errors.grove.miss": {
+   "unit": "errors",
+   "source": "results_posthoc/errors_final.json",
+   "key_path": [
+    "systems",
+    "GROVE",
+    "totals",
+    "miss"
+   ],
+   "post_hoc": true,
+   "value": 138
+  },
+  "errors.grove.false_alarm": {
+   "unit": "errors",
+   "source": "results_posthoc/errors_final.json",
+   "key_path": [
+    "systems",
+    "GROVE",
+    "totals",
+    "false alarm"
+   ],
+   "post_hoc": true,
+   "value": 176
+  },
+  "errors.gemma.miss": {
+   "unit": "errors",
+   "source": "results_posthoc/errors_final.json",
+   "key_path": [
+    "systems",
+    "gemma4:31b",
+    "totals",
+    "miss"
+   ],
+   "post_hoc": true,
+   "value": 34
+  },
+  "errors.gemma.false_alarm": {
+   "unit": "errors",
+   "source": "results_posthoc/errors_final.json",
+   "key_path": [
+    "systems",
+    "gemma4:31b",
+    "totals",
+    "false alarm"
+   ],
+   "post_hoc": true,
+   "value": 494
+  },
+  "errors.overlap": {
+   "unit": "image-category errors made by both",
+   "source": "results_posthoc/errors_final.json",
+   "key_path": [
+    "overlap"
+   ],
+   "post_hoc": true,
+   "value": 201
+  },
+  "method.cv_repeats": {
+   "value": "10",
+   "unit": "repeats",
+   "source": "freeze/freeze_2.json",
+   "key_path": [
+    "regex",
+    "held-out micro-F1 \\((\\d+) repeats of \\d+ grouped folds"
+   ],
+   "post_hoc": false
+  },
+  "method.cv_folds": {
+   "value": "5",
+   "unit": "grouped folds",
+   "source": "freeze/freeze_2.json",
+   "key_path": [
+    "regex",
+    "held-out micro-F1 \\(\\d+ repeats of (\\d+) grouped folds"
+   ],
+   "post_hoc": false
+  },
+  "method.bootstrap_draws": {
+   "unit": "bootstrap draws",
+   "source": "results_posthoc/box_upper_bound.json",
+   "key_path": [
+    "draws"
+   ],
+   "post_hoc": false,
+   "value": 4000
+  },
+  "method.seed": {
+   "unit": "random seed",
+   "source": "results_posthoc/box_upper_bound.json",
+   "key_path": [
+    "seed"
+   ],
+   "post_hoc": false,
+   "value": 20260422
+  },
+  "method.threshold_fit": {
+   "unit": "threshold fitting method",
+   "source": "freeze/final_thresholds.json",
+   "key_path": [
+    "method"
+   ],
+   "post_hoc": false,
+   "value": "grid 0.02-0.98 step 0.02, best single threshold then 2 rounds per category, micro-F1"
+  }
+ }
+}

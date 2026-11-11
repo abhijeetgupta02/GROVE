@@ -1,0 +1,38 @@
+ollama list (frozen Ollama 0.40.14, 2026-11-05T11:13:16)
+
+NAME                      ID              SIZE      MODIFIED       
+d3:9b                     0f459473f035    10 GB     39 minutes ago    
+ministral-3:14b           4760c35aeb9d    9.1 GB    20 hours ago      
+mistral-small3.2:24b      5a408ab55df5    15 GB     20 hours ago      
+qwen3-vl:32b              ff2e46876908    20 GB     20 hours ago      
+d3:27b                    bdde0a6212d6    29 GB     21 hours ago      
+pplx-decider:27b          733585a9ebb6    17 GB     21 hours ago      
+clef-flash:9b             73e026ff389b    10 GB     22 hours ago      
+clef:27b                  7885241a86db    20 GB     22 hours ago      
+qwen3.5:27b               7653528ba5cb    17 GB     6 months ago      
+qwen3.5:9b                6488c96fa5fa    6.6 GB    6 months ago      
+qwen3.5:4b                2a654d98e6fb    3.4 GB    6 months ago      
+qwen3.5:2b                324d162be6ca    2.7 GB    6 months ago      
+llama3.2-vision:11b       6f2f9757ae97    7.8 GB    6 months ago      
+llama3.2-vision:latest    6f2f9757ae97    7.8 GB    6 months ago      
+qwen3.6:35b               07d35212591f    23 GB     6 months ago      
+qwen3.6:latest            07d35212591f    23 GB     6 months ago      
+gemma4:31b                6316f0629137    19 GB     6 months ago      
+gemma4:26b                5571076f3d70    17 GB     6 months ago      
+gemma4:e4b                c6eb396dbd59    9.6 GB    6 months ago      
+gemma4:latest             c6eb396dbd59    9.6 GB    6 months ago      
+gemma4:e2b                7fbdbf8f5e45    7.2 GB    6 months ago      
+
+
+Run models: tag | ID (first 12) | expected | match | size bytes | full digest
+clef:27b | 7885241a86db | 039c167bd0ec | DIFFERS | 20163365656 | 7885241a86db4803ff95b6a8fc60dc132a5f9612a76db786a304cfa8c760f84b
+clef-flash:9b | 73e026ff389b | 0a2a05d6a581 | DIFFERS | 10578965269 | 73e026ff389b28464bb26f8978f3164851a76832f0d339032747e2c56f98ea29
+pplx-decider:27b | 733585a9ebb6 | 733585a9ebb6 | MATCH | 17475009375 | 733585a9ebb6205d2d5b64a13748f0b1c9f1285885dd267780cfdb1c4c8ef141
+d3:9b | 0f459473f035 | (none recorded) | n/a | 10449219831 | 0f459473f0351636a127ca79c3206930f2d2cd79e4690b14f832fe450e3be563
+d3:27b | bdde0a6212d6 | 66f8405a50c4 | DIFFERS | 29526923288 | bdde0a6212d68af9a99e29bb908252aaa9c93e852713df98836bb2cef804fba0
+qwen3.5:9b | 6488c96fa5fa | 6488c96fa5fa | MATCH | 6594474711 | 6488c96fa5faab64bb65cbd30d4289e20e6130ef535a93ef9a49f42eda893ea7
+qwen3.5:27b | 7653528ba5cb | (none recorded) | n/a | 17420432728 | 7653528ba5cba4dd8e19da24aaddc7f4d0b5ecd93571c0825dfd4137958ec06e
+gemma4:31b | 6316f0629137 | (none recorded) | n/a | 19868981791 | 6316f0629137b426c9d9b853ffc4c8209589f30ee39aebede6285096c0ff47e7
+mistral-small3.2:24b | 5a408ab55df5 | 5a408ab55df5 | MATCH | 15177384862 | 5a408ab55df5c1b5cf46533c368813b30bf9e4d8fc39263bf2a3338cfa3b895b
+ministral-3:14b | 4760c35aeb9d | 4760c35aeb9d | MATCH | 9082537546 | 4760c35aeb9d9e9c6174c2492562c0b999e80a222804fd96b1915ab72bbcdcf7
+qwen3-vl:32b | ff2e46876908 | ff2e46876908 | MATCH | 20910297800 | ff2e46876908853b8d0872595047c46d599d970056277e4864c8a1f0fd93fd3b

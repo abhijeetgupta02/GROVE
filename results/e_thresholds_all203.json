@@ -1,0 +1,7 @@
+{
+ "GROVE": {
+  "Fall_Hazard": 0.12,
+  "Electrocution_Hazard": 0.32,
+  "PPE_Violation": 0.5
+ }
+}

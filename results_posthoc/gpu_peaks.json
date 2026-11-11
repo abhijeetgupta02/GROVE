@@ -1,0 +1,8 @@
+{
+ "|": 477,
+ "p06_final|qwen3.5:27b": 19896,
+ "p07_cal|qwen3.5:27b": 19896,
+ "p07_final|qwen3.5:27b": 19804,
+ "p07_cal|gemma4:31b": 25004,
+ "p07_final|gemma4:31b": 25010
+}
