@@ -2,11 +2,14 @@
  "set": "development",
  "n_images_in_set": 203,
  "seed": null,
- "selection_rule": "Examples from the 29 development images we generated with Google Gemini (the other 174 development images and the ConstructionSite10k images are not ours to show). Shown are the images where GROVE is right on all three categories with the thresholds fit on the 203 development images (Fall 0.12, protective equipment 0.50, Electrical 0.32) and, for each category it reports, its GroundingDINO box overlaps a labeled box with IoU 0.5 or more; we picked them by looking at them. Because the thresholds were fit on these same images, these are in-sample examples, not a test. GROVE's measured performance is on the 1,000 final images (see Results and the threshold explorer).",
- "candidates_successes": 7,
+ "selection_rule": "Author-selected examples from our Gemini-generated development images, showing Fall and protective equipment only. Ten illustrate correct identification and, where an alert is raised, a top evidence box at IoU ≥ 0.5. Three show limitations: two false Fall alerts and one correctly identified Fall hazard with imprecise grounding. Development thresholds (Fall 0.12, PPE 0.50) were fit on these same 203 images. These are in-sample illustrations, not a representative test; Electrical is not illustrated. Final-set performance is reported separately in Results.",
+ "candidates_successes": 10,
  "success_draw_log": [],
  "quotas": {},
- "failure_types": [],
+ "failure_types": [
+  "false Fall alert",
+  "grounding overlap below 0.5"
+ ],
  "teaser": "191",
  "thresholds_refit": {
   "fall": 0.86,
@@ -51,7 +54,7 @@
  "box_note": "Boxes are stored as fractions of the image width and height. gemma4:31b boxes are drawn as written, read as pixel coordinates (the frozen rule).",
  "sources": {
   "scores": "runs/e12/d3_27b__h.jsonl (GROVE), runs/e11/d3_27b__m.jsonl (main questions), runs/e09/gemma4_31b__sp.jsonl (gemma4:31b)",
-  "boxes": "results/gcache_gdino.jsonl (GROVE top GroundingDINO box for the fixed phrase; the overlaps equal results/e31_matches.jsonl)",
+  "boxes": "results/e31_38.json -> items.31 fixed phrases (new examples); results/gcache_gdino.jsonl (original examples)",
   "labels": "packet/data/grove203/annotations.coco.json",
   "images": "the generated development images (Google Gemini), at most 1600 px on the long side, WebP and JPEG, no metadata"
  },
@@ -173,7 +176,8 @@
     "grove_correct": true,
     "gemma_wrong": true,
     "disagree": true
-   }
+   },
+   "title": "An unguarded work platform"
   },
   {
    "id": "200",
@@ -345,7 +349,884 @@
     "grove_correct": true,
     "gemma_wrong": false,
     "disagree": false
-   }
+   },
+   "title": "Fall exposure and missing PPE"
+  },
+  {
+   "id": "194",
+   "role": "success",
+   "failure_type": null,
+   "draw_reason": "selected for clear Fall/PPE illustration",
+   "teaser": false,
+   "files": {
+    "full_webp": "gallery/dev_194.webp",
+    "full_jpg": "gallery/dev_194.jpg",
+    "thumb_webp": "gallery/dev_194_thumb.webp",
+    "thumb_jpg": "gallery/dev_194_thumb.jpg"
+   },
+   "width": 1024,
+   "height": 1024,
+   "thumb_width": 640,
+   "thumb_height": 640,
+   "original_width": 1024,
+   "original_height": 1024,
+   "illumination": "generated with Google Gemini",
+   "camera_distance": "development image",
+   "size_band": null,
+   "caption": null,
+   "label_reason": {
+    "fall": null,
+    "ppe": null
+   },
+   "labels": {
+    "fall": true,
+    "ppe": false
+   },
+   "label_boxes": {
+    "fall": [
+     [
+      0.1377,
+      0.6357,
+      0.8994,
+      0.9189
+     ]
+    ],
+    "ppe": []
+   },
+   "grove": {
+    "scores": {
+     "fall": 0.9014,
+     "ppe": 0.1734
+    },
+    "decisions": {
+     "fall": true,
+     "ppe": false
+    },
+    "first_freeze_decisions": {
+     "fall": true,
+     "ppe": false
+    },
+    "boxes": {
+     "fall": [
+      [
+       0.1678,
+       0.638,
+       0.8632,
+       0.9113
+      ]
+     ]
+    },
+    "phrase": {
+     "fall": "open trench or floor opening"
+    },
+    "box_source": {
+     "fall": "GroundingDINO"
+    },
+    "top_iou": {
+     "fall": 0.881
+    },
+    "probs": {
+     "Fall_Hazard": 0.8189,
+     "f_fall_edge": 0.6235,
+     "f_fall_opening": 0.9965,
+     "ok_fall_protected": 0.0198,
+     "Electrocution_Hazard": 0.6565,
+     "f_elec_wire": 0.9645,
+     "f_elec_lines": 0.0834,
+     "ok_elec_testing": 0.0232,
+     "PPE_Violation": 0.2055,
+     "f_worker": 0.9995,
+     "f_ppe_nohat": 0.0718,
+     "f_ppe_novest": 0.1282,
+     "f_ppe_noeye_glove": 0.1413,
+     "Housekeeping_Storage": 0.9415,
+     "f_house_trip": 0.9697,
+     "f_house_debris": 0.4053
+    }
+   },
+   "main_question": {
+    "scores": {
+     "fall": 0.9531,
+     "ppe": 0.2072
+    },
+    "decisions": {
+     "fall": true,
+     "ppe": false
+    }
+   },
+   "gemma": {
+    "decisions": {
+     "fall": true,
+     "ppe": false
+    },
+    "evidence": {
+     "fall": "large unguarded floor opening in the foreground"
+    },
+    "box_as_written": {
+     "fall": [
+      638,
+      176,
+      873,
+      862
+     ]
+    },
+    "box_drawn": {
+     "fall": [
+      0.623,
+      0.1719,
+      0.8525,
+      0.8418
+     ]
+    },
+    "fits_pixel_rule": {
+     "fall": true
+    },
+    "fits_grid_reading": {
+     "fall": true
+    }
+   },
+   "outcome": {
+    "grove_correct": true,
+    "gemma_wrong": false,
+    "disagree": false
+   },
+   "title": "An opening in the work floor"
+  },
+  {
+   "id": "125",
+   "role": "success",
+   "failure_type": null,
+   "draw_reason": "selected for clear Fall/PPE illustration",
+   "teaser": false,
+   "files": {
+    "full_webp": "gallery/dev_125.webp",
+    "full_jpg": "gallery/dev_125.jpg",
+    "thumb_webp": "gallery/dev_125_thumb.webp",
+    "thumb_jpg": "gallery/dev_125_thumb.jpg"
+   },
+   "width": 1600,
+   "height": 1600,
+   "thumb_width": 640,
+   "thumb_height": 640,
+   "original_width": 2048,
+   "original_height": 2048,
+   "illumination": "generated with Google Gemini",
+   "camera_distance": "development image",
+   "size_band": null,
+   "caption": null,
+   "label_reason": {
+    "fall": null,
+    "ppe": null
+   },
+   "labels": {
+    "fall": false,
+    "ppe": true
+   },
+   "label_boxes": {
+    "fall": [],
+    "ppe": [
+     [
+      0.4331,
+      0.1548,
+      0.757,
+      0.6935
+     ]
+    ]
+   },
+   "grove": {
+    "scores": {
+     "fall": 0.0366,
+     "ppe": 0.9977
+    },
+    "decisions": {
+     "fall": false,
+     "ppe": true
+    },
+    "first_freeze_decisions": {
+     "fall": false,
+     "ppe": true
+    },
+    "boxes": {
+     "ppe": [
+      [
+       0.4319,
+       0.1621,
+       0.7145,
+       0.6788
+      ]
+     ]
+    },
+    "phrase": {
+     "ppe": "worker without hard hat"
+    },
+    "box_source": {
+     "ppe": "GroundingDINO"
+    },
+    "top_iou": {
+     "ppe": 0.8302
+    },
+    "probs": {
+     "Fall_Hazard": 0.0367,
+     "f_fall_edge": 0.0612,
+     "f_fall_opening": 0.021,
+     "ok_fall_protected": 0.7218,
+     "Electrocution_Hazard": 0.0906,
+     "f_elec_wire": 0.7774,
+     "f_elec_lines": 0.0054,
+     "ok_elec_testing": 0.003,
+     "PPE_Violation": 0.9978,
+     "f_worker": 0.9995,
+     "f_ppe_nohat": 0.9981,
+     "f_ppe_novest": 0.9954,
+     "f_ppe_noeye_glove": 0.4571,
+     "Housekeeping_Storage": 0.9964,
+     "f_house_trip": 0.9962,
+     "f_house_debris": 0.9853
+    }
+   },
+   "main_question": {
+    "scores": {
+     "fall": 0.0378,
+     "ppe": 0.9978
+    },
+    "decisions": {
+     "fall": false,
+     "ppe": true
+    }
+   },
+   "gemma": {
+    "decisions": {
+     "fall": false,
+     "ppe": true
+    },
+    "evidence": {
+     "ppe": "worker is not wearing a hard hat or high-visibility vest"
+    },
+    "box_as_written": {
+     "ppe": [
+      158,
+      441,
+      654,
+      711
+     ]
+    },
+    "box_drawn": {
+     "ppe": [
+      0.0771,
+      0.2153,
+      0.3193,
+      0.3472
+     ]
+    },
+    "fits_pixel_rule": {
+     "ppe": true
+    },
+    "fits_grid_reading": {
+     "ppe": true
+    }
+   },
+   "outcome": {
+    "grove_correct": true,
+    "gemma_wrong": false,
+    "disagree": false
+   },
+   "title": "Missing head protection"
+  },
+  {
+   "id": "176",
+   "role": "success",
+   "failure_type": null,
+   "draw_reason": "selected for clear Fall/PPE illustration",
+   "teaser": false,
+   "files": {
+    "full_webp": "gallery/dev_176.webp",
+    "full_jpg": "gallery/dev_176.jpg",
+    "thumb_webp": "gallery/dev_176_thumb.webp",
+    "thumb_jpg": "gallery/dev_176_thumb.jpg"
+   },
+   "width": 1024,
+   "height": 1024,
+   "thumb_width": 640,
+   "thumb_height": 640,
+   "original_width": 1024,
+   "original_height": 1024,
+   "illumination": "generated with Google Gemini",
+   "camera_distance": "development image",
+   "size_band": null,
+   "caption": null,
+   "label_reason": {
+    "fall": null,
+    "ppe": null
+   },
+   "labels": {
+    "fall": true,
+    "ppe": false
+   },
+   "label_boxes": {
+    "fall": [
+     [
+      0.4453,
+      0.1914,
+      0.7118,
+      0.6671
+     ]
+    ],
+    "ppe": []
+   },
+   "grove": {
+    "scores": {
+     "fall": 0.2043,
+     "ppe": 0.0682
+    },
+    "decisions": {
+     "fall": true,
+     "ppe": false
+    },
+    "first_freeze_decisions": {
+     "fall": true,
+     "ppe": false
+    },
+    "boxes": {
+     "fall": [
+      [
+       0.4547,
+       0.1941,
+       0.6403,
+       0.6439
+      ]
+     ]
+    },
+    "phrase": {
+     "fall": "open trench or floor opening"
+    },
+    "box_source": {
+     "fall": "DETR+OpenCLIP"
+    },
+    "top_iou": {
+     "fall": 0.6584
+    },
+    "probs": {
+     "Fall_Hazard": 0.2103,
+     "f_fall_edge": 0.203,
+     "f_fall_opening": 0.2207,
+     "ok_fall_protected": 0.1483,
+     "Electrocution_Hazard": 0.0035,
+     "f_elec_wire": 0.0163,
+     "f_elec_lines": 0.0008,
+     "ok_elec_testing": 0.1075,
+     "PPE_Violation": 0.1088,
+     "f_worker": 0.9996,
+     "f_ppe_nohat": 0.004,
+     "f_ppe_novest": 0.0063,
+     "f_ppe_noeye_glove": 0.0277,
+     "Housekeeping_Storage": 0.9954,
+     "f_house_trip": 0.9907,
+     "f_house_debris": 0.9895
+    }
+   },
+   "main_question": {
+    "scores": {
+     "fall": 0.2074,
+     "ppe": 0.1034
+    },
+    "decisions": {
+     "fall": true,
+     "ppe": false
+    }
+   },
+   "gemma": {
+    "decisions": {
+     "fall": false,
+     "ppe": false
+    },
+    "evidence": {},
+    "box_as_written": {},
+    "box_drawn": {},
+    "fits_pixel_rule": {},
+    "fits_grid_reading": {}
+   },
+   "outcome": {
+    "grove_correct": true,
+    "gemma_wrong": true,
+    "disagree": true
+   },
+   "title": "An unguarded stairwell"
+  },
+  {
+   "id": "183",
+   "role": "success",
+   "failure_type": null,
+   "draw_reason": "chosen by the authors from the generated development images where GROVE is right",
+   "teaser": false,
+   "files": {
+    "full_webp": "gallery/dev_183.webp",
+    "full_jpg": "gallery/dev_183.jpg",
+    "thumb_webp": "gallery/dev_183_thumb.webp",
+    "thumb_jpg": "gallery/dev_183_thumb.jpg"
+   },
+   "width": 1024,
+   "height": 1024,
+   "thumb_width": 480,
+   "thumb_height": 480,
+   "original_width": 1024,
+   "original_height": 1024,
+   "illumination": "generated with Google Gemini",
+   "camera_distance": "development image",
+   "size_band": null,
+   "caption": null,
+   "label_reason": {
+    "fall": null,
+    "ppe": null
+   },
+   "labels": {
+    "fall": false,
+    "ppe": true
+   },
+   "label_boxes": {
+    "fall": [],
+    "ppe": [
+     [
+      0.2939,
+      0.2246,
+      0.6748,
+      0.8189
+     ]
+    ]
+   },
+   "grove": {
+    "scores": {
+     "fall": 0.0024,
+     "ppe": 0.9281
+    },
+    "decisions": {
+     "fall": false,
+     "ppe": true
+    },
+    "first_freeze_decisions": {
+     "fall": false,
+     "ppe": true
+    },
+    "boxes": {
+     "ppe": [
+      [
+       0.2928,
+       0.2346,
+       0.6008,
+       0.8095
+      ]
+     ]
+    },
+    "phrase": {
+     "ppe": "worker without safety vest"
+    },
+    "box_source": {
+     "ppe": "GroundingDINO"
+    },
+    "top_iou": {
+     "ppe": 0.7772
+    },
+    "probs": {
+     "Fall_Hazard": 0.0024,
+     "f_fall_edge": 0.0016,
+     "f_fall_opening": 0.0048,
+     "ok_fall_protected": 0.9631,
+     "Electrocution_Hazard": 0.033,
+     "f_elec_wire": 0.1143,
+     "f_elec_lines": 0.0037,
+     "ok_elec_testing": 0.1803,
+     "PPE_Violation": 0.8683,
+     "f_worker": 0.9996,
+     "f_ppe_nohat": 0.0052,
+     "f_ppe_novest": 0.9881,
+     "f_ppe_noeye_glove": 0.7252,
+     "Housekeeping_Storage": 0.9829,
+     "f_house_trip": 0.9658,
+     "f_house_debris": 0.9251
+    }
+   },
+   "main_question": {
+    "scores": {
+     "fall": 0.0025,
+     "ppe": 0.8649
+    },
+    "decisions": {
+     "fall": false,
+     "ppe": true
+    }
+   },
+   "gemma": {
+    "decisions": {
+     "fall": false,
+     "ppe": true
+    },
+    "evidence": {
+     "ppe": "worker is missing eye protection and a high-visibility vest"
+    },
+    "box_as_written": {
+     "ppe": [
+      203,
+      203,
+      785,
+      594
+     ]
+    },
+    "box_drawn": {
+     "ppe": [
+      0.1982,
+      0.1982,
+      0.7666,
+      0.5801
+     ]
+    },
+    "fits_pixel_rule": {
+     "ppe": true
+    },
+    "fits_grid_reading": {
+     "ppe": true
+    }
+   },
+   "outcome": {
+    "grove_correct": true,
+    "gemma_wrong": false,
+    "disagree": false
+   },
+   "title": "Protection during workshop tasks"
+  },
+  {
+   "id": "197",
+   "role": "success",
+   "failure_type": null,
+   "draw_reason": "chosen by the authors from the generated development images where GROVE is right",
+   "teaser": false,
+   "files": {
+    "full_webp": "gallery/dev_197.webp",
+    "full_jpg": "gallery/dev_197.jpg",
+    "thumb_webp": "gallery/dev_197_thumb.webp",
+    "thumb_jpg": "gallery/dev_197_thumb.jpg"
+   },
+   "width": 1024,
+   "height": 1024,
+   "thumb_width": 480,
+   "thumb_height": 480,
+   "original_width": 1024,
+   "original_height": 1024,
+   "illumination": "generated with Google Gemini",
+   "camera_distance": "development image",
+   "size_band": null,
+   "caption": null,
+   "label_reason": {
+    "fall": null,
+    "ppe": null
+   },
+   "labels": {
+    "fall": false,
+    "ppe": true
+   },
+   "label_boxes": {
+    "fall": [],
+    "ppe": [
+     [
+      0.2705,
+      0.1113,
+      0.7588,
+      0.9997
+     ]
+    ]
+   },
+   "grove": {
+    "scores": {
+     "fall": 0.0021,
+     "ppe": 0.9384
+    },
+    "decisions": {
+     "fall": false,
+     "ppe": true
+    },
+    "first_freeze_decisions": {
+     "fall": false,
+     "ppe": true
+    },
+    "boxes": {
+     "ppe": [
+      [
+       0.2652,
+       0.1292,
+       0.7296,
+       0.9987
+      ]
+     ]
+    },
+    "phrase": {
+     "ppe": "worker using power tool"
+    },
+    "box_source": {
+     "ppe": "GroundingDINO"
+    },
+    "top_iou": {
+     "ppe": 0.9106
+    },
+    "probs": {
+     "Fall_Hazard": 0.0029,
+     "f_fall_edge": 0.0035,
+     "f_fall_opening": 0.0023,
+     "ok_fall_protected": 0.9512,
+     "Electrocution_Hazard": 0.0582,
+     "f_elec_wire": 0.4184,
+     "f_elec_lines": 0.0028,
+     "ok_elec_testing": 0.0798,
+     "PPE_Violation": 0.9145,
+     "f_worker": 0.9994,
+     "f_ppe_nohat": 0.0079,
+     "f_ppe_novest": 0.0086,
+     "f_ppe_noeye_glove": 0.9628,
+     "Housekeeping_Storage": 0.8364,
+     "f_house_trip": 0.8654,
+     "f_house_debris": 0.6496
+    }
+   },
+   "main_question": {
+    "scores": {
+     "fall": 0.0028,
+     "ppe": 0.915
+    },
+    "decisions": {
+     "fall": false,
+     "ppe": true
+    }
+   },
+   "gemma": {
+    "decisions": {
+     "fall": false,
+     "ppe": true
+    },
+    "evidence": {
+     "ppe": "worker is not wearing eye protection while using a grinder"
+    },
+    "box_as_written": {
+     "ppe": [
+      188,
+      578,
+      256,
+      668
+     ]
+    },
+    "box_drawn": {
+     "ppe": [
+      0.1836,
+      0.5645,
+      0.25,
+      0.6523
+     ]
+    },
+    "fits_pixel_rule": {
+     "ppe": true
+    },
+    "fits_grid_reading": {
+     "ppe": true
+    }
+   },
+   "outcome": {
+    "grove_correct": true,
+    "gemma_wrong": false,
+    "disagree": false
+   },
+   "title": "Cutting without eye protection"
+  },
+  {
+   "id": "178",
+   "role": "success",
+   "failure_type": null,
+   "draw_reason": "chosen by the authors from the generated development images where GROVE is right",
+   "teaser": false,
+   "files": {
+    "full_webp": "gallery/dev_178.webp",
+    "full_jpg": "gallery/dev_178.jpg",
+    "thumb_webp": "gallery/dev_178_thumb.webp",
+    "thumb_jpg": "gallery/dev_178_thumb.jpg"
+   },
+   "width": 1024,
+   "height": 1024,
+   "thumb_width": 480,
+   "thumb_height": 480,
+   "original_width": 1024,
+   "original_height": 1024,
+   "illumination": "generated with Google Gemini",
+   "camera_distance": "development image",
+   "size_band": null,
+   "caption": null,
+   "label_reason": {
+    "fall": null,
+    "ppe": null
+   },
+   "labels": {
+    "fall": false,
+    "ppe": false
+   },
+   "label_boxes": {
+    "fall": [],
+    "ppe": []
+   },
+   "grove": {
+    "scores": {
+     "fall": 0.0147,
+     "ppe": 0.059
+    },
+    "decisions": {
+     "fall": false,
+     "ppe": false
+    },
+    "first_freeze_decisions": {
+     "fall": false,
+     "ppe": false
+    },
+    "boxes": {},
+    "phrase": {},
+    "box_source": {},
+    "top_iou": {},
+    "probs": {
+     "Fall_Hazard": 0.0063,
+     "f_fall_edge": 0.0037,
+     "f_fall_opening": 0.0379,
+     "ok_fall_protected": 0.9619,
+     "Electrocution_Hazard": 0.0013,
+     "f_elec_wire": 0.0018,
+     "f_elec_lines": 0.0024,
+     "ok_elec_testing": 0.0372,
+     "PPE_Violation": 0.0484,
+     "f_worker": 0.9989,
+     "f_ppe_nohat": 0.0322,
+     "f_ppe_novest": 0.0697,
+     "f_ppe_noeye_glove": 0.0172,
+     "Housekeeping_Storage": 0.1436,
+     "f_house_trip": 0.1343,
+     "f_house_debris": 0.095
+    }
+   },
+   "main_question": {
+    "scores": {
+     "fall": 0.0062,
+     "ppe": 0.0495
+    },
+    "decisions": {
+     "fall": false,
+     "ppe": false
+    }
+   },
+   "gemma": {
+    "decisions": {
+     "fall": false,
+     "ppe": false
+    },
+    "evidence": {},
+    "box_as_written": {},
+    "box_drawn": {},
+    "fits_pixel_rule": {},
+    "fits_grid_reading": {}
+   },
+   "outcome": {
+    "grove_correct": true,
+    "gemma_wrong": false,
+    "disagree": false
+   },
+   "title": "No scored violation on the haul road"
+  },
+  {
+   "id": "181",
+   "role": "success",
+   "failure_type": null,
+   "draw_reason": "chosen by the authors from the generated development images where GROVE is right",
+   "teaser": false,
+   "files": {
+    "full_webp": "gallery/dev_181.webp",
+    "full_jpg": "gallery/dev_181.jpg",
+    "thumb_webp": "gallery/dev_181_thumb.webp",
+    "thumb_jpg": "gallery/dev_181_thumb.jpg"
+   },
+   "width": 1024,
+   "height": 1024,
+   "thumb_width": 480,
+   "thumb_height": 480,
+   "original_width": 1024,
+   "original_height": 1024,
+   "illumination": "generated with Google Gemini",
+   "camera_distance": "development image",
+   "size_band": null,
+   "caption": null,
+   "label_reason": {
+    "fall": null,
+    "ppe": null
+   },
+   "labels": {
+    "fall": false,
+    "ppe": false
+   },
+   "label_boxes": {
+    "fall": [],
+    "ppe": []
+   },
+   "grove": {
+    "scores": {
+     "fall": 0.0045,
+     "ppe": 0.0668
+    },
+    "decisions": {
+     "fall": false,
+     "ppe": false
+    },
+    "first_freeze_decisions": {
+     "fall": false,
+     "ppe": false
+    },
+    "boxes": {},
+    "phrase": {},
+    "box_source": {},
+    "top_iou": {},
+    "probs": {
+     "Fall_Hazard": 0.0059,
+     "f_fall_edge": 0.0056,
+     "f_fall_opening": 0.0075,
+     "ok_fall_protected": 0.9538,
+     "Electrocution_Hazard": 0.003,
+     "f_elec_wire": 0.0064,
+     "f_elec_lines": 0.011,
+     "ok_elec_testing": 0.0978,
+     "PPE_Violation": 0.0525,
+     "f_worker": 0.9979,
+     "f_ppe_nohat": 0.0813,
+     "f_ppe_novest": 0.0142,
+     "f_ppe_noeye_glove": 0.0161,
+     "Housekeeping_Storage": 0.0824,
+     "f_house_trip": 0.0252,
+     "f_house_debris": 0.0212
+    }
+   },
+   "main_question": {
+    "scores": {
+     "fall": 0.0057,
+     "ppe": 0.0506
+    },
+    "decisions": {
+     "fall": false,
+     "ppe": false
+    }
+   },
+   "gemma": {
+    "decisions": {
+     "fall": false,
+     "ppe": false
+    },
+    "evidence": {},
+    "box_as_written": {},
+    "box_drawn": {},
+    "fits_pixel_rule": {},
+    "fits_grid_reading": {}
+   },
+   "outcome": {
+    "grove_correct": true,
+    "gemma_wrong": false,
+    "disagree": false
+   },
+   "title": "No alert in the warehouse"
   },
   {
    "id": "196",
@@ -490,26 +1371,27 @@
     "grove_correct": true,
     "gemma_wrong": false,
     "disagree": false
-   }
+   },
+   "title": "Fall exposure at night"
   },
   {
-   "id": "183",
-   "role": "success",
-   "failure_type": null,
-   "draw_reason": "chosen by the authors from the generated development images where GROVE is right",
+   "id": "201",
+   "role": "failure",
+   "failure_type": "grounding overlap below 0.5",
+   "draw_reason": "selected to show a development-set limitation",
    "teaser": false,
    "files": {
-    "full_webp": "gallery/dev_183.webp",
-    "full_jpg": "gallery/dev_183.jpg",
-    "thumb_webp": "gallery/dev_183_thumb.webp",
-    "thumb_jpg": "gallery/dev_183_thumb.jpg"
+    "full_webp": "gallery/dev_201.webp",
+    "full_jpg": "gallery/dev_201.jpg",
+    "thumb_webp": "gallery/dev_201_thumb.webp",
+    "thumb_jpg": "gallery/dev_201_thumb.jpg"
    },
-   "width": 1024,
-   "height": 1024,
-   "thumb_width": 480,
-   "thumb_height": 480,
-   "original_width": 1024,
-   "original_height": 1024,
+   "width": 1600,
+   "height": 1600,
+   "thumb_width": 640,
+   "thumb_height": 640,
+   "original_width": 2048,
+   "original_height": 2048,
    "illumination": "generated with Google Gemini",
    "camera_distance": "development image",
    "size_band": null,
@@ -519,431 +1401,78 @@
     "ppe": null
    },
    "labels": {
-    "fall": false,
-    "ppe": true
-   },
-   "label_boxes": {
-    "fall": [],
-    "ppe": [
-     [
-      0.2939,
-      0.2246,
-      0.6748,
-      0.8189
-     ]
-    ]
-   },
-   "grove": {
-    "scores": {
-     "fall": 0.0024,
-     "ppe": 0.9281
-    },
-    "decisions": {
-     "fall": false,
-     "ppe": true
-    },
-    "first_freeze_decisions": {
-     "fall": false,
-     "ppe": true
-    },
-    "boxes": {
-     "ppe": [
-      [
-       0.2928,
-       0.2346,
-       0.6008,
-       0.8095
-      ]
-     ]
-    },
-    "phrase": {
-     "ppe": "worker without safety vest"
-    },
-    "box_source": {
-     "ppe": "GroundingDINO"
-    },
-    "top_iou": {
-     "ppe": 0.7772
-    },
-    "probs": {
-     "Fall_Hazard": 0.0024,
-     "f_fall_edge": 0.0016,
-     "f_fall_opening": 0.0048,
-     "ok_fall_protected": 0.9631,
-     "Electrocution_Hazard": 0.033,
-     "f_elec_wire": 0.1143,
-     "f_elec_lines": 0.0037,
-     "ok_elec_testing": 0.1803,
-     "PPE_Violation": 0.8683,
-     "f_worker": 0.9996,
-     "f_ppe_nohat": 0.0052,
-     "f_ppe_novest": 0.9881,
-     "f_ppe_noeye_glove": 0.7252,
-     "Housekeeping_Storage": 0.9829,
-     "f_house_trip": 0.9658,
-     "f_house_debris": 0.9251
-    }
-   },
-   "main_question": {
-    "scores": {
-     "fall": 0.0025,
-     "ppe": 0.8649
-    },
-    "decisions": {
-     "fall": false,
-     "ppe": true
-    }
-   },
-   "gemma": {
-    "decisions": {
-     "fall": false,
-     "ppe": true
-    },
-    "evidence": {
-     "ppe": "worker is missing eye protection and a high-visibility vest"
-    },
-    "box_as_written": {
-     "ppe": [
-      203,
-      203,
-      785,
-      594
-     ]
-    },
-    "box_drawn": {
-     "ppe": [
-      0.1982,
-      0.1982,
-      0.7666,
-      0.5801
-     ]
-    },
-    "fits_pixel_rule": {
-     "ppe": true
-    },
-    "fits_grid_reading": {
-     "ppe": true
-    }
-   },
-   "outcome": {
-    "grove_correct": true,
-    "gemma_wrong": false,
-    "disagree": false
-   }
-  },
-  {
-   "id": "197",
-   "role": "success",
-   "failure_type": null,
-   "draw_reason": "chosen by the authors from the generated development images where GROVE is right",
-   "teaser": false,
-   "files": {
-    "full_webp": "gallery/dev_197.webp",
-    "full_jpg": "gallery/dev_197.jpg",
-    "thumb_webp": "gallery/dev_197_thumb.webp",
-    "thumb_jpg": "gallery/dev_197_thumb.jpg"
-   },
-   "width": 1024,
-   "height": 1024,
-   "thumb_width": 480,
-   "thumb_height": 480,
-   "original_width": 1024,
-   "original_height": 1024,
-   "illumination": "generated with Google Gemini",
-   "camera_distance": "development image",
-   "size_band": null,
-   "caption": null,
-   "label_reason": {
-    "fall": null,
-    "ppe": null
-   },
-   "labels": {
-    "fall": false,
-    "ppe": true
-   },
-   "label_boxes": {
-    "fall": [],
-    "ppe": [
-     [
-      0.2705,
-      0.1113,
-      0.7588,
-      0.9997
-     ]
-    ]
-   },
-   "grove": {
-    "scores": {
-     "fall": 0.0021,
-     "ppe": 0.9384
-    },
-    "decisions": {
-     "fall": false,
-     "ppe": true
-    },
-    "first_freeze_decisions": {
-     "fall": false,
-     "ppe": true
-    },
-    "boxes": {
-     "ppe": [
-      [
-       0.2652,
-       0.1292,
-       0.7296,
-       0.9987
-      ]
-     ]
-    },
-    "phrase": {
-     "ppe": "worker using power tool"
-    },
-    "box_source": {
-     "ppe": "GroundingDINO"
-    },
-    "top_iou": {
-     "ppe": 0.9106
-    },
-    "probs": {
-     "Fall_Hazard": 0.0029,
-     "f_fall_edge": 0.0035,
-     "f_fall_opening": 0.0023,
-     "ok_fall_protected": 0.9512,
-     "Electrocution_Hazard": 0.0582,
-     "f_elec_wire": 0.4184,
-     "f_elec_lines": 0.0028,
-     "ok_elec_testing": 0.0798,
-     "PPE_Violation": 0.9145,
-     "f_worker": 0.9994,
-     "f_ppe_nohat": 0.0079,
-     "f_ppe_novest": 0.0086,
-     "f_ppe_noeye_glove": 0.9628,
-     "Housekeeping_Storage": 0.8364,
-     "f_house_trip": 0.8654,
-     "f_house_debris": 0.6496
-    }
-   },
-   "main_question": {
-    "scores": {
-     "fall": 0.0028,
-     "ppe": 0.915
-    },
-    "decisions": {
-     "fall": false,
-     "ppe": true
-    }
-   },
-   "gemma": {
-    "decisions": {
-     "fall": false,
-     "ppe": true
-    },
-    "evidence": {
-     "ppe": "worker is not wearing eye protection while using a grinder"
-    },
-    "box_as_written": {
-     "ppe": [
-      188,
-      578,
-      256,
-      668
-     ]
-    },
-    "box_drawn": {
-     "ppe": [
-      0.1836,
-      0.5645,
-      0.25,
-      0.6523
-     ]
-    },
-    "fits_pixel_rule": {
-     "ppe": true
-    },
-    "fits_grid_reading": {
-     "ppe": true
-    }
-   },
-   "outcome": {
-    "grove_correct": true,
-    "gemma_wrong": false,
-    "disagree": false
-   }
-  },
-  {
-   "id": "178",
-   "role": "success",
-   "failure_type": null,
-   "draw_reason": "chosen by the authors from the generated development images where GROVE is right",
-   "teaser": false,
-   "files": {
-    "full_webp": "gallery/dev_178.webp",
-    "full_jpg": "gallery/dev_178.jpg",
-    "thumb_webp": "gallery/dev_178_thumb.webp",
-    "thumb_jpg": "gallery/dev_178_thumb.jpg"
-   },
-   "width": 1024,
-   "height": 1024,
-   "thumb_width": 480,
-   "thumb_height": 480,
-   "original_width": 1024,
-   "original_height": 1024,
-   "illumination": "generated with Google Gemini",
-   "camera_distance": "development image",
-   "size_band": null,
-   "caption": null,
-   "label_reason": {
-    "fall": null,
-    "ppe": null
-   },
-   "labels": {
-    "fall": false,
+    "fall": true,
     "ppe": false
    },
    "label_boxes": {
-    "fall": [],
+    "fall": [
+     [
+      0.2896,
+      0.3892,
+      0.9585,
+      0.8465
+     ]
+    ],
     "ppe": []
    },
    "grove": {
     "scores": {
-     "fall": 0.0147,
-     "ppe": 0.059
+     "fall": 0.507,
+     "ppe": 0.0068
     },
     "decisions": {
-     "fall": false,
+     "fall": true,
      "ppe": false
     },
     "first_freeze_decisions": {
-     "fall": false,
+     "fall": true,
      "ppe": false
     },
-    "boxes": {},
-    "phrase": {},
-    "box_source": {},
-    "top_iou": {},
+    "boxes": {
+     "fall": [
+      [
+       0.0257,
+       0.5698,
+       0.9939,
+       0.9958
+      ]
+     ]
+    },
+    "phrase": {
+     "fall": "open trench or floor opening"
+    },
+    "box_source": {
+     "fall": "GroundingDINO"
+    },
+    "top_iou": {
+     "fall": 0.3471
+    },
     "probs": {
-     "Fall_Hazard": 0.0063,
-     "f_fall_edge": 0.0037,
-     "f_fall_opening": 0.0379,
-     "ok_fall_protected": 0.9619,
-     "Electrocution_Hazard": 0.0013,
-     "f_elec_wire": 0.0018,
-     "f_elec_lines": 0.0024,
-     "ok_elec_testing": 0.0372,
-     "PPE_Violation": 0.0484,
-     "f_worker": 0.9989,
-     "f_ppe_nohat": 0.0322,
-     "f_ppe_novest": 0.0697,
-     "f_ppe_noeye_glove": 0.0172,
-     "Housekeeping_Storage": 0.1436,
-     "f_house_trip": 0.1343,
-     "f_house_debris": 0.095
-    }
-   },
-   "main_question": {
-    "scores": {
-     "fall": 0.0062,
-     "ppe": 0.0495
-    },
-    "decisions": {
-     "fall": false,
-     "ppe": false
-    }
-   },
-   "gemma": {
-    "decisions": {
-     "fall": false,
-     "ppe": false
-    },
-    "evidence": {},
-    "box_as_written": {},
-    "box_drawn": {},
-    "fits_pixel_rule": {},
-    "fits_grid_reading": {}
-   },
-   "outcome": {
-    "grove_correct": true,
-    "gemma_wrong": false,
-    "disagree": false
-   }
-  },
-  {
-   "id": "181",
-   "role": "success",
-   "failure_type": null,
-   "draw_reason": "chosen by the authors from the generated development images where GROVE is right",
-   "teaser": false,
-   "files": {
-    "full_webp": "gallery/dev_181.webp",
-    "full_jpg": "gallery/dev_181.jpg",
-    "thumb_webp": "gallery/dev_181_thumb.webp",
-    "thumb_jpg": "gallery/dev_181_thumb.jpg"
-   },
-   "width": 1024,
-   "height": 1024,
-   "thumb_width": 480,
-   "thumb_height": 480,
-   "original_width": 1024,
-   "original_height": 1024,
-   "illumination": "generated with Google Gemini",
-   "camera_distance": "development image",
-   "size_band": null,
-   "caption": null,
-   "label_reason": {
-    "fall": null,
-    "ppe": null
-   },
-   "labels": {
-    "fall": false,
-    "ppe": false
-   },
-   "label_boxes": {
-    "fall": [],
-    "ppe": []
-   },
-   "grove": {
-    "scores": {
-     "fall": 0.0045,
-     "ppe": 0.0668
-    },
-    "decisions": {
-     "fall": false,
-     "ppe": false
-    },
-    "first_freeze_decisions": {
-     "fall": false,
-     "ppe": false
-    },
-    "boxes": {},
-    "phrase": {},
-    "box_source": {},
-    "top_iou": {},
-    "probs": {
-     "Fall_Hazard": 0.0059,
-     "f_fall_edge": 0.0056,
-     "f_fall_opening": 0.0075,
-     "ok_fall_protected": 0.9538,
+     "Fall_Hazard": 0.4364,
+     "f_fall_edge": 0.4802,
+     "f_fall_opening": 0.581,
+     "ok_fall_protected": 0.0097,
      "Electrocution_Hazard": 0.003,
-     "f_elec_wire": 0.0064,
-     "f_elec_lines": 0.011,
-     "ok_elec_testing": 0.0978,
-     "PPE_Violation": 0.0525,
-     "f_worker": 0.9979,
-     "f_ppe_nohat": 0.0813,
-     "f_ppe_novest": 0.0142,
-     "f_ppe_noeye_glove": 0.0161,
-     "Housekeeping_Storage": 0.0824,
-     "f_house_trip": 0.0252,
-     "f_house_debris": 0.0212
+     "f_elec_wire": 0.0035,
+     "f_elec_lines": 0.0017,
+     "ok_elec_testing": 0.0123,
+     "PPE_Violation": 0.0134,
+     "f_worker": 0.0106,
+     "f_ppe_nohat": 0.0206,
+     "f_ppe_novest": 0.0263,
+     "f_ppe_noeye_glove": 0.0052,
+     "Housekeeping_Storage": 0.9673,
+     "f_house_trip": 0.8139,
+     "f_house_debris": 0.9324
     }
    },
    "main_question": {
     "scores": {
-     "fall": 0.0057,
-     "ppe": 0.0506
+     "fall": 0.438,
+     "ppe": 0.0131
     },
     "decisions": {
-     "fall": false,
+     "fall": true,
      "ppe": false
     }
    },
@@ -960,14 +1489,269 @@
    },
    "outcome": {
     "grove_correct": true,
+    "gemma_wrong": true,
+    "disagree": true
+   },
+   "title": "An alert with imprecise grounding"
+  },
+  {
+   "id": "198",
+   "role": "failure",
+   "failure_type": "false Fall alert",
+   "draw_reason": "selected to show a development-set limitation",
+   "teaser": false,
+   "files": {
+    "full_webp": "gallery/dev_198.webp",
+    "full_jpg": "gallery/dev_198.jpg",
+    "thumb_webp": "gallery/dev_198_thumb.webp",
+    "thumb_jpg": "gallery/dev_198_thumb.jpg"
+   },
+   "width": 1024,
+   "height": 1024,
+   "thumb_width": 640,
+   "thumb_height": 640,
+   "original_width": 1024,
+   "original_height": 1024,
+   "illumination": "generated with Google Gemini",
+   "camera_distance": "development image",
+   "size_band": null,
+   "caption": null,
+   "label_reason": {
+    "fall": null,
+    "ppe": null
+   },
+   "labels": {
+    "fall": false,
+    "ppe": false
+   },
+   "label_boxes": {
+    "fall": [],
+    "ppe": []
+   },
+   "grove": {
+    "scores": {
+     "fall": 0.2079,
+     "ppe": 0.0026
+    },
+    "decisions": {
+     "fall": true,
+     "ppe": false
+    },
+    "first_freeze_decisions": {
+     "fall": true,
+     "ppe": false
+    },
+    "boxes": {
+     "fall": [
+      [
+       0.0263,
+       0.6867,
+       0.4781,
+       0.95
+      ]
+     ]
+    },
+    "phrase": {
+     "fall": "open trench or floor opening"
+    },
+    "box_source": {
+     "fall": "GroundingDINO"
+    },
+    "top_iou": {
+     "fall": 0
+    },
+    "probs": {
+     "Fall_Hazard": 0.1753,
+     "f_fall_edge": 0.0436,
+     "f_fall_opening": 0.3404,
+     "ok_fall_protected": 0.5532,
+     "Electrocution_Hazard": 0.8967,
+     "f_elec_wire": 0.9874,
+     "f_elec_lines": 0.0486,
+     "ok_elec_testing": 0.0014,
+     "PPE_Violation": 0.0051,
+     "f_worker": 0.0023,
+     "f_ppe_nohat": 0.0099,
+     "f_ppe_novest": 0.0133,
+     "f_ppe_noeye_glove": 0.0015,
+     "Housekeeping_Storage": 0.999,
+     "f_house_trip": 0.9966,
+     "f_house_debris": 0.9985
+    }
+   },
+   "main_question": {
+    "scores": {
+     "fall": 0.1728,
+     "ppe": 0.0051
+    },
+    "decisions": {
+     "fall": true,
+     "ppe": false
+    }
+   },
+   "gemma": {
+    "decisions": {
+     "fall": false,
+     "ppe": false
+    },
+    "evidence": {},
+    "box_as_written": {},
+    "box_drawn": {},
+    "fits_pixel_rule": {},
+    "fits_grid_reading": {}
+   },
+   "outcome": {
+    "grove_correct": false,
     "gemma_wrong": false,
+    "disagree": true
+   },
+   "title": "Debris without a Fall label"
+  },
+  {
+   "id": "182",
+   "role": "failure",
+   "failure_type": "false Fall alert",
+   "draw_reason": "selected to show a development-set limitation",
+   "teaser": false,
+   "files": {
+    "full_webp": "gallery/dev_182.webp",
+    "full_jpg": "gallery/dev_182.jpg",
+    "thumb_webp": "gallery/dev_182_thumb.webp",
+    "thumb_jpg": "gallery/dev_182_thumb.jpg"
+   },
+   "width": 1024,
+   "height": 1024,
+   "thumb_width": 640,
+   "thumb_height": 640,
+   "original_width": 1024,
+   "original_height": 1024,
+   "illumination": "generated with Google Gemini",
+   "camera_distance": "development image",
+   "size_band": null,
+   "caption": null,
+   "label_reason": {
+    "fall": null,
+    "ppe": null
+   },
+   "labels": {
+    "fall": false,
+    "ppe": false
+   },
+   "label_boxes": {
+    "fall": [],
+    "ppe": []
+   },
+   "grove": {
+    "scores": {
+     "fall": 0.9019,
+     "ppe": 0.0988
+    },
+    "decisions": {
+     "fall": true,
+     "ppe": false
+    },
+    "first_freeze_decisions": {
+     "fall": true,
+     "ppe": false
+    },
+    "boxes": {
+     "fall": [
+      [
+       0.6381,
+       0.0017,
+       1.0005,
+       0.5113
+      ]
+     ]
+    },
+    "phrase": {
+     "fall": "open trench or floor opening"
+    },
+    "box_source": {
+     "fall": "DETR+OpenCLIP"
+    },
+    "top_iou": {
+     "fall": 0
+    },
+    "probs": {
+     "Fall_Hazard": 0.8911,
+     "f_fall_edge": 0.2586,
+     "f_fall_opening": 0.966,
+     "ok_fall_protected": 0.0818,
+     "Electrocution_Hazard": 0.0086,
+     "f_elec_wire": 0.0065,
+     "f_elec_lines": 0.016,
+     "ok_elec_testing": 0.025,
+     "PPE_Violation": 0.1444,
+     "f_worker": 0.9993,
+     "f_ppe_nohat": 0.0532,
+     "f_ppe_novest": 0.0356,
+     "f_ppe_noeye_glove": 0.0375,
+     "Housekeeping_Storage": 0.3272,
+     "f_house_trip": 0.2149,
+     "f_house_debris": 0.0719
+    }
+   },
+   "main_question": {
+    "scores": {
+     "fall": 0.8935,
+     "ppe": 0.1397
+    },
+    "decisions": {
+     "fall": true,
+     "ppe": false
+    }
+   },
+   "gemma": {
+    "decisions": {
+     "fall": true,
+     "ppe": false
+    },
+    "evidence": {
+     "fall": "worker is in an unprotected trench without shoring or shielding"
+    },
+    "box_as_written": {
+     "fall": [
+      508,
+      448,
+      795,
+      611
+     ]
+    },
+    "box_drawn": {
+     "fall": [
+      0.4961,
+      0.4375,
+      0.7764,
+      0.5967
+     ]
+    },
+    "fits_pixel_rule": {
+     "fall": true
+    },
+    "fits_grid_reading": {
+     "fall": true
+    }
+   },
+   "outcome": {
+    "grove_correct": false,
+    "gemma_wrong": true,
     "disagree": false
-   }
+   },
+   "title": "An alert without a matching Fall label"
   }
  ],
  "set_label": "development set",
  "thresholds": {
   "fall": 0.12,
   "ppe": 0.5
- }
+ },
+ "featured": [
+  "191",
+  "194",
+  "197",
+  "125",
+  "176",
+  "200"
+ ]
 }

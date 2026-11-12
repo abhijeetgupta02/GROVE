@@ -1,0 +1,40 @@
+---
+import { Icon } from "astro-icon/components";
+const links = [
+  ["teaser", "Compare"],
+  ["gallery", "Examples"],
+  ["how", "Method"],
+  ["explorer", "Explore thresholds"],
+  ["results", "Results"],
+  ["reproducibility", "Resources"],
+];
+---
+
+<nav class="site-nav not-prose full-bleed" aria-label="Sections">
+  <div class="nav-inner">
+    <a class="wordmark" href="#main" aria-label="GROVE home"
+      ><span class="brand-mark" aria-hidden="true"><i></i><i></i></span> GROVE<span
+        class="wordmark-divider"></span><span class="wordmark-note"
+        >VISUAL INSPECTION</span
+      ></a
+    >
+    <div class="nav-links">
+      {
+        links.map(([id, label]) => (
+          <a href={`#${id}`} data-nav-section={id}>
+            {label}
+          </a>
+        ))
+      }
+    </div>
+    <a
+      class="nav-github"
+      href="https://github.com/abhijeetgupta02/GROVE"
+      aria-label="GROVE on GitHub"
+      ><Icon name="ri:github-line" size={21} /><span>GitHub</span><span
+        aria-hidden="true">↗</span
+      ></a
+    >
+  </div>
+  <div class="reading-progress" aria-hidden="true"></div>
+</nav>

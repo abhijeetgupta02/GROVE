@@ -1,0 +1,68 @@
+<script>
+  // Motion is MIT licensed: https://github.com/motiondivision/motion.
+  // Content is visible by default; reduced-motion and no-JS readers lose nothing.
+  import { animate, inView, scroll, stagger } from "motion";
+  const reduced = window.matchMedia("(prefers-reduced-motion: reduce)");
+  let cleanups: (() => void)[] = [];
+  function setupMotion() {
+    cleanups.forEach((stop) => stop());
+    cleanups = [];
+    if (reduced.matches) return;
+    const hero = animate(
+      ".hero-enter",
+      { opacity: [0, 1], y: [16, 0] },
+      { duration: 0.65, delay: stagger(0.065), ease: [0.22, 1, 0.36, 1] },
+    );
+    cleanups.push(() => hero.stop());
+    cleanups.push(
+      inView(
+        ".section-heading",
+        (el) => {
+          const animation = animate(
+            el,
+            { opacity: [0.15, 1], y: [14, 0] },
+            { duration: 0.55, ease: [0.22, 1, 0.36, 1] },
+          );
+          cleanups.push(() => animation.stop());
+        },
+        { margin: "0px 0px -48px 0px" },
+      ),
+    );
+    const bar = document.querySelector<HTMLElement>(".reading-progress");
+    if (bar)
+      cleanups.push(
+        scroll(animate(bar, { scaleX: [0, 1] }, { ease: "linear" })),
+      );
+  }
+  setupMotion();
+  reduced.addEventListener("change", setupMotion);
+  // Active navigation uses observed sections, independently of animation preferences.
+  const links = [
+    ...document.querySelectorAll<HTMLAnchorElement>("[data-nav-section]"),
+  ];
+  const observer = new IntersectionObserver(
+    (entries) => {
+      const current = entries
+        .filter((e) => e.isIntersecting)
+        .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top)[0];
+      if (!current) return;
+      links.forEach((link) => {
+        if (link.dataset.navSection === current.target.id)
+          link.setAttribute("aria-current", "location");
+        else link.removeAttribute("aria-current");
+      });
+    },
+    { rootMargin: "-12% 0px -65% 0px", threshold: 0 },
+  );
+  document
+    .querySelectorAll("main > section")
+    .forEach((section) => observer.observe(section));
+  window.addEventListener(
+    "pagehide",
+    () => {
+      observer.disconnect();
+      cleanups.forEach((stop) => stop());
+    },
+    { once: true },
+  );
+</script>

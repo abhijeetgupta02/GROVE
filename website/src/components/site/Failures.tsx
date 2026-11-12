@@ -9,15 +9,21 @@ import { fmtInt } from "../../lib/numbers";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const E = errors as any;
-const FAILS: GalleryImage[] = IMAGES.filter((x: GalleryImage) => x.role === "failure");
+const FAILS: GalleryImage[] = IMAGES.filter(
+  (x: GalleryImage) => x.role === "failure",
+);
 
 /** One plain sentence per failure, built from the image's saved data. */
 function sentence(img: GalleryImage): string {
-  const th = (G.thresholds ?? G.thresholds_refit);
+  const th = G.thresholds ?? G.thresholds_refit;
   const e = img.error?.[0];
   const c: string = e?.category ?? "ppe";
   const sc = `${fixed(img.grove.scores[c], 2)} against a threshold of ${fixed(th[c], 2)}`;
   switch (img.failure_type) {
+    case "grounding overlap below 0.5":
+      return `GROVE identifies the labeled Fall hazard, but its top box has IoU ${fixed(img.grove.top_iou.fall, 2)}, below the 0.5 matching cutoff.`;
+    case "false Fall alert":
+      return `GROVE raises a Fall alert (score ${fixed(img.grove.scores.fall, 2)}, development threshold ${fixed(th.fall, 2)}), but this image has no Fall label.`;
     case "false alarm on a vest in daylight":
       return `In daylight GROVE flagged a missing vest ("${img.grove.phrase.ppe}", score ${sc}), but the labels mark no protective-equipment violation.`;
     case "miss":
@@ -34,8 +40,15 @@ function sentence(img: GalleryImage): string {
 }
 
 type Bar = { sys: string; type: string; cls: string; n: number };
-const BARS: Bar[] = Object.entries(E.systems as Record<string, { type: string; class: string; all: number }[]>).flatMap(([sys, rows]) =>
-  rows.map((r) => ({ sys: sys === "GROVE" ? "GROVE" : "gemma4:31b", type: r.type, cls: r.class.replace("inferred height or depth", "height or depth"), n: r.all })),
+const BARS: Bar[] = Object.entries(
+  E.systems as Record<string, { type: string; class: string; all: number }[]>,
+).flatMap(([sys, rows]) =>
+  rows.map((r) => ({
+    sys: sys === "GROVE" ? "GROVE" : "gemma4:31b",
+    type: r.type,
+    cls: r.class.replace("inferred height or depth", "height or depth"),
+    n: r.all,
+  })),
 );
 
 export default function Failures({ base }: { base: string }) {
@@ -49,37 +62,117 @@ export default function Failures({ base }: { base: string }) {
       height: 320,
       marginLeft: ml,
       marginRight: 20,
-      style: { background: "transparent", color: "currentColor", fontSize: "12px", fontFamily: "ui-sans-serif, system-ui, sans-serif" },
-      x: { label: "Image-category errors on the final set →", labelOffset: 38, grid: true },
+      style: {
+        background: "transparent",
+        color: "currentColor",
+        fontSize: "12px",
+        fontFamily: "ui-sans-serif, system-ui, sans-serif",
+      },
+      x: {
+        label: "Image-category errors on the final set →",
+        labelOffset: 38,
+        grid: true,
+      },
       y: { label: null },
-      color: { domain: ["GROVE", "gemma4:31b"], range: [COLORS.grove, COLORS.gemma] },
+      color: {
+        domain: ["GROVE", "gemma4:31b"],
+        range: [COLORS.grove, COLORS.gemma],
+      },
       marginTop: 24,
-      fy: { label: null, domain: ["false alarm", "miss"], axis: null, padding: 0.3 },
+      fy: {
+        label: null,
+        domain: ["false alarm", "miss"],
+        axis: null,
+        padding: 0.3,
+      },
       marks: [
         facetTitles(["false alarm", "miss"], ml),
-        Plot.barX(BARS, { fy: "type", y: (d: Bar) => `${d.cls} · ${d.sys}`, x: "n", fill: "sys", insetTop: 1, insetBottom: 1 }),
-        Plot.tip(BARS, Plot.pointer({ fy: "type", y: (d: Bar) => `${d.cls} · ${d.sys}`, x: "n", title: (d: Bar) => `${d.sys}: ${d.type}, ${d.cls}: ${d.n}` })),
+        Plot.barX(BARS, {
+          fy: "type",
+          y: (d: Bar) => `${d.cls} · ${d.sys}`,
+          x: "n",
+          fill: "sys",
+          insetTop: 1,
+          insetBottom: 1,
+        }),
+        Plot.tip(
+          BARS,
+          Plot.pointer({
+            fy: "type",
+            y: (d: Bar) => `${d.cls} · ${d.sys}`,
+            x: "n",
+            title: (d: Bar) => `${d.sys}: ${d.type}, ${d.cls}: ${d.n}`,
+          }),
+        ),
       ],
     });
   };
   return (
     <div className="not-prose font-sans">
-      {FAILS.length > 0 && <ul className="m-0 grid list-none grid-cols-1 gap-3 p-0 sm:grid-cols-2 lg:grid-cols-3">
-        {FAILS.map((img, k) => (
-          <Card key={img.id} img={img} base={base} layers={layers} onOpen={() => setOpen(k)} sentence={`${img.failure_type[0].toUpperCase()}${img.failure_type.slice(1)}. ${sentence(img)}`} />
-        ))}
-      </ul>}
-      <Lightbox list={FAILS} index={open} setIndex={setOpen} base={base} layers={layers} />
-      <h3 className="mt-6 text-lg font-semibold">Error types on all final images<PostHoc /></h3>
+      {FAILS.length > 0 && (
+        <p className="mb-4 text-sm text-zinc-600 dark:text-zinc-300">
+          Development illustrations: the Gemini-generated images below are
+          separate from the final-set counts and chart.
+        </p>
+      )}
+      {FAILS.length > 0 && (
+        <ul className="m-0 grid list-none grid-cols-1 gap-3 p-0 sm:grid-cols-2 lg:grid-cols-3">
+          {FAILS.map((img, k) => (
+            <Card
+              key={img.id}
+              img={img}
+              base={base}
+              layers={layers}
+              onOpen={() => setOpen(k)}
+              sentence={`${img.failure_type[0].toUpperCase()}${img.failure_type.slice(1)}. ${sentence(img)}`}
+            />
+          ))}
+        </ul>
+      )}
+      <Lightbox
+        list={FAILS}
+        index={open}
+        setIndex={setOpen}
+        base={base}
+        layers={layers}
+      />
+      <h3 className="mt-6 text-lg font-semibold">
+        Error types on all final images
+        <PostHoc />
+      </h3>
       <ChartTable
         label="Counts of false alarms and misses by error class for GROVE and gemma4:31b on the final set"
         make={make}
         deps={[]}
-        caption={<>Classes come from keywords in the system text and the dataset reason; &ldquo;other or no text&rdquo; means no keyword matched. Counted on the {fmtInt("final.n_images")} final images after final scoring. Bars: GROVE (blue) and <span className="font-mono">gemma4:31b</span> (orange).</>}
+        caption={
+          <>
+            Classes come from keywords in the system text and the dataset
+            reason; &ldquo;other or no text&rdquo; means no keyword matched.
+            Counted on the {fmtInt("final.n_images")} final images after final
+            scoring. Bars: GROVE (blue) and{" "}
+            <span className="font-mono">gemma4:31b</span> (orange).
+          </>
+        }
         table={
           <table className={tableCls}>
-            <thead><tr><th className="text-left">System</th><th className="text-left">Type</th><th className="text-left">Class</th><th className="text-right">Errors</th></tr></thead>
-            <tbody>{BARS.map((b) => <tr key={b.sys + b.type + b.cls}><td>{b.sys}</td><td>{b.type}</td><td>{b.cls}</td><td className="text-right font-mono">{b.n}</td></tr>)}</tbody>
+            <thead>
+              <tr>
+                <th className="text-left">System</th>
+                <th className="text-left">Type</th>
+                <th className="text-left">Class</th>
+                <th className="text-right">Errors</th>
+              </tr>
+            </thead>
+            <tbody>
+              {BARS.map((b) => (
+                <tr key={b.sys + b.type + b.cls}>
+                  <td>{b.sys}</td>
+                  <td>{b.type}</td>
+                  <td>{b.cls}</td>
+                  <td className="text-right font-mono">{b.n}</td>
+                </tr>
+              ))}
+            </tbody>
           </table>
         }
       />
