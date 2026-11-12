@@ -5,13 +5,32 @@ interface Props {
   wide?: boolean;
 }
 const { id, title, wide = false } = Astro.props;
+const labels: Record<string, string> = {
+  teaser: "01 / OBSERVE",
+  glance: "02 / MEASURE",
+  how: "03 / UNDERSTAND",
+  explorer: "04 / INTERACT",
+  results: "05 / EVALUATE",
+  gallery: "06 / INSPECT",
+  failures: "07 / LEARN",
+  limitations: "08 / CONTEXT",
+  reproducibility: "09 / REPRODUCE",
+  cite: "10 / REFERENCE",
+};
 ---
 
-<section id={id} aria-labelledby={`${id}-h`} class:list={["scroll-mt-6", wide && "full-bleed px-4"]}>
+<section
+  id={id}
+  aria-labelledby={`${id}-h`}
+  class:list={["research-section", wide && "full-bleed px-4"]}
+>
   <div class:list={[wide && "mx-auto max-w-[72rem]"]}>
-    <h2 id={`${id}-h`} class="mb-3">
-      <a href={`#${id}`} class="no-underline! hover:underline!">{title}</a>
-    </h2>
+    <div class="section-heading">
+      <p class="eyebrow section-eyebrow">{labels[id]}</p>
+      <h2 id={`${id}-h`} class="mb-3">
+        <a href={`#${id}`} class="no-underline! hover:underline!">{title}</a>
+      </h2>
+    </div>
     <slot />
   </div>
 </section>

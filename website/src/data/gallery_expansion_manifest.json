@@ -1,0 +1,47 @@
+{
+  "selection": "13 selected development examples; six added from existing saved outputs",
+  "new_images": [
+    {
+      "id": "194",
+      "source_image": "gemini_development_images/194.png",
+      "source_sha256": "deac425b9c2c7fb68a49b04d4f8de14a08b1ef6deeb6b825332599e4c6d421a0",
+      "decisions_correct": true,
+      "grounding_meets_0_5": true
+    },
+    {
+      "id": "125",
+      "source_image": "gemini_development_images/125.png",
+      "source_sha256": "626d5814c6ed7f370ecc6eb77dcc656718c23bd93a95692b8d94ed3f97077025",
+      "decisions_correct": true,
+      "grounding_meets_0_5": true
+    },
+    {
+      "id": "176",
+      "source_image": "gemini_development_images/176.png",
+      "source_sha256": "05d626c786c53e87535135cb1d66ed3db178905d03a238c47d1e5a4e0a2bf054",
+      "decisions_correct": true,
+      "grounding_meets_0_5": true
+    },
+    {
+      "id": "201",
+      "source_image": "gemini_development_images/201.png",
+      "source_sha256": "b423d3d98dcb511ab79792f88dd6415c86504fd7992462eec9524bb7043dbf25",
+      "decisions_correct": true,
+      "grounding_meets_0_5": false
+    },
+    {
+      "id": "198",
+      "source_image": "gemini_development_images/198.png",
+      "source_sha256": "f1cd21eab4333d36cecfbca36fef21326ac0b9c9c467f024241354ff83785af6",
+      "decisions_correct": false,
+      "grounding_meets_0_5": false
+    },
+    {
+      "id": "182",
+      "source_image": "gemini_development_images/182.png",
+      "source_sha256": "0e15d89b35400f9a2dd4474149dd68c5c7d4f1f7e6bd291754650c457815e863",
+      "decisions_correct": false,
+      "grounding_meets_0_5": false
+    }
+  ]
+}

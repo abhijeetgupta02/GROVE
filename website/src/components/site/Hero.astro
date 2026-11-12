@@ -1,6 +1,11 @@
 ---
-// Page header. Links that are not public yet are shown as disabled placeholders (see README, publication checklist).
-const authors = ["Abhijeet Gupta", "Shruti Singh", "Vijayan Asari", "Tam V. Nguyen"];
+import { Icon } from "astro-icon/components";
+const authors = [
+  "Abhijeet Gupta",
+  "Shruti Singh",
+  "Vijayan Asari",
+  "Tam V. Nguyen",
+];
 const bibtex = `@article{gupta_grove,
   title  = {GROVE: Grounded Violation Evaluator for Visual Inspection},
   author = {Gupta, Abhijeet and Singh, Shruti and Asari, Vijayan and Nguyen, Tam V.},
@@ -8,43 +13,83 @@ const bibtex = `@article{gupta_grove,
 }`;
 ---
 
-<header class="not-prose full-bleed mb-8 px-4 pt-4">
-  <div class="mx-auto flex max-w-[52rem] flex-col items-center gap-4 text-center">
-    <h1 class="m-0 text-3xl leading-tight font-semibold text-zinc-900 sm:text-5xl dark:text-zinc-50">
-      GROVE: Grounded Violation Evaluator for Visual Inspection
-    </h1>
-    <p class="m-0 text-lg sm:text-xl">
-      {authors.map((a, k) => (<><span class="whitespace-nowrap">{a}</span>{k < authors.length - 1 ? ", " : ""}</>))}
+<header class="research-hero not-prose full-bleed">
+  <div class="hero-grid" aria-hidden="true"></div>
+  <div class="hero-content">
+    <p class="eyebrow hero-enter">
+      <span class="status-dot" aria-hidden="true"></span> UNIVERSITY OF DAYTON <span
+        class="eyebrow-divider">/</span
+      > CONSTRUCTION SAFETY RESEARCH
     </p>
-    <p class="m-0 text-base sm:text-lg">University of Dayton</p>
-    <div class="flex flex-row flex-wrap justify-center gap-2 font-sans text-base">
-      <span class="link-disabled" aria-disabled="true" title="The paper is under review">Paper (under review)</span>
-      <a class="link-button" style="text-decoration:none" href="https://github.com/abhijeetgupta02/GROVE">Code and results</a>
-      <a class="link-button" style="text-decoration:none" href="https://doi.org/10.5281/zenodo.24145023">Zenodo archive</a>
-      <button type="button" class="link-button" data-copy-bibtex>Copy BibTeX</button>
-      <span id="bibtex-status" class="sr-only" aria-live="polite"></span>
+    <h1 class="hero-enter">GROVE<span class="hero-period">.</span></h1>
+    <p class="hero-subtitle hero-enter">
+      Grounded Violation Evaluator<br class="sm:hidden" /> for Visual Inspection
+    </p>
+    <p class="hero-description hero-enter">
+      From a safety alert to the <em>visible evidence.</em><br />A local
+      vision–language pipeline that scores hazards in construction photographs
+      and shows where to look.
+    </p>
+    <div class="hero-actions hero-enter">
+      <a class="action-primary" href="#teaser"
+        >Explore GROVE <Icon name="ri:arrow-down-line" size={18} /></a
+      >
+      <a
+        class="action-secondary"
+        href="https://github.com/abhijeetgupta02/GROVE"
+        ><Icon name="ri:github-line" size={18} /> Code &amp; results <span
+          aria-hidden="true">↗</span
+        ></a
+      >
+      <a class="action-secondary" href="https://doi.org/10.5281/zenodo.24145023"
+        ><Icon name="ri:archive-line" size={18} /> Archive <span
+          aria-hidden="true">↗</span
+        ></a
+      >
     </div>
-    <p class="m-0 max-w-[44rem] text-lg leading-relaxed">
-      GROVE flags safety violations in construction-site photos by asking a vision-language model a fixed set of yes/no
-      questions, combining the answers with a frozen formula into one score per category, and backing each alert with an
-      evidence box.
-    </p>
+    <div class="hero-byline hero-enter">
+      <p>
+        {
+          authors.map((a, k) => (
+            <>
+              <span>{a}</span>
+              {k < authors.length - 1 ? (
+                <span class="author-separator" aria-hidden="true">
+                  {" "}
+                  ·{" "}
+                </span>
+              ) : null}
+            </>
+          ))
+        }
+      </p>
+      <div>
+        <span>Paper under review</span><span aria-hidden="true">·</span><button
+          type="button"
+          data-copy-bibtex
+          >Copy BibTeX <Icon name="ri:file-copy-line" size={13} /></button
+        ><span id="bibtex-status" class="sr-only" aria-live="polite"></span>
+      </div>
+    </div>
   </div>
   <template id="bibtex-text">{bibtex}</template>
 </header>
-
 <script>
-  document.querySelectorAll<HTMLButtonElement>("[data-copy-bibtex]").forEach((b) => {
-    b.addEventListener("click", async () => {
-      const t = (document.getElementById("bibtex-text") as HTMLTemplateElement | null)?.content.textContent ?? "";
-      const status = document.getElementById("bibtex-status");
-      try {
-        await navigator.clipboard.writeText(t.trim());
-        b.textContent = "BibTeX copied";
-        if (status) status.textContent = "BibTeX copied to the clipboard";
-      } catch {
-        location.hash = "#bibtex";
-      }
+  document
+    .querySelectorAll<HTMLButtonElement>("[data-copy-bibtex]")
+    .forEach((button) => {
+      button.addEventListener("click", async () => {
+        const text =
+          (document.getElementById("bibtex-text") as HTMLTemplateElement | null)
+            ?.content.textContent ?? "";
+        try {
+          await navigator.clipboard.writeText(text.trim());
+          const status = document.getElementById("bibtex-status");
+          if (status) status.textContent = "BibTeX copied to the clipboard";
+          button.textContent = "Copied ✓";
+        } catch {
+          location.hash = "#bibtex";
+        }
+      });
     });
-  });
 </script>

@@ -7,6 +7,7 @@ description: "GROVE flags safety violations in construction-site photos with a f
 thumbnail: social-preview.png
 ---
 
+import Navigation from "./components/site/Navigation.astro";
 import Hero from "./components/site/Hero.astro";
 import Section from "./components/site/Section.astro";
 import Glance from "./components/site/Glance.astro";
@@ -25,30 +26,18 @@ import Failures from "./components/site/Failures.tsx";
 
 export const base = import.meta.env.BASE_URL.endsWith("/") ? import.meta.env.BASE_URL : import.meta.env.BASE_URL + "/";
 
+<Navigation />
 <Hero />
 
-<nav aria-label="Sections" class="not-prose mb-10 font-sans text-sm">
-  <ul class="m-0 flex list-none flex-wrap justify-center gap-x-4 gap-y-1 p-0">
-    <li><a class="underline decoration-dashed underline-offset-4" href="#teaser">Example</a></li>
-    <li><a class="underline decoration-dashed underline-offset-4" href="#glance">At a glance</a></li>
-    <li><a class="underline decoration-dashed underline-offset-4" href="#how">How it works</a></li>
-    <li><a class="underline decoration-dashed underline-offset-4" href="#explorer">Threshold explorer</a></li>
-    <li><a class="underline decoration-dashed underline-offset-4" href="#results">Results</a></li>
-    <li><a class="underline decoration-dashed underline-offset-4" href="#gallery">Gallery</a></li>
-    <li><a class="underline decoration-dashed underline-offset-4" href="#failures">Where GROVE fails</a></li>
-    <li><a class="underline decoration-dashed underline-offset-4" href="#limitations">Limitations</a></li>
-    <li><a class="underline decoration-dashed underline-offset-4" href="#reproducibility">Reproducibility</a></li>
-    <li><a class="underline decoration-dashed underline-offset-4" href="#cite">Cite</a></li>
-  </ul>
-</nav>
 
-<Section id="teaser" title="One photo, two inspectors" wide>
+
+<Section id="teaser" title="One scene. Two ways to inspect." wide>
 <div class="mx-auto max-w-[50rem]">
 
-A single-pass vision-language model (<span class="font-mono">gemma4:31b</span>) reads the photo and answers in one go, with a sentence of evidence. GROVE scores each category against a fixed threshold and backs its alert with a box. The photo is one of our development images, generated with Google Gemini; how it was chosen is described in the gallery.
+A single-pass vision-language model (<span class="font-mono">gemma4:31b</span>) reads the photo and answers in one go, with a sentence of evidence. GROVE scores each category against a fixed threshold and backs its alert with a box. Switch scenes, then drag the divider to compare the saved outputs. These are development images generated with Google Gemini; the gallery explains their selection.
 
 </div>
-<Teaser client:visible base={base} />
+<Teaser client:load base={base} />
 </Section>
 
 <Section id="glance" title="At a glance">
@@ -96,13 +85,13 @@ Under the frozen rule, a single-pass box counts only as pixel coordinates inside
 <Grounding client:visible />
 </Section>
 
-<Section id="gallery" title="Gallery" wide>
+<Section id="gallery" title="A closer look at the evidence" wide>
 <div class="mx-auto max-w-[50rem] font-semibold">
 
-Examples from our development images generated with Google Gemini, where GROVE is right. They are chosen, not representative: on all <Num k="final.n_images" as="int" /> final images GROVE&rsquo;s micro-F1 is <Num k="final.grove.micro_f1" />.
+Selected Gemini-generated development scenes: clear detections, correctly quiet scenes, and examples that reveal the limits of identification or grounding. They are chosen, not representative: on all <Num k="final.n_images" as="int" /> final images GROVE&rsquo;s micro-F1 is <Num k="final.grove.micro_f1" />.
 
 </div>
-<Gallery client:visible base={base} />
+<Gallery client:visible={{ rootMargin: "400px" }} base={base} />
 </Section>
 
 <Section id="failures" title="Where GROVE fails" wide>

@@ -90,3 +90,24 @@ credit is also in the page footer. The template's own documentation is in `docum
 
 The construction-site images and labels come from ConstructionSite10k, whose images come from MOCS; they are used under
 CC BY-NC 4.0 and the MOCS terms. The dataset citation is on the page and in `src/data/gallery.json`.
+
+## Visual refresh
+
+The site extends its existing Astro academic template; it is not a replacement implementation.
+It retains `react-compare-slider` for the image comparison, Observable Plot for charts and
+Remix Icon via Astro Icon. Scroll reveals and the reading-progress line use
+[Motion](https://github.com/motiondivision/motion) (MIT), bundled locally. No animation CDN
+or tracking request is needed. Motion is disabled for reduced-motion preferences.
+
+The public gallery contains 13 author-selected Gemini development scenes (10 correct
+examples and 3 limitations), including 6 additional images. Saved predictions, annotations,
+boxes, formula weights and development thresholds determine each display. The gallery
+illustrates Fall and PPE, uses thresholds fit on the same development images, and is not a
+representative evaluation. Six original image hashes are recorded in
+`src/data/gallery_expansion_manifest.json`; the generator is `tools/expand_dev_gallery.py`.
+It requires the authors' Gemini image folder as an argument and never invokes a model.
+The seven previously published images and their numerical records are preserved.
+
+Featured scenes are selectable above the original comparison slider. The gallery has
+category/outcome filters, overlay controls, a keyboard-navigable modal and an empty-state
+reset. The complete final results and threshold explorer remain available below.
